@@ -40,8 +40,8 @@
 
 
 <body>
-  <!-- loaded from /components/header.html -->
-  <div id="header"></div>
+  <!-- load header component -->
+  <div data-include="components/header.html"></div>
 
   <main>
     <!-- page content -->
@@ -78,54 +78,21 @@
           <h2>Projects ///</h2>
     </div>
 
-    <!-- load components/project-tiles.html -->
-    <div id="project-tiles"></div>
+    <!-- load grid of tiles component -->
+    <div data-include="components/project-tiles.html">
+    </div>
 
-    <!-- load components/resume.html -->
-    <div id="resume"></div>
-
+    <!-- load resume component -->
+    <div data-include="components/resume.html">
+    </div>
   </main>
 
-  <!-- loaded from /components/footer.html -->
-  <div id="footer"></div>
+  <!-- load footer component -->
+  <div data-include="components/footer.html"></div>
 
   <!-- load HTML components -->
-  <script src="js/components.js"></script>
+  <script src="js/main.js" defer></script>
   <script src="js/ia.js"></script>
-
-  <!-- calculate years of service for resume -->
-    <script>
-      function yearsAndMonthsSince(startDate) {
-          const start = new Date(startDate);
-          const now = new Date();
-
-          let years = now.getFullYear() - start.getFullYear();
-          let months = now.getMonth() - start.getMonth();
-
-          if (months < 0) {
-            years--;
-            months += 12;
-          }
-
-          if (now.getDate() < start.getDate()) {
-            months--;
-            if (months < 0) {
-              years--;
-              months += 12;
-            }
-          }
-
-          if (months === 0) {
-            return `${years} year${years !== 1 ? "s" : ""}`;
-          }
-
-          return `${years} year${years !== 1 ? "s" : ""}, ${months} month${months !== 1 ? "s" : ""}`;
-        }
-
-
-      document.getElementById("yearsOfService").textContent =
-        yearsAndMonthsSince("2016-01-01");
-    </script>
 
 </body>
 
