@@ -8,4 +8,6 @@ async function loadComponent(selector, url) {
 
 // Load components
 loadComponent("#header", "../components/header.html");
+loadComponent("#project-tiles", "../components/project-tiles.html");
+loadComponent("#resume", "../components/resume.html");
 loadComponent("#footer", "../components/footer.html");
