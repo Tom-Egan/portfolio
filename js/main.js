@@ -10,6 +10,14 @@ function updateCopyrightYear() {
   yearEl.textContent = new Date().getFullYear();
 }
 
+// Duplicate for mobile footer
+function updateCopyrightYear2() {
+  const yearEl2 = document.getElementById('current-year2');
+  if (!yearEl2) return;
+
+  yearEl2.textContent = new Date().getFullYear();
+}
+
 // Calculates years + months since a given date
 // Used in the resume template
 function yearsAndMonthsSince(startDate) {
@@ -67,6 +75,7 @@ async function loadIncludes() {
 
 function initSite() {
   updateCopyrightYear();
+  updateCopyrightYear2();
   updateYearsOfService();
   // initMobileNav();
   // initIADiagram();
