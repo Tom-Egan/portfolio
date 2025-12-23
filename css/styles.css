@@ -7,6 +7,7 @@
 
 :root {
   --dark-green: #1c403a;
+  --darkest-green: #1c2d2a;
   --white: #fff;
   --light-grey: #999;
   --large-border-radius: 12px;
@@ -50,14 +51,30 @@ ul{
 }
 
 
-.site-header {
+
+.header-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1.5rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0px auto;
+  color: #fff;
+  background: var(--darkest-green);
+  border-radius: var(--small-border-radius);
+  z-index: 9999;
+}
 
+.site-header {
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  margin: 0px auto;
+  color: #fff;
+  background: var(--dark-green);
+  z-index: 1;
 }
 
 .site-footer {
@@ -69,11 +86,11 @@ ul{
 .site-nav {
   display: flex;
   gap: 1rem;
-  z-index: 9999;
+  background: var(--darkest-green);
 }
 
 .logo {
-  z-index: 9999;
+
 }
 
 /* Hide hamburger on desktop */
@@ -84,12 +101,36 @@ ul{
   border: none;
 }
 
+.hero-bg-shape-1 {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  background: var(--white);
+  bottom: -200px;
+  right: 80%;
+  z-index: 1;
+  opacity: 0.05;
+  border-radius: 50%;
+}
+
+.hero-bg-shape-2 {
+   position: absolute;
+  height: 900px;
+  width: 900px;
+  background: var(--white);
+  bottom: -400px;
+  left: 70%;
+  z-index: 1;
+  opacity: 0.05;
+  border-radius: 50%;
+}
+
 .home-hero-wrapper {
   position: relative;
   width: 100%;
   background: var(--dark-green);
   margin: 0 auto;
-  top: -56px;
+
 
    color: var(--white);
    text-align: center;
@@ -97,20 +138,19 @@ ul{
 }
 
 .home-hero-wrapper h1 {
-  padding-top: 150px;
-  margin-bottom: -20px;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 20px;
   font-size: 4rem;
+  z-index: 2;
 }
 
 /* home page Learn more CTA */
 .hero-cta-wrapper {
   max-width: 240px;
   margin: 0 auto;
-  display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+ position: relative;
+ z-index: 2;
 }
 
 /* home page Learn more CTA */
@@ -133,6 +173,7 @@ button {
   outline: none;
   border: none;
   font-size: 0.9rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 button:hover {
@@ -183,6 +224,14 @@ button span, .tile a span{
 **
 **/
 
+.clear-hero {
+  position: relative;
+  width: 100%;
+  background: var(--white);
+  margin: 0;
+  z-index: 3;
+}
+
 .section-header {
   position: relative;
   max-width: 1200px;
@@ -190,6 +239,7 @@ button span, .tile a span{
   padding: 60px 20px 0px 20px;
   text-transform: uppercase;
   font-size: 0.8rem;
+  z-index: 3;
 }
 
 .tile a:hover span {
@@ -234,7 +284,7 @@ button span, .tile a span{
 
 .project-info-wrapper {
   display: flex;
-  margin-top: -75px;
+  margin-top: -80px;
   gap: 8px;
   padding: 20px;
   z-index: -1;
@@ -242,10 +292,12 @@ button span, .tile a span{
 
 .project-info-chip {
   margin-top: auto;
-  background: #888;
+  color: var(--white);
+  background: none;
   padding: 8px;
   border-radius: var(--small-border-radius);
   font-size: 0.9rem;
+  border: 2px solid var(--white);
 }
 
 
@@ -263,6 +315,7 @@ button span, .tile a span{
   padding: 0px 20px 0px 20px;
   display: flex;
   color: var(--white);
+  z-index: 4;
 }
 
 .resume-content {
@@ -273,6 +326,7 @@ button span, .tile a span{
   padding: 50px;
   margin: -100px auto;
   border-radius: var(--large-border-radius);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .resume-content h2 {
@@ -282,7 +336,7 @@ button span, .tile a span{
 }
 
 .resume-content h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .resume-content h4, .resume-content h5 {
@@ -325,6 +379,7 @@ button span, .tile a span{
   padding: 12px 24px;
   margin-top: -12px;
   float: right;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 
@@ -396,6 +451,10 @@ button span, .tile a span{
   margin-bottom: 16px;
 }
 
+#education-headline {
+  padding-top: 30px;
+}
+
 
 /*
 **
@@ -413,6 +472,10 @@ button span, .tile a span{
   max-width: 1000px;
   margin: 4rem auto;
   row-gap: 1rem;
+  z-index: 2;
+  padding-bottom: 40px;
+
+
 }
 
 .ia-lines {
@@ -429,8 +492,8 @@ button span, .tile a span{
 
 
 line {
-  stroke: #000;
-  stroke-width: 2;
+  stroke: var(--light-grey);
+  stroke-width: 1.5;
   vector-effect: non-scaling-stroke;
   shape-rendering: crispEdges;
 }
@@ -440,11 +503,11 @@ line {
   align-self: start;
   width: clamp(100px, 20vw, 200px);
   padding: 0.8rem 0.4rem;
-  background: #888;
   border-top: 6px solid #000;
+  border: 3px solid var(--white);
   font-weight: 600;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   border-radius: var(--small-border-radius);
   z-index: 1; /* ensure nodes sit above lines */
 }
@@ -455,9 +518,9 @@ line {
   grid-column: 2 / span 2;
   grid-row: 1;
   justify-items: stretch;
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: clamp(180px, 50vw, 300px);
-  border: 6px solid #000;
+  border: 3px solid var(--white);
 }
 
 .ia-top p {
@@ -603,6 +666,7 @@ line {
   .ia-node {
     width: clamp(60px, 20vw, 100px);
     font-size: 0.6rem;
+    padding: 8px;
   }
 
   .ia-top {
@@ -612,6 +676,12 @@ line {
 
   .home-hero-wrapper h1 {
     font-size: 2.5rem;
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
+
+  .ia {
+    padding-bottom: 10px;
   }
 
   .ia-top p {
