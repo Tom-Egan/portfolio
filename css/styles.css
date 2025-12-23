@@ -5,13 +5,21 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark-green: #1c403a;
+  --white: #fff;
+  --light-grey: #999;
+  --large-border-radius: 12px;
+  --small-border-radius: 6px;
+}
+
 /* Base styles applied to the entire page body */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Defines a font stack */
   font-size: 16px; /* The default size for most browsers, which can be adjusted */
   line-height: 1.5; /* Sets spacing between lines of text */
   color: #333; /* Default text color */
-  background-color: #fff; /* Default background color */
+  background-color: var(--white); /* Default background color */
   margin: 0; /* Removes default body margin */
 }
 
@@ -55,7 +63,7 @@ ul{
 .site-footer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 160px 20px 20px 20px;
 }
 
 .site-nav {
@@ -79,11 +87,11 @@ ul{
 .home-hero-wrapper {
   position: relative;
   width: 100%;
-  background: #555;
+  background: var(--dark-green);
   margin: 0 auto;
   top: -56px;
 
-   color: #fff;
+   color: var(--white);
    text-align: center;
    padding: 0 20px 75px 20px;
 }
@@ -200,7 +208,7 @@ button span, .tile a span{
   max-width: 1200px;
   margin: 0 auto;
   gap: 20px;
-  padding: 20px 20px 120px 20px;
+  padding: 20px 20px 220px 20px;
 }
 
 .tile {
@@ -209,7 +217,7 @@ button span, .tile a span{
   justify-content: space-evenly;
   flex-grow: 1;
   height: 400px;
-  border-radius: 12px;
+  border-radius: var(--large-border-radius);
 }
 
 .tile a {
@@ -221,7 +229,7 @@ button span, .tile a span{
   line-height: 2.6rem;
   font-weight: bold;
   z-index: 9999!important;
-  border-radius: 12px;
+  border-radius: var(--large-border-radius);
 }
 
 .project-info-wrapper {
@@ -236,7 +244,7 @@ button span, .tile a span{
   margin-top: auto;
   background: #888;
   padding: 8px;
-  border-radius: 6px;
+  border-radius: var(--small-border-radius);
   font-size: 0.9rem;
 }
 
@@ -250,20 +258,21 @@ button span, .tile a span{
 .resume-wrapper {
   position: relative;
   width: 100%;
-  background: #222;
+  background: var(--light-grey);
   margin: 20px 0px;
-  padding: 40px 0 60px 0;
+  padding: 0px 20px 0px 20px;
   display: flex;
-  color: #fff;
+  color: var(--white);
 }
 
 .resume-content {
   position: relative;
   flex-grow: 3;
   max-width: 700px;
-
-  padding: 50px 20px;
-  margin: 0 auto;
+  background: var(--dark-green);
+  padding: 50px;
+  margin: -100px auto;
+  border-radius: var(--large-border-radius);
 }
 
 .resume-content h2 {
@@ -277,9 +286,12 @@ button span, .tile a span{
 }
 
 .resume-content h4, .resume-content h5 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: -3px;
-  margin-top: 5px;
+}
+
+.resume-content h4 {
+  margin-top: 4px;
 }
 
 
@@ -331,8 +343,8 @@ button span, .tile a span{
 .resume-timeline h5 {
   margin-left: 38px;
   float: left;
-  margin-top: -16px;
-  margin-bottom: -3px;
+  margin-top: -18px;
+  margin-bottom: 0px;
 }
 
 .resume-timeline p {
@@ -354,18 +366,20 @@ button span, .tile a span{
   margin-right: 28px;
   margin-left: -1px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--white);
 }
 
 /* adjustment for the first line below Bachelor's Degree
 ** on the resume section */
 .magd-fix {
-  margin-top: 20px;
+  margin-top: 0px;
+  padding-top: 10px;
+
 }
 
 
 .resume-content-border {
-  border-left: 2px solid #fff;
+  border-left: 2px solid var(--white);
   margin-left: 4px;
   padding-left: 12px;
   clear: both;
@@ -431,7 +445,7 @@ line {
   font-weight: 600;
   text-align: center;
   font-size: 0.9rem;
-  border-radius: 6px;
+  border-radius: var(--small-border-radius);
   z-index: 1; /* ensure nodes sit above lines */
 }
 
@@ -463,9 +477,15 @@ line {
   float: left;
 }
 
+.footer-left a {
+  font-weight: bold;
+  color: var(--dark-green);
+}
+
 .footer-left p {
   font-size: 0.8rem;
   padding-bottom: 20px;
+  padding-top: 12px;
 }
 
 .footer-right {
@@ -569,6 +589,13 @@ line {
 
   .footer-left p {
     display: none;
+  }
+
+  .magd-fix {
+    position: relative;
+    top: -20px;
+    padding-top: 30px;
+
   }
 }
 
