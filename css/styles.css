@@ -278,7 +278,8 @@ button span, .tile a span{
 
 .resume-content h4, .resume-content h5 {
   font-size: 1rem;
-  margin-bottom: 4px;
+  margin-bottom: -3px;
+  margin-top: 5px;
 }
 
 
@@ -305,6 +306,7 @@ button span, .tile a span{
 
 .employer-right p, .resume-content-border p {
   color: #999;
+  font-size: 0.9rem;
 }
 
 .resume-content a button{
@@ -324,13 +326,18 @@ button span, .tile a span{
 
 }
 
+
+
 .resume-timeline h5 {
-  margin-left: 12px;
-  line-height: 10px;
+  margin-left: 38px;
+  float: left;
+  margin-top: -16px;
+  margin-bottom: -3px;
 }
 
 .resume-timeline p {
   margin-left: 20px;
+
 }
 
 .resume-timeline ul {
@@ -349,12 +356,16 @@ button span, .tile a span{
   background: #fff;
 }
 
+/* adjustment for the first line below Bachelor's Degree
+** on the resume section */
+.magd-fix {
+  margin-top: 20px;
+}
 
 
 .resume-content-border {
   border-left: 2px solid #fff;
   margin-left: 4px;
-  margin-top: 6px;
   padding-left: 12px;
   clear: both;
 }
@@ -363,7 +374,6 @@ button span, .tile a span{
   width: 100%;
   float: left;
   margin-left: 19px;
-  font-size: 0.9rem;
 }
 
 .timeline-clear {
@@ -446,6 +456,22 @@ line {
 .ia-node[data-child] {
   grid-row: 3;
   justify-self: center;
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-right {
+  float: right;
+}
+
+.footer-links-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-link {
 }
 
 
