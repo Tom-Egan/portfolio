@@ -111,6 +111,7 @@ ul{
   z-index: 1;
   opacity: 0.05;
   border-radius: 50%;
+  overflow: none;
 }
 
 .hero-bg-shape-2 {
@@ -123,6 +124,7 @@ ul{
   z-index: 1;
   opacity: 0.05;
   border-radius: 50%;
+  overflow: none;
 }
 
 .home-hero-wrapper {
@@ -232,14 +234,52 @@ button span, .tile a span{
   z-index: 3;
 }
 
+
+.resume-content .section-header {
+  color: var(--light-grey);
+  margin-left: -20px;
+  margin-top: -60px;
+  margin-right: -20px;
+}
+
+.resume-content .section-header .header-line{
+  margin-right: 12px;
+}
+
+
 .section-header {
-  position: relative;
+  display: flex;
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px 0px 20px;
   text-transform: uppercase;
   font-size: 0.8rem;
+  align-items: center;
+  justify-content: space-evenly;
   z-index: 3;
+  color: var(--dark-green);
+}
+
+.section-header h2 {
+  flex-grow: 1;
+}
+
+
+.header-dash {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-left: 12px;
+  margin-top: -9px;
+  letter-spacing: -0.2rem;
+  color: var(--light-grey);
+}
+
+.header-line {
+  margin-top: -7px;
+  margin-left: -2px;
+  width: 100%;
+  border-top: 3px solid var(--light-grey);
+
 }
 
 .tile a:hover span {
@@ -262,16 +302,22 @@ button span, .tile a span{
 }
 
 .tile {
-  background: #666;
   width: 100%;
   justify-content: space-evenly;
   flex-grow: 1;
   height: 400px;
   border-radius: var(--large-border-radius);
+  background-size: cover;
+  background-position: center center;
 }
 
+.land-rover-tile {
+  background-image: url(../img/defender_interior.jpg);
+}
+
+
 .tile a {
-  background: #333;
+  background: rgba(0,0,0,0.4);
   height: 100%;
   display: block;
   padding: 20px;
@@ -279,7 +325,16 @@ button span, .tile a span{
   line-height: 2.6rem;
   font-weight: bold;
   z-index: 9999!important;
+  color: var(--white);
   border-radius: var(--large-border-radius);
+  box-shadow: rgba(50, 50, 93, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  transition: 0.2s ease-in-out;
+}
+
+.tile a:hover {
+  background: rgba(28, 64, 58, 0.8);
+  transition: 0.2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.6) 0px 13px 27px -5px, rgba(0, 0, 0, 0.4) 0px 8px 16px -8px;
 }
 
 .project-info-wrapper {
@@ -293,11 +348,10 @@ button span, .tile a span{
 .project-info-chip {
   margin-top: auto;
   color: var(--white);
-  background: none;
+  background: var(--dark-green);
   padding: 8px;
   border-radius: var(--small-border-radius);
-  font-size: 0.9rem;
-  border: 2px solid var(--white);
+  font-size: 0.8rem;
 }
 
 
@@ -356,14 +410,17 @@ button span, .tile a span{
 
 .employer-wrap {
   margin-top: 35px;
+  display: flex;
+  flex-direction: column;
 }
 
 .employer-wrap h3 {
   margin-bottom: 24px;
+  flex-grow: 4;
 }
 
-.employer-left, .employer-right {
-  float: left;
+.employer-info {
+  display: flex;
 }
 
 .employer-right {
@@ -377,8 +434,9 @@ button span, .tile a span{
 
 .resume-content a button{
   padding: 12px 24px;
-  margin-top: -12px;
+  margin-top: -10px;
   float: right;
+  min-width: 166px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
@@ -444,6 +502,7 @@ button span, .tile a span{
   width: 100%;
   float: left;
   margin-left: 19px;
+  padding-right: 24px;
 }
 
 .timeline-clear {
@@ -453,8 +512,19 @@ button span, .tile a span{
 
 #education-headline {
   padding-top: 30px;
+  border-top: 1px solid var(--light-grey);
 }
 
+
+
+.resume-header-bg {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.3);
+  left: 0;
+  top: 0;
+}
 
 /*
 **
@@ -692,7 +762,24 @@ line {
     font-size: 2.2rem;
   }
 
+  .resume-content .section-header {
+   
+  }
 
+  .resume-content .section-header .header-dash,
+  .resume-content .section-header .header-line {
+    display: none;
+  }
+
+  .resume-content {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 454px) {
+    #education-headline .employer-info .employer-right{
+    margin-top: -10px;
+  }
 }
 
 
