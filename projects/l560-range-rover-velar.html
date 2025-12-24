@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="section-content">
-                    <p>Following the 20MY (2020 Model Year) launch of the new Pivi/Pivi Pro infotainment system in JLR (Jaguar Land Rover) vehicles, came the 24MY mid-cycle refresh. The proposed  update for 24MY included reconfigured vehicle interiors with several physical controls and switchpacks removed.</p>
+                    <p>Following the 20MY (2020 Model Year) launch of the new Pivi/Pivi Pro infotainment system in JLR (Jaguar Land Rover) vehicles, came the 24MY mid-cycle refresh. The proposed  update for 24MY, L560 Range Rover Velar being the lead vehicle for this update, included reconfigured vehicle interiors with several physical controls and switchpacks removed.</p>
 
                     <p>Our team was tasked with designing a solution around relocating those affected features, previously physical controls, into the vehicle's touchscreen. After several design iterations, interactive prototypes,  and user tests, our team delivered the design solution that made it into the 24MY production vehicles. This UX (user experience) update to the infotainment system eventually cascaded down into all JLR vehicles for 24MY and beyond.
                 </p>
@@ -163,9 +163,14 @@
                 </div>
 
                 <div class="section-content">
-                    <p>The concept work was split up between a team of two designers, myself included, where we decided to tackle individual feature sets, one at a time before piecing it together into a larger interaction model. Reason being, this would be the first time these functions would be performed on the touchscreen in JLR vehicles - resulting in a lot of individual nuance to sort out (e.g. solving the temperature control interactions, then solving the broader layout of the whole climate screen).
-                </p>
+                    <h3>The What</h3>
 
+                    <p>A straightforward goal: Provide  quick access to these high priority use cases, formerly physical controls.</p>
+
+                    <h3>The Who</h3>
+                    <p>The concept work was split up between a team of two designers, myself included, where we decided to tackle individual feature sets, one at a time before piecing it together into a larger interaction model. Reason being, this would be the first time these functions would be performed on the touchscreen in JLR vehicles - resulting in a lot of individual nuance to sort out (e.g. solving the temperature control interactions, then solving the broader layout of the whole climate screen).</p>
+
+                <h3>The How</h3>
                 <p>A breakdown of our design iteration cycle included:</p>
                 <ol>
                     <li>Design two, contrasting concepts (in Sketch/Figma)</li>
@@ -183,7 +188,7 @@
                     <li>Run it again: Take the research recommendations and insights and return to Step 1 with a refined design direction</li>
                 </ol>
 
-                <p>Each of the feature sets went through several of these design iteration cycles before putting it all together into a single design proposal. Later on, more extensive and comprehensive user testing of the prototype was conducted by our research team in the UK - performed on the JLR test track in Gaydon, England.</p>
+                <p>Each of the feature sets went through several of these design iteration cycles before putting it all together into a single design proposal. More extensive and comprehensive user testing of the prototype was also conducted by our research team in the UK - performed on the JLR test track in Gaydon, England.</p>
 
                     <img src="../img/defender_interior.jpg">
                 </div>
@@ -259,7 +264,7 @@
 
                      <img src="../img/icp_delete_defrost.svg">
 
-                     <h3>System Overlays</h3>
+                     <h3>Overlays</h3>
 
                      <p>Accessed from the sidebars, overlays were used to accommdate  more complex and deeper feature sets, such as Climate and Drive Modes. This however, created it's own set of design challenges as now there was less consistency with how the sidebars behave—it became a mixed bag of interactions. In other words: certain buttons performed an on/off action, some buttons exit your current screen and take you somewhere new, and some keep you in the same context but display an overlay on top.</p>
 
@@ -272,19 +277,34 @@
 
 
                     <h3>The Quick Slider</h3>
-                    <p>Maximizing our design sandbox and to enable "no-look" interactions while driving for ease-of-use, secondary interactions were designed into the overlay buttons. In addition to  pressing the buttons (to open an overlay), a drag interaction was added for quick and wide-band adjustments. With the physical volume control removed and now living in the touchscreen, having the ability to make quick (and large) adjustments to the volume level became one use case that benefitted from this interaction.</p>
+                    <p>Maximizing our design sandbox and to enable "no-look" or muscle-memory interactions while driving for ease-of-use, secondary interactions were designed into the overlay buttons. In addition to  pressing the buttons (to open an overlay), a drag interaction was added for quick and wide-band adjustments. With the physical volume control removed and now living in the touchscreen, having the ability to make quick (and large) adjustments to the volume level became one use case that benefitted from this interaction.</p>
 
                     <p>To promote the discoverability of the drag interaction, a deliberate visual element and affordance was added to the button: The Rail. A line extending outwards from the button was used to create the impression of the button sitting on a track, appearing more as a draggable element. The Rail also provided an opportunity communicate interaction intent with the temperature slider. With the blue tip used to indicate  dragging down will lower the temperature, and the red tip, used to indicate a dragging up will raise the temperature.</p>
 
 
+                    <h3>Climate Overlay</h3>
+                    <p>The Climate Overlay is broken up into three sections of controls: temperature, heated/cooled seats, and fan speed. Several different layouts and individual control styles were explored and tested, including concepts where all three sections reused the exact same format of controls. In those cases, the visual duplication and repetition became too much. In the end, each section was given control schemes that suited their use cases best. The visual variance of controls between sections enabled users quicker task completions.</p>
+
+                    <p>For temperature, a variety of controls were provided to cover a range of use cases: small, medium, and large adjustments. (1) The single chevrons adjust the temperature up/down by one degree (0.5 degrees  Celsius). (2) Double chevrons adjust in larger chunks, changing the temperature up/down in five-degree increments (two degrees Celsius). (3) Dedicated shortcuts to jump to the highest and lowest temperatures round out the suite of controls. Supplemental interactions were also included: press-and-hold any of the chevrons for continunous adjustment, and dragging up/down on the entire temperature area.</p>
+
+                    <p>Moving over to Seats, this section is an abbreviated version of a larger Seats app, providing quick access to the highest priority use case: seat heating/cooling. With a limited range of adjustments, we were able to display direct selection of high, medium, and low all at once, reducing the number of steps for the user. The visual centerpiece of the overlay, the seat graphic doubles as an  interactive element - controlling which zone(s) heating/cooling is applied to. Finally, to increase user mobility around the system, a shortcut to the full Seats app (which includes additional features such as Massage) anchors the top edge of the screen. </p>
+
+                    <p>The final section of the Climate Overlay contains the fan speed controls. Placement of this section in the overlay was very deliberate. Being the only "neutral" or shared control, it serves as a natural divider and visual break when both the driver and passsenger Climate Overlays are open at the same time. Interactions for fan speed are fairly straightforward: direct selection via press or dragging. Similarly to Seats, a shortcut to the wider Climate app is provided above.
+
+
 
                      <h3>Drive Modes Overlay</h3>
+
+                     <h3>Volume Overlay</h3>
 
                      
 
                      <h3>The Preflight Checklist</h3>
 
                     <p>The Preflight Checklist A UX byproduct from this project</p>
+
+                    <h3>Max Defrost</h3>
+                    <p>It's an on/off button 🤷‍♂️.
 
 
 
