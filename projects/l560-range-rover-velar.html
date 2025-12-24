@@ -142,7 +142,7 @@
                 </p>
 
                 <ul>
-                    <li><strong>Functional: </strong>Mission-critical systems such as climate and drive modes needed to be globally accessible in the system (i.e. can be accessed at anytime, regardless of which screen the user is on). In certain system states (e.g. while Apple CarPlay or Android Auto is active), the sidebars would be the only globally available entry point for these features.</li>
+                    <li><strong>Functional: </strong>Mission-critical systems such as climate and drive modes needed to be globally accessible in the system (i.e. can be accessed at anytime, regardless of which screen the user is on). In certain system states (e.g. while Apple CarPlay or Android Auto is active), the sidebars would be the only global entry point for these features.</li>
                     <li class="li-block"><strong>Legal: </strong>Functions such as Rear Defrost came with their own set of rules which needed to be considered and also dictated their implementation.</li>
                     <li class="li-block"><strong>Development: </strong>Integrating brand new, system level interactions into an existing software architecture meant that time and cost to develop factored into how much the system could/should be modified.</li>
                 </ul>
@@ -173,14 +173,14 @@
                     <li>Pre user test: Coordinate with our Portland UX Research team
                         <ul>
                             <li>Determine interactions/user flows to examine</li>
-                            <li>Define the user test tasks</li>
-                            <li>Conduct remote, A/B test of the two prototypes (via Microsoft Teams)</li>
+                            <li>Define the user test tasks and user test plan</li>
+                            <li>Conduct remote, A/B tests of the two prototypes (via Microsoft Teams)</li>
                         </ul>
                     <li>Post user test: Review with our Portland UX Research team
                         <ul>
                             <li>User test insights, recommendations, and next steps</li>
                         </ul>
-                    <li>Take the research recommendations and insights and return to Step 1 with a refined design direction</li>
+                    <li>Run it again: Take the research recommendations and insights and return to Step 1 with a refined design direction</li>
                 </ol>
 
                 <p>Each of the feature sets went through several of these design iteration cycles before putting it all together into a single design proposal. Later on, more extensive and comprehensive user testing of the prototype was conducted by our research team in the UK - performed on the JLR test track in Gaydon, England.</p>
@@ -235,27 +235,52 @@
                         <li>If the user is <strong>not</strong> on the home screen, display a shortcut button to return Home.</li>
                     </ul>
 
+                    <p>Note: The App Drawer could still be accessed via swiping from the left edge as a secondary method (Not quite as discoverable as the dedicated button, but still an available option for the user).
+
                     <img src="../img/icp_delete_homebtn.svg">
 
-                    <p>This same idea was also applied to the Phone shortcut. As one of the  deprioritized features, Phone no longer had a permanent shortcut in the sidebar. Some might ask, "but what if the user is on a phone call?" Similarly, in that context of being on an active phone call, the Media button would temporarily change to a shortcut to return to the active call screen. Given that the phone call audio would be coming through the cabin speakers, this made access to Media unncessary at that point in time. With this approach we were effectively able to serve up shortcuts to four features, freeing up two available slots in the sidebar.</p>
+                    <p>This same idea was also applied to the Phone shortcut. As one of the  deprioritized features, Phone no longer had a permanent shortcut in the sidebar. Some might ask, "but what if the user is on a phone call?" Similarly, in that context of being on an active phone call, the Media button would temporarily change to a shortcut to return to the active call screen. Given that the phone call audio would be coming through the cabin speakers, this made access to Media unncessary at that point in time—i.e. show the user the right thing at the right time. With this approach we were effectively able to serve up shortcuts to four features in two areas, freeing up two available slots in the sidebar.</p>
 
                     <img src="../img/icp_delete_activecall.svg">
 
                      <h3>Combo Defrost Button</h3>
-                     <p>Another example of where creative problem solving became necessary was with the case of Rear Defrost and Heated Windshield. Functionally, these two features are related, in the sense that they both are turning on some sort of heated element in the glass. Given that, and the limited space in the sidebar, these two features seemed like logical candidates to pair together into one button. However, the legal requirement that was given to us—at any point, Rear Defrost must be able to be turned on within one press on the screen—presented a different challenge. After several different design concepts and user tests, the final result was a toggle switch that cycles through four different states, while satisfying the Rear Defrost legal requirement.</p>
-
-                     <ul>
+                     <p>Another example of where creative problem solving became necessary was with the case of Rear Defrost and Heated Windshield. Functionally, these two features are related, in the sense that they both are turning on some sort of heated element in the glass. Given that, and the limited space in the sidebar, these two features seemed like logical candidates to pair together into one button. However, the legal requirement that was given to us—at any point, Rear Defrost must be able to be turned on within one press on the screen—presented a different challenge.</p>
+                    <p>After several different design concepts and user tests, the final result was a toggle switch that cycles through four different states, while still satisfying the Rear Defrost legal requirement. Doing so also gave us the benefit of saving an interaction—the ability to turn two controls on at once, in a single button press.</p>
+                    <ul>
                          <li><strong>Button State 1:</strong> Off</li>
-                         <li><strong>Button State 2:</strong> Rear Defrost on</li>
+                         <li><strong>Button State 2:</strong> Rear Defrost + Heated Windshield on</li>
                          <li><strong>Button State 3:</strong> Heated Windshield on</li>
-                         <li><strong>Button State 4:</strong> Rear Defrost + Heated Windshield on </li>
+                         <li><strong>Button State 4:</strong> Rear Defrost on </li>
                      </ul>
 
-                     <h3>Climate Overlay</h3>
+                    <p>Additional design notes—Because of the visual similarity between the two icons, F (front) and R (rear) indicators were added next to the icons. Visual reinforcement in the form of dedicated status indicators (dots) were added as well, so that the  user could better differentiate which of the two is turned on.</p>
+
+                     
+
+                     <img src="../img/icp_delete_defrost.svg">
+
+                     <h3>System Overlays</h3>
+
+                     <p>Accessed from the sidebars, overlays were used to accommdate  more complex and deeper feature sets, such as Climate and Drive Modes. This however, created it's own set of design challenges as now there was less consistency with how the sidebars behave—it became a mixed bag of interactions. In other words: certain buttons performed an on/off action, some buttons exit your current screen and take you somewhere new, and some keep you in the same context but display an overlay on top.</p>
+
+                    <p>To assist in helping the user identify the different intents of these buttons, or at least, tip the user off that certain buttons will have different results, buttons that launch an overlay were given specific visual styling. This was done for two reason: One, to indicate to the user that these buttons behave differently that the rest of the sidebar buttons. Two, the button could be repurposed, changing context to a close button once the overlay was opened.</p>
+
+                    <p>To accomplish this, buttons that launch an overlay were given a contrasting background color and drop shadow to create a visual distinction and communicate, "these buttons are different than everything else".</p>
+
+
+                    <p>Once an overlay is launched, the sidebars change to a more focused, empty state, removing unnecessary visual clutter. This was done to help communicate the context switch of having the overlay open, as well as provide the user a clearer visual path to their exit route (close button). One caveat to this stategy comes back to the previously mentioned legal requirements. Since one-touch activation of Rear Defrost and Max Defrost are required at all times, those two buttons remained in place. 
+
+
+                    <h3>The Quick Slider</h3>
+                    <p>Maximizing our design sandbox and to enable "no-look" interactions while driving for ease-of-use, secondary interactions were designed into the overlay buttons. In addition to  pressing the buttons (to open an overlay), a drag interaction was added for quick and wide-band adjustments. With the physical volume control removed and now living in the touchscreen, having the ability to make quick (and large) adjustments to the volume level became one use case that benefitted from this interaction.</p>
+
+                    <p>To promote the discoverability of the drag interaction, a deliberate visual element and affordance was added to the button: The Rail. A line extending outwards from the button was used to create the impression of the button sitting on a track, appearing more as a draggable element. The Rail also provided an opportunity communicate interaction intent with the temperature slider. With the blue tip used to indicate  dragging down will lower the temperature, and the red tip, used to indicate a dragging up will raise the temperature.</p>
+
+
 
                      <h3>Drive Modes Overlay</h3>
 
-                     <h3>The Quick Slider</h3>
+                     
 
                      <h3>The Preflight Checklist</h3>
 
