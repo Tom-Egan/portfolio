@@ -229,7 +229,17 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 .caption {
   font-style: italic;
   font-size: 0.8rem;
-  padding-top: 8px;
+  margin-top: -20px;
+
+}
+
+.caption-buffer {
+  margin-bottom: 50px;
+}
+
+.section-content video {
+  width: 100%;
+  padding-bottom: 30px;
 }
 
 .project-main h3 {
