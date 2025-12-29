@@ -283,6 +283,11 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   line-height: 1.5rem;
 }
 
+.skim-lead-margin {
+  margin-top: 60px;
+  margin-bottom: -24px;
+}
+
 .branding-content .skim-lead {
   margin-top: -5px;
 }
@@ -312,6 +317,34 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   margin-left: -30px;
 }
 
+.card-spacer {
+  margin-bottom: 75px;
+}
+
+/*.table-of-contents {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.table-of-contents ul {
+  display: flex;
+  list-style-type: none;
+  padding: 10px 20px;
+  margin-left: 20px;
+  top: 30px;
+  left: 8px;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  justify-items: stretch;
+}*/
+
+.table-of-contents ol li {
+  font-size: 1.2rem;
+  line-height: 2rem;
+
+}
+
 .project-main {
   width: 100%;
 }
@@ -334,8 +367,19 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   font-style: italic;
   font-size: 0.8rem;
   margin-top: -20px;
-
 }
+
+.italic {
+  font-style: italic;
+
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 0px 24px 0 24px;
+  border-radius: var(--small-border-radius);
+  border: 1px dashed var(--light-grey);
+}
+
+
 
 .caption-buffer {
   margin-bottom: 50px;
