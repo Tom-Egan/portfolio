@@ -177,7 +177,10 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 .project-content {
   margin: 0 auto;
   max-width: 700px;
+  margin-bottom: 50px;
+  background: #fff;
   position: relative;
+  border-radius: var(--small-border-radius);
 /*    max-width: 1200px;
   padding: 50px 20px 300px 20px;
 */
@@ -185,27 +188,92 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 
 .project-sidebar {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-content: stretch;
-  background: #fff;
   gap: 20px;
+  padding: 30px 12px 12px 12px;
+  margin-top: -50px;
   border-radius: var(--small-border-radius);
   box-shadow: var(--shadow1);
-  text-align: center;
 }
 
-.project-content .project-sidebar {
-  margin-top: -50px;
+.number-bg {
+  right: -60px;
+  bottom: 0;
+  left: 0;
+  top: -130px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0;
+  text-align: right;
+  z-index: -1;
+}
+
+.number-bg h4 {
+    font-size: 22rem;
+    line-height: 100%;
+    opacity: 0.05;
+    letter-spacing: -32px;
+}
+
+
+.project-info-block h3, .project-info-block p {
+  position: relative;
+  z-index: 3;
+}
+
+.section-info {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: var(--small-border-radius);
+  box-shadow: var(--shadow1);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.section-info .project-info-block h3 {
+  margin-top: 0px;
+
+}
+
+
+.tldr-header {
+  padding: 20px 0 12px 30px;
+  flex: 1 1 100%;
+  width: 100%;
+  flex-grow: 4;
+  margin-top: -10px;
+  font-size: 1.8rem;
+}
+
+.snapshot-block{
+
+}
+
+.no-bullets {
+  list-style: none;
+  list-style-type: none;
+  margin-left: -20px;
 }
 
 .project-info-block {
   flex-grow: 1;
-  padding: 30px;
+  padding: 0 30px 12px 30px;
 }
 
 .project-info-block p {
   margin-bottom: 0;
+}
+
+.project-info-block h3 {
+  margin-top: -12px;
+  margin-bottom: -12px;
 }
 
 .project-main {
@@ -242,7 +310,7 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   padding-bottom: 30px;
 }
 
-.project-main h3 {
+.project-main h3{
   font-size: 1.8rem;
   margin-bottom: 10px;
   margin-top: 30px;
@@ -969,6 +1037,20 @@ line {
   .project-info-block {
     padding: 0;
   }
+
+  .tldr-header  {
+    margin-left: -30px;
+  }
+
+  .section-info {
+    padding: 30px;
+  }
+
+  .number-bg {
+    display: none;
+  }
+
+
 
 
 }
