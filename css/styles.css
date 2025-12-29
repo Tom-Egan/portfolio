@@ -256,6 +256,13 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 
 }
 
+.skim-lead {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  line-height: 1.8rem;
+}
+
 .no-bullets {
   list-style: none;
   list-style-type: none;
@@ -838,6 +845,14 @@ line {
   justify-self: center;
 }
 
+.footer-wrapper {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  margin-top: -20px;
+  padding-bottom: 80px;
+}
+
 .footer-left {
   float: left;
 }
@@ -982,6 +997,10 @@ line {
     margin-right: -20px;
   }
 
+  .footer-wrapper {
+      padding-bottom: 0px;
+  }
+
   
 }
 
@@ -1049,6 +1068,8 @@ line {
   .number-bg {
     display: none;
   }
+
+
 
 
 
