@@ -149,7 +149,7 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   height: 100%;
   left: 0;
   top: 0;
-  background-image: url(../img/defender_interior.jpg);
+  background-image: url(../img/24my_interior2.jpg);
   background-size: cover;
   background-position: center center;
 }
@@ -242,6 +242,21 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 
 }
 
+/*.contrast-bg {
+  position: relative;
+  background: #ccc;
+  width: 100%;
+  z-index: 2;
+  margin-top: -150px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.contrast-bg .project-content {
+  background: none;
+  padding: 30px;
+}
+*/
 
 .tldr-header {
   padding: 20px 0 12px 30px;
@@ -547,7 +562,7 @@ button span, .tile a span{
 }
 
 .land-rover-tile {
-  background-image: url(../img/defender_interior.jpg);
+  background-image: url(../img/24my_interior2.jpg);
 }
 
 .li-block {
