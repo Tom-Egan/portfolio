@@ -8,6 +8,9 @@
 :root {
   --dark-green: #1c403a;
   --darkest-green: #1c2d2a;
+  --eggplant: #3F2E42;
+  --mustard: #FFD655;
+  --steel-red: #CB4848;
   --white: #fff;
   --light-grey: #999;
   --large-border-radius: 12px;
@@ -296,7 +299,7 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 
 .slides-wrapper {
   display: flex; /* Lines images up horizontally */
-  transition: transform 0.3s ease-out; /* The animation magic */
+  transition: transform 0.6s ease-in-out; /* The animation magic */
   width: 100%;
   max-width: 500px;
 }
@@ -358,7 +361,104 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   right: 0px;
 }
 
+.contrast-main {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: stretch;
+}
 
+.color-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: stretch;
+  justify-items: stretch;
+
+}
+
+.contrast-color {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  align-items: stretch;
+  height: 50%;
+  padding-top: 60px;
+}
+
+.eggplant-on-white {
+  background: var(--eggplant);
+  color: var(--white);
+}
+
+.white-on-eggplant {
+  background: var(--white);
+  color: var(--eggplant);
+}
+
+
+.ratings-wrapper {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+    padding-left: 30px;
+    margin-top: -16px;
+}
+
+.ratings-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+}
+
+.ratings-border {
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.ratings-content h5 {
+  font-size: 1.1rem;
+  margin-top: 0px;
+  width: 100%;
+
+}
+
+.ratings-details {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+}
+
+
+
+.ratings-details p {
+  line-height: 36px;
+  margin-bottom:6px;
+  min-width: 90px;
+
+}
+
+.rating-chip {
+
+
+}
+
+.pass-chip span{
+  background: green;
+  color: var(--white);
+}
+
+.rating-chip span {
+
+width: 100%;
+  line-height: 36px;
+  padding: 6px 10px 8px 10px;
+  border-radius: var(--small-border-radius);
+}
 
 .skim-lead {
   font-size: 1.3rem;
@@ -1171,6 +1271,8 @@ line {
   }
 
   
+
+  
 }
 
 @media (max-width: 500px) {
@@ -1242,6 +1344,24 @@ line {
     margin-left: 0px;
   }
 
+  .contrast-color {
+    font-size: 2.5rem;
+  }
+
+  .contrast-main, .color-wrapper, .ratings-wrapper{
+    display: block;
+    width: 100%;
+  }
+
+  .contrast-color {
+    height: 150px;
+    padding-top: 42px;
+  }
+
+  .ratings-wrapper {
+    margin-top: 0px;
+    padding-left: 0;
+  }
 
 
 
