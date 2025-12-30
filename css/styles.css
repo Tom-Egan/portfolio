@@ -286,10 +286,55 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 .t-bolt-wrapper {
     position: relative;
     width: 100%;
-    max-width: 500px;
     margin: 40px auto 0 auto;
     overflow: hidden;
+    max-width: 500px;
+    touch-action: pan-y; /* Crucial for 2025 mobile UX */
+  user-select: none;   /* Prevents accidental text highlighting while swiping */
+
 }
+
+.slides-wrapper {
+  display: flex; /* Lines images up horizontally */
+  transition: transform 0.3s ease-out; /* The animation magic */
+  width: 100%;
+  max-width: 500px;
+}
+
+.slide {
+  min-width: 100%; /* Each image takes full slider width */
+  max-width: 500px;
+  flex-shrink: 0;
+}
+
+
+.slide-active {
+  display: block; /* Show the active image */
+}
+
+.section-info h4 {
+  font-size: 1.4rem;
+  margin-top: 50px;
+  margin-bottom: 6px;
+}
+
+.dots-container {
+  text-align: center;
+  margin-top: 0px;
+  padding-bottom: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.dot-active { background-color: #717171; }
 
 .t-bolt-wrapper button {
   position: absolute;
@@ -313,14 +358,7 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   right: 0px;
 }
 
-.slide {
-  display: none; /* Hide all images by default */
-    width: 100%;
-}
 
-.slide-active {
-  display: block; /* Show the active image */
-}
 
 .skim-lead {
   font-size: 1.3rem;
@@ -1126,6 +1164,10 @@ line {
 
   .t-bolt-wrapper {
     display: block;
+  }
+
+  .t-bolt-wrapper, .slides-wrapper, .slide {
+    width: 100%;
   }
 
   
