@@ -276,6 +276,52 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 
 }
 
+/*.t-bolt-wrapper {
+  display: flex;
+  padding: 0;
+  margin: -10px -10px -30px -10px;
+  gap: 12px;
+}*/
+
+.t-bolt-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto 0 auto;
+    overflow: hidden;
+}
+
+.t-bolt-wrapper button {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--white);
+    top: 50%;
+    transform: translateY(-50%);
+    /* Add styling for background, color, padding, cursor etc. */
+}
+
+.t-bolt-wrapper img {
+  position: relative;
+}
+
+.t-bolt-wrapper #prev-slide {
+  left: 0px;
+}
+
+.t-bolt-wrapper #next-slide {
+  right: 0px;
+}
+
+.slide {
+  display: none; /* Hide all images by default */
+    width: 100%;
+}
+
+.slide-active {
+  display: block; /* Show the active image */
+}
+
 .skim-lead {
   font-size: 1.3rem;
   margin-top: 20px;
@@ -374,9 +420,13 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 
   margin-top: 20px;
   margin-bottom: 40px;
-  padding: 0px 24px 0 24px;
+  padding: 25px 24px 0 24px;
   border-radius: var(--small-border-radius);
   border: 1px dashed var(--light-grey);
+}
+
+.italic strong {
+  font-size: 1.2rem;
 }
 
 
@@ -1072,6 +1122,10 @@ line {
 
   .footer-wrapper {
       padding-bottom: 0px;
+  }
+
+  .t-bolt-wrapper {
+    display: block;
   }
 
   
