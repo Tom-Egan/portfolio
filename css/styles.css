@@ -366,6 +366,7 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   flex-direction: row;
   align-items: stretch;
   align-content: stretch;
+  margin-bottom: 100px;
 }
 
 .color-wrapper {
@@ -397,13 +398,33 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   color: var(--eggplant);
 }
 
+.eggplant-on-mustard {
+  background: var(--mustard);
+  color: var(--eggplant);
+}
+
+.mustard-on-eggplant {
+  background: var(--eggplant);
+  color: var(--mustard);
+}
+
+.steel-on-white {
+  background: var(--white);
+  color: var(--steel-red);
+}
+
+.white-on-steel {
+  background: var(--steel-red);
+  color: var(--white);
+}
+
 
 .ratings-wrapper {
   display: flex;
   width: 50%;
   flex-direction: column;
     padding-left: 30px;
-    margin-top: -16px;
+
 }
 
 .ratings-content {
@@ -442,21 +463,22 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 
 }
 
-.rating-chip {
-
-
-}
 
 .pass-chip span{
   background: green;
   color: var(--white);
 }
 
-.rating-chip span {
+.fail-chip span {
+  background: var(--steel-red);
+  color: var(--white);
+}
 
+.rating-chip span {
 width: 100%;
   line-height: 36px;
   padding: 6px 10px 8px 10px;
+
   border-radius: var(--small-border-radius);
 }
 
@@ -1359,7 +1381,6 @@ line {
   }
 
   .ratings-wrapper {
-    margin-top: 0px;
     padding-left: 0;
   }
 
