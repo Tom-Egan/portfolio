@@ -388,6 +388,27 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   padding-top: 60px;
 }
 
+.full-width-focus {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-top: -320px;
+  padding: 0;
+}
+
+.full-width-clear {
+  padding-top: 60px;
+}
+
+.full-width-focus img {
+  padding: 0;
+  margin: 0;
+}
+
+.overlap {
+  z-index: 2;
+}
+
 .eggplant-on-white {
   background: var(--eggplant);
   color: var(--white);

@@ -1,0 +1,599 @@
+/* A basic CSS Reset to remove default browser margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sand: #EFEDE7;
+  --dark-green: #1c403a;
+  --darkest-green: #1c2d2a;
+  --dark-green3: #19201F;
+  --eggplant: #3F2E42;
+  --mustard: #FFD655;
+  --steel-red: #CB4848;
+  --white: #fff;
+  --light-grey: #999;
+  --large-border-radius: 12px;
+  --small-border-radius: 6px;
+  --padding1: 20px;
+  --shadow1: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+;
+}
+
+/* Base styles applied to the entire page body */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Defines a font stack */
+  font-size: 16px; /* The default size for most browsers, which can be adjusted */
+  line-height: 1.5; /* Sets spacing between lines of text */
+  color: #333; /* Default text color */
+  background: var(--white);
+  background-color: var(--sand); /* Default background color */
+  margin: 0; /* Removes default body margin */
+}
+
+/* Styles for headings (h1-h6) */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; /* Ensures headings are bold */
+  margin-bottom: 0.5em; /* Adds space below headings */
+  margin-top: 0.5em;
+  line-height: 1.2; /* Tighter line spacing for headings */
+}
+
+/* Styles for paragraphs */
+p {
+  margin-top: 1.7em;
+  margin-bottom: 1em;
+}
+
+/* Styles for links */
+a {
+  color: #007bff; /* Sets link color */
+  text-decoration: none; /* Removes default underlines */
+}
+
+a:hover, a:focus {
+  text-decoration: underline; /* Adds underline on hover/focus for accessibility */
+}
+
+ul{
+  padding: var(--padding1);
+}
+
+.subpage-hero {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: var(--padding1);
+}
+
+.flex{
+  display: flex;
+  width: 100%;
+  gap: 50px;
+}
+
+.flex-tight {
+  gap: 0;
+}
+
+.flex-tight .col {
+  padding: 0;
+  border: none;
+}
+
+.flex-header {
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.col {
+  flex: 1; /* Makes both columns take up an equal share of the available space */
+  padding: 20px 30px;
+  /*border: 1px solid #000;*/
+  border-radius: var(--small-border-radius);
+  box-sizing: border-box; /* Ensures padding/border are included in the 50% width calculation */
+}
+
+.col-two-thirds {
+  flex: 2 1 0; /* shorthand for flex-grow, flex-shrink, flex-basis */
+}
+
+.col-one-third {
+  flex: 1 1 0; /* This item will take up 1 part of the available space */
+}
+
+.main-content h2 {
+  font-size: 3.8rem;
+}
+
+.main-content h3 {
+  font-size: 2.2rem;
+  margin-top: 40px;
+  margin-bottom: -10px;
+}
+
+.project-details section {
+  margin-top: -80px;
+}
+
+.project-details video {
+  width: 100%;
+}
+
+.project-details h3 {
+  padding-top: 30px;
+}
+
+.list-margin {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.list-indent {
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+
+.project-media {
+  position: relative;
+  max-width: 700px;
+  margin: 40px auto;
+  color: var(--sand);
+}
+
+.project-media img {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 30px auto;
+}
+
+
+.shadow-box {
+  box-shadow: var(--shadow1);
+  padding: 0px 40px 30px 40px;
+  background: var(--white);
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: var(--large-border-radius);
+}
+
+.shadow-box ul {
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+
+.section-marker {
+  padding: 0;
+  min-height: 100px;
+  text-align: center;
+}
+
+.section-bg-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #ccc;
+  border-radius: var(--small-border-radius);
+  text-align: center;
+}
+
+.section-marker span {
+  position: absolute;
+  z-index: 3;
+  font-size: 14rem;
+  /* Set the fill color to transparent */
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent; /* Standard property (less widely supported) */
+  
+  /* Define the stroke (outline) width and color */
+  -webkit-text-stroke-width: 5px;
+  text-stroke-width: 5px;
+  
+  -webkit-text-stroke-color: #fff; /* Use your desired color */
+  text-stroke-color: #fff;
+  
+  /* Ensure text is visible even if properties aren't fully supported */
+  color: #fff; 
+  opacity: 0.6;
+}
+
+.section-bg-tint {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 3;
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Optionally, centers horizontally as well */
+}
+
+.section-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/24my_exterior.jpg);
+}
+
+.section-bg-square {
+  height: 200px;
+  width: 200px;
+  background: #ccc;
+  position: absolute;
+  z-index: -1;
+}
+
+.square-left {
+  left: -40px;
+  top: -40px;
+}
+
+.square-right {
+  right: -40px;
+  top: -40px;
+}
+
+.content {
+  padding: var(--padding1);
+}
+
+.style-list {
+  list-style: none;
+  list-style-type: none;
+  margin-left: -20px;
+}
+
+.style-list li {
+  line-height: 1.4rem;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--dark-green);
+  padding: 6px 12px 6px 12px;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 120px auto 120px auto;
+}
+
+.caption {
+  position: relative;
+  font-style: italic;
+  font-size: 0.8rem;
+  top: -20px;
+}
+
+.tight-fix {
+  max-width: 700px;
+  margin: -120px auto 0 auto;
+}
+
+.tight-fix img, .tight-fix video{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tight-fix .caption {
+  top: 0px;
+}
+
+.video-caption {
+  top: 0;
+}
+
+.img-buffer {
+  margin-bottom: 50px;
+}
+
+.bare-list {
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+li {
+    line-height: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.shadow {
+  box-shadow: var(--shadow1);
+  border: none;
+}
+
+/* remove bullets, treat as stacked text */
+.bare-list, .bare-list ul {
+  list-style: none;
+  list-style-type: none;
+  font-size: 0.9rem;
+}
+
+.dark-bg {
+  background: var(--dark-green3);
+  border-radius: 60px;
+  margin:30px auto;
+  max-width: 1300px;
+}
+
+.dark-bg-content {
+  margin-top: -145px;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--sand);
+}
+
+.margin-fix {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.dark-bg-content h2 {
+  font-size: 8rem;
+  color: var(--sand);
+  margin-bottom: -20px;
+}
+
+.contents-list {
+  margin-left:0;
+  font-size: 1.5rem;
+  list-style: none;
+  list-style-type: none;
+}
+
+.contents-list li {
+  line-height: 2.2rem;
+}
+
+.header-block h3{
+  position: absolute;
+  margin-bottom: 20px;
+  padding: 8px 12px 12px 12px;
+  background: var(--dark-green);
+  border-radius: 3px;
+  color: var(--white);
+}
+
+.outcomes-list {
+  border-top: 2px dotted var(--dark-green);
+  padding-top: 40px;
+  margin-top: 29px;
+  margin-bottom: -8px;
+}
+
+.content-tight {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.accordion {
+  display: none;
+}
+
+
+  .show-mobile {
+    display: none;
+  }
+
+
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* collapse flexboxes into single column */
+  .flex, .flex-tight{
+    display: block;
+  }
+
+  .col {
+    margin-bottom: var(--padding1);
+  }
+
+  .col-tight {
+    margin-top: -40px;
+  }
+
+  .flex-tight .col {
+    margin-bottom: 0;
+  }
+
+  .contents-list {
+    font-size: 1.5rem;
+  }
+
+  .contents-accordion {
+    padding: 0;
+    border-radius: var(--small-border-radius);
+  }
+  /* Style the buttons that are used to open and close the accordion panel */
+  .accordion {
+    display: block;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 15px 30px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: var(--small-border-radius);
+  }
+
+  .contents-header, .contents-line {
+    display: none;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+
+  /* Style the accordion panel. Note: hidden by default */
+  .accordion-panel {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .contents-list {
+    padding: 15px;
+    margin-left: -15px;
+  }
+
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    margin-top: 2px;
+  }
+
+  .contents-list li {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+  .col-two-thirds{
+    padding: 12px;
+  }
+
+  .main-content {
+    margin: 50px auto -20px auto;
+
+  }
+
+  .main-content h2 {
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  .section-bg-wrapper {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    margin-bottom: -150px;
+    z-index: -1;
+  }
+
+  .square-right {
+    left: -40px;
+  }
+
+  .section-marker span {
+    font-size: 10rem;
+    text-align: right;
+    padding-right: 30px;
+  }
+
+  .section-bg-tint {
+    justify-content: right;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .show-mobile {
+    display: block;
+  }
+
+  .project-details {
+    padding: 40px 0;
+  }
+
+  .dark-bg {
+    margin: 0 auto 150px auto;
+  }
+
+  .dark-bg-content {
+    margin-top: -118px;
+    margin-bottom: 80px;
+  }
+
+  .dark-bg-content h2 {
+    font-size: 6rem;
+    color: var(--sand);
+    margin-bottom: -20px;
+  }
+
+  .tight-fix {
+    padding: 12px;
+  }
+
+  .project-details section {
+    margin-top: -200px;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .dark-bg-content {
+    margin-top: -105px;
+  }
+
+  .dark-bg-content h2 {
+    font-size: 5rem;
+    color: var(--sand);
+    margin-bottom: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dark-bg-content {
+    margin-top: -93px;
+    padding: 20px;
+  }
+
+  .dark-bg-content h2 {
+    font-size: 4rem;
+    color: var(--sand);
+    margin-bottom: -10px;
+  }
+}
+
+
+
+
+@media (max-width: 400px) {
+  .main-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .main-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .section-bg-wrapper {
+    margin-bottom: -120px;
+  }
+
+  .dark-bg-content {
+    margin-top: -93px;
+    padding: 20px;
+  }
+
+  .dark-bg-content h2 {
+    font-size: 4rem;
+    color: var(--sand);
+    margin-bottom: -10px;
+  }
+}
