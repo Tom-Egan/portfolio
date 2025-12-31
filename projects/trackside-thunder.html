@@ -22,8 +22,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Styles -->
-    <link rel="preload" href="../css/styles.css" as="style">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preload" href="../css/styles2.css" as="style">
+    <link rel="stylesheet" href="../css/styles2.css">
 
   <!-- Optional: Open Graph / social sharing -->
   <meta property="og:title" content="Trackside Thunder Brand Identity | Tom Egan">
@@ -78,652 +78,441 @@
   <!-- load header component -->
   <div data-include="../components/header.html"></div>
 
-  <main aria-labelledby="page-title">
-    <!-- page content -->
-    <div class="home-hero-wrapper">
-        <div class="trackside-bg"></div>
-        <div class="subpage-hero-overlay"></div>
-        
-        <h1 id="page-title">Trackside Thunder</h1>
-    </div>
+  <main aria-labelledby="project-name">
+    <!-- hero -->
+    <section class="subpage-hero">
+        <h1 id="project-name">L560 Range Rover Velar</h1>
+    </section> <!-- hero -->
 
-    <div class="clear-hero"></div>
 
-    <div class="project-details-wrapper">
-        <section aria-labelledby="project-snapshot" class="project-content snapshot-block">
+    <!-- project details -->
+    <div data-include="../components/project_details_trackside.html"></div>
+
+    <!-- row 1 -->
+    <div id="problem" class="content main-content flex">
+
+        <!-- hidden section on desktop, show on mobile so that the image appears above the section header -->
+        <!-- section marker and image -->
+        <section class="col col-one-third section-marker show-mobile">
+            <div class="section-bg-wrapper">
+                
+                <div class="section-bg-tint">
+                    <span>1</span>
+                </div>
+                <div class="section-bg tt-bg-1"></div>
+                <div class="section-bg-square square-left"></div>
+            </div>
+        </section>
+
+        <section id="intro" class="col col-two-thirds">
+            <h2>Introduction</h2>
+
+            <p><strong>Trackside Thunder</strong> is an upcoming podcast, expected to launch in 2026. The name gives a nod to both the podcast’s subject matter, dirt track racing, and the show’s host — Thunder Jones, announcer for River City Speedway in St. Helens, Oregon.</p>
+
+            <p>Starting from scratch, the goal was to create a brand that felt established from Day One — credible enough to stand alongside long-running motorsports media, while remaining flexible enough to grow into something bigger.</p>
+
+            <ul class="style-list italic">
+                <li><strong>Portfolio relevancy: </strong>While this project focused on brand identity rather than product UX, it required the same core skills that apply to UX design: systems thinking, scalability, constraint-based decision making, and designing for long-term use across multiple platforms.</li>
+            </ul>
+        </section>
+
+        <!-- section marker and image -->
+        <!-- hidden section on mobile, so that the images does not appear below the section header -->
+        <section class="col col-one-third section-marker hide-mobile">
+            <div class="section-bg-wrapper">
+                
+                <div class="section-bg-tint">
+                    <span>1</span>
+                </div>
+                <div class="section-bg tt-bg-1"></div>
+                <div class="section-bg-square square-left"></div>
+            </div>
+        </section>
+    </div> <!-- row 1 -->
+
+    <!-- row 2 -->
+    <div id="objective" class="content main-content flex">
+        <!-- contents -->
+        <section class="col col-one-third section-marker">
+            <div class="section-bg-wrapper">
+                
+                <div class="section-bg-tint">
+                    <span>2</span>
+                </div>
+                <div class="section-bg tt-bg-2"></div>
+                <div class="section-bg-square square-right"></div>
+            </div>
+        </section>
+        <!-- contents -->
+        <section id="definition" class="col col-two-thirds">
+            <h2 id="objective-section">Definition</h2>
+
+            <ul class="style-list italic tldr-margin">
+                <li><strong>TL;DR: </strong>This section establishes a set of guidelines to keep the project focused, provide design direction, and ensure design decisions are tied back to overaching goals.</li>
+            </ul>
+
+            <h3>Design Goals</h3>
+            <ul class="h3-list-margin">
+                <li><strong>Recognizable: </strong>Enable the brand to stand out in a memorable way and attracts attention</li>
+
+                <li><strong>Scalable and modular: </strong>Flexibility to adapt to any platform and context, while maintaining brand recognition </li>
+
+                <li><strong>Brand depth: </strong>Visual components that can be used independently or arranged into multiple configurations and flavors</li>
+
+                <li><strong>Ready for success: </strong>Establish a professional presence at launch, equipped with the tools to grow once the podcast launches</li>
+            </ul>
+
             
-            <div class="project-sidebar">
-                <h2 id="project-snapshot" class="tldr-header">Project Snapshot (TL;DR)</h2>
-                <div class="project-info-block">
-                    
-                    <h3>Overview</h3>
-                    <ul>
-                        <li><strong>Project: </strong> Trackside Thunder Brand Identity</li>
-                        <li><strong>Role: </strong> Designer</li>
-                        <li><strong>Team: </strong> N/A, solo project</li>
-                        <li><strong>Timeframe: </strong> 2025</li>
-                        <li><strong>Industry: </strong> Motorsport Podcast</li>
-                    </ul>
-                </div>
-
-                <div class="project-info-block">
-                    <h3>Outcomes</h3>
-                    <ul>
-                        <li>Modular brand design system</li>
-                        <li>Podcast cover and episode art</li>
-                        <li>Branded merch concepts</li>
-                        <li>Enabled the brand to grow into something larger from Day 1</li>
-                    </ul>
-                </div>
-
-                
-            </div>
         </section>
-
-        <section aria-labelledby="contents" class="project-content">
-            <div class="project-main ">
-                <div class="section-header">
-                    <h2 id="contents" class="multi-line">Contents</h2>
-
-                    <span class="header-dash">///</span>
-                    <div class="header-line"></div>
-                </div>
-
-                <div class="section-content table-of-contents">
-                    <ol>
-                        <li><a href="#section-intro">Introduction</a></li>
-                        <li><a href="#section-define">Design Definition</a></li>
-                        <li><a href="#section-primary-logo">Primary Logo</a></li>
-                        <li><a href="#section-logo-variants">Logo Variants</a></li>
-                        <li><a href="#section-design-breakdown">Design Breakdown</a></li>
-                        <li><a href="#section-brand-elements">Brand Elements</a></li>
-                        <li><a href="#section-brand-in-action">The Brand in Action</a></li>
-                        <li><a href="#section-wrap-up">Wrap-up</a></li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section aria-labelledby="project-intro" class="project-content">
-            <div id="section-intro" class="project-main ">
-                <div class="section-header">
-                    <h2 id="project-intro">Introduction</h2>
-
-                    <span class="header-dash">///</span>
-                    <div class="header-line"></div>
-                </div>
-
-                <div class="section-content">
-                    <div class="italic">
-                    <p><strong>Portfolio Relevancy</strong></p>
-
-                    <p>
-                        While this project focused on brand identity rather than product UX, it required the same core skills that apply to UX design:
-                        systems thinking, scalability, constraint-based decision making, and designing for long-term use across multiple platforms.
-                      </p>
-
-                      <p>
-                        The outcome was not just a single-use logo, but a flexible visual system designed to support future growth, multiple formats,
-                        and consistent recognition — similar to how a design system is the backbone of a digital product.
-                      </p>
-
-                    </div>
-
-                    <p><strong>Trackside Thunder</strong> is an upcoming podcast, expected to launch in 2026. The name gives a nod to both the podcast’s subject matter, dirt track racing, and the show’s host — Thunder Jones, announcer for River City Speedway in St. Helens, Oregon.</p>
-
-                    <p>Starting from scratch, the goal was to create a brand that felt established from Day One — credible enough to stand alongside long-running motorsports media, while remaining flexible enough to grow into something bigger.</p>
-                </div>
-            </div>
-        </section>
-
-        <section aria-labelledby="definition-phase" class="project-content">
-            <div id="section-define" class="project-main">
-                <div class="section-header">
-                    <h2 id="definition-phase" class="multi-line">Define</h2>
-
-                    <span class="header-dash">///</span>
-                    <div class="header-line"></div>
-                </div>
-
-                <div class="section-content branding-content">
-                    <h3>Design Goals</h3>
-                    <p class="skim-lead">Outcomes we want to achieve</p>
-                    <ul>
-                        <li><strong>Recognizable: </strong>Enable the brand to stand out in a memorable way and attracts attention</li>
-                        <li><strong>Scalable and modular: </strong>Flexibility to adapt to any platform and context, while maintaining brand recognition </li>
-                        <li><strong>Brand depth: </strong>Visual components that can be used independently or arranged into multiple configurations and flavors</li>
-                        <li><strong>Ready for success: </strong>Establish a professional presence at launch, equipped with the tools to grow from Day One</li>
-                    </ul>
-
-                    <h3>Gameplan</h3>
-                    <p class="skim-lead">How we achieve those goals</p>
-                    <ul>
-                        <li><strong>Be unique: </strong>Avoid generic podcast imagery, such as a microphone, and create something distinct and identifiable</li>
-                        <li><strong>Future proof: </strong>Focus more towards clean and timeless design for brand longevity and stability</li>
-                        <li><strong>Express personality: </strong>This isn’t a tech company, lean into the energy and charisma of dirt track racing</li>
-                        <li><strong>Merch-minded: </strong>Easily translate to a variety of clothing and  promotional merchandise</li>
-                    </ul>
-
-                    <h3>Mind Mapping</h3>
-                    <p class="skim-lead">Identifying high level themes, attributes, and other words/phrases associated with the brand.</p>
-
-                    <p>
-                      This exercise helped narrow the brand keywords toward <strong>controlled chaos</strong> and <strong>storytelling</strong>, which later influenced the design direction of the wordmark and icon. 
-                    </p>
-
-                    <img loading="lazy" src="../img/trackside_thunder/tt_mindmap.svg" alt="Mind map diagram highlighting keywords that were explored to decide on a design direction.">
-                </div>
-            </div>
-
-        </section>
-        
-
-        <section aria-labelledby="primary-logo" class="project-content">
-            <div id="section-primary-logo" class="project-main">
-                <div class="section-header">
-                    <h2 id="primary-logo" class="multi-line">Primary Logo</h2>
-
-                    <span class="header-dash">///</span>
-                    <div class="header-line"></div>
-                </div> <!-- section header -->
-
-                <div class="section-info card-spacer">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Vertical Lockup</h3>
-
-                        <p>
-                          The vertical lockup serves as the primary mark for social media, podcast platforms, and square aspect ratio applications.
-                        </p>
-                    </div>
-
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_primary_vert.svg" alt="Image of the Trackside Thunder logo on a purple background, in a vertical lockup">
-
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_primary_vert_colors.svg" alt="Four instances of the Trackside Thunder logo on a various background colors, in a horizontal lockup">
-
-                     <span class="caption">Stress test: primary logo placed on variety of background colors, including black-and-white versions.</span>
-                </div> <!-- section info -->
-
-                <div class="section-info">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Horizontal Lockup</h3>
-
-                        <p>
-                          The horizontal lockup  accommodates wider aspect ratio layouts such as banners, merchandise, and future web use, maintaining legibility at smaller sizes.
-                        </p>
-                    </div>
-
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_primary_horz.svg" alt="Image of the Trackside Thunder logo on a purple background, in a vertical lockup">
-
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_primary_horz_colors.svg" alt="Four instances of the Trackside Thunder logo on a various background colors, in a horizontal lockup">
-                    <span class="caption">Stress test: primary logo placed on variety of background colors, including black-and-white versions.</span>
-                </div> <!-- section info -->
-
-
-              
-            </div> <!-- project main -->
-        </section>
-
-         <section aria-labelledby="logo-variants" class="project-content">
-            <div id="section-logo-variants" class="project-main">
-                <div class="section-header">
-                    <h2 id="logo-variants" class="multi-line">Logo Variants</h2>
-
-                    <span class="header-dash">///</span>
-                    <div class="header-line"></div>
-                </div>
-
-                <div class="section-info card-spacer">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Tagline</h3>
-
-                        <p>
-                          Placeholder description for the tagline logo variant
-                        </p>
-                    </div>
-
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_tagline.svg" alt="Image of two logo variants (vertical and horizontal) with an included tagline at the bottom">
-                </div> <!-- section info -->
-
-                <div class="section-info card-spacer">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Pulse Patch</h3>
-
-                        <p>
-                          A true, 1:1 square aspect ratio, the Pulse Patch offers versatility in a compact package with a classic and established feel. The subtle design cues of radiating lines hint at both the sound waves of podcast audio and the echoing sounds from the announcer's P.A. system. The Pulse Patch was design with marketing and branded merch in mind—suitable  for shirts, hats, stickers, and more.
-                        </p>
-                    </div>
-
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_pulse_patch.svg" alt="Image of two logo variants (vertical and horizontal) with an included tagline at the bottom">
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_pulse_patch2.svg" alt="Four instances of the Trackside Thunder Pulse Patch logo variant on a various background colors">
-                    <span class="caption">Stress test: Pulse Patch placed on variety of background colors, including black-and-white versions.</span>
-
-                    <p class="skim-lead skim-lead-margin">Fully modular: swappable brand elements</p>
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_pulse_patch3.svg" alt="Image displaying three different visual treatments to the Pulse Patch variant, swapping out the flag icon for the T-Bolt icon">
-                    <span class="caption">Sub variants with different brand assets in the center cap</span>
-                </div> <!-- section info -->
-
-                <div class="section-info card-spacer">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Bullring Badge</h3>
-
-                        <p>
-                          The extended version of the primary logo with additional visual elements, including the racetrack border that surrounds and defines the badge's shape. 
-                        </p>
-                    </div>
-
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_bullring_badge.svg" alt="Image of an enclosed badge style logo variant">
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_bullring_badge2.svg" alt="Image of an two enclosed badge style logo variants on different colored backgrounds">
-                    
-                    
-                </div> <!-- section info -->
-        </section>
-
-        <section aria-labelledby="design-breakdown" class="project-content">
-            <div id="section-design-breakdown" class="project-main">
-                <div class="section-header">
-                    <h2 id="design-breakdown" class="multi-line">Design Breakdown</h2>
-
-                    <span class="header-dash">///</span>
-                    <div class="header-line"></div>
-                </div> <!-- section header -->
-
-                <div class="section-info card-spacer">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Icon</h3>
-
-                        <p>
-                          The brand’s primary visual identifier. Balancing the concepts of podcast storytelling and the controlled chaos of dirt track racing, the icon represents the core theme of the podcast—conversations about racing.
-                        </p>
-                    </div>
-
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_icon_detail.svg" alt="Image of the Trackside Thunder icon, highlighting the design concept of merging a speech bubble, checkered flag, and lightning bolt together">
-
-                    <p class="skim-lead skim-lead-margin">Adjustments for Context & Usage</p>
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_icon_detail2.svg" alt="Image showing the design differences between the icon made for dark theme UI usage and light theme UI usage">
-                    <span class="caption">Emphasis was given to properly inverting the icon, ensuring the flag is always filled-in white for both use cases</span>
-
-                    <p class="skim-lead skim-lead-margin">Early Concepts</p>
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_early_concepts.svg" alt="Image showing multiple early concepts of the icon design">
-
-                     
-                </div> <!-- section info -->
-
-                <div class="section-info card-spacer">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Wordmark</h3>
-
-                        
-                    </div>
-
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_wordmark.svg" alt="Image of the Trackside Thunder wordmark, with callouts displayed relating to the annotations below.">
-
-                    <ul>
-                        <li><strong>(1): </strong>Typeface: Molot—Strong, bold, and chunky to make a statement and establish a presence</li>
-                        <li><strong>(2): </strong>Custom, stylized T with integrated lightning bolt (The T-Bolt)</li>
-                        <li><strong>(3): </strong>-15% bend brings additional character and complements the curves in the brand mark’s waving checkered flag</li>
-                        <li><strong>(4): </strong>Sweeping, tapered underline adds a sense of motion, tying into the racing theme</li>
-                        <li><strong>(5): </strong>Angled cuts in the letterforms pairs with the jagged edges of the lightning bolts</li>
-                    </ul>
-
-                    <h4>T-Bolt Construction</h4>
-                    <p>A step-by-step look at how the T-Bolt icon was made, based off the original letter's geogeomtry.</p>
-
-                    <div class="t-bolt-wrapper">
-                        <div class="slides-wrapper" id="slidesWrapper">
-                        <img class="slide slide-active" loading="lazy" src="../img/trackside_thunder/tt_tbolt_1.svg" alt="Imaging detailing Step 1 of how the T-Bolt submark is constructed">
-
-                        <img class="slide" loading="lazy" src="../img/trackside_thunder/tt_tbolt_2.svg" alt="Imaging detailing Step 2 of how the T-Bolt submark is constructed">
-
-                        <img class="slide" loading="lazy" src="../img/trackside_thunder/tt_tbolt_3.svg" alt="Imaging detailing Step 3 of how the T-Bolt submark is constructed">
-
-                        <img class="slide" loading="lazy" src="../img/trackside_thunder/tt_tbolt_4.svg" alt="Imaging detailing Step 4 of how the T-Bolt submark is constructed">
-
-                        <img class="slide" loading="lazy" src="../img/trackside_thunder/tt_tbolt_5.svg" alt="Imaging detailing Step 5 of how the T-Bolt submark is constructed">
-
-                        <img class="slide" loading="lazy" src="../img/trackside_thunder/tt_tbolt_6.svg" alt="Imaging detailing Step 6 of how the T-Bolt submark is constructed">
-
-                        <img class="slide" loading="lazy" src="../img/trackside_thunder/tt_tbolt_7.svg" alt="Imaging detailing Step 7 of how the T-Bolt submark is constructed">
-
-                        <img class="slide" loading="lazy" src="../img/trackside_thunder/tt_tbolt_8.svg" alt="Imaging detailing Step 8 of how the T-Bolt submark is constructed">
-
-                        <img class="slide" loading="lazy" src="../img/trackside_thunder/tt_tbolt_9.svg" alt="Imaging detailing Step 9 of how the T-Bolt submark is constructed">
-                    </div>
-
-                        <button id="prev-slide">❮</button>
-                        <button id="next-slide">❯</button>
-                    </div>
-
-                    <!-- Pagination Dots -->
-                    <div class="dots-container">
-                      <span class="dot dot-active" onclick="currentSlide(0)"></span>
-                      <span class="dot" onclick="currentSlide(1)"></span>
-                      <span class="dot" onclick="currentSlide(2)"></span>
-                      <span class="dot" onclick="currentSlide(3)"></span>
-                      <span class="dot" onclick="currentSlide(4)"></span>
-                      <span class="dot" onclick="currentSlide(5)"></span>
-                      <span class="dot" onclick="currentSlide(6)"></span>
-                      <span class="dot" onclick="currentSlide(7)"></span>
-                      <span class="dot" onclick="currentSlide(8)"></span>
-                    </div>
-                
-                </div> <!-- section info -->
-                <div class="section-info card-spacer">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Submark</h3>
-
-                        <p>
-                          An abbreviated version of the wordmark, the T-Bolt is the brand’s visual identity reduced down to it’s most minimalist form. This is intended to be used in a support/utility role within the identity system, with the checkered flag icon serving as the main visual identifier.</p>
-                    </div>
-
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_submark.svg" alt="Image of the Trackside Thunder T-Bolt submark">
-
-                    
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_submark2.svg" alt="Image of the Trackside Thunder T-Bolt submark">
-
-                    <p class="skim-lead skim-lead-margin">Variants: Reusing established design patterns for consistency and flexibility in the visual system.</p>
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_submark3.svg" alt="Image showing the design differences between the icon made for dark theme UI usage and light theme UI usage">
-                     
-                </div> <!-- section info -->
-            </div> <!-- project main -->
-        </section>
-
-        <section aria-labelledby="brand-elements" class="project-content overlap">
-            <div id="section-brand-elements" class="project-main">
-                <div class="section-header">
-                    <h2 id="brand-elements" class="multi-line">Brand Elements</h2>
-
-                    <span class="header-dash">///</span>
-                    <div class="header-line"></div>
-                </div>
-
-                <div class="section-info card-spacer">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Brand Colors</h3>
-
-                        <p>
-                          Connecting to the thunder name, the brand colors pull inspiration from dark, stormy skies and thunderstorm scenes.
-                        </p>
-                    </div>
-                </div> <!-- section info -->
-            </div> <!-- project main -->
-        </section>
-    </div> <!-- main -->
-
-    <div class="full-width-focus">
-                    <img class="img-margin" loading="lazy" src="../img/trackside_thunder/tt_colors.svg" alt="Image of Trackside Thunder's three brand colors: mustard, eggplant, and steel red.">
     </div>
-     <div class="project-details-wrapper full-width-clear">
-        <section class="project-content">
-            <div id="section-brand-elements" class="project-main">
-                <div class="section-info card-spacer">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Contrast Ratings</h3>
+    <!-- row 2 -->
+    <div id="objective" class="content main-content flex">
+        <!-- contents -->
+        <section class="col col-one-third">
+        </section>
+        <!-- contents -->
+        <section id="definition" class="col col-two-thirds row-fix">
+            <h3>Gameplan</h3>
 
-                        <p>
-                          Factoring usability, accessibility, and future web applications into the design decisions, all brand colors were carefully selected to ensure core combinations met the minimum WCAG AA Level, AAA in almost all cases.
-                        </p>
-                    </div>
+            <ul class="h3-list-margin">
+                <li><strong>Be unique: </strong>Avoid generic podcast imagery, such as a microphone, and create something distinct and identifiable</li>
 
-                    <h4> Eggplant & White</h4>
-                    <div class="contrast-main">
-                    <div class="color-wrapper">
-                        <div class="contrast-color eggplant-on-white">
-                            <p>12.49</p>
-                        </div>
+                <li><strong>Future proof: </strong>Focus more towards clean and timeless design for brand longevity and stability</li>
 
-                        <div class="contrast-color white-on-eggplant">
-                            <p>12.49</p>
-                        </div>
+                <li><strong>Express personality: </strong>This isn’t a tech company, lean into the energy and charisma of dirt track racing</li>
 
-                        
-                    </div>
-                    <div class="ratings-wrapper">
-                            <div class="ratings-content ratings-border">
-                                <h5>Small Text</h5>
+                <li><strong>Merch-minded: </strong>Racing offers large marketing opportunities; easily translate to  clothing and promotional merchandise that could be showcased in a variety of ways at the racetrack</li>
+            </ul>
 
-                                <div class="ratings-details">
-                                    <p>WCAG AA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                                <div class="ratings-details">
-                                    <p>WCAG AAA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ratings-content ratings-border">
-                                <h5>Large Text</h5>
+            <h3>Mind Mapping</h3>
 
-                                <div class="ratings-details">
-                                    <p>WCAG AA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                                <div class="ratings-details">
-                                    <p>WCAG AAA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ratings-content">
-                                <h5>Web/UI Components</h5>
+            <ul class="style-list italic h3-list-margin">
+                <li><strong>Purpose: </strong> By mapping out keywords and attributes associated to the brand/subject matter, design concepts can be connected back to a strategy, grounding design decisions to a targeted theme. </li>
+            </ul>
 
-                                <div class="ratings-details">
-                                    <p>WCAG AA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- contrast main -->
+            <p class="margin-10">
+              This exercise helped narrow the brand keywords toward <strong>controlled chaos</strong> and <strong>storytelling</strong>, which later influenced the design direction of the wordmark and icon. 
+            </p>
 
-                    <h4> Eggplant & Mustard</h4>
-                    <div class="contrast-main">
-                    <div class="color-wrapper">
-                        <div class="contrast-color mustard-on-eggplant">
-                            <p>8.93</p>
-                        </div>
+           <img loading="lazy" src="../img/trackside_thunder/tt_mindmap.svg" alt="Mind map diagram highlighting keywords that were explored to decide on a design direction.">
 
-                        <div class="contrast-color eggplant-on-mustard">
-                            <p>8.93</p>
-                        </div>
+            
+        </section>
+    </div>
 
-                        
-                    </div>
-                    <div class="ratings-wrapper">
-                            <div class="ratings-content ratings-border">
-                                <h5>Small Text</h5>
 
-                                <div class="ratings-details">
-                                    <p>WCAG AA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                                <div class="ratings-details">
-                                    <p>WCAG AAA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ratings-content ratings-border">
-                                <h5>Large Text</h5>
+<div id="logo" class="dark-bg trackside-dark">
+    <div id="solutions" class="content content-tight main-content flex">
+        <!-- contents -->
+        <section class="col dark-bg-content">
+            <h2 id="solutions-section">The Logo</h2>
 
-                                <div class="ratings-details">
-                                    <p>WCAG AA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                                <div class="ratings-details">
-                                    <p>WCAG AAA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ratings-content">
-                                <h5>Web/UI Components</h5>
-
-                                <div class="ratings-details">
-                                    <p>WCAG AA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- contrast main -->
-
-                    <h4> Steel Red & White</h4>
-                    <div class="contrast-main">
-                    <div class="color-wrapper">
-                        <div class="contrast-color white-on-steel">
-                            <p>4.61</p>
-                        </div>
-
-                        <div class="contrast-color steel-on-white">
-                            <p>4.61</p>
-                        </div>
-
-                        
-                    </div>
-                    <div class="ratings-wrapper">
-                            <div class="ratings-content ratings-border">
-                                <h5>Small Text</h5>
-
-                                <div class="ratings-details">
-                                    <p>WCAG AA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                                <div class="ratings-details">
-                                    <p>WCAG AAA</p>
-                                    <div class="rating-chip fail-chip">
-                                        <span>Fail</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ratings-content ratings-border">
-                                <h5>Large Text</h5>
-
-                                <div class="ratings-details">
-                                    <p>WCAG AA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                                <div class="ratings-details">
-                                    <p>WCAG AAA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ratings-content">
-                                <h5>Web/UI Components</h5>
-
-                                <div class="ratings-details">
-                                    <p>WCAG AA</p>
-                                    <div class="rating-chip pass-chip">
-                                        <span>Pass</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- contrast main -->
-
-                    
-
-                </div> <!-- section info -->
+            
 
         </section>
-
-        <section aria-labelledby="brand-in-action" class="project-content">
-            <div id="section-brand-in-action" class="project-main">
-                <div class="section-header">
-                    <h2 id="brand-in-action" class="multi-line">The Brand in Action</h2>
-
-                    <span class="header-dash">///</span>
-                    <div class="header-line"></div>
-                </div>
-
-                <div class="section-info card-spacer">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Placeholder</h3>
-
-                        <p>
-                          Placeholder description for the tagline logo variant
-                        </p>
-                    </div>
-                </div> <!-- section info -->
-        </section>
-
-
-
-        <section aria-labelledby="outcomes-learnings" class="project-content">
-          <div id="section-wrap-up" class="project-main">
-            <div class="section-header">
-              <h2 id="outcomes-learnings" class="multi-line">Wrap-up</h2>
-              <span class="header-dash">///</span>
-              <div class="header-line"></div>
-            </div>
-
-            <div class="section-info">
-                    <div class="project-info-block title-only">
-                        
-                        <h3>Outcomes</h3>
-                    </div>
-
-                     <ul>
-                    <li>Created a flexible brand system rather than a single-use logo</li>
-                    <li>Designed with real-world constraints and applications in mind, e.g. merch production and platform variability</li>
-                    <li>Reinforced my approach to design systems beyond traditional UX deliverables</li>
-                  </ul>
-                </div> <!-- section info -->
-
-                
-          </div>
-        </section>
-
-        
-
 
     </div>
 
-    <!-- load resume component -->
-    <div data-include="../components/resume_2nd_level.html">
+    <section class="col logo-wrapper">
+         <img class="img-contain" loading="lazy" src="../img/trackside_thunder/tt_primary_vert.svg" alt="Image of the Trackside Thunder logo on a purple background, in a vertical lockup">
+
+         <img class="img-contain" loading="lazy" src="../img/trackside_thunder/tt_primary_vert_colors.svg" alt="Four instances of the Trackside Thunder logo on a various background colors, in a horizontal lockup">
+    </section>
+
+
+    <div class="content project-details main-content flex">
+        <!-- contents -->
+        <section aria-labelledby="problem-space" class="col">
+
+
+
+            <div class="shadow-box">
+
+                <h3 id="problem-space">Problem Space</h3>
+                
+                <p>The first major problem to address was sorting out what and where everything would go into the sidebar, which boiled down to: the number of elements that needed to be added, exceeded the available space. Once  placement of Rear Defrost and Max Defrost (legal requirements) was  accounted for, many back-and-forth dicussions with manangement and stakeholders of which features to prioritize unfolded.</p>
+
+            </div>
+
+            <div class="project-media">
+
+                <img loading="lazy" src="../img/icp_delete_sidebar_callout.png" alt="Image of the vehicle's touchscreen, highlighting the area of the screen which will be referenced in this section">
+                            
+                <img loading="lazy" src="../img/icp_delete_sidebar.svg" alt="Wireframes showing the sidebar content differences from before and after the 24MY update">
+            </div>
+        </section>
     </div>
+
+    <div class="content content-tight project-details main-content flex">
+        <!-- contents -->
+        <section aria-labelledby="contextual-buttons" class="col">
+
+            <div class="shadow-box">
+
+                <h3 id="contextual-buttons">Contextual Buttons</h3>
+                <ul>
+                   <li><strong>Problem: </strong>Available space in the sidebar was insufficient for all required controls.</li>
+
+                    <li><strong>Solution: </strong>Introduced context-dependent buttons based on system state.</li>
+
+                    <li><strong>Impact: </strong>Enabled access to four high-priority features using only two sidebar positions, without increasing interaction depth.</li>
+                </ul>
+            </div>
+
+            <div class="project-media">
+
+                <p>To address space constraints, we introduced context-dependent buttons that adapted based on system state. One example was consolidating the previously separate Home and Apps buttons into a single contextual control.</p>
+
+                <ul>
+                    <li>If the user is on the home screen, display a shortcut button to open the App Drawer.</li>
+
+                    <li>If the user is not on the home screen, display a shortcut button to return Home.</li>
+                </ul>
+
+                <p class="img-buffer">Note: The App Drawer could still be accessed via swiping from the left edge as a secondary method (Not quite as discoverable as the dedicated button, but still an available option for the user).</p>
+
+                <img loading="lazy" src="../img/icp_delete_homebtn.svg" alt="Wireframes showing the state change to the sidebar button when the user is on the home screen and when the user is not">
+
+                <p class="img-buffer">This approach was extended to the Phone shortcut. With Phone  deprioritized, left without a permanent sidebar element, two edge cases still required attention: returning to active calls and returning to CarPlay or Android Auto. In these states, the Media button temporarily became a shortcut back to the active call or phone projection interface. Because call audio was already using the cabin speakers, Media access was unnecessary at that moment (i.e. show the user the right thing at the right time). This allowed four high-priority features to be served through two sidebar positions, freeing additional space without increasing interaction depth.</p>
+
+                <img loading="lazy" src="../img/icp_delete_activecall.svg" alt="Wireframes showing the state change to the sidebar button when the user is on an active phone call">
+            </div>
+        </section>
+    </div>
+
+    <div class="content content-tight project-details main-content flex">
+        <!-- contents -->
+        <section aria-labelledby="combo-defrost-button" class="col">
+
+            <div class="shadow-box">
+
+                <h3 id="combo-defrost-button">Combo Defrost Button</h3>
+                <ul>
+                    <li><strong>Problem: </strong>Available space in the sidebar was insufficient for all required controls, one-touch activation of Rear Defrost legally required.</li>
+
+                    <li><strong>Solution: </strong>Combine two related functions into a single switch, toggling between multiple modes.</li>
+
+                    <li><strong>Impact: </strong>Legal compliance maintained and enabled dual activation in a single press.</li>
+                </ul>
+            </div>
+
+            <div class="project-media">
+
+                <p>Another example of where creative problem solving became necessary was with the case of Rear Defrost and Heated Windshield. Functionally, these two features are related, in the sense that they both are turning on some sort of heated element in the glass. Given that, and the limited space in the sidebar, these two features seemed like logical candidates to pair together into one button. However, the legal requirement that was given to us—at any point, Rear Defrost must be able to be turned on within one press on the screen—presented a different challenge.</p>
+
+                <p>Several concepts were explored and ultimately rejected due to legal constraints requiring one-touch activation of Rear Defrost. The chosen direction was a toggle switch that cycles through four different states, while still complying with  the Rear Defrost legal requirement. Our solution also created a beneficial byproduct: activating two controls on at once, in a single button press.</p>
+
+                <p class="img-buffer">To reduce ambiguity, visual indicators were added to clearly distinguish front and rear control  states and to signal that this control behaved differently from standard sidebar navigation. The interaction also adapted based on vehicle trim level—defaulting to a simple Rear Defrost toggle when Heated Windshield was not equipped.</p>
+
+                <img loading="lazy" src="../img/icp_delete_defrost.svg" alt="Wireframes showing all four states of the combo defrost button">
+            </div>
+        </section>
+    </div>
+
+    <div class="content content-tight project-details main-content flex">
+        <!-- contents -->
+        <section aria-labelledby="overlays" class="col">
+
+            <div class="shadow-box">
+
+                <h3 id="overlays">Overlays</h3>
+                <ul>
+                    <li><strong>Problem: </strong>Broader feature sets needed quick access and to be globally accessible from any screen.</li>
+
+                    <li><strong>Solution: </strong>Use sidebar buttons as entry points to open an overlay, to allow for full-screen display.</li>
+
+                    <li><strong>Impact: </strong>Climate, volume, and drive controls accessible from any screen, reduced visual clutter during active overlays.</li>
+                </ul>
+            </div>
+
+            <div class="project-media">
+
+                <p class="img-buffer">Using sidebar buttons as overlay entry points introduced the risk of mixed interaction models within the same visual grouping. This was mitigated by clearly delineating interaction zones and reinforcing behavior through distinct visual treatments and affordances.</p>
+
+                <img loading="lazy" src="../img/icp_delete_overlay1.png" alt="Annotated screenshot highlighting the visual cues that were added to the Overlay buttons">
+
+                <p class="img-buffer">Once an overlay is launched, the sidebars change to a more focused, empty state, removing unnecessary visual clutter. This was done to help communicate the context switch of having the overlay open, as well as provide the user a clearer visual path to their exit route (close button). One caveat to this stategy comes back to the previously mentioned legal requirements. Since one-touch activation of Rear Defrost and Max Defrost are required at all times, those two buttons needed to remain in place.</p>
+
+                <img loading="lazy" src="../img/icp_delete_overlay2.png" alt="Annotated screenshot highlighting how the sidebar changes states when an overlay is opened.">
+                <span class="caption">[Screenshot from "Understanding the Pivi Pro Infotainment System | Land Rover Naperville | Naperville, IL" by Land Rover Naperville (2024), YouTube, 4:11]</span>
+            </div>
+        </section>
+    </div>
+
+    <div class="content content-tight project-details main-content flex">
+        <!-- contents -->
+        <section aria-labelledby="quick-slider" class="col">
+
+            <div class="shadow-box">
+
+                <h3 id="quick-slider">The Quick Slider</h3>
+                <ul>
+                    <li><strong>Problem: </strong>The new system lacked the ability for quick, large scale adjustments and quickly reach min/max values.</li>
+
+                    <li><strong>Solution: </strong>Add a vertical drag interaction to select sidebar buttons.</li>
+
+                    <li><strong>Impact: </strong>Rapid, low-precision adjustments supported. Interaction model reused across climate, drive modes, and volume</li>
+                </ul>
+            </div>
+
+            <div class="project-media">
+
+                <p class="img-buffer">Introducing a secondary drag interaction to the overlay buttons enabled rapid adjustments, allowing for looser, less precise inputs from the user.  Visual feedback reinforced state changes without requiring explicit confirmation.</p>
+
+                <img loading="lazy" src="../img/icp_delete_slider1.svg" alt="Static wireframe version showing the state change of a blue background when the climate button is dragged down">
+
+                <span class="caption img-buffer">
+                The sidebar background provides blue feedback for additional confirmation when the selected temperature is in the lower/colder ranges.
+                </span>
+
+                <img loading="lazy" src="../img/icp_delete_slider2.svg" alt="Static wireframe version showing the state change of a red background when the climate button is dragged up">
+
+                <span class="caption img-buffer">
+                The sidebar background provides red feedback for additional confirmation when the selected temperature is in the upper/warmer ranges.
+                </span>
+
+                <video muted controls autoplay loop src="../img/icp_delete_quickslider.mp4">Your browser does not support the video tag.</video>
+
+                <span class="caption video-caption">[Clip from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 6:54-7:05]</span>
+
+                <p class="img-buffer">To promote discoverability, a visual affordance—the Rail—was added to suggest a constrained drag interaction. Color cues reinforced directionality for temperature adjustment, and the same interaction model was later extended to Drive Modes and Volume for consistency.</p>
+
+                <img loading="lazy" src="../img/icp_delete_therail.png" alt="Close-up image showing the details of UI elements that make up the Overlay buttons">
+            </div>
+        </section>
+    </div>
+
+    <div class="content content-tight project-details main-content flex">
+        <!-- contents -->
+        <section aria-labelledby="preflight-checklist" class="col">
+
+            <div class="shadow-box">
+
+                <h3 id="preflight-checklist">The Preflight Checklist</h3>
+                <ul>
+                    <li><strong>Problem: </strong>Quick, top-level access to common functions upon entering the vehicle was now lost.</li>
+
+                    <li><strong>Solution: </strong>Once the system boots, surface a dedicated space where the user can access features they might regularly turn on/off when first getting into the vehicle.</li>
+
+                    <li><strong>Impact: </strong>Reduced steps during vehicle entry and helped smooth the transition from physical to digital controls.</li>
+                </ul>
+            </div>
+
+            <div class="project-media">
+
+                <p class="img-buffer">While our designated sandbox to design in was limited to the system sidebars and overlays, we were able to make one outside modification to  interaction model: a new home tile. The Preflight Checklist introduced a new "launch pad" or "starting point" type of interaction pattern, allowing drivers to easily locate key system settings before driving. This reduced the number of interactions and time spent wayfinding during vehicle startup. The primary goal behind this was to help ease the transition from physical controls to touchscreen by surfacing those frequently used functions at the top level. </p>
+
+                <img loading="lazy" src="../img/preflightchecklist.svg" alt="Wireframe version of the home tile layout of quick controls">
+
+                <img loading="lazy" src="../img/preflightchecklist.png" alt="Image of the vehicle's touchscreen, showing the home screen tile with quick controls">
+                <span class="caption">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 6:41]</span>
+            </div>
+        </section>
+    </div>
+</div>
+
+    <div id="results" class="content main-content flex">
+        <!-- contents -->
+        <section class="col col-one-third section-marker">
+            <div class="section-bg-wrapper">
+                
+                <div class="section-bg-tint">
+                    <span>7</span>
+                </div>
+                <div class="section-bg results-bg"></div>
+                <div class="section-bg-square square-right"></div>
+            </div>
+        </section>
+        <!-- contents -->
+        <section aria-labelledby="results-section" class="col col-two-thirds">
+            <h2 id="results-section">Results</h2>
+
+            <ul>
+                <li>Shipped as part of the 24MY mid-cycle refresh, debuting in the 2024 Range Rover Velar</li>
+
+                <li>The interaction patterns and design principles established in this project scaled across all JLR vehicles, forming a foundation for future infotainment updates.</li>
+
+                <li>Met legal requirements for safety-critical functions</li>
+
+                <li>Designs validated through multiple rounds of user testing in Portland and the UK</li>
+            </ul>
+        </section>
+    </div>
+    <div class="content content-tight main-content flex">
+        <section aria-labelledby="climate-overlay" class="col tight-fix">
+            <h3 id="climate-overlay">Climate Overlay</h3>
+
+            <p class="img-buffer">The Climate Overlay was structured into three sections—temperature, seats, and fan speed—each optimized for its specific use case. While uniform control patterns were initially explored, testing showed that excessive visual repetition affected comprehension. Assigning distinct interaction styles to each section helped improved clarity.</p>
+
+            <img loading="lazy" src="../img/icp_delete_climate1.png" alt="Image of the Range Rover's touchscreen, displaying the Climate overlay">
+
+            <span class="caption">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 8:46]</span>
+
+            <p>For temperature, a variety of controls were provided to cover a range of use cases: small, medium, and large adjustments.
+            </p>
+
+            <ul>
+                <li><strong>Single Chevrons: </strong>adjusts the temperature up/down by one degree (0.5 degrees  Celsius).</li>
+
+                <li><strong>Double Chevrons: </strong>adjusts in larger chunks, changing the temperature up/down in four-degree increments (two degrees Celsius).</li>
+
+                <li><strong>Hi/Lo: </strong>dedicated shortcuts to jump to the highest and lowest temperatures round out the suite of controls</li>
+            </ul>
+
+            <p class="img-buffer">Supplemental interactions were also included: press-and-hold any of the chevrons for continuous adjustment, and dragging up/down on the entire temperature area.</p>
+
+            <img loading="lazy" src="../img/icp_delete_temp.png" alt="Annotated screenshot calling out what each of the buttons on screen will do.">
+            
+            <span class="caption">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 8:46]</span>
+
+            <p>Moving over to Seats, this section is a small slice of a larger Seats app, providing quick access to the highest priority use case: seat heating/cooling. With a limited range of adjustments, we were able to display direct selection of high, medium, and low all at once, reducing the number of steps for the user. The visual centerpiece of the overlay, the seat graphic indicates which zone(s) heating/cooling is applied to. Finally, to increase user mobility around the system, a shortcut to the full Seats app (which includes additional features such as Massage) anchors the top edge of the screen. </p>
+
+            <p class="img-buffer">The final section of the Climate Overlay contains the fan speed controls. Placement of this section in the overlay was very deliberate. Being the only "neutral" or shared control, it serves as a natural divider and visual break when both the driver and passsenger Climate Overlays are open at the same time. Interactions for fan speed are fairly straightforward: direct selection via press or dragging. Similarly to Seats, a shortcut to the wider Climate app is provided above.</p>
+
+            <video muted controls autoplay loop src="../img/icp_delete_climate.mp4">Your browser does not support the video tag.</video>
+            
+            <span class="caption caption-buffer">[Clip from "Range Rover Walkthrough: Climate Controls pt 1" by SHARPECars (2025), YouTube, 1:06-1:19]</span>
+
+            <h3 class="margin-fix">Drive Modes Overlay</h3>
+
+            <img loading="lazy" src="../img/icp_delete_drivemodes.png" alt="Screenshot image of a YouTube video, showing the Drive Modes overlay on the vehicle's touchscreen.">
+            
+            <span class="caption">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 7:36]</span>
+
+            <img loading="lazy" src="../img/icp_delete_vehicle.svg" alt="Wireframes of multiple UI components, showing the different contents of the tiles inside the Drive Modes overlay">
+            <span class="caption caption-buffer">Layout of the Drive Modes overlay</span>
+
+            <img loading="lazy" src="../img/icp_delete_vehicle2.svg" alt="Production example of the above wireframes, shown in context, on the vehicle's touchscreen.">
+
+            <span class="caption">Full list of vehicle quick control tiles. Note: Some tiles may not be displayed if not equipped on the vehicle (e.g. Ride Height only available on vehicles with air suspension).</span>
+
+            <p class="img-buffer">The inside column of the Drive Modes overlay can also be controlled via the Quick Slider—changing the drive mode or launching the 4x4i app without needing to open the overlay.</p>
+
+            <video muted controls autoplay loop src="../img/icp_delete_vehicleslider.mp4">Your browser does not support the video tag.</video>
+
+            <span class="caption caption-buffer">[Clip from "2024 Range Rover Sport Climate and Volume Quick Adjustment!" by Dan Stuart (2024), YouTube, 0:30-0:46]</span>
+
+            <h3 class="margin-fix">Volume Overlay</h3>
+            
+            <video muted controls autoplay loop src="../img/icp_delete_volume.mp4">Your browser does not support the video tag.</video>
+            
+            <span class="caption">[Clip from "How to adjust the volume in your Range Rover Velar" by Land Rover Grand Rapids (2025), YouTube, 0:02-0:14]</span>
+        </section>
+    </div>
+
+
+    
+
+    
+
 
   </main>
 
   <!-- load footer component -->
-  <div data-include="../components/footer_2nd_level.html"></div>
 
   <!-- load main javascript -->
   <script src="../js/main.js" defer></script>
-  <script src="../js/img-slider.js" defer></script>
+
 
 </body>
 </html>
