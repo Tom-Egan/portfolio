@@ -7,6 +7,8 @@
 
 :root {
   --sand: #EFEDE7;
+  --teal: #1aad91;
+  --accent-red: #A00A0C;
   --dark-green: #1c403a;
   --darkest-green: #1c2d2a;
   --dark-green3: #19201F;
@@ -71,7 +73,7 @@ ul{
 .flex{
   display: flex;
   width: 100%;
-  gap: 50px;
+  gap: 40px;
 }
 
 .flex-tight {
@@ -86,6 +88,10 @@ ul{
 .flex-header {
   margin-top: 20px;
   margin-bottom: -10px;
+}
+
+strong {
+  color: var(--accent-red);
 }
 
 .col {
@@ -153,7 +159,8 @@ ul{
 .shadow-box {
   box-shadow: var(--shadow1);
   padding: 0px 40px 30px 40px;
-  background: var(--white);
+  background: var(--sand);
+  color: var(--darkest-green);
   position: relative;
   width: 100%;
   height: auto;
@@ -197,12 +204,11 @@ ul{
   text-stroke-color: #fff;
   
   /* Ensure text is visible even if properties aren't fully supported */
-  color: #fff; 
-  opacity: 0.6;
+  color: var(--sand); 
 }
 
 .section-bg-tint {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(28, 64, 58, 0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -223,6 +229,26 @@ ul{
   background-size: cover;
   background-position: center;
   background-image: url(../img/24my_exterior.jpg);
+}
+
+.objective-bg {
+  background-image: url(../img/24my_interior2.jpg);
+}
+
+.constraints-bg {
+  background-image: url(../img/24my_interior3.jpg);
+}
+
+.approach-bg {
+  background-image: url(../img/24my_exterior3.jpg);
+}
+
+.role-bg {
+  background-image: url(../img/24my_exterior2.jpg);
+}
+
+.results-bg {
+  background-image: url(../img/24my_interior4.jpg);
 }
 
 .section-bg-square {
@@ -256,7 +282,7 @@ ul{
 .style-list li {
   line-height: 1.4rem;
   margin-bottom: 20px;
-  border-left: 5px solid var(--dark-green);
+  border-left: 5px solid var(--accent-red);
   padding: 6px 12px 6px 12px;
 }
 
@@ -318,7 +344,7 @@ li {
 }
 
 .dark-bg {
-  background: var(--dark-green3);
+  background: var(--darkest-green);
   border-radius: 60px;
   margin:30px auto;
   max-width: 1300px;
@@ -346,13 +372,17 @@ li {
 
 .contents-list {
   margin-left:0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   list-style: none;
   list-style-type: none;
 }
 
 .contents-list li {
   line-height: 2.2rem;
+}
+
+.contents-list li a {
+  color: var(--teal);
 }
 
 .header-block h3{
@@ -385,7 +415,16 @@ li {
     display: none;
   }
 
-
+.contents-accordion  {
+  padding: 0;
+}
+.contents-bg {
+  background: var(--white);
+  height: auto;
+  padding: 20px 35px;
+  box-shadow: var(--shadow1);
+  border-radius: var(--small-border-radius);
+}
 
 
 /* Mobile styles */
@@ -541,6 +580,10 @@ li {
 
   .project-details section {
     margin-top: -200px;
+  }
+
+  .contents-bg {
+    padding: 0;
   }
 
 }
