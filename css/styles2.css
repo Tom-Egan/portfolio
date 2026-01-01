@@ -109,11 +109,11 @@ strong {
   flex: 1 1 0; /* This item will take up 1 part of the available space */
 }
 
-.main-content h2 {
+.main-content h2, .section-break-bg h2{
   font-size: 3.8rem;
 }
 
-.main-content h3 {
+.main-content h3, .dark-content-tight h3 {
   font-size: 2.2rem;
   margin-top: 40px;
   margin-bottom: -10px;
@@ -182,6 +182,7 @@ strong {
   text-align: center;
   border-radius: var(--small-border-radius);
   box-shadow: var(--shadow1);
+  z-index: 3;
 }
 
 .section-bg-wrapper {
@@ -202,8 +203,8 @@ strong {
   text-fill-color: transparent; /* Standard property (less widely supported) */
   
   /* Define the stroke (outline) width and color */
-  -webkit-text-stroke-width: 5px;
-  text-stroke-width: 5px;
+  -webkit-text-stroke-width: 2px;
+  text-stroke-width: 2px;
   
   -webkit-text-stroke-color: #fff; /* Use your desired color */
   text-stroke-color: #fff;
@@ -273,6 +274,9 @@ strong {
   margin-top: -20px;
   margin-bottom: -40px;
 }
+.break-after-dark-bg {
+  margin-top: 100px;
+}
 
 .margin-10 {
   margin-top: -10px;
@@ -299,6 +303,57 @@ strong {
 
 .content {
   padding: var(--padding1);
+}
+
+.top-border {
+  border-top: 2px solid #000;
+  padding-top: 60px;
+}
+
+.img-grid-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 120px auto;
+}
+
+.img-grid-col {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 20px;
+}
+
+.img-grid-col img {
+  margin: 12px auto;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.last-img-grid {
+  margin: 0 auto;
+}
+
+.section-break-bg {
+  width: 100%;
+  max-width: 1500px;
+  background: var(--dark-green);
+  padding: 100px 50px 75px 50px;
+  color: var(--sand);
+}
+
+@media screen and (max-width: 800px) {
+  .img-grid-col {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .img-grid-col {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 .style-list {
@@ -393,9 +448,30 @@ li {
 .logo-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: -80px;
+  margin: -30px auto 0 auto;
+  max-width: 700px;
   justify-content: center;
+  color: var(--sand);
 
+}
+
+.dark-content-tight {
+  position: relative;
+  margin: -30px auto 0px auto;
+  max-width: 900px;
+  color: var(--sand);
+}
+
+.shadow-box-margin {
+  margin-top: 80px;
+}
+
+.dark-content-tight .shadow-box {
+  padding-top: 2px;
+}
+
+.dark-content-tight h4 {
+  font-size: 1.5rem;
 }
 
 .logo-wrapper img {
@@ -421,6 +497,7 @@ li {
   font-size: 8rem;
   color: var(--sand);
   margin-bottom: -20px;
+  text-align: center;
 }
 
 .contents-list {
@@ -465,6 +542,12 @@ li {
   margin: 0 auto;
 }
 
+.img-slider {
+  color: #333;
+  margin-top: -100px;
+  margin-bottom: -80px;
+}
+
 .accordion {
   display: none;
   color: var(--sand);
@@ -473,6 +556,19 @@ li {
 .accordion::after {
   color: var(--sand);
 
+}
+
+.img-full {
+  width: 100%;
+  margin: 0 auto 50px auto;
+
+}
+
+.img-wrapper {
+  max-width: 700px;
+
+  position: relative;
+  margin: 0 auto;
 }
 
 
@@ -493,9 +589,140 @@ li {
 }
 
 
+.row-img {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  border-radius: var(--small-border-radius);
+}
+
+
 .col img {
   width: 100%;
+  border-radius: var(--small-border-radius);
 }
+
+.t-bolt-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 40px auto 0 auto;
+    overflow: hidden;
+    max-width: 500px;
+    touch-action: pan-y; /* Crucial for 2025 mobile UX */
+  user-select: none;   /* Prevents accidental text highlighting while swiping */
+
+}
+
+.slides-wrapper {
+  display: flex; /* Lines images up horizontally */
+  transition: transform 0.6s ease-in-out; /* The animation magic */
+  width: 100%;
+  max-width: 500px;
+  padding: 0;
+}
+
+.slide {
+  min-width: 100%; /* Each image takes full slider width */
+  max-width: 500px;
+  max-height: 600px;
+  flex-shrink: 0;
+}
+
+
+.slide-active {
+  display: block; /* Show the active image */
+}
+
+.dots-container {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: -30px auto 0 auto;
+  text-align: center;
+  z-index: 2;
+  padding-bottom: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.dot-active { background-color: #717171; }
+
+.t-bolt-wrapper button {
+  position: absolute;
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: var(--sand);
+  box-shadow: var(--shadow1);
+    top: 50%;
+    transform: translateY(-50%);
+    /* Add styling for background, color, padding, cursor etc. */
+}
+
+.t-bolt-wrapper img {
+  position: relative;
+}
+
+.t-bolt-wrapper #prev-slide {
+  left: 20px;
+}
+
+.t-bolt-wrapper #next-slide {
+  right: 20px;
+}
+
+.color-box {
+  margin: 12px;
+}
+
+.color-box h4 {
+  font-size: 1.5rem;
+  margin-bottom: -20px;
+}
+
+
+.eggplant {
+  background: var(--eggplant);
+  color: var(--sand);
+}
+
+.mustard {
+  background: var(--mustard);
+  color: var(--eggplant);
+
+}
+
+.steel-red {
+  background: var(--steel-red);
+  color: var(--white);
+}
+
+.transition-callout {
+  max-width: 1000px;
+  margin: 0 auto 200px auto;
+  background: var(--dark-green);
+  color: var(--sand);
+  padding: 50px;
+  border-radius: var(--small-border-radius);
+  font-size: 1.5rem;
+}
+
+
+
+
 
 
 /* Mobile styles */
@@ -587,7 +814,7 @@ li {
 
   }
 
-  .main-content h2 {
+  .main-content h2, .section-break-bg h2{
     color: #fff;
     margin-bottom: 40px;
   }
@@ -658,6 +885,52 @@ li {
     margin-left: 0;
   }
 
+  .mobile-margin {
+    margin-top: 0px;
+    padding: 0;
+  }
+
+  .mobile-margin img {
+    margin-top: -60px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .row-img img {
+    border-radius: var(--small-border-radius);
+  }
+
+  .t-bolt-wrapper {
+    display: block;
+  }
+
+  .t-bolt-wrapper, .slides-wrapper, .slide {
+    width: 100%;
+  }
+
+  .img-slider {
+    margin-bottom: 20px;
+  }
+
+  .color-wrapper {
+    margin-top: -40px;
+  }
+
+  .color-box {
+    margin: 10px;
+  }
+
+  .section-break-bg {
+    background: none;
+    padding: 20px;
+    margin-top: 120px;
+    margin-bottom: -200px;
+  }
+
+  .transition-callout {
+    margin: 75px auto 150px auto;
+  }
+
 }
 
 @media (max-width: 550px) {
@@ -689,11 +962,11 @@ li {
 
 
 @media (max-width: 400px) {
-  .main-content h2 {
+  .main-content h2, .section-break-bg h2{
     font-size: 2.5rem;
   }
 
-  .main-content h3 {
+  .main-content h3, .dark-content-tight .logo-wrapper .shadow-box h3{
     font-size: 1.8rem;
   }
 

@@ -286,6 +286,14 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   gap: 12px;
 }*/
 
+
+
+.section-info h4 {
+  font-size: 1.4rem;
+  margin-top: 50px;
+  margin-bottom: 6px;
+}
+
 .t-bolt-wrapper {
     position: relative;
     width: 100%;
@@ -297,14 +305,14 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
 
 }
 
-.slides-wrapper {
+.slides-wrapper, .slides-wrapper2{
   display: flex; /* Lines images up horizontally */
   transition: transform 0.6s ease-in-out; /* The animation magic */
   width: 100%;
   max-width: 500px;
 }
 
-.slide {
+.slide, .slide2 {
   min-width: 100%; /* Each image takes full slider width */
   max-width: 500px;
   flex-shrink: 0;
@@ -315,19 +323,13 @@ background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 2.30000000
   display: block; /* Show the active image */
 }
 
-.section-info h4 {
-  font-size: 1.4rem;
-  margin-top: 50px;
-  margin-bottom: 6px;
-}
-
 .dots-container {
   text-align: center;
   margin-top: 0px;
   padding-bottom: 20px;
 }
 
-.dot {
+.dot, .dot2 {
   cursor: pointer;
   height: 12px;
   width: 12px;
@@ -1309,7 +1311,7 @@ line {
     display: block;
   }
 
-  .t-bolt-wrapper, .slides-wrapper, .slide {
+  .t-bolt-wrapper, .slides-wrapper, .slide, .slides-wrapper2, .slide2 {
     width: 100%;
   }
 
