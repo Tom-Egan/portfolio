@@ -15,7 +15,7 @@
   --mustard: #FFD655;
   --steel-red: #CB4848;
   --white: #fff;
-  --light-grey: #999;
+  --light-grey: #BFBFBF;
   --large-border-radius: 12px;
   --small-border-radius: 6px;
   --padding1: 20px;
@@ -109,8 +109,12 @@ strong {
   flex: 1 1 0; /* This item will take up 1 part of the available space */
 }
 
-.main-content h2, .section-break-bg h2{
+.main-content h2{
   font-size: 3.8rem;
+}
+
+.section-break-bg h2 {
+  font-size: 5rem;
 }
 
 .main-content h3, .dark-content-tight h3 {
@@ -154,17 +158,34 @@ strong {
   margin: 0 auto 30px auto;
 }
 
+.text-center {
+  text-align: center;
+}
+
 
 .shadow-box {
-  box-shadow: var(--shadow1);
-  padding: 0px 40px 30px 40px;
-  background: var(--sand);
-  color: var(--dark-green);
+  padding:20px !important;
+  
+  border-left: 8px solid var(--light-grey);
+  border-right: 8px solid var(--light-grey);
+  color: var(--sand);
   position: relative;
   width: 100%;
   height: auto;
+  border-radius: 20px;
+}
+
+.shadow-box-inner {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 40px 30px 40px;
+  box-shadow: var(--shadow1);
   border-radius: var(--large-border-radius);
 }
+
+.shadow-box-inner strong {
+  color: var(--accent-teal);
+}
+
 
 .shadow-box ul {
   margin-top: 20px;
@@ -246,10 +267,10 @@ strong {
 .role-bg {background-image: url(../img/24my_exterior2.jpg);}
 .results-bg {background-image: url(../img/24my_interior4.jpg);}
 /* Trackside Thunder case study section images */
-.tt-bg-1 {background-image: url(../img/24my_exterior.jpg);}
-.tt-bg-2 {background-image: url(../img/24my_exterior.jpg);}
-.tt-bg-3 {background-image: url(../img/24my_exterior.jpg);}
-.tt-bg-4 {background-image: url(../img/24my_exterior.jpg);}
+.tt-bg-1 {background-image: url(../img/trackside_thunder/tt_mock_4.jpg);}
+.tt-bg-2 {background-image: url(../img/trackside_thunder/tt_mock_5.jpg);}
+.tt-bg-3 {background-image: url(../img/trackside_thunder/tt_mock_1.jpg);}
+.tt-bg-4 {background-image: url(../img/trackside_thunder/tt_mock_2.jpg);}
 .tt-bg-5 {background-image: url(../img/24my_exterior.jpg);}
 .tt-bg-6 {background-image: url(../img/24my_exterior.jpg);}
 .tt-bg-7 {background-image: url(../img/24my_exterior.jpg);}
@@ -315,13 +336,46 @@ strong {
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: 0 auto 120px auto;
+  margin: 40px auto 120px auto;
 }
 
 .img-grid-col {
   flex: 50%;
   max-width: 50%;
   padding: 0 20px;
+}
+
+.video-col {
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding: 0 20px;
+  margin: 0 auto;
+  color: var(--sand);
+}
+
+.video-margin {
+  margin-top: 100px;
+}
+
+.video-col video {
+  width: 100%;
+}
+
+.video-col h3 {
+  font-size: 1.5rem;
+}
+
+.video-iframe {
+  text-align: center;
+}
+
+.video-frame h3 {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.last-row {
+  padding-bottom: 200px;
 }
 
 .img-grid-col img {
@@ -482,10 +536,15 @@ li {
 .dark-bg-content {
   margin-top: -145px;
   margin-bottom: 40px;
-  max-width: 700px;
+  /*max-width: 700px;*/
   margin-left: auto;
   margin-right: auto;
   color: var(--sand);
+}
+
+.shadow-box-inner h4 {
+  font-weight: normal;
+  color: var(--light-grey);
 }
 
 .margin-fix {
@@ -494,9 +553,10 @@ li {
 }
 
 .dark-bg-content h2 {
-  font-size: 8rem;
+  font-size: 12rem;
   color: var(--sand);
-  margin-bottom: -20px;
+  margin-bottom: 40px;
+  margin-top: 45px;
   text-align: center;
 }
 
@@ -713,11 +773,15 @@ li {
 .transition-callout {
   max-width: 1000px;
   margin: 0 auto 200px auto;
-  background: var(--dark-green);
   color: var(--sand);
   padding: 50px;
   border-radius: var(--small-border-radius);
   font-size: 1.5rem;
+}
+
+.transition-callout .shadow-box .shadow-box-inner {
+  background: var(--dark-green);
+  padding-top: 30px;
 }
 
 
@@ -929,6 +993,7 @@ li {
 
   .transition-callout {
     margin: 75px auto 150px auto;
+    font-size: 1.2rem;
   }
 
 }
