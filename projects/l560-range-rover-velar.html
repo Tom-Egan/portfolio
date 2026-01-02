@@ -18,7 +18,7 @@
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="../img/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/jlr/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Styles -->
@@ -303,9 +303,9 @@
 
             <div class="project-media">
 
-                <img loading="lazy" src="../img/icp_delete_sidebar_callout.png" alt="Image of the vehicle's touchscreen, highlighting the area of the screen which will be referenced in this section">
+                <img loading="lazy" src="../img/jlr/icp_delete_sidebar_callout.png" alt="Image of the vehicle's touchscreen, highlighting the area of the screen which will be referenced in this section">
                             
-                <img loading="lazy" src="../img/icp_delete_sidebar.svg" alt="Wireframes showing the sidebar content differences from before and after the 24MY update">
+                <img loading="lazy" src="../img/jlr/icp_delete_sidebar.svg" alt="Wireframes showing the sidebar content differences from before and after the 24MY update">
             </div>
         </section>
     </div>
@@ -340,11 +340,11 @@
 
                 <p class="img-buffer">Note: The App Drawer could still be accessed via swiping from the left edge as a secondary method (Not quite as discoverable as the dedicated button, but still an available option for the user).</p>
 
-                <img loading="lazy" src="../img/icp_delete_homebtn.svg" alt="Wireframes showing the state change to the sidebar button when the user is on the home screen and when the user is not">
+                <img loading="lazy" src="../img/jlr/icp_delete_homebtn.svg" alt="Wireframes showing the state change to the sidebar button when the user is on the home screen and when the user is not">
 
                 <p class="img-buffer">This approach was extended to the Phone shortcut. With Phone  deprioritized, left without a permanent sidebar element, two edge cases still required attention: returning to active calls and returning to CarPlay or Android Auto. In these states, the Media button temporarily became a shortcut back to the active call or phone projection interface. Because call audio was already using the cabin speakers, Media access was unnecessary at that moment (i.e. show the user the right thing at the right time). This allowed four high-priority features to be served through two sidebar positions, freeing additional space without increasing interaction depth.</p>
 
-                <img loading="lazy" src="../img/icp_delete_activecall.svg" alt="Wireframes showing the state change to the sidebar button when the user is on an active phone call">
+                <img loading="lazy" src="../img/jlr/icp_delete_activecall.svg" alt="Wireframes showing the state change to the sidebar button when the user is on an active phone call">
             </div>
         </section>
     </div>
@@ -375,7 +375,7 @@
 
                 <p class="img-buffer">To reduce ambiguity, visual indicators were added to clearly distinguish front and rear control  states and to signal that this control behaved differently from standard sidebar navigation. The interaction also adapted based on vehicle trim level—defaulting to a simple Rear Defrost toggle when Heated Windshield was not equipped.</p>
 
-                <img loading="lazy" src="../img/icp_delete_defrost.svg" alt="Wireframes showing all four states of the combo defrost button">
+                <img loading="lazy" src="../img/jlr/icp_delete_defrost.svg" alt="Wireframes showing all four states of the combo defrost button">
             </div>
         </section>
     </div>
@@ -402,11 +402,11 @@
 
                 <p class="img-buffer">Using sidebar buttons as overlay entry points introduced the risk of mixed interaction models within the same visual grouping. This was mitigated by clearly delineating interaction zones and reinforcing behavior through distinct visual treatments and affordances.</p>
 
-                <img loading="lazy" src="../img/icp_delete_overlay1.png" alt="Annotated screenshot highlighting the visual cues that were added to the Overlay buttons">
+                <img loading="lazy" src="../img/jlr/icp_delete_overlay1.png" alt="Annotated screenshot highlighting the visual cues that were added to the Overlay buttons">
 
                 <p class="img-buffer">Once an overlay is launched, the sidebars change to a more focused, empty state, removing unnecessary visual clutter. This was done to help communicate the context switch of having the overlay open, as well as provide the user a clearer visual path to their exit route (close button). One caveat to this stategy comes back to the previously mentioned legal requirements. Since one-touch activation of Rear Defrost and Max Defrost are required at all times, those two buttons needed to remain in place.</p>
 
-                <img loading="lazy" src="../img/icp_delete_overlay2.png" alt="Annotated screenshot highlighting how the sidebar changes states when an overlay is opened.">
+                <img loading="lazy" src="../img/jlr/icp_delete_overlay2.png" alt="Annotated screenshot highlighting how the sidebar changes states when an overlay is opened.">
                 <span class="caption">[Screenshot from "Understanding the Pivi Pro Infotainment System | Land Rover Naperville | Naperville, IL" by Land Rover Naperville (2024), YouTube, 4:11]</span>
             </div>
         </section>
@@ -434,25 +434,25 @@
 
                 <p class="img-buffer">Introducing a secondary drag interaction to the overlay buttons enabled rapid adjustments, allowing for looser, less precise inputs from the user.  Visual feedback reinforced state changes without requiring explicit confirmation.</p>
 
-                <img loading="lazy" src="../img/icp_delete_slider1.svg" alt="Static wireframe version showing the state change of a blue background when the climate button is dragged down">
+                <img loading="lazy" src="../img/jlr/icp_delete_slider1.svg" alt="Static wireframe version showing the state change of a blue background when the climate button is dragged down">
 
                 <span class="caption img-buffer">
                 The sidebar background provides blue feedback for additional confirmation when the selected temperature is in the lower/colder ranges.
                 </span>
 
-                <img loading="lazy" src="../img/icp_delete_slider2.svg" alt="Static wireframe version showing the state change of a red background when the climate button is dragged up">
+                <img loading="lazy" src="../img/jlr/icp_delete_slider2.svg" alt="Static wireframe version showing the state change of a red background when the climate button is dragged up">
 
                 <span class="caption img-buffer">
                 The sidebar background provides red feedback for additional confirmation when the selected temperature is in the upper/warmer ranges.
                 </span>
 
-                <video muted controls autoplay loop src="../img/icp_delete_quickslider.mp4">Your browser does not support the video tag.</video>
+                <video muted controls autoplay loop src="../img/jlr/icp_delete_quickslider.mp4">Your browser does not support the video tag.</video>
 
                 <span class="caption video-caption">[Clip from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 6:54-7:05]</span>
 
                 <p class="img-buffer">To promote discoverability, a visual affordance—the Rail—was added to suggest a constrained drag interaction. Color cues reinforced directionality for temperature adjustment, and the same interaction model was later extended to Drive Modes and Volume for consistency.</p>
 
-                <img loading="lazy" src="../img/icp_delete_therail.png" alt="Close-up image showing the details of UI elements that make up the Overlay buttons">
+                <img loading="lazy" src="../img/jlr/icp_delete_therail.png" alt="Close-up image showing the details of UI elements that make up the Overlay buttons">
             </div>
         </section>
     </div>
@@ -480,9 +480,9 @@
 
                 <p class="img-buffer">While our designated sandbox to design in was limited to the system sidebars and overlays, we were able to make one outside modification to  interaction model: a new home tile. The Preflight Checklist introduced a new "launch pad" or "starting point" type of interaction pattern, allowing drivers to easily locate key system settings before driving. This reduced the number of interactions and time spent wayfinding during vehicle startup. The primary goal behind this was to help ease the transition from physical controls to touchscreen by surfacing those frequently used functions at the top level. </p>
 
-                <img loading="lazy" src="../img/preflightchecklist.svg" alt="Wireframe version of the home tile layout of quick controls">
+                <img loading="lazy" src="../img/jlr/preflightchecklist.svg" alt="Wireframe version of the home tile layout of quick controls">
 
-                <img loading="lazy" src="../img/preflightchecklist.png" alt="Image of the vehicle's touchscreen, showing the home screen tile with quick controls">
+                <img loading="lazy" src="../img/jlr/preflightchecklist.png" alt="Image of the vehicle's touchscreen, showing the home screen tile with quick controls">
                 <span class="caption">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 6:41]</span>
             </div>
         </section>
@@ -522,7 +522,7 @@
 
             <p class="img-buffer">The Climate Overlay was structured into three sections—temperature, seats, and fan speed—each optimized for its specific use case. While uniform control patterns were initially explored, testing showed that excessive visual repetition affected comprehension. Assigning distinct interaction styles to each section helped improved clarity.</p>
 
-            <img loading="lazy" src="../img/icp_delete_climate1.png" alt="Image of the Range Rover's touchscreen, displaying the Climate overlay">
+            <img loading="lazy" src="../img/jlr/icp_delete_climate1.png" alt="Image of the Range Rover's touchscreen, displaying the Climate overlay">
 
             <span class="caption">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 8:46]</span>
 
@@ -539,7 +539,7 @@
 
             <p class="img-buffer">Supplemental interactions were also included: press-and-hold any of the chevrons for continuous adjustment, and dragging up/down on the entire temperature area.</p>
 
-            <img loading="lazy" src="../img/icp_delete_temp.png" alt="Annotated screenshot calling out what each of the buttons on screen will do.">
+            <img loading="lazy" src="../img/jlr/icp_delete_temp.png" alt="Annotated screenshot calling out what each of the buttons on screen will do.">
             
             <span class="caption">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 8:46]</span>
 
@@ -547,32 +547,32 @@
 
             <p class="img-buffer">The final section of the Climate Overlay contains the fan speed controls. Placement of this section in the overlay was very deliberate. Being the only "neutral" or shared control, it serves as a natural divider and visual break when both the driver and passsenger Climate Overlays are open at the same time. Interactions for fan speed are fairly straightforward: direct selection via press or dragging. Similarly to Seats, a shortcut to the wider Climate app is provided above.</p>
 
-            <video muted controls autoplay loop src="../img/icp_delete_climate.mp4">Your browser does not support the video tag.</video>
+            <video muted controls autoplay loop src="../img/jlr/icp_delete_climate.mp4">Your browser does not support the video tag.</video>
             
             <span class="caption caption-buffer">[Clip from "Range Rover Walkthrough: Climate Controls pt 1" by SHARPECars (2025), YouTube, 1:06-1:19]</span>
 
             <h3 class="margin-fix">Drive Modes Overlay</h3>
 
-            <img loading="lazy" src="../img/icp_delete_drivemodes.png" alt="Screenshot image of a YouTube video, showing the Drive Modes overlay on the vehicle's touchscreen.">
+            <img loading="lazy" src="../img/jlr/icp_delete_drivemodes.png" alt="Screenshot image of a YouTube video, showing the Drive Modes overlay on the vehicle's touchscreen.">
             
             <span class="caption">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 7:36]</span>
 
-            <img loading="lazy" src="../img/icp_delete_vehicle.svg" alt="Wireframes of multiple UI components, showing the different contents of the tiles inside the Drive Modes overlay">
+            <img loading="lazy" src="../img/jlr/icp_delete_vehicle.svg" alt="Wireframes of multiple UI components, showing the different contents of the tiles inside the Drive Modes overlay">
             <span class="caption caption-buffer">Layout of the Drive Modes overlay</span>
 
-            <img loading="lazy" src="../img/icp_delete_vehicle2.svg" alt="Production example of the above wireframes, shown in context, on the vehicle's touchscreen.">
+            <img loading="lazy" src="../img/jlr/icp_delete_vehicle2.svg" alt="Production example of the above wireframes, shown in context, on the vehicle's touchscreen.">
 
             <span class="caption">Full list of vehicle quick control tiles. Note: Some tiles may not be displayed if not equipped on the vehicle (e.g. Ride Height only available on vehicles with air suspension).</span>
 
             <p class="img-buffer">The inside column of the Drive Modes overlay can also be controlled via the Quick Slider—changing the drive mode or launching the 4x4i app without needing to open the overlay.</p>
 
-            <video muted controls autoplay loop src="../img/icp_delete_vehicleslider.mp4">Your browser does not support the video tag.</video>
+            <video muted controls autoplay loop src="../img/jlr/icp_delete_vehicleslider.mp4">Your browser does not support the video tag.</video>
 
             <span class="caption caption-buffer">[Clip from "2024 Range Rover Sport Climate and Volume Quick Adjustment!" by Dan Stuart (2024), YouTube, 0:30-0:46]</span>
 
             <h3 class="margin-fix">Volume Overlay</h3>
             
-            <video muted controls autoplay loop src="../img/icp_delete_volume.mp4">Your browser does not support the video tag.</video>
+            <video muted controls autoplay loop src="../img/jlr/icp_delete_volume.mp4">Your browser does not support the video tag.</video>
             
             <span class="caption">[Clip from "How to adjust the volume in your Range Rover Velar" by Land Rover Grand Rapids (2025), YouTube, 0:02-0:14]</span>
         </section>
