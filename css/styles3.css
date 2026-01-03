@@ -4,7 +4,7 @@
 
    :root {
       --sand: #EFEDE7;
-      --accent-teal: #1aad91;
+      --accent-teal: #18C3A2;
       --accent-red: #A00A0C;
       --medium-green: #1c403a;
       --dark-green: #1c2d2a;
@@ -65,40 +65,14 @@ a {
   font-weight: bold;
 }
 
-a:hover, a:focus {
-  text-decoration: underline; /* Adds underline on hover/focus for accessibility */
-}
-
-ul {
-   margin-top: -12px;
-}
-
-ul li {
-    margin-bottom: 16px; /* Adds 10px of space below each list item */
-
-}
-
-/* Optional: remove the margin from the last item to prevent extra space at the end */
-ul li:last-child {
-    margin-bottom: 0;
-}
-
-h2 {
-   font-size: 4rem;
-}
-
-h3 {
-   font-size: 2.3rem; 
-   margin-bottom: 30px;
-}
-
-h4 {
-   font-size: 1.1rem;
-}
-
-h5 {
-   font-weight: normal;
-}
+a:hover, a:focus {text-decoration: underline;}
+ul {margin-top: -12px;}
+ul li {margin-bottom: 16px;}
+ul li:last-child {margin-bottom: 0;}
+h2 {font-size: 4rem;}
+h3 {font-size: 2.3rem; margin-bottom: 30px;}
+h4 {font-size: 1.1rem;}
+h5 {font-weight: normal;}
 
 /* =========================
    2. Global Layout
@@ -116,33 +90,22 @@ h5 {
 }
 
 .full-width {width: var(--max-width-100);}
-
 .flex {display: flex;}
-
 .section-break {margin-top: 60px;}
-
 .img-thumb {width: 52px;}
 
 /* column widths */
 .col-25-percent {flex-basis: 25%;}
-
 .col-33-percent {flex-basis: 33.33%;}
-
 .col-50-percent {flex-basis: 50%;}
-
 .col-67-percent {flex-basis: 66.67%;}
-
 .col-75-percent {flex-basis: 75%;}
-
 .col-100-percent {flex-basis: 100%;}
 
 /* border radius */
 .radius-sm {border-radius: var(--radius-sm);}
-
 .radius-md {border-radius: var(--radius-md);}
-
 .radius-lg {border-radius: var(--radius-lg);}
-
 .radius-pill {border-radius: 50px;}
 
 /* padding */
@@ -159,19 +122,19 @@ h5 {
 }
 
 .mt-20 {margin-top: 20px;}
+.mt-80 {margin-top: 80px;}
 .mb-20 {margin-bottom: 20px;}
 .neg-mt-30 {margin-top: -30px;}
 
 
 /* center aligned buttons in a container */
-.btn-center {
-   justify-content: center;
-}
+.btn-center {justify-content: center;}
 
 /* outside wrapper for buttons */
 .btn-row {
    display: flex;
    flex-direction: row;
+   margin-bottom: 30px;
 }
 
 /* button <a> styles */
@@ -181,12 +144,14 @@ h5 {
    background: #888;
    color: #fff;
    border: 2px solid #000;
-   padding: 8px 32px;
+   padding: 4px 32px;
+   font-size: 0.85rem;
    top: 0;
    display: flex;
    justify-content: center;
    align-content: center;
    align-items: center;
+   transition: 0.2s ease-in-out;
 }
 
 /* button arrow */
@@ -207,17 +172,32 @@ h5 {
 
 .button:hover span svg {
   left: 8px;
-   transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
+
+/* overrides for dark backgrounds */
+.dark-bg {
+   background: var(--dark-green);
+   color: var(--sand);
+}
+
+.dark-bg .button {
+   background: var(--medium-green);
+   border: 2px solid var(--accent-teal);
+}
+
+.dark-bg .button:hover {background: var(--accent-teal);color:var(--dark-green);}
+.dark-bg h4 {color: var(--dark-green);}
+.dark-bg a {color: var(--sand);}
+.dark-bg strong {color: var(--accent-teal);}
+
 
 /* =========================
    3. Resume
    ========================= */
 
 /* full width container for entire block */
-.resume-bg {
-   margin-top: 100px;
-}
+.resume-bg {margin-top: 100px;}
 
 /* partial height container for bg color */
 .resume-bg-color {
@@ -233,13 +213,8 @@ h5 {
    padding-left: 12px;
 }
 
-.resume h4 {
-   margin-top: 4px;
-}
-
-.resume h5 {
-   margin-top: -8px;
-} 
+.resume h4 {margin-top: 4px;}
+.resume h5 {margin-top: -8px;} 
 
 /* left border on sections */
 .border-left {
@@ -256,9 +231,7 @@ h5 {
 }
 
 /* last line of the resume */
-.resume-list {
-   margin-bottom: -20px;
-}
+.resume-list {margin-bottom: -20px;}
 
 
 /* =========================
@@ -270,18 +243,17 @@ h5 {
 }
 
 .footer-bg {
-   background: #ccc;
    padding: 0 20px;
    display: grid;
    grid-template-columns: 1fr 1fr;
    column-gap: 130px;
+   background: var(--dark-green);
 }
 
 .site-footer h4 {
-   font-size: 2.8rem;
-   margin-top: -25px;
+   font-size: 3.5rem;
+   margin-top: -28px;
    padding-bottom: 20px;
-   color: #ccc;
    text-transform: uppercase;
 }
 
@@ -301,6 +273,7 @@ underneath it ignore it's position for margins */
 .footer-left {
    grid-column: 1;
    grid-row: 1;
+   padding: 0 12px 12px 12px;
 }
 
 .footer-right {
@@ -309,15 +282,10 @@ underneath it ignore it's position for margins */
 }
 
 /* width of two footer blocks */
-.footer-left, .footer-right {
-   background: #ccc;
-   flex-basis: 40%;
-}
+.footer-left, .footer-right {flex-basis: 40%;}
 
 /* social media icons */
-.footer-left .flex {
-   gap: 12px;
-}
+.footer-left .flex {gap: 12px;}
 
 /* social media icon size */
 .footer-left .flex img {
@@ -333,38 +301,50 @@ inside of the footer-right */
    margin: 0;
    padding: 0;
    height: 100%;
+   transition: 0.2s ease-in-out;
 }
 
 /* individial containers for the project links */
 .footer-project-tile {
    display: flex;
-   background: blue;
    align-content: stretch;
    align-items: stretch;
    border-radius: var(--radius-sm);
    padding: 0;
+   background-position: center center;
+   background-size: cover;
 }
 
-/* link inside of the tile */
+/* project tile background images, passed in from attribute */
+.footer-project-tile[data-bg="1"] { background-image: url(../img/jlr/24my_exterior.jpg); }
+.footer-project-tile[data-bg="2"] { background-image: url(../img/trackside_thunder/tt_wordmark.svg); }
+.footer-project-tile[data-bg="3"] { background-image: url(../img/dirt_track/hero_card3.png); }
+
+/* project tile <a> */
 .footer-projects a {
    display: flex;
    align-content: stretch;
    align-items: stretch;
    align-self: center;
    flex-basis: 100%;
-   background: red;
-   padding: 38px;
+   color: var(--white);
+   padding: 54px 24px;
    margin-top: 0px;
-   opacity: 0.5;
    font-size: 1.7rem;
    line-height: 1.7rem;
    border-radius: var(--radius-sm);
+   background: linear-gradient(90deg,rgba(28, 64, 58, 0.9) 35%, rgba(28, 64, 58, 0.4) 100%);
+   transition: 0.2s ease-in-out;
+   box-shadow: var(--shadow);
+   text-shadow: 2px 2px 0px rgba(0,0,0,0);
 }
 
-/* email address link */
+/* project tile <a> hover */
 .footer-projects a:hover {
-   background: blue;
+   background: linear-gradient(90deg,rgba(26, 173, 145, .9) 35%, rgba(26, 173, 145, .4) 100%);
    text-decoration: none;
+   transition: 0.2s ease-in-out;
+   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 /* reposition the email next to email address,
@@ -375,14 +355,7 @@ pulls it down a bit to center it with text */
 }
 
 /* decrease font size of copyright text */
-.footer-left p {
-   font-size: 0.8rem;
-}
-
-/* offset the container of social media icons */
-.social-icon-link{
-    margin-top: 20px;
-}
+.footer-left p {font-size: 0.9rem;}
 
 /* resize social media icons */
 .footer-left a svg {
@@ -390,37 +363,64 @@ pulls it down a bit to center it with text */
    height: 32px;
 }
 
+.footer-left a path {
+   fill: var(--sand);
+   transition: 0.2s ease-in-out;
+}
+
+.footer-left a:hover path {
+   fill: var(--accent-teal);
+   transition: 0.2s ease-in-out;
+}
+
 /* resize the bounding box of the link that the 
 social media icons sit in */
 .footer-left a {
    width: 32px;
    height: 32px;
-  
+}
+
+.email-link span svg {
+   left: 0;
+   padding-right: 8px;
+   transition: 0.2s ease-in-out;
+}
+
+.email-link {
+   padding: 8px;
+   border-top: 1px solid var(--sand);
+   border-bottom: 1px solid var(--sand);
+   transition: 0.2s ease-in-out;
+}
+
+.email-link:hover {
+   text-decoration: none;
+   border-top: 3px solid var(--accent-teal);
+   border-bottom: 3px solid var(--accent-teal);
+   transition: 0.2s ease-in-out;
+   color: var(--accent-teal);
+}
+
+.email-link:hover span svg {
+   left: 4px;
+   transition: 0.2s ease-in-out;
 }
 
 /* =========================
    5. Mobile Styles
    ========================= */
 
+@media (max-width: 1077px) {
+   .footer-projects a {padding: 62px 24px;}
+   .footer-bg {column-gap: 80px;}
+}
 
-@media (max-width:700px) {
-   /* collapse flexboxes into rows */
-   .flex {
-      display: block;
-   }
-
-   /* keeps logo and label stacked side-by-side
-   in the resume section */
-   .resume .flex {
-      display: flex;
-   }
-
+@media (max-width: 830px) {
    /* changes footer content blocks to
    have the background color, defining two
    separate blocks instead of one footer element */
    .footer-left, .footer-right{
       margin-top: 30px;
-      background: #222;
       padding: 0px 24px 24px 24px;
       border-radius: var(--radius-md);
    }
@@ -454,7 +454,6 @@ social media icons sit in */
    }
 
    .site-footer h4 {
-      margin-top: -24px;
       margin-left: -20px;
       color: #222;
    }
@@ -474,17 +473,24 @@ social media icons sit in */
    }
 
    .footer-projects a {
-      padding: 25px;
+      padding: 35px 24px;
       font-size: 1.2rem;
    }
+}
 
-   .social-icon-link{
-      top:40px;
-       margin-top: 40px !important;
+@media (max-width:700px) {
+   /* collapse flexboxes into rows */
+   .flex {
+      display: block;
    }
 
-
+   /* keeps logo and label stacked side-by-side
+   in the resume section */
+   .resume .flex, .footer-left .flex {
+      display: flex;
+   }
 }
+
 
 @media (max-width: 397px) {
    /* in the resume, moves "University of
@@ -492,6 +498,11 @@ social media icons sit in */
    the logo when it wraps to two lines */
    .multi-line-wrap {
       margin-top: -7px;
+   }
+
+   .site-footer h4 {
+      font-size: 3rem;
+      margin-top: -25px;
    }
 }
 
