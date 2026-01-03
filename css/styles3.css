@@ -1,0 +1,574 @@
+/* =========================
+   0. CSS VARIABLES
+   ========================= */
+
+   :root {
+      --sand: #EFEDE7;
+      --accent-teal: #1aad91;
+      --accent-red: #A00A0C;
+      --medium-green: #1c403a;
+      --dark-green: #1c2d2a;
+      --white: #fff;
+      --light-grey: #BFBFBF;
+      --dark-grey: #333333;
+
+      --max-width-100: 100%;
+      --max-width-md: 1200px;
+      --max-width-sm: 720px;
+
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 2rem;
+      --space-lg: 4rem;
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+
+      --shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   }
+
+/* =========================
+   1. Global Styles
+   ========================= */
+
+/* Base styles applied to the entire page body */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Defines a font stack */
+  font-size: 16px; /* The default size for most browsers, which can be adjusted */
+  line-height: 1.5; /* Sets spacing between lines of text */
+  color: var(--dark-grey); /* Default text color */
+  background: var(--sand);
+  background-color: var(--sand); /* Default background color */
+  margin: 0; /* Removes default body margin */
+}
+
+/* Styles for headings (h1-h6) */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; /* Ensures headings are bold */
+  margin-bottom: var(--space-xs); /* Adds space below headings */
+  margin-top: var(--space-xs);
+  line-height: 1.2rem; /* Tighter line spacing for headings */
+}
+
+/* Styles for paragraphs */
+p {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+/* Styles for links */
+a {
+  color: #007bff; /* Sets link color */
+  text-decoration: none; /* Removes default underlines */
+  font-weight: bold;
+}
+
+a:hover, a:focus {
+  text-decoration: underline; /* Adds underline on hover/focus for accessibility */
+}
+
+ul {
+   margin-top: -12px;
+}
+
+ul li {
+    margin-bottom: 16px; /* Adds 10px of space below each list item */
+
+}
+
+/* Optional: remove the margin from the last item to prevent extra space at the end */
+ul li:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+   font-size: 4rem;
+}
+
+h3 {
+   font-size: 2.3rem; 
+   margin-bottom: 30px;
+}
+
+h4 {
+   font-size: 1.1rem;
+}
+
+h5 {
+   font-weight: normal;
+}
+
+/* =========================
+   2. Global Layout
+   ========================= */
+
+.container--rel {position: relative;}
+
+.container--narrow {
+   position: relative;
+   padding: 20px 30px;
+   margin: 0 auto;
+   background: #ccc;
+   max-width: var(--max-width-sm);
+   border-radius: var(--radius-lg);
+}
+
+.full-width {width: var(--max-width-100);}
+
+.flex {display: flex;}
+
+.section-break {margin-top: 60px;}
+
+.img-thumb {width: 52px;}
+
+/* column widths */
+.col-25-percent {flex-basis: 25%;}
+
+.col-33-percent {flex-basis: 33.33%;}
+
+.col-50-percent {flex-basis: 50%;}
+
+.col-67-percent {flex-basis: 66.67%;}
+
+.col-75-percent {flex-basis: 75%;}
+
+.col-100-percent {flex-basis: 100%;}
+
+/* border radius */
+.radius-sm {border-radius: var(--radius-sm);}
+
+.radius-md {border-radius: var(--radius-md);}
+
+.radius-lg {border-radius: var(--radius-lg);}
+
+.radius-pill {border-radius: 50px;}
+
+/* padding */
+.padding-20 {padding: 20px;}
+
+/* XL headers that extend off containers */
+.xl-offset-header h2 {
+   font-size: 6rem;
+   margin-top: -62px;
+   margin-left: -4px;
+   color: #ccc;
+   text-transform: uppercase;
+   letter-spacing: -3px;
+}
+
+.mt-20 {margin-top: 20px;}
+.mb-20 {margin-bottom: 20px;}
+.neg-mt-30 {margin-top: -30px;}
+
+
+/* center aligned buttons in a container */
+.btn-center {
+   justify-content: center;
+}
+
+/* outside wrapper for buttons */
+.btn-row {
+   display: flex;
+   flex-direction: row;
+}
+
+/* button <a> styles */
+.btn-row .button {
+   flex-basis: fit-content;
+   flex-direction: row;
+   background: #888;
+   color: #fff;
+   border: 2px solid #000;
+   padding: 8px 32px;
+   top: 0;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+}
+
+/* button arrow */
+.btn-row .button span svg {
+   width: 24px;
+   padding: 0;
+   margin-top: -14px;
+   left: 4px;
+   transition: 0.2s ease-in-out;
+}
+
+.button:hover {
+   text-decoration: none;
+   background: #222;
+   color: #fff;
+   border: 2px solid #000;
+}
+
+.button:hover span svg {
+  left: 8px;
+   transition: 0.2s ease-in-out;
+}
+
+/* =========================
+   3. Resume
+   ========================= */
+
+/* full width container for entire block */
+.resume-bg {
+   margin-top: 100px;
+}
+
+/* partial height container for bg color */
+.resume-bg-color {
+   position: absolute;
+   width: 100%;
+   height: 80%;
+   top: 10%;
+   background: #222;
+}
+
+/* tightens up the alignment between headings */
+.resume .flex .col h4, .resume .flex .col h5 {
+   padding-left: 12px;
+}
+
+.resume h4 {
+   margin-top: 4px;
+}
+
+.resume h5 {
+   margin-top: -8px;
+} 
+
+/* left border on sections */
+.border-left {
+   border-left: 3px solid var(--dark-grey);
+   padding: 0 12px 2px 36px;
+   margin: auto auto 20px 25px;
+}
+
+/* section header background color */
+.bg-highlight {
+   background: rgba(255, 255, 255, 0.4);
+   margin: 12px auto -20px -12px;
+   padding: 4px 12px;
+}
+
+/* last line of the resume */
+.resume-list {
+   margin-bottom: -20px;
+}
+
+
+/* =========================
+   4. Footer
+   ========================= */
+.site-footer {
+   max-width: 1440px;
+   margin: 150px auto 0 auto;
+}
+
+.footer-bg {
+   background: #ccc;
+   padding: 0 20px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 130px;
+}
+
+.site-footer h4 {
+   font-size: 2.8rem;
+   margin-top: -25px;
+   padding-bottom: 20px;
+   color: #ccc;
+   text-transform: uppercase;
+}
+
+/* switched to absolute, so project link tiles
+underneath it ignore it's position for margins */
+.site-footer .footer-right h4 {
+   position: absolute;
+}
+
+.site-footer h5 {
+   font-size: 1.8rem;
+   line-height: 2.2rem;
+   margin-bottom: 50px;
+   max-width: 460px;
+}
+
+.footer-left {
+   grid-column: 1;
+   grid-row: 1;
+}
+
+.footer-right {
+   grid-column: 2;
+   grid-row: 1;
+}
+
+/* width of two footer blocks */
+.footer-left, .footer-right {
+   background: #ccc;
+   flex-basis: 40%;
+}
+
+/* social media icons */
+.footer-left .flex {
+   gap: 12px;
+}
+
+/* social media icon size */
+.footer-left .flex img {
+   width: 36px;
+   margin-top: 24px;
+}
+
+/* outsinde container for project links, sits 
+inside of the footer-right */
+.footer-projects {
+   display: grid;
+   rid-template-columns: 1fr;
+   margin: 0;
+   padding: 0;
+   height: 100%;
+}
+
+/* individial containers for the project links */
+.footer-project-tile {
+   display: flex;
+   background: blue;
+   align-content: stretch;
+   align-items: stretch;
+   border-radius: var(--radius-sm);
+   padding: 0;
+}
+
+/* link inside of the tile */
+.footer-projects a {
+   display: flex;
+   align-content: stretch;
+   align-items: stretch;
+   align-self: center;
+   flex-basis: 100%;
+   background: red;
+   padding: 38px;
+   margin-top: 0px;
+   opacity: 0.5;
+   font-size: 1.7rem;
+   line-height: 1.7rem;
+   border-radius: var(--radius-sm);
+}
+
+/* email address link */
+.footer-projects a:hover {
+   background: blue;
+   text-decoration: none;
+}
+
+/* reposition the email next to email address,
+pulls it down a bit to center it with text */
+.footer-left a span svg {
+   position: relative;
+   top: 10px;
+}
+
+/* decrease font size of copyright text */
+.footer-left p {
+   font-size: 0.8rem;
+}
+
+/* offset the container of social media icons */
+.social-icon-link{
+    margin-top: 20px;
+}
+
+/* resize social media icons */
+.footer-left a svg {
+   width: 32px;
+   height: 32px;
+}
+
+/* resize the bounding box of the link that the 
+social media icons sit in */
+.footer-left a {
+   width: 32px;
+   height: 32px;
+  
+}
+
+/* =========================
+   5. Mobile Styles
+   ========================= */
+
+
+@media (max-width:700px) {
+   /* collapse flexboxes into rows */
+   .flex {
+      display: block;
+   }
+
+   /* keeps logo and label stacked side-by-side
+   in the resume section */
+   .resume .flex {
+      display: flex;
+   }
+
+   /* changes footer content blocks to
+   have the background color, defining two
+   separate blocks instead of one footer element */
+   .footer-left, .footer-right{
+      margin-top: 30px;
+      background: #222;
+      padding: 0px 24px 24px 24px;
+      border-radius: var(--radius-md);
+   }
+
+   /* moves footer block with copyright 
+   below footer block with project links */
+   .footer-left {
+      grid-column: 1;
+      grid-row: 2;
+
+   }
+
+   /* moves footer block with project links 
+   above copyright/contact block */
+   .footer-right {
+      grid-column: 1;
+      grid-row: 1;
+       margin-bottom: 50px;
+   }
+
+   /* changes grid layout to 1 row, 2 columns
+   to 2 rows, 1 column */
+   .footer-bg {
+      grid-template-columns: 1fr;
+      padding: 0;
+      background: none;
+   }
+
+   .site-footer {
+      margin: 80px auto 0 auto;
+   }
+
+   .site-footer h4 {
+      margin-top: -24px;
+      margin-left: -20px;
+      color: #222;
+   }
+
+   .site-footer h5 {
+      font-size: 1.5rem;
+      max-width: 100%;
+   }
+
+   .xl-offset-header h2 {
+      font-size: 4.5rem;
+      margin-top: -56px;
+   }
+
+   .footer-projects  {
+      margin-bottom: -20px;
+   }
+
+   .footer-projects a {
+      padding: 25px;
+      font-size: 1.2rem;
+   }
+
+   .social-icon-link{
+      top:40px;
+       margin-top: 40px !important;
+   }
+
+
+}
+
+@media (max-width: 397px) {
+   /* in the resume, moves "University of
+   Wisconsin-Whitewater" up to align with
+   the logo when it wraps to two lines */
+   .multi-line-wrap {
+      margin-top: -7px;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
