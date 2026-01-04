@@ -4,12 +4,14 @@
 
    :root {
       --sand: #EFEDE7;
+      --sand-dark: #D5D3CD;
+      --sand-3: #C9C8C4;
       --accent-teal: #18C3A2;
       --accent-red: #A00A0C;
       --medium-green: #1c403a;
       --dark-green: #1c2d2a;
       --white: #fff;
-      --light-grey: #BFBFBF;
+      --light-grey: #D5D3CD;
       --dark-grey: #333333;
 
       --max-width-100: 100%;
@@ -27,6 +29,10 @@
       --radius-xl: 24px;
 
       --shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  
+      --nav-width: 320px;
+      --nav-bg: #0f0f14;
+      --nav-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
    }
 
 /* =========================
@@ -42,6 +48,7 @@ body {
   background: var(--sand);
   background-color: var(--sand); /* Default background color */
   margin: 0; /* Removes default body margin */
+  overflow-x: hidden;
 }
 
 /* Styles for headings (h1-h6) */
@@ -84,9 +91,11 @@ h5 {font-weight: normal;}
    position: relative;
    padding: 20px 30px;
    margin: 0 auto;
-   background: #ccc;
+   background: var(--white);
+   color: var(--dark-grey);
    max-width: var(--max-width-sm);
    border-radius: var(--radius-lg);
+   box-shadow: var(--shadow);
 }
 
 .full-width {width: var(--max-width-100);}
@@ -113,12 +122,24 @@ h5 {font-weight: normal;}
 
 /* XL headers that extend off containers */
 .xl-offset-header h2 {
-   font-size: 6rem;
-   margin-top: -62px;
+   font-size: 7rem;
+   margin-top: -65px;
    margin-left: -4px;
-   color: #ccc;
+   color: var(--white);
    text-transform: uppercase;
    letter-spacing: -3px;
+   text-shadow: 0px 12px 20px rgba(0,0,0,0.2);
+}
+
+.shadow-mask {
+   position: absolute;
+   width: 100%;
+   height: 40px;
+   top: 0;
+   left: 0;
+   background: var(--white);
+   border-top-left-radius: var(--radius-lg);
+   border-top-right-radius: var(--radius-lg);
 }
 
 .mt-20 {margin-top: 20px;}
@@ -193,6 +214,119 @@ h5 {font-weight: normal;}
 
 
 /* =========================
+   3. Project Tiles
+   ========================= */
+
+
+ .tile a span{
+  position: relative;
+  top: 0px;
+  left: 0;
+  transition: left 0.2s ease-in-out;
+}
+
+
+.tile a:hover span {
+  left: 6px;
+  transition: left 0.2s ease-in-out;
+}
+
+.tile-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 90px 20px 150px 20px;
+}
+
+
+.tile-row-1 {
+  padding: 20px 20px 10px 20px;
+}
+
+.tile {
+  width: 100%;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  height: 400px;
+  border-radius: var(--radius-md);
+  background-size: cover;
+  padding-bottom: 40px;
+  background-position: center center;
+}
+
+.tile[data-bg="velar"] { background-image: url(../img/jlr/24my_interior2.jpg); }
+.tile[data-bg="trackside"] { background-image: url(../img/trackside_thunder/tt_wordmark.svg); }
+
+
+.tile a {
+  background: linear-gradient(0deg,rgba(28, 64, 58, 0.9) 20%, rgba(28, 64, 58, 0.5) 50%, rgba(28, 64, 58, 0.9) 100%);
+  height: 100%;
+  display: block;
+  padding: 20px 50px 20px 20px;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  font-weight: bold;
+  z-index: 9999!important;
+  color: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: rgba(50, 50, 93, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  transition: 0.2s ease-in-out;
+}
+
+.tile a:hover {
+  text-decoration: none;
+  background: linear-gradient(0deg,rgba(26, 173, 145, .8) 0%, rgba(26, 173, 145, .8) 50%, rgba(26, 173, 145, .8) 100%);
+  transition: 0.2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.6) 0px 13px 27px -5px, rgba(0, 0, 0, 0.4) 0px 8px 16px -8px;
+}
+
+.tile-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: -475px;
+  z-index: -1;
+  padding-top: 40px;
+  border-radius: var(--radius-md);
+}
+
+.tile video {
+    /* Position and size the video to cover the entire container */
+  position: absolute;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+   border-radius: var(--radius-md);
+  object-fit: cover; /* Ensures the video covers the area while maintaining aspect ratio */
+  z-index: 0; /* Places the video in the background */
+}
+
+.project-info-wrapper {
+  display: flex;
+  margin-top: -80px;
+  gap: 8px;
+  padding: 20px;
+  z-index: 1!important;
+}
+
+.project-info-chip {
+  margin-top: auto;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.2);
+  /*border-left: 3px solid var(--white);
+  border-right: 3px solid var(--white);*/
+  font-weight: bold;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  z-index: 0;
+}
+
+
+/* =========================
    3. Resume
    ========================= */
 
@@ -205,8 +339,10 @@ h5 {font-weight: normal;}
    width: 100%;
    height: 80%;
    top: 10%;
-   background: #222;
+   background: var(--sand-dark);
 }
+
+
 
 /* tightens up the alignment between headings */
 .resume .flex .col h4, .resume .flex .col h5 {
@@ -214,24 +350,145 @@ h5 {font-weight: normal;}
 }
 
 .resume h4 {margin-top: 4px;}
-.resume h5 {margin-top: -8px;} 
+.resume h5 {margin-top: -8px; color: var(--dark-green);} 
 
 /* left border on sections */
 .border-left {
-   border-left: 3px solid var(--dark-grey);
+   border-left: 3px solid var(--sand-dark);
    padding: 0 12px 2px 36px;
    margin: auto auto 20px 25px;
 }
 
 /* section header background color */
 .bg-highlight {
-   background: rgba(255, 255, 255, 0.4);
+   background: var(--sand);
    margin: 12px auto -20px -12px;
-   padding: 4px 12px;
+   padding: 4px 12px 2px 12px;
 }
 
 /* last line of the resume */
 .resume-list {margin-bottom: -20px;}
+
+.corner-square {
+   position: absolute;
+   height: 100px;
+   width: 100px;
+}
+
+.top-right-square {
+   border-right: 5px solid var(--sand-3);
+   border-top: 5px solid var(--sand-3);
+   right: -30px;
+   top: -30px;
+   border-top-right-radius: var(--radius-xl);
+}
+
+.btm-left-square {
+   border-left: 5px solid var(--sand-3);
+   border-bottom: 5px solid var(--sand-3);
+   left: -30px;
+   bottom: -30px;
+   border-bottom-left-radius: var(--radius-xl);
+}
+
+/* =========================
+   4. Header
+   ========================= */
+
+
+.subpage-title {
+   position: relative;
+   max-width: 1200px;
+   padding: 20px;
+   margin: 0 auto;
+}
+
+.subpage-title h1 {
+   font-size: 7rem;
+   margin-top: 50px;
+   color: var(--white);
+   text-shadow: 0px 12px 20px rgba(0,0,0,0.2);
+}
+
+ /* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 200px;
+  width: 200px;
+  position: absolute; /* Stay in place */
+  z-index: 9998; /* Sit on top */
+  right: -100px;
+  top: -120px;
+  border-bottom-left-radius: 50%;
+  background: var(--dark-green);
+  overflow: hidden; /* Disable horizontal scroll */
+  transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+}
+
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  color: var(--sand);
+  font-size: 3rem;
+  display: block;
+  margin-left: 500px;
+  transition: 0.3s ease-in-out; /* Transition effects on hover (color) */
+}
+
+.nav-link {margin-left: 500px;}
+
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: var(--accent-teal);
+}
+
+.nav-btn {
+   cursor:pointer;
+   position: absolute;
+   top: 12px;
+   right: 12px;
+   z-index: 9999;
+   color: var(--white);
+   opacity: 1;
+   display: flex;
+   flex-direction: column;;
+   line-height: 7px;
+   padding-bottom: 7px;
+   font-size: 38px;
+   height: 36px;
+   width: 44px;
+   background-color: transparent;
+   border: none;
+   appearance: none;
+}
+
+#ham-line1, #ham-line2, #ham-line3 {
+   position: absolute;
+   transition: 0.3s ease-in-out;
+}
+
+#ham-line1 {top: 0px;}
+#ham-line2 {top: 8px;}
+#ham-line3 {top: 16px;}
+
+.home-logo img {
+   width: 48px;
+   margin-left: 12px;
+   margin-top: 12px;
+}
+
 
 
 /* =========================
@@ -239,7 +496,7 @@ h5 {font-weight: normal;}
    ========================= */
 .site-footer {
    max-width: 1440px;
-   margin: 150px auto 0 auto;
+   margin: 200px auto 0 auto;
 }
 
 .footer-bg {
@@ -255,6 +512,7 @@ h5 {font-weight: normal;}
    margin-top: -28px;
    padding-bottom: 20px;
    text-transform: uppercase;
+   letter-spacing: -2px;
 }
 
 /* switched to absolute, so project link tiles
@@ -316,7 +574,7 @@ inside of the footer-right */
 }
 
 /* project tile background images, passed in from attribute */
-.footer-project-tile[data-bg="1"] { background-image: url(../img/jlr/24my_exterior.jpg); }
+.footer-project-tile[data-bg="1"] { background-image: url(../img/jlr/24my_interior2.jpg); }
 .footer-project-tile[data-bg="2"] { background-image: url(../img/trackside_thunder/tt_wordmark.svg); }
 .footer-project-tile[data-bg="3"] { background-image: url(../img/dirt_track/hero_card3.png); }
 
@@ -333,18 +591,23 @@ inside of the footer-right */
    font-size: 1.7rem;
    line-height: 1.7rem;
    border-radius: var(--radius-sm);
-   background: linear-gradient(90deg,rgba(28, 64, 58, 0.9) 35%, rgba(28, 64, 58, 0.4) 100%);
+   background: linear-gradient(90deg,rgba(28, 64, 58, 0.9) 35%, rgba(255, 255, 255, 0.4) 100%);
    transition: 0.2s ease-in-out;
    box-shadow: var(--shadow);
    text-shadow: 2px 2px 0px rgba(0,0,0,0);
+   background-size: 200% 100%; /* Make background twice as wide */
+  background-position: 0% 0%; /* Start at the beginning */
+  transition: 0.3s ease-out;
 }
 
 /* project tile <a> hover */
 .footer-projects a:hover {
-   background: linear-gradient(90deg,rgba(26, 173, 145, .9) 35%, rgba(26, 173, 145, .4) 100%);
+   background: linear-gradient(90deg,rgba(26, 173, 145, .9) 35%, rgba(255, 255, 255, .4) 100%);
    text-decoration: none;
    transition: 0.2s ease-in-out;
    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+   background-position: 100% 0%;
+   transition: 0.3s ease-out;
 }
 
 /* reposition the email next to email address,
@@ -406,6 +669,8 @@ social media icons sit in */
    transition: 0.2s ease-in-out;
 }
 
+
+
 /* =========================
    5. Mobile Styles
    ========================= */
@@ -413,6 +678,26 @@ social media icons sit in */
 @media (max-width: 1077px) {
    .footer-projects a {padding: 62px 24px;}
    .footer-bg {column-gap: 80px;}
+}
+
+@media (max-width: 920px) {
+   .corner-square {
+      display: none;
+   }
+}
+
+@media (max-width: 900px) {
+  .tile-wrapper {
+      flex-flow: column wrap;
+       padding: 80px 20px 80px 20px;
+  }
+  .tile {
+    height: 300px;
+  }
+
+  .tile-video-wrapper {
+    top: -375px !important;
+  }
 }
 
 @media (max-width: 830px) {
@@ -463,10 +748,7 @@ social media icons sit in */
       max-width: 100%;
    }
 
-   .xl-offset-header h2 {
-      font-size: 4.5rem;
-      margin-top: -56px;
-   }
+   
 
    .footer-projects  {
       margin-bottom: -20px;
@@ -489,6 +771,17 @@ social media icons sit in */
    .resume .flex, .footer-left .flex {
       display: flex;
    }
+
+   .subpage-title h1 {
+      font-size: 5rem;
+   }
+}
+
+@media (max-width: 600px) {
+   .xl-offset-header h2 {
+      font-size: 4.5rem;
+      margin-top: -56px;
+   }
 }
 
 
@@ -505,6 +798,16 @@ social media icons sit in */
       margin-top: -25px;
    }
 }
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+} 
 
 
 

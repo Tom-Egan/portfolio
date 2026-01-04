@@ -17,12 +17,12 @@
   <link rel="canonical" href="https://www.tom-egan.com/">
 
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../img/te_icon_color.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles3.css">
 
   <!-- Optional: Open Graph / social sharing -->
   <meta property="og:title" content="Tom Egan – St. Helens, Oregon Designer">
@@ -37,72 +37,45 @@
 
 
 <body>
-    <!-- <div class="hero-bg-shape-1"></div>
-    <div class="hero-bg-shape-2"></div>
-    <div class="hero-bg-shape-3"></div> -->
-  <!-- load header component -->
-  <div data-include="components/header.html"></div>
-
+<!-- load grid of tiles component -->
+        <div data-include="../components/header.html">
+        </div>
   <main>
-    <!-- page content -->
-    <div class="home-hero-wrapper">
-    <div class="hero-bg"></div>
-        
+
+    <section class="subpage-title">
         <h1>Versatile Problem Solver</h1>
+    </section>
 
-        <!-- IA diagram -->
-        <div class="ia" id="ia">
-            <!-- IA lines, drawn in ia.js -->
-            <svg class="ia-lines"></svg>
-
-            <!-- IA node, top row -->
-            <div class="ia-node ia-top" data-node="top"><h2>Tom Egan</h2><p>Based in St. Helens, Oregon</p></div>
-            <!-- IA nodes, second row -->
-            <div class="ia-node" data-child><h3>UX Design</h3></div>
-            <div class="ia-node" data-child><h3>Visual Design</h3></div>
-            <div class="ia-node" data-child><h3>Motion Graphics</h3></div>
-            <div class="ia-node" data-child><h3>Branding </h3></div>
-        </div>
-
-        <div class="hero-cta-wrapper">
-            <a href="about/index.html">
-                <button>Learn more
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class=""><path d="M2.66797 8H13.3346M13.3346 8L9.33464 4M13.3346 8L9.33464 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </span>
-                </button>
-            </a>
-        </div>
-    </div>
-
-    <div class="clear-hero">
-        <div class="section-header">
-              <h2>Projects</h2>
-              <span class="header-dash">///</span>
-              <div class="header-line"></div>
-              
-        </div>
-
-
+    <section>
         <!-- load grid of tiles component -->
-        <div data-include="components/project-tiles.html">
+        <div data-include="../components/project-tiles.html">
         </div>
-    </div>
+    </section>
 
-    <!-- load resume component -->
-    <div data-include="components/resume.html">
-    </div>
+    <section>
+        <!-- load resume component -->
+        <div data-include="../components/resume.html">
+        </div>
+    </section>
 
   </main>
 
-  <!-- load footer component -->
-  <div data-include="components/footer.html"></div>
+  <section>
+      <!-- load footer component -->
+      <div data-include="../components/footer.html"></div>  
+  </section>
+
+    <script>
+      /* Open */
+
+  </script>
 
   <!-- load main javascript -->
-  <script src="js/main.js" defer></script>
-  <!-- hero section for IA diagram drawing -->
-  <script src="js/ia.js"></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/nav.js" defer></script>
+
+
+
 
 </body>
 
