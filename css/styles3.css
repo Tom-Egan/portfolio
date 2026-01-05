@@ -41,7 +41,7 @@
 
 /* Base styles applied to the entire page body */
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Defines a font stack */
+  font-family: "Inter", sans-serif;
   font-size: 16px; /* The default size for most browsers, which can be adjusted */
   line-height: 1.5; /* Sets spacing between lines of text */
   color: var(--dark-grey); /* Default text color */
@@ -57,6 +57,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--space-xs); /* Adds space below headings */
   margin-top: var(--space-xs);
   line-height: 1.2rem; /* Tighter line spacing for headings */
+}
+
+h1, h2 {
+   font-family: "Inter", sans-serif;
+}
+
+h3, h4, .serif-strong{
+   font-family: "Merriweather", serif;
+}
+
+h3, .serif-strong {
+   font-weight: 900;
 }
 
 /* Styles for paragraphs */
@@ -80,6 +92,46 @@ h2 {font-size: 4rem;}
 h3 {font-size: 2.3rem; margin-bottom: 30px;}
 h4 {font-size: 1.1rem;}
 h5 {font-weight: normal;}
+
+.inter-light {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: light;
+}
+
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
+}
+
+.merriweather-normal {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 
 /* =========================
    2. Global Layout
@@ -382,8 +434,8 @@ strong {
    padding-left: 12px;
 }
 
-.resume h4 {margin-top: 4px;}
-.resume h5 {margin-top: -8px; color: var(--dark-green);} 
+.resume h4 {margin-top: 6px;}
+.resume h5 {margin-top: -6px; color: var(--dark-green);} 
 
 /* left border on sections */
 .border-left {
@@ -396,7 +448,7 @@ strong {
 .bg-highlight {
    background: var(--sand);
    margin: 12px auto -20px -12px;
-   padding: 4px 12px 2px 12px;
+   padding: 6px 12px 2px 12px;
 }
 
 /* last line of the resume */
@@ -436,9 +488,14 @@ strong {
    max-width: 1000px;
 }
 
-.subpage-wide {
-   max-width: 1200px;
+.subpage-bg {
+   height: 300px;
+   width: 100%;
+   background: var(--dark-green);
+   margin-top: -76px;
+   padding-top: 76px;
 }
+
 
 .subpage-title h1 {
    width: auto;
@@ -480,17 +537,45 @@ strong {
    background: var(--sand);
 }
 
+#corner-circle-base {
+   height: 200px;
+  width: 200px;
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  right: -100px;
+  top: -120px;
+  border-bottom-left-radius: 50%;
+  opacity: 1;
+  background: var(--medium-green);
+  overflow: hidden; /* Disable horizontal scroll */
+  transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  border: 3px solid var(--accent-teal);
+}
+
+#corner-circle {
+   height: 200px;
+  width: 200px;
+  position: absolute; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  right: -100px;
+  top: -120px;
+  border-bottom-left-radius: 50%;
+  background: var(--accent-teal);
+  overflow: hidden; /* Disable horizontal scroll */
+  transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
  /* The Overlay (background) */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */   
   height: 200px;
   width: 200px;
   position: absolute; /* Stay in place */
-  z-index: 9998; /* Sit on top */
+  z-index: 9999; /* Sit on top */
   right: -100px;
   top: -120px;
   border-bottom-left-radius: 50%;
-  background: var(--dark-green);
+  background: var(--medium-green);
   overflow: hidden; /* Disable horizontal scroll */
   transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -500,8 +585,12 @@ strong {
 .overlay-content {
   position: relative;
   top: 25%; /* 25% from the top */
-  width: fit-content;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto; 
+  padding: 0 20px;
+    transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+
 }
 
 .nav-underline {
@@ -511,16 +600,26 @@ strong {
 
 /* The navigation links inside the overlay */
 .overlay a {
-  padding: 8px;
+  padding: 12px;
   text-decoration: none;
-  color: var(--sand);
-  font-size: 3rem;
+  
   display: block;
-  margin-left: 500px;
+  margin-left: 20px;
+  margin-right: 20px;
   transition: 0.3s ease-in-out; /* Transition effects on hover (color) */
 }
 
-.nav-link {margin-left: 500px;}
+.nav-link {
+   opacity: 0;
+   font-size: 3rem;
+   color: var(--sand);
+   pointer-events: none;
+}
+
+/* When you mouse over the navigation links, change their color */
+.nav-link:hover, .nav-link:focus {
+  color: var(--accent-teal) !important;
+}
 
 .nav-subtitle {
    font-size: 0.9rem;
@@ -529,10 +628,7 @@ strong {
 }
 
 
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: var(--accent-teal);
-}
+
 
 .nav-btn {
    cursor:pointer;
@@ -554,6 +650,11 @@ strong {
    appearance: none;
 }
 
+.ham-line {
+   color: var(--sand);
+   font-weight: bold;
+}
+
 #ham-line1, #ham-line2, #ham-line3 {
    position: absolute;
    transition: 0.3s ease-in-out;
@@ -565,8 +666,8 @@ strong {
 
 .home-logo img {
    width: 48px;
-   margin-left: 12px;
-   margin-top: 12px;
+   margin-left: 24px;
+   margin-top: 24px;
 }
 
 /* =========================
@@ -926,7 +1027,7 @@ social media icons sit in */
       top: 15%;
    }
 
-   .overlay a {
+   .nav-link {
       font-size: 1.8rem;
    }
 
@@ -960,7 +1061,7 @@ social media icons sit in */
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
+  .nav-link {font-size: 20px}
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;

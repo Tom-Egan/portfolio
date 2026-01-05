@@ -1,29 +1,52 @@
+<!-- header -->
 <header>
+  <!-- logo -->
   <div class="home-logo">
-    <a href="/">
-      <img src="../img/te_icon_color.svg">
-    </a>
+    <a href="/"><img src="../img/te_icon_color.svg" alt="image of Tom Egan logo"></a>
   </div>
+
+  <!-- accent circle that sits underneath nav manu
+  ---- and extends outwards with a teal accent -->
+  <div id="corner-circle-base"></div>
+
+  <!-- parent element to hide overflow -->
+  <div class="overlaywrapper">
+
+      <!-- main menu overlay -->
+      <div id="nav-overlay" class="overlay">
+
+        <!-- accent circle that makes the background
+        ---- of the close button -->
+        <div id="corner-circle"></div>
+
+        <!-- Overlay content -->
+        <div id="overlay-container" class="overlay-content">
+          <!-- link 1 -->
+          <a class="nav-link nav-underline" href="/">Home</a>
+
+          <!-- link 2 -->
+          <a class="nav-link nav-underline" href="/about">About</a>
+
+          <!-- link 3 -->
+          <a class="nav-link nav-underline" href="/l560-range-rover-velar.html"><span class="nav-subtitle">Case Study 1</span>L560 Range Rover Velar</a>
+
+          <!-- link 4 -->
+          <a class="nav-link nav-underline" href="/trackside-thunder.html"><span class="nav-subtitle">Case Study 2</span>Trackside Thunder</a>
+
+          <!-- link 5 -->
+          <a class="nav-link" href="/dirt-track-racing.html"><span class="nav-subtitle">Case Study 3</span>Dirt Track Racing</a>
+
+        </div> <!-- overlay content -->
+      </div> <!-- overlay -->
+  </div> <!-- overlayWrapper -->
+
+  <!-- Open/close menu button -->
+  <button id="navBtn" class="nav-btn" onclick="toggleMenu()">
+      <!-- hamburger menu lines -->
+      <span class="ham-line" id="ham-line1">—</span>
+      <span class="ham-line" id="ham-line2">—</span>
+      <span class="ham-line" id="ham-line3">—</span>
+  </button>
+
 </header>
-
-     <!-- The overlay -->
-<div class="overlaywrapper">
-    <div id="nav-overlay" class="overlay">
-
-      <!-- Overlay content -->
-      <div class="overlay-content">
-        <a class="nav-link nav-underline" href="/">Home</a>
-        <a class="nav-link nav-underline" href="/about">About</a>
-        <a class="nav-link nav-underline" href="/projects/l560-range-rover-velar.html"><span class="nav-subtitle">Case Study 1</span>L560 Range Rover Velar</a>
-        <a class="nav-link nav-underline" href="/projects/trackside-thunder.html"><span class="nav-subtitle">Case Study 2</span>Trackside Thunder</a>
-        <a class="nav-link" href="/projects/dirt-track-racing.html"><span class="nav-subtitle">Case Study 3</span>Dirt Track Racing</a>
-      </div>
-
-    </div>
-</div>
-<!-- Use any element to open/show the overlay navigation menu -->
-<button id="navBtn" class="nav-btn" onclick="toggleMenu()">
-    <span id="ham-line1">—</span>
-    <span id="ham-line2">—</span>
-    <span id="ham-line3">—</span>
-</button>
+<!-- end of header -->
