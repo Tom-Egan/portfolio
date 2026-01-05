@@ -8,13 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Page title -->
-  <title>About Tom Egan – St. Helens, Oregon Designer</title>
+  <title>About Tom Egan | Senior UX Designer at Jaguar Land Rover, based in St. Helens, Oregon</title>
 
   <!-- Primary SEO -->
-  <meta name="description" content="Portfolio of Tom Egan – a versatile and multifaceted designer, proficient in delivering UI/UX design, visual design, motion graphics, branding, and more.">
+ <meta name="description" content="About Tom Egan, a UX designer at Jaguar Land Rover focused on interaction design, in-vehicle infotainment systems, and visual storytelling; based in St. Helens, Oregon.">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.tom-egan.com/">
+  <link rel="canonical" href="https://www.tom-egan.com/about/">
+
 
   <!-- Favicon -->
   <link rel="icon" href="../favicon.ico" sizes="any">
@@ -25,7 +26,7 @@
   <link rel="stylesheet" href="../css/styles3.css">
 
   <!-- Optional: Open Graph / social sharing -->
-  <meta property="og:title" content="Tom Egan – St. Helens, Oregon Designer">
+  <meta property="og:title" content="About Tom Egan | Senior UX Designer at Jaguar Land Rover, based in St. Helens, Oregon">
   <meta property="og:description" content="Versatile and multifaceted designer, proficient in delivering UI/UX design, visual design, motion graphics, branding, and more.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tom-egan.com/">
@@ -38,37 +39,53 @@
 
 <body>
 <!-- load grid of tiles component -->
-        <div data-include="../components/header.html">
-        </div>
+<header data-include="../components/header.html"></header>
   <main>
 
     <section class="subpage-title">
         <h1>About</h1>
+
+        <div class="subpage-title-line1"></div>
+        <div class="subpage-title-line2"></div>
+        <div class="subpage-title-line3"></div>
     </section>
 
     <section>
-        <!-- load grid of tiles component -->
-        <div data-include="../components/project-tiles.html">
-        </div>
+      <div class="narrow padding-20">
+          <p class="mt-0">
+          I’m a UX Designer focused on creating clear, intuitive digital experiences in complex environments. My work spans interaction design, systems thinking, and visual craft.
+        </p>
+
+        <p>
+        Originally from the Upper Midwest, I was born and raised in Minnesota and studied Media Arts & Game Development at the University of Wisconsin–Whitewater. Since 2016, I’ve been based in St. Helens, Oregon, where I work as a UX Designer at Jaguar Land Rover, contributing to in-vehicle infotainment systems used across global vehicle platforms.
+      </p>
+
+       <img class="mt-40 mb-20" src="../img/about-map.svg" alt="Map highlighting Minnesota, Wisconsin, and Oregon" loading="lazy">
+
+      <p class="mt-40">
+        Outside of my day-to-day work, I’m deeply involved in the local dirt track racing community as a photographer and designer. Through <a href="https://www.tomeganphoto.com/" target="_blank" rel="noopener noreferrer">Tom Egan Photo</a>, I collaborate with tracks and drivers on race promotions, driver promotions, and more—an outlet that lets me explore storytelling and visual design work in a real-world setting.
+      </p>
+
+      <h3 class="mt-40">Core Skills</h3>
+          <ul>
+          <li><strong>UX Design:</strong> Wireframing, Information Architecture, Prototyping, User Flows, Usability Testing, Heuristic Evaluation</li>
+          <li><strong>Visual Design:</strong> UI Design, Poster Design</li>
+          <li><strong>Branding:</strong> Logo Design, Typography, Color Systems, Brand Strategy</li>
+          <li><strong>Motion Graphics: </strong>Animation, Visual Storytelling</li>
+          <li><strong>Design Systems:</strong> DesignOps, Component Libraries</li>
+        </ul>
+         
+      </div>
     </section>
 
-    <section>
-        <!-- load resume component -->
-        <div data-include="../components/resume.html">
-        </div>
-    </section>
+
+    <div class="pad-bot-60"></div>
+
+    <section data-include="../components/resume.html"></section>
 
   </main>
 
-  <section>
-      <!-- load footer component -->
-      <div data-include="../components/footer.html"></div>  
-  </section>
-
-    <script>
-      /* Open */
-
-  </script>
+  <footer data-include="../components/footer.html"></footer>
 
   <!-- load main javascript -->
   <script src="../js/main.js" defer></script>
@@ -79,4 +96,4 @@
 
 </body>
 
-<html>
+</html>

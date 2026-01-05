@@ -67,7 +67,7 @@ p {
 
 /* Styles for links */
 a {
-  color: #007bff; /* Sets link color */
+  color: var(--accent-red); /* Sets link color */
   text-decoration: none; /* Removes default underlines */
   font-weight: bold;
 }
@@ -87,6 +87,14 @@ h5 {font-weight: normal;}
 
 .container--rel {position: relative;}
 
+.narrow {
+   position: relative;
+   margin: -70px auto 0 auto;
+   max-width: 600px;
+   background: var(--sand);
+   border-radius: var(--radius-md);
+}
+
 .container--narrow {
    position: relative;
    padding: 20px 30px;
@@ -98,8 +106,15 @@ h5 {font-weight: normal;}
    box-shadow: var(--shadow);
 }
 
+.container-1200 {
+   position: relative;
+   margin: 50px auto;
+   max-width: 1200px;
+}
+
 .full-width {width: var(--max-width-100);}
 .flex {display: flex;}
+.flex-col {flex-direction: column;}
 .section-break {margin-top: 60px;}
 .img-thumb {width: 52px;}
 
@@ -111,6 +126,8 @@ h5 {font-weight: normal;}
 .col-75-percent {flex-basis: 75%;}
 .col-100-percent {flex-basis: 100%;}
 
+.gap-100 {gap: 100px;}
+
 /* border radius */
 .radius-sm {border-radius: var(--radius-sm);}
 .radius-md {border-radius: var(--radius-md);}
@@ -119,6 +136,10 @@ h5 {font-weight: normal;}
 
 /* padding */
 .padding-20 {padding: 20px;}
+
+.align-vert-center {
+   align-items: center;
+}
 
 /* XL headers that extend off containers */
 .xl-offset-header h2 {
@@ -142,10 +163,18 @@ h5 {font-weight: normal;}
    border-top-right-radius: var(--radius-lg);
 }
 
+.mt-0 {margin-top: 0;}
 .mt-20 {margin-top: 20px;}
+.mt-40 {margin-top: 40px;}
+.mt-60 {margin-top: 60px;}
 .mt-80 {margin-top: 80px;}
 .mb-20 {margin-bottom: 20px;}
+.mb-40 {margin-bottom: 40px;}
+.mb-80 {margin-bottom: 80px;}
 .neg-mt-30 {margin-top: -30px;}
+.pad-top-20 {padding-top: 20px;}
+.pad-bot-60 {padding-bottom: 60px;}
+.pad-bot-120 {padding-bottom: 120px;}
 
 
 /* center aligned buttons in a container */
@@ -192,7 +221,7 @@ h5 {font-weight: normal;}
 }
 
 .button:hover span svg {
-  left: 8px;
+  left: 7px;
   transition: 0.2s ease-in-out;
 }
 
@@ -205,6 +234,10 @@ h5 {font-weight: normal;}
 .dark-bg .button {
    background: var(--medium-green);
    border: 2px solid var(--accent-teal);
+}
+
+strong {
+   color: var(--accent-red);
 }
 
 .dark-bg .button:hover {background: var(--accent-teal);color:var(--dark-green);}
@@ -397,17 +430,54 @@ h5 {font-weight: normal;}
 
 
 .subpage-title {
-   position: relative;
-   max-width: 1200px;
+   display: flex;
    padding: 20px;
    margin: 0 auto;
+   max-width: 1000px;
+}
+
+.subpage-wide {
+   max-width: 1200px;
 }
 
 .subpage-title h1 {
+   width: auto;
    font-size: 7rem;
-   margin-top: 50px;
-   color: var(--white);
-   text-shadow: 0px 12px 20px rgba(0,0,0,0.2);
+   padding: 90px 60px 120px 60px;
+   color: var(--sand);
+   background: var(--dark-green);
+   border-radius: var(--radius-md);
+}
+
+.subpage-title-line1, .subpage-title-line2, .subpage-title-line3 {
+   position: absolute;
+   height:5px;
+}
+
+.subpage-wide .subpage-title-line1,
+.subpage-wide .subpage-title-line2 {
+   width: 1000px;
+}
+
+.subpage-title-line1 {
+   width: 50%;
+   margin-left: 200px;
+   margin-top: 45px;
+   background: var(--dark-green);
+}
+
+.subpage-title-line2 {
+   width: 50%;
+   margin-left: 100px;
+   margin-top: 40px;
+   background: var(--sand);
+}
+
+.subpage-title-line3 {
+   width: 10%; 
+   margin-top: 200px;
+   margin-right: 300px;
+   background: var(--sand);
 }
 
  /* The Overlay (background) */
@@ -430,8 +500,12 @@ h5 {font-weight: normal;}
 .overlay-content {
   position: relative;
   top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
+  width: fit-content;
+  margin: 0 auto; 
+}
+
+.nav-underline {
+   border-bottom: 1px solid var(--sand);
 }
 
 
@@ -447,6 +521,12 @@ h5 {font-weight: normal;}
 }
 
 .nav-link {margin-left: 500px;}
+
+.nav-subtitle {
+   font-size: 0.9rem;
+   display: block;
+   margin-bottom: -14px;
+}
 
 
 /* When you mouse over the navigation links, change their color */
@@ -489,6 +569,68 @@ h5 {font-weight: normal;}
    margin-top: 12px;
 }
 
+/* =========================
+   4. Contact
+   ========================= */
+
+
+.contact-form .btn-row .button {
+   padding-top: 6px;
+   padding-bottom: 6px;
+   font-size: 0.9rem;
+   font-weight: bold;
+}
+
+.contact-form .btn-row .button:hover {
+   cursor: pointer;
+}
+
+.contact-form .btn-row .button span {
+   margin-top: 12px;
+   position: relative;
+   left: 4px;
+   transition: 0.2s ease-in-out;
+}
+
+.contact-form .btn-row .button:hover span {
+   left: 7px;
+   transition: 0.2s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form input:active,
+.contact-form textarea:active  {
+   border: 1px solid var(--accent-teal);
+   background: rgba(255, 255, 255, 0.1);
+   outline: none;
+   transition: 0.2s ease-in-out;
+}
+
+.contact-form input,
+.contact-form textarea{
+   width: 100%;
+   padding: 12px;
+   color: var(--sand);
+   box-sizing: border-box;
+   border-radius: none;
+   background: var(--dark-green);
+   border: 1px solid rgba(255, 255, 255, 0.4);
+   box-shadow: var(--shadow);
+   margin-top: 6px;
+   transition: 0.2s ease-in-out;
+   border-radius: var(--radius-sm);
+
+
+}
+
+.contact-form textarea {
+   position: relative;
+   height: 150px;
+   resize: none;
+   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Defines a font stack */
+
+}
 
 
 /* =========================
@@ -774,6 +916,23 @@ social media icons sit in */
 
    .subpage-title h1 {
       font-size: 5rem;
+   }
+
+   .subpage-title {
+      margin-left: -50px;
+   }
+
+   .overlay-content {
+      top: 15%;
+   }
+
+   .overlay a {
+      font-size: 1.8rem;
+   }
+
+   .nav-subtitle {
+      font-size: 0.8rem;
+      margin-bottom: 0px;
    }
 }
 

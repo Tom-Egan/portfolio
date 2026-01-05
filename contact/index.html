@@ -8,13 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Page title -->
-  <title>Contact Tom Egan – St. Helens, Oregon Designer</title>
+  <title>Contact Tom Egan | Senior UX Designer at Jaguar Land Rover, based in St. Helens, Oregon</title>
 
   <!-- Primary SEO -->
-  <meta name="description" content="Portfolio of Tom Egan – a versatile and multifaceted designer, proficient in delivering UI/UX design, visual design, motion graphics, branding, and more.">
+ <meta name="description" content="About Tom Egan, a UX designer at Jaguar Land Rover focused on interaction design, in-vehicle infotainment systems, and visual storytelling; based in St. Helens, Oregon.">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.tom-egan.com/">
+  <link rel="canonical" href="https://www.tom-egan.com/contact/">
+
 
   <!-- Favicon -->
   <link rel="icon" href="../favicon.ico" sizes="any">
@@ -25,10 +26,10 @@
   <link rel="stylesheet" href="../css/styles3.css">
 
   <!-- Optional: Open Graph / social sharing -->
-  <meta property="og:title" content="Tom Egan – St. Helens, Oregon Designer">
+  <meta property="og:title" content="About Tom Egan | Senior UX Designer at Jaguar Land Rover, based in St. Helens, Oregon">
   <meta property="og:description" content="Versatile and multifaceted designer, proficient in delivering UI/UX design, visual design, motion graphics, branding, and more.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.tom-egan.com/">
+  <meta property="og:url" content="https://www.tom-egan.com/contact/">
   <meta property="og:image" content="https://www.tom-egan.com/og-image.jpg">
 
   <!-- Optional: Twitter -->
@@ -38,37 +39,71 @@
 
 <body>
 <!-- load grid of tiles component -->
-        <div data-include="../components/header.html">
-        </div>
+<header data-include="../components/header.html"></header>
   <main>
 
     <section class="subpage-title">
         <h1>Contact</h1>
+
+        <div class="subpage-title-line1"></div>
+        <div class="subpage-title-line2"></div>
+        <div class="subpage-title-line3"></div>
     </section>
 
-    <section>
-        <!-- load grid of tiles component -->
-        <div data-include="../components/project-tiles.html">
+    <section class="contact-form">
+      <div class="narrow padding-20">
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="061060bd-a8e6-4c00-b8ff-e25e47dffa43">
+        <div class="flex flex-col">
+          <div class="col-100-percent">
+            <label class="mt-20">Name</label>
+          </div>
+          <div class="col-100-percent">
+            <input class="mb-20" type="text" name="name" required>
+          </div>
         </div>
+
+        <div class="flex flex-col">
+          <div class="col-100-percent">
+            <label>Email</label>
+          </div>
+          <div class="col-100-percent">
+            <input class="mb-20" type="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <div class="col-100-percent">
+            <label>Message</label>
+          </div>
+          <div class="col-100-percent">
+            <textarea class="mb-20" name="message" required></textarea>
+          </div>
+        </div>
+
+
+        <div class="btn-row">
+          <button class="button radius-pill" type="submit">Submit
+          <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16" fill="none" class=""><path d="M2.66797 8H13.3346M13.3346 8L9.33464 4M13.3346 8L9.33464 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+          </span>
+        </button>
+      </div>
+        
+        
+      </form>
+         
+      </div>
     </section>
 
-    <section>
-        <!-- load resume component -->
-        <div data-include="../components/resume.html">
-        </div>
-    </section>
+
+    <div class="pad-bot-60"></div>
 
   </main>
 
-  <section>
-      <!-- load footer component -->
-      <div data-include="../components/footer.html"></div>  
-  </section>
-
-    <script>
-      /* Open */
-
-  </script>
+  <footer data-include="../components/footer.html"></footer>
 
   <!-- load main javascript -->
   <script src="../js/main.js" defer></script>
@@ -79,4 +114,4 @@
 
 </body>
 
-<html>
+</html>
