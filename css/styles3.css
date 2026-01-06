@@ -110,7 +110,7 @@ h5 {font-weight: normal;}
 .inter-bold {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 800;
   font-style: bold;
 }
 
@@ -132,6 +132,9 @@ h5 {font-weight: normal;}
     "wdth" 100;
 }
 
+.color-dark-grey {
+   color: var(--dark-grey);
+}
 
 /* =========================
    2. Global Layout
@@ -191,7 +194,9 @@ h5 {font-weight: normal;}
 .col-75-percent {flex-basis: 75%;}
 .col-100-percent {flex-basis: 100%;}
 
+
 .gap-100 {gap: 100px;}
+.gap-50 {gap:50px;}
 
 /* border radius */
 .radius-sm {border-radius: var(--radius-sm);}
@@ -238,6 +243,7 @@ h5 {font-weight: normal;}
 .mb-40 {margin-bottom: 40px;}
 .mb-80 {margin-bottom: 80px;}
 .neg-mt-30 {margin-top: -30px;}
+.neg-mb-30 {margin-bottom: -30px;}
 .pad-top-20 {padding-top: 20px;}
 .pad-bot-60 {padding-bottom: 60px;}
 .pad-bot-120 {padding-bottom: 120px;}
@@ -318,13 +324,14 @@ strong {
   font-size: 0.9rem;
 }
 
+.text-center {
+   text-align: center;
+}
+
 .super-title {
    color: var(--sand);
-   font-family: 'Merriweather', serif;
    font-size: 1.2rem;
-   font-weight: bold;
    position: absolute;
-   text-align: center;
    margin-top: 15px;
    margin-left: 20px;
    color: var(--sand-dark);
@@ -347,8 +354,18 @@ strong {
 }
 
 .contents-list {
-   font-size: 1.2rem;
+   font-size: 1rem;
    line-height: 2rem;
+}
+
+.contents-list li a {
+   transition: 0.2s ease-in-out;
+}
+
+.contents-list li a:hover {
+
+   letter-spacing: 1px;
+   transition: 0.1s ease-in-out;
 }
 
   .contents-accordion {
@@ -394,11 +411,11 @@ strong {
   }
   .accordion::after {
     content: '+'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
+    font-size: 20px;
     color: var(--sand) !important;
-    float: right;
-    margin-left: 5px;
-    margin-top: 2px;
+    position: absolute;
+    right: 50px;
+    top: 42px;
   }
 
   .active::after {
@@ -586,6 +603,103 @@ strong {
 }
 
 /* =========================
+   4. Project Pages
+   ========================= */
+
+
+/* parent wrappers for the row of project content */
+.section-block, .section-block-reverse {
+  display: grid;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin-block: clamp(4rem, 8vw, 8rem);
+}
+
+/* grid layout (Text Content | Image) */
+.section-block {grid-template-columns: 2fr 1fr;}
+
+/* reversed grid layout (Image | Text Content ) */
+.section-block-reverse {grid-template-columns: 1fr 2fr;}
+
+/* text content in column 1 (left) */
+.section-content {grid-column: 1; grid-row: 1;}
+
+/* image in column 2 (right) */
+.section-marker {
+   grid-column: 2;
+   grid-row: 1;
+   height: 100%;
+}
+
+/* text content in column 2 (right) */
+.section-block-reverse .section-content {grid-column: 2; grid-row: 1;}
+
+/* image in column 1 (left) */
+.section-block-reverse .section-marker {grid-column: 1; grid-row: 1;}
+
+/* parent container for holding the offset content and image */
+.section-bg-wrapper {
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   height: 100%;
+   width: 100%;
+   flex-basis: 100%;
+   min-height: 150px;
+   background-size: cover;
+   background-position: center;
+}
+
+/* div that sits on top of the image, color overlay */
+.section-bg-tint {
+   height: 100%;
+   width: 100%;
+   /*background: rgba(28, 45, 42, 0.6);*/
+   background: rgba(24, 195, 162, 0.6);
+}
+
+/* large text block for the section number */
+.section-marker span {
+   display: inline-block;
+  z-index: 3;
+  font-size: 14rem;
+  font-weight: bold;
+  /* Set the fill color to transparent */
+  -webkit-text-fill-color: transparent;  
+  /* Define the stroke (outline) width and color */
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #fff;
+  
+  /* Ensure text is visible even if properties aren't fully supported */
+  color: var(--sand); 
+}
+
+/* section marker background images */
+/* pivi project images */
+.section-bg-wrapper[data-bg="jlr-1"] { background-image: url(../img/jlr/24my_exterior.jpg); }
+.section-bg-wrapper[data-bg="jlr-2"] { background-image: url(../img/jlr/24my_interior2.jpg); }
+.section-bg-wrapper[data-bg="jlr-3"] { background-image: url(../img/jlr/24my_interior3.jpg); }
+.section-bg-wrapper[data-bg="jlr-4"] { background-image: url(../img/jlr/24my_exterior3.jpg); }
+.section-bg-wrapper[data-bg="jlr-5"] { background-image: url(../img/jlr/24my_exterior2.jpg); }
+.section-bg-wrapper[data-bg="jlr-6"] { background-image: url(../img/jlr/24my_interior4.jpg); }
+
+/* trackside thunder images */
+.section-bg-wrapper[data-bg="tt-1"] { background-image: url(../img/trackside_thunder/tt_mock_4.jpg); }
+.section-bg-wrapper[data-bg="tt-2"] { background-image: url(../img/trackside_thunder/tt_mock_5.jpg); }
+.section-bg-wrapper[data-bg="tt-3"] { background-image: url(../img/trackside_thunder/tt_mock_1.jpg); }
+.section-bg-wrapper[data-bg="tt-4"] { background-image: url(../img/trackside_thunder/tt_mock_2.jpg); }
+.section-bg-wrapper[data-bg="tt-5"] { background-image: url(../img/trackside_thunder/tt_pulse_patch.svg); }
+.section-bg-wrapper[data-bg="tt-6"] { background-image: url(../img/trackside_thunder/tt_podcast_cover_art.png); }
+
+/* dirt track images */
+.section-bg-wrapper[data-bg="dtr-1"] { background-image: url(../img/dirt_track/tom_egan_dirt_bg1.jpg); }
+.section-bg-wrapper[data-bg="dtr-2"] { background-image: url(../img/dirt_track/tom_egan_dirt_bg2.jpg); }
+.section-bg-wrapper[data-bg="dtr-3"] { background-image: url(../img/dirt_track/tom_egan_dirt_bg3.jpg); }
+.section-bg-wrapper[data-bg="dtr-4"] { background-image: url(../img/dirt_track/tom_egan_dirt_bg4.jpg); }
+
+
+
+/* =========================
    4. Header
    ========================= */
 
@@ -595,6 +709,7 @@ strong {
    padding: 20px;
    margin: 0 auto;
    max-width: 1000px;
+   align-items: stretch;
 
 }
 
@@ -628,6 +743,8 @@ strong {
    border-left: 3px solid var(--accent-teal);
    border-top-left-radius: var(--radius-md);
 }
+
+
 
 
 #corner-circle-base {
@@ -683,7 +800,6 @@ strong {
   margin: 0 auto; 
   padding: 0 20px;
     transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-
 }
 
 .nav-underline {
@@ -1086,8 +1202,6 @@ social media icons sit in */
       max-width: 100%;
    }
 
-   
-
    .footer-projects  {
       margin-bottom: -20px;
    }
@@ -1098,10 +1212,53 @@ social media icons sit in */
    }
 }
 
+@media (max-width: 768px) {
+  .section-block, .section-block-reverse{
+    display: block;
+  }
+
+  .section-marker {
+    height: 200px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-marker span  {
+   position: absolute;
+   font-size: 6rem;
+   width: 89%;
+   height: 133px;
+   line-height: 133px;
+   left: 24px;
+   -webkit-text-stroke-width: 3px;
+   text-align: left;
+  }
+
+  .section-content {
+    padding: 2rem 1.25rem;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -50px;
+  }
+
+  .section-content h2 {
+   color: var(--white);
+    margin-top: -85px;
+    margin-bottom: 50px;
+  }
+}
+
+
+
 @media (max-width:700px) {
    /* collapse flexboxes into rows */
    .flex {
       display: block;
+   }
+
+   /* collapse grid to one row */
+   .grid {
+      grid-template-columns: 1fr;
    }
 
    /* keeps logo and label stacked side-by-side
@@ -1114,7 +1271,6 @@ social media icons sit in */
       font-size: 3.5rem;
       line-height: 3.5rem;
    }
-
 
    .overlay-content {
       top: 15%;
@@ -1133,7 +1289,6 @@ social media icons sit in */
      display: block;
      color: var(--sand);
      box-shadow: var(--shadow);
-
    }
 
    .panel {
