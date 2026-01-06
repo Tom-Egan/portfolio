@@ -141,7 +141,9 @@ h5 {font-weight: normal;}
 
 .narrow {
    position: relative;
-   margin: -70px auto 0 auto;
+   margin: -30px auto 0 auto;
+   padding-left: 30px;
+   padding-right: 30px;
    max-width: 600px;
    background: var(--sand);
    border-radius: var(--radius-md);
@@ -158,10 +160,21 @@ h5 {font-weight: normal;}
    box-shadow: var(--shadow);
 }
 
-.container-1200 {
+.container {
    position: relative;
-   margin: 50px auto;
+   margin: 20px auto;
+}
+
+.container-1200 {
    max-width: 1200px;
+}
+
+.container-1000 {
+   max-width: 1000px;
+}
+
+.container-800 {
+   max-width: 800px;
 }
 
 .full-width {width: var(--max-width-100);}
@@ -188,6 +201,7 @@ h5 {font-weight: normal;}
 
 /* padding */
 .padding-20 {padding: 20px;}
+.padding-0 {padding: 0;}
 
 .align-vert-center {
    align-items: center;
@@ -296,6 +310,101 @@ strong {
 .dark-bg h4 {color: var(--dark-green);}
 .dark-bg a {color: var(--sand);}
 .dark-bg strong {color: var(--accent-teal);}
+
+.bare-list {
+  margin-left: -40px;
+  list-style: none;
+  list-style-type: none;
+  font-size: 0.9rem;
+}
+
+.super-title {
+   color: var(--sand);
+   font-family: 'Merriweather', serif;
+   font-size: 1.2rem;
+   font-weight: bold;
+   position: absolute;
+   text-align: center;
+   margin-top: 15px;
+   margin-left: 20px;
+   color: var(--sand-dark);
+}
+
+/* =========================
+   3. Project Summary 
+   ========================= */
+
+.project-summary {
+   margin-top: -50px;
+   background: var(--sand);
+   padding-left: 30px;
+   padding-right: 30px;
+}
+
+.project-summary h3 {
+   font-size: 1.7rem;
+   line-height: 2rem;
+}
+
+.contents-list {
+   font-size: 1.2rem;
+   line-height: 2rem;
+}
+
+  .contents-accordion {
+    padding: 0;
+    color: var(--sand);
+    border-radius: var(--small-border-radius);
+  }
+  /* Style the buttons that are used to open and close the accordion panel */
+  .accordion {
+    background-color: var(--medium-green);
+    color: var(--sand);
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    display: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: var(--small-border-radius);
+    border-radius: var(--radius-sm);
+  }
+
+   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: var(--dark-green);
+    color: var(--sand);
+  }
+
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 30px;
+    max-height: 100%;
+    margin-bottom: 30px;
+    margin-left: -30px;
+    margin-top: -30px;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+    display: block;
+  }
+  .accordion::after {
+    content: '+'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: var(--sand) !important;
+    float: right;
+    margin-left: 5px;
+    margin-top: 2px;
+  }
+
+  .active::after {
+    content: "−"; /* Unicode character for "minus" sign (-) */
+    color: var(--sand);
+  }
 
 
 /* =========================
@@ -486,56 +595,40 @@ strong {
    padding: 20px;
    margin: 0 auto;
    max-width: 1000px;
+
 }
 
 .subpage-bg {
-   height: 300px;
-   width: 100%;
+   min-height: 200px;
+   width: 100vw;
+   max-width: 100%;
    background: var(--dark-green);
    margin-top: -76px;
    padding-top: 76px;
+   text-wrap: balance;
 }
 
 
 .subpage-title h1 {
    width: auto;
-   font-size: 7rem;
-   padding: 90px 60px 120px 60px;
+   font-size: 5rem;
+   padding: 60px 0 60px 20px;
+   line-height: 5rem;
    color: var(--sand);
-   background: var(--dark-green);
-   border-radius: var(--radius-md);
 }
 
-.subpage-title-line1, .subpage-title-line2, .subpage-title-line3 {
+.subpage-line {
+   height: 50px;
+   width: 160px;
    position: absolute;
-   height:5px;
+   background: none;
+   margin-top: 50px;
+   margin-left: -5px;
+   border-top: 3px solid var(--accent-teal);
+   border-left: 3px solid var(--accent-teal);
+   border-top-left-radius: var(--radius-md);
 }
 
-.subpage-wide .subpage-title-line1,
-.subpage-wide .subpage-title-line2 {
-   width: 1000px;
-}
-
-.subpage-title-line1 {
-   width: 50%;
-   margin-left: 200px;
-   margin-top: 45px;
-   background: var(--dark-green);
-}
-
-.subpage-title-line2 {
-   width: 50%;
-   margin-left: 100px;
-   margin-top: 40px;
-   background: var(--sand);
-}
-
-.subpage-title-line3 {
-   width: 10%; 
-   margin-top: 200px;
-   margin-right: 300px;
-   background: var(--sand);
-}
 
 #corner-circle-base {
    height: 200px;
@@ -546,10 +639,10 @@ strong {
   top: -120px;
   border-bottom-left-radius: 50%;
   opacity: 1;
-  background: var(--medium-green);
+  background: var(--accent-teal);
   overflow: hidden; /* Disable horizontal scroll */
   transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  border: 3px solid var(--accent-teal);
+  border: 1.5px solid var(--accent-teal);
 }
 
 #corner-circle {
@@ -943,6 +1036,8 @@ social media icons sit in */
   }
 }
 
+
+
 @media (max-width: 830px) {
    /* changes footer content blocks to
    have the background color, defining two
@@ -1016,12 +1111,10 @@ social media icons sit in */
    }
 
    .subpage-title h1 {
-      font-size: 5rem;
+      font-size: 3.5rem;
+      line-height: 3.5rem;
    }
 
-   .subpage-title {
-      margin-left: -50px;
-   }
 
    .overlay-content {
       top: 15%;
@@ -1034,6 +1127,31 @@ social media icons sit in */
    .nav-subtitle {
       font-size: 0.8rem;
       margin-bottom: 0px;
+   }
+
+   .accordion {
+     display: block;
+     color: var(--sand);
+     box-shadow: var(--shadow);
+
+   }
+
+   .panel {
+      max-height: 0;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border-bottom-right-radius: var(--radius-sm);
+      border-bottom-left-radius: var(--radius-sm);
+      margin-left: 0px;
+      margin-top: 0px;
+   }
+
+   .accordion::after {
+     color: var(--sand);
+   }
+
+   #contents-header {
+      display: none;
    }
 }
 

@@ -28,8 +28,6 @@ function toggleMenu() {
     cornerCircle.style.borderBottomLeftRadius = '50%';
     cornerCircle.style.top = '-120px';
     cornerCircle.style.right = '-100px';
-    cornerCircle.style.background = 'var(--medium-green)';
-    cornerCircle.style.opacity = '1';
     hamLine1.style.transform = 'rotate(0deg)';
     hamLine1.style.top = '0px';
     hamLine1.style.left = '4px'
@@ -71,8 +69,6 @@ function toggleMenu() {
     cornerCircle.style.borderBottomLeftRadius = '0';
     cornerCircle.style.top = '0';
     cornerCircle.style.right = '0';
-    cornerCircle.style.background = 'var(--accent-teal)';
-    cornerCircle.style.opacity = '1';
     hamLine1.style.transform = 'rotate(45deg)';
     hamLine1.style.top = '10px';
     hamLine1.style.left = '7px';
