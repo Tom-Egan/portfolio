@@ -83,6 +83,8 @@
 <header data-include="../components/header.html"></header>
   <main>
 
+  <div data-include="../components/btn-to-top.html"></div>
+
     <!-- subpage header -->
   <div class="subpage-bg">
 
@@ -99,21 +101,26 @@
     <div data-include="../components/project_details_velar.html"></div>
   </section>
 
-  <div class="container container-1200">
+<div id="problem" class="container container-1200">
   <!-- section 1 - intro -->
   <section class="section-block padding-20">
     <!-- container for image block and number -->
+
     <div class="section-marker padding-0 radius-sm text-center">
        
+      
+
        <!-- contains bg image, passed through with "data-bg" -->
-        <div data-bg="jlr-1" class="section-bg-wrapper radius-sm"">
+        <div data-bg="jlr-1" class="section-bg-wrapper radius-sm">
           <!-- color of image tint + section number -->
             <div class="section-bg-tint radius-sm">
-                <span>1</span>
+                 <span>1</span>
             </div>
         </div> <!-- section-bg-wrapper -->
 
+
          <div class="section-bg-square radius-sm square-left"></div>
+         
     </div> <!-- section marker -->
 
     <!-- text block --> 
@@ -126,29 +133,150 @@
   </section> <!-- row -->
 </div>
 
-<div class="container container-1200">
+<div id="objective" class="container container-1200">
   <!-- section 1 - intro -->
   <section class="section-block-reverse padding-20">
+    <!-- container for image block and number -->
     <div class="section-marker padding-0 radius-sm text-center">
-        <div class="section-bg-wrapper">
-
+       
+       <!-- contains bg image, passed through with "data-bg" -->
+        <div data-bg="jlr-2" class="section-bg-wrapper radius-sm">
+          <!-- color of image tint + section number -->
             <div class="section-bg-tint radius-sm">
                 <span>2</span>
             </div>
+        </div> <!-- section-bg-wrapper -->
+    </div> <!-- section marker -->
 
-            <div data-bg="jlr-1" class="section-img radius-sm"></div>
-            <div class="section-bg-square radius-sm square-left"></div>
-
-        </div>
-      
-    </div>  
+    <!-- text block --> 
     <div class="section-content">
-        <h2>Problem</h2>
-        <p>For the 24MY (2024 Model Year) mid-cycle refresh, Jaguar Land Rover <strong class="color-dark-grey">removed a significant number of physical controls</strong> as part of a redesigned interior strategy. This resulted in several mission-critical vehicle functions needing to be safely and intuitively relocated into the touchscreen.</p>
+        <h2>Objective</h2>
 
-        <p>As one of the UX designers, I worked with a small design team to <strong class="color-dark-grey">re-architect the existing Pivi infotainment system</strong>, adhering to strict legal, functional, and development constraints. Through multiple design iterations, interactive prototypes, and user tests, we delivered a production-ready solution that launched on the Range Rover Velar and later scaled across all JLR vehicles for 24MY and beyond.</p>
-    </div>
-  </section>
+        <p> The objective was to provide quick access to the high-frequency, safety-critical controls (previously operated by physical buttons) into the Pivi touchscreen. Affected features included:</p>
+
+        <ul class="mt-20">
+            <li>Climate/HVAC</li>
+            <li>Heated/cooled seats</li>
+            <li>Volume</li>
+            <li>Drive modes</li>
+            <li>Defrost</li>
+            <li>Various vehicle settings (e.g. Auto Stop/Start)</li>
+        </ul>
+    </div> <!-- section content -->
+  </section> <!-- row -->
+</div>
+
+<div id="constraints" class="container container-1200">
+  <!-- section 1 - intro -->
+  <section class="section-block padding-20">
+    <!-- container for image block and number -->
+    <div class="section-marker padding-0 radius-sm text-center">
+       
+       <!-- contains bg image, passed through with "data-bg" -->
+        <div data-bg="jlr-3" class="section-bg-wrapper radius-sm">
+          <!-- color of image tint + section number -->
+            <div class="section-bg-tint radius-sm">
+                <span>3</span>
+            </div>
+        </div> <!-- section-bg-wrapper -->
+
+         <div class="section-bg-square radius-sm square-left"></div>
+    </div> <!-- section marker -->
+
+    <!-- text block --> 
+    <div class="section-content">
+        <h2>Constraints</h2>
+
+         <p>The primary design challenge was working within a tightly constrained solution space. Design modifications  were limited to system sidebars and overlays, driven by functional requirements, legal regulations, and existing software architecture. These constraints defined the boundaries of the work and eliminated some UX patterns that we could explore.</p>
+
+          <ul class="style-list">
+              <li><strong>Functional: </strong>Mission-critical systems such as climate and drive modes needed to be globally accessible in the system (i.e. can be accessed at anytime, regardless of which screen the user is on). In certain system states (e.g. while Apple CarPlay or Android Auto is active), the sidebars would be the only global entry point for these features.</li>
+
+              <li class="li-block"><strong>Legal: </strong>Functions such as Rear Defrost came with their own set of rules which needed to be considered and also dictated their implementation.</li>
+
+              <li class="li-block"><strong>Development: </strong>Integrating brand new, system level interactions into an existing software architecture meant that time and cost to develop factored into how much the system could/should be modified.</li>
+          </ul>
+    </div> <!-- section content -->
+  </section> <!-- row -->
+</div>
+
+<div id="approach" class="container container-1200">
+  <!-- section 1 - intro -->
+  <section class="section-block-reverse padding-20">
+    <!-- container for image block and number -->
+    <div class="section-marker padding-0 radius-sm text-center">
+       
+       <!-- contains bg image, passed through with "data-bg" -->
+        <div data-bg="jlr-4" class="section-bg-wrapper radius-sm">
+          <!-- color of image tint + section number -->
+            <div class="section-bg-tint radius-sm">
+                <span>4</span>
+            </div>
+        </div> <!-- section-bg-wrapper -->
+    </div> <!-- section marker -->
+
+    <!-- text block --> 
+    <div class="section-content">
+        <h2>Approach</h2>
+
+        <h3 class="mt-60 neg-mb-10">The What</h3>
+
+        <p>A straightforward goal: Provide  quick access to these high priority use cases, formerly physical controls, through the vehicle's touchscreen.</p>
+
+        <h3 class="mt-60 neg-mb-10">The Who</h3>
+
+        <p>The work was shared between two designers, Mutlu Isik and myself, with each of us developing concepts in parallel before converging on a unified interaction model and design direction. We tackled feature sets one at a time in order to solve nuanced problems individually—such as temperature control behavior and climate layout— then integrated cohesively at a system level.</p>
+
+        <h3 class="mt-60 neg-mb-10">The How</h3>
+
+        <ol class="mt-40 neg-ml-16">
+            <li class="mb-10"><strong>Design: </strong>One to two concepts created in parallel (in Sketch/Figma)</li>
+
+            <li class="mb-10"><strong>Develop: </strong>High-fidelity, interactive prototypes of the design direction(s) created (in Proto.io)</li>
+        
+            <li class="mb-10"><strong>User Test Plan: </strong> Coordinate with the UX Research team</li>
+
+            <ul class="mt-10 mb-20">
+                <li>Determine interactions/user flows to examine</li>
+                <li>Define the user test tasks and user test plan</li>
+                <li>Conduct remote, A/B tests (if applicable) of the prototype(s)</li>
+            </ul>
+
+            <li class="mb-10"><strong>User Test Debrief: </strong>Review with our the UX Research team, sharing insights, recommendations, and next steps</li>
+
+            <li><strong>Iterate: </strong>Take the research recommendations and insights and return to Step 1 with a refined design direction</li>
+        </ol>
+    </div> <!-- section content -->
+  </section> <!-- row -->
+</div>
+
+<div id="constraints" class="container container-1200">
+  <!-- section 1 - intro -->
+  <section class="section-block padding-20">
+    <!-- container for image block and number -->
+    <div class="section-marker padding-0 radius-sm text-center">
+       
+       <!-- contains bg image, passed through with "data-bg" -->
+        <div data-bg="jlr-5" class="section-bg-wrapper radius-sm">
+          <!-- color of image tint + section number -->
+            <div class="section-bg-tint radius-sm">
+                <span>5</span>
+            </div>
+        </div> <!-- section-bg-wrapper -->
+
+         <div class="section-bg-square radius-sm square-left"></div>
+    </div> <!-- section marker -->
+
+    <!-- text block --> 
+    <div class="section-content">
+        <h2>Role</h2>
+
+         <p>I was responsible for end-to-end concept development, which included: wireframing, interaction design, high-fidelity prototyping, and research collaboration. I helped develop each of interactive prototypes used in all user tests and worked directly with UX Research teams in both Portland and the UK to define user test plans and refine designs post-testing.</p>
+
+         <p>With the JLR headquarters located in England, and our satellite office in Portland, Oregon, this was a global effort that involved regular collaboration with management and stakeholders in the UK.</p>
+
+    </div> <!-- section content -->
+  </section> <!-- row -->
 </div>
 
 

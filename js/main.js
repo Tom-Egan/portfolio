@@ -56,6 +56,31 @@ function updateYearsOfService() {
 }
 
 // =====================================
+// Back to Top Button
+// =====================================
+
+function initToTopButton() {
+  const toTopBtn = document.getElementById("to-top-btn");
+
+  if (!toTopBtn) return; // component not on this page
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 800) {
+      toTopBtn.style.display = "block";
+    } else {
+      toTopBtn.style.display = "none";
+    }
+  });
+
+  toTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
+
+// =====================================
 // Accordion Menu for Table of Contents
 // =====================================
 
@@ -105,6 +130,7 @@ function initSite() {
   updateCopyrightYear();
   updateCopyrightYear2();
   updateYearsOfService();
+  initToTopButton();
   initAccordion();
 }
 
