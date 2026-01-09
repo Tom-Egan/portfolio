@@ -92,6 +92,7 @@
         <h1>24MY Pivi Infotainment Update</h1>
         <span class="super-title merriweather-bold">Case Study 1</span>
         <div class="subpage-line"></div>
+
     </section>
   </div>
 
@@ -277,8 +278,145 @@
 
     </div> <!-- section content -->
   </section> <!-- row -->
+  <div id="solutions"></div>
 </div>
 
+
+<section class="parallax">
+  
+    <div class="parallax-text">
+      <img src="../img/hero-design-text.svg">
+    </div>
+
+   
+   <!-- <img class="defender" src="../img/jlr/defender.png" alt=""> -->
+
+</section>
+ <div class="defender"></div>
+<div class="parallax-btm"></div>
+
+
+
+<div class="container--rel full-width contrast-bg">
+    <div class="contrast-bg-color"></div>
+    <section class="container--narrow resume xl-offset-header">
+        
+        <!-- accent elements -->
+        <div class="corner-square top-right-square"></div>
+        <div class="corner-square btm-left-square"></div>
+
+        <h2>Solutions</h2>
+
+         <div class="shadow-mask"></div>
+
+        <div class="container--rel full-width section-break">
+            <p> The following solutions demonstrate how specific information architecture and system-level interaction problems were solved within the tight spatial, legal, and technical constraints.</p>
+
+             <h3 class="neg-mb-10 bg-highlight radius-sm">6.1: Problem Space</h3>
+
+             <p>The first major problem to address was sorting out what and where everything would go into the sidebar, which boiled down to: the number of elements that needed to be added, exceeded the available space. Once placement of Rear Defrost and Max Defrost (legal requirements) was accounted for, many back-and-forth dicussions with manangement and stakeholders of which features to prioritize unfolded.</p>
+
+             <img loading="lazy" src="../img/jlr/icp_delete_sidebar_callout.png" alt="Image of the vehicle's touchscreen, highlighting the area of the screen which will be referenced in this section">
+                            
+              <img class="mb-40" loading="lazy" src="../img/jlr/icp_delete_sidebar.svg" alt="Wireframes showing the sidebar content differences from before and after the 24MY update">
+
+              <h3 class="neg-mb-10 bg-highlight radius-sm">6.2: Contextual Buttons</h3>
+
+              <ul class="mt-40">
+                   <li><strong>Problem: </strong>Available space in the sidebar was insufficient for all required controls.</li>
+
+                    <li><strong>Solution: </strong>Introduced context-dependent buttons based on system state.</li>
+
+                    <li><strong>Impact: </strong>Enabled access to four high-priority features using only two sidebar positions, without increasing interaction depth.</li>
+                </ul>
+
+              <p>To address space constraints, we introduced context-dependent buttons that adapted based on system state. One example was consolidating the previously separate Home and Apps buttons into a single contextual control.</p>
+
+                <ul>
+                    <li>If the user is on the home screen, display a shortcut button to open the App Drawer.</li>
+
+                    <li>If the user is not on the home screen, display a shortcut button to return Home.</li>
+                </ul>
+
+                <p>Note: The App Drawer could still be accessed via swiping from the left edge as a secondary method (Not quite as discoverable as the dedicated button, but still an available option for the user).</p>
+
+                <img loading="lazy" src="../img/jlr/icp_delete_homebtn.svg" alt="Wireframes showing the state change to the sidebar button when the user is on the home screen and when the user is not">
+
+                <p>This approach was extended to the Phone shortcut. With Phone  deprioritized, left without a permanent sidebar element, two edge cases still required attention: returning to active calls and returning to CarPlay or Android Auto. In these states, the Media button temporarily became a shortcut back to the active call or phone projection interface. Because call audio was already using the cabin speakers, Media access was unnecessary at that moment (i.e. show the user the right thing at the right time). This allowed four high-priority features to be served through two sidebar positions, freeing additional space without increasing interaction depth.</p>
+
+                <img class="mb-40" loading="lazy" src="../img/jlr/icp_delete_activecall.svg" alt="Wireframes showing the state change to the sidebar button when the user is on an active phone call">
+
+                <h3 class="neg-mb-10 bg-highlight radius-sm">6.3: Combo Defrost Button</h3>
+
+                <ul class="mt-40">
+                    <li><strong>Problem: </strong>Available space in the sidebar was insufficient for all required controls, one-touch activation of Rear Defrost legally required.</li>
+
+                    <li><strong>Solution: </strong>Combine two related functions into a single switch, toggling between multiple modes.</li>
+
+                    <li><strong>Impact: </strong>Legal compliance maintained and enabled dual activation in a single press.</li>
+                </ul>
+
+                <p>Another example of where creative problem solving became necessary was with the case of Rear Defrost and Heated Windshield. Functionally, these two features are related, in the sense that they both are turning on some sort of heated element in the glass. Given that, and the limited space in the sidebar, these two features seemed like logical candidates to pair together into one button. However, the legal requirement that was given to us—at any point, Rear Defrost must be able to be turned on within one press on the screen—presented a different challenge.</p>
+
+                <p>Several concepts were explored and ultimately rejected due to legal constraints requiring one-touch activation of Rear Defrost. The chosen direction was a toggle switch that cycles through four different states, while still complying with  the Rear Defrost legal requirement. Our solution also created a beneficial byproduct: activating two controls on at once, in a single button press.</p>
+
+                <p>To reduce ambiguity, visual indicators were added to clearly distinguish front and rear control  states and to signal that this control behaved differently from standard sidebar navigation. The interaction also adapted based on vehicle trim level—defaulting to a simple Rear Defrost toggle when Heated Windshield was not equipped.</p>
+
+                <img class="mb-40" loading="lazy" src="../img/jlr/icp_delete_defrost.svg" alt="Wireframes showing all four states of the combo defrost button">
+
+                <h3 class="neg-mb-10 bg-highlight radius-sm">6.4: Overlays</h3>
+
+                <ul class="mt-40">
+                    <li><strong>Problem: </strong>Broader feature sets needed quick access and to be globally accessible from any screen.</li>
+
+                    <li><strong>Solution: </strong>Use sidebar buttons as entry points to open an overlay, to allow for full-screen display.</li>
+
+                    <li><strong>Impact: </strong>Additional Climate, Volume, and driving-related controls accessible from any screen, reduced visual clutter during active overlays.</li>
+                </ul>
+
+                <p>Using sidebar buttons as overlay entry points introduced the risk of mixed interaction models within the same visual grouping. This was mitigated by clearly delineating interaction zones and reinforcing behavior through distinct visual treatments and affordances.</p>
+
+                <img loading="lazy" src="../img/jlr/icp_delete_overlay1.png" alt="Annotated screenshot highlighting the visual cues that were added to the Overlay buttons">
+
+                <p>Once an overlay is launched, the sidebars change to a more focused, empty state, removing unnecessary visual clutter. This was done to help communicate the context switch of having the overlay open, as well as provide the user a clearer visual path to their exit route (close button). One caveat to this stategy comes back to the previously mentioned legal requirements. Since one-touch activation of Rear Defrost and Max Defrost are required at all times, those two buttons needed to remain in place.</p>
+
+                <img loading="lazy" src="../img/jlr/icp_delete_overlay2.png" alt="Annotated screenshot highlighting how the sidebar changes states when an overlay is opened.">
+                <span class="caption mb-40">[Screenshot from "Understanding the Pivi Pro Infotainment System | Land Rover Naperville | Naperville, IL" by Land Rover Naperville (2024), YouTube, 4:11]</span>
+
+                <h3 class="neg-mb-10 bg-highlight radius-sm">6.5: The Quick Slider</h3>
+
+                <ul class="mt-40">
+                    <li><strong>Problem: </strong>The new system lacked the ability for quick, large scale adjustments and quickly reach min/max values.</li>
+
+                    <li><strong>Solution: </strong>Add a vertical drag interaction to select sidebar buttons.</li>
+
+                    <li><strong>Impact: </strong>Rapid, low-precision adjustments supported. Interaction model reused across climate, drive modes, and volume</li>
+                </ul>
+
+                 <p>Introducing a secondary drag interaction to the overlay buttons enabled rapid adjustments, allowing for looser, less precise inputs from the user.  Visual feedback reinforced state changes without requiring explicit confirmation.</p>
+
+                <img loading="lazy" src="../img/jlr/icp_delete_slider1.svg" alt="Static wireframe version showing the state change of a blue background when the climate button is dragged down">
+
+                <span class="caption">
+                The sidebar background provides blue feedback for additional confirmation when the selected temperature is in the lower/colder ranges.
+                </span>
+
+                <img loading="lazy" src="../img/jlr/icp_delete_slider2.svg" alt="Static wireframe version showing the state change of a red background when the climate button is dragged up">
+
+                <span class="caption">
+                The sidebar background provides red feedback for additional confirmation when the selected temperature is in the upper/warmer ranges.
+                </span>
+
+                <video muted controls autoplay loop src="../img/jlr/icp_delete_quickslider.mp4">Your browser does not support the video tag.</video>
+
+                <span class="caption video-caption">[Clip from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 6:54-7:05]</span>
+
+                <p>To promote discoverability, a visual affordance—the Rail—was added to suggest a constrained drag interaction. Color cues reinforced directionality for temperature adjustment, and the same interaction model was later extended to Drive Modes and Volume for consistency.</p>
+
+                <img class="mb-40" loading="lazy" src="../img/jlr/icp_delete_therail.png" alt="Close-up image showing the details of UI elements that make up the Overlay buttons">
+        </div>
+    </section> <!-- container--narrow -->
+</div> <!-- resume-bg -->
 
 
 
@@ -291,7 +429,9 @@
 
   <!-- load main javascript -->
   <script src="../js/main.js" defer></script>
+
   <script src="../js/nav.js" defer></script>
+
 
 
 

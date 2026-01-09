@@ -186,6 +186,17 @@ h5 {font-weight: normal;}
 .section-break {margin-top: 60px;}
 .img-thumb {width: 52px;}
 
+.contrast-bg img, .contrast-bg video{
+   position: relative;
+   width: 100%;
+}
+
+.contrast-bg .bg-highlight {
+   padding: 30px;
+   margin-top: 60px;
+   line-height: 2.8rem;
+}
+
 /* column widths */
 .col-25-percent {flex-basis: 25%;}
 .col-33-percent {flex-basis: 33.33%;}
@@ -240,6 +251,7 @@ h5 {font-weight: normal;}
 .mt-40 {margin-top: 40px;}
 .mt-60 {margin-top: 60px;}
 .mt-80 {margin-top: 80px;}
+.mt-120 {margin-top: 120px;}
 .mb-10 {margin-bottom: 10px;}
 .mb-20 {margin-bottom: 20px;}
 .mb-40 {margin-bottom: 40px;}
@@ -383,65 +395,107 @@ strong {
 }
 
 .contents-list li a:hover {
-
    letter-spacing: 1px;
    transition: 0.1s ease-in-out;
 }
 
-  .contents-accordion {
-    padding: 0;
-    color: var(--sand);
-    border-radius: var(--small-border-radius);
-  }
-  /* Style the buttons that are used to open and close the accordion panel */
-  .accordion {
-    background-color: var(--medium-green);
-    color: var(--sand);
-    cursor: pointer;
-    padding: 15px 20px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    display: none;
-    outline: none;
-    transition: 0.4s;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 10px;
-    border-radius: var(--small-border-radius);
-    border-radius: var(--radius-sm);
-  }
+.contents-accordion {
+   padding: 0;
+   color: var(--sand);
+   border-radius: var(--small-border-radius);
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+   background-color: var(--medium-green);
+   color: var(--sand);
+   cursor: pointer;
+   padding: 15px 20px;
+   width: 100%;
+   text-align: left;
+   border: none;
+   display: none;
+   outline: none;
+   transition: 0.4s;
+   font-size: 1rem;
+   font-weight: bold;
+   margin-top: 10px;
+   border-radius: var(--small-border-radius);
+   border-radius: var(--radius-sm);
+}
 
-   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: var(--dark-green);
-    color: var(--sand);
-  }
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+   background-color: var(--dark-green);
+   color: var(--sand);
+}
 
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    padding: 0 30px;
-    max-height: 100%;
-    margin-bottom: 30px;
-    margin-left: -30px;
-    margin-top: -30px;
-    overflow: hidden;
-    transition: max-height 0.35s ease-out;
-    display: block;
-  }
-  .accordion::after {
-    content: '+'; /* Unicode character for "plus" sign (+) */
-    font-size: 20px;
-    color: var(--sand) !important;
-    position: absolute;
-    right: 50px;
-    top: 42px;
-  }
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+   padding: 0 30px;
+   max-height: 100%;
+   margin-bottom: 30px;
+   margin-left: -30px;
+   margin-top: -30px;
+   overflow: hidden;
+   transition: max-height 0.35s ease-out;
+   display: block;
+}
+.accordion::after {
+   content: '+'; /* Unicode character for "plus" sign (+) */
+   font-size: 20px;
+   color: var(--sand) !important;
+   position: absolute;
+   right: 50px;
+   top: 42px;
+}
 
-  .active::after {
-    content: "−"; /* Unicode character for "minus" sign (-) */
-    color: var(--sand);
-  }
+.active::after {
+   content: "−"; /* Unicode character for "minus" sign (-) */
+   color: var(--sand);
+}
+
+
+.parallax {
+   position: relative;
+   display: flex;
+   height: 100vh;
+   width: 90vw;
+   max-width: 1440px;
+   margin: 0 auto;
+   justify-content: center;
+   align-items: flex-start;
+   background: url(../img/jlr/24my_interior3.jpg);
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   border-radius: var(--radius-lg);
+}
+
+.parallax-text {
+   margin-top: -20px;
+}
+
+
+.parallax-text img {
+   max-width: 800px;
+   width: 95vw;
+}
+
+.defender {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   margin-top: -100vh;
+   background: url(../img/jlr/defender.png);
+   background-position: bottom right;
+   background-size: cover;
+}
+
+.touchscreen {
+   width: 100%;
+}
+
+
 
 
 /* =========================
@@ -564,8 +618,12 @@ strong {
 /* full width container for entire block */
 .resume-bg {margin-top: 100px;}
 
+.contrast-bg {
+   margin-top: 200px;
+}
+
 /* partial height container for bg color */
-.resume-bg-color {
+.resume-bg-color, .contrast-bg-color {
    position: absolute;
    width: 100%;
    height: 80%;
@@ -754,8 +812,8 @@ strong {
 }
 
 #to-top-btn {
-   height: 60px;
-   width: 60px;
+   height: 54px;
+   width: 54px;
    border: 2px solid var(--accent-teal);
    border-radius: 50%;
    display: none; /* Hidden by default */
@@ -765,6 +823,19 @@ strong {
   z-index: 99; /* Make sure it does not overlap */
   box-shadow: var(--shadow);
 }
+
+#to-top-btn svg {
+   transform: rotate(-90deg);
+   margin-top: 0px;
+   transition: 0.2s ease-in-out;
+}
+
+#to-top-btn:hover svg, #to-top-btn:active svg {
+   margin-top: -5px;
+   transition: 0.2s ease-in-out;
+}
+
+
 
 
 
@@ -791,6 +862,7 @@ background: linear-gradient(230deg,rgba(36, 94, 84, 1) 0%, rgba(28, 45, 42, 1) 1
    margin-top: -76px;
    padding-top: 76px;
    text-wrap: balance;
+   overflow: hidden;
 }
 
 
@@ -800,6 +872,7 @@ background: linear-gradient(230deg,rgba(36, 94, 84, 1) 0%, rgba(28, 45, 42, 1) 1
    padding: 60px 0 60px 20px;
    line-height: 5rem;
    color: var(--sand);
+   z-index: 2;
 }
 
 .subpage-line {
@@ -812,34 +885,37 @@ background: linear-gradient(230deg,rgba(36, 94, 84, 1) 0%, rgba(28, 45, 42, 1) 1
    border-top: 3px solid var(--accent-teal);
    border-left: 3px solid var(--accent-teal);
    border-top-left-radius: var(--radius-md);
+   z-index: 2;
 }
 
 
 
 
+/* navbar overlay */
 #corner-circle-base {
-   height: 200px;
-  width: 200px;
+   height: 65px;
+  width: 80px;
   position: absolute; /* Stay in place */
   z-index: 1; /* Sit on top */
-  right: -100px;
-  top: -120px;
-  border-bottom-left-radius: 50%;
+  right: 0;
+  top: 0;
+  border-bottom-left-radius: 90%;
   opacity: 1;
   background: var(--accent-teal);
   overflow: hidden; /* Disable horizontal scroll */
   transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  border: 1.5px solid var(--accent-teal);
+  border-left: 2px solid var(--accent-teal);
+  border-bottom: 2px solid var(--accent-teal);
 }
 
 #corner-circle {
-   height: 200px;
-  width: 200px;
+   height: 0;
+  width: 0;
   position: absolute; /* Stay in place */
   z-index: 9999; /* Sit on top */
-  right: -100px;
-  top: -120px;
-  border-bottom-left-radius: 50%;
+  right: -65px;
+  top: -80px;
+  border-bottom-left-radius: 90%;
   background: var(--accent-teal);
   overflow: hidden; /* Disable horizontal scroll */
   transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
@@ -848,13 +924,13 @@ background: linear-gradient(230deg,rgba(36, 94, 84, 1) 0%, rgba(28, 45, 42, 1) 1
  /* The Overlay (background) */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-  height: 200px;
-  width: 200px;
+  height: 65px;
+  width: 80px;
   position: absolute; /* Stay in place */
   z-index: 9999; /* Sit on top */
-  right: -100px;
-  top: -120px;
-  border-bottom-left-radius: 50%;
+  right: 0px;
+  top: 0px;
+  border-bottom-left-radius: 90%;
   background: var(--medium-green);
   overflow: hidden; /* Disable horizontal scroll */
   transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
@@ -863,13 +939,21 @@ background: linear-gradient(230deg,rgba(36, 94, 84, 1) 0%, rgba(28, 45, 42, 1) 1
 
 /* Position the content inside the overlay */
 .overlay-content {
-  position: relative;
-  top: 25%; /* 25% from the top */
+  display: flex;
+  height: 100%;
   width: 100%;
   max-width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
   margin: 0 auto; 
-  padding: 0 20px;
     transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.link-wrapper {
+   width: 80vw;
+   justify-self: center;
 }
 
 .nav-underline {
@@ -881,16 +965,14 @@ background: linear-gradient(230deg,rgba(36, 94, 84, 1) 0%, rgba(28, 45, 42, 1) 1
 .overlay a {
   padding: 12px;
   text-decoration: none;
-  
   display: block;
-  margin-left: 20px;
-  margin-right: 20px;
+  
   transition: 0.3s ease-in-out; /* Transition effects on hover (color) */
 }
 
 .nav-link {
    opacity: 0;
-   font-size: 3rem;
+   font-size: 5vw;
    color: var(--sand);
    pointer-events: none;
 }
@@ -912,8 +994,8 @@ background: linear-gradient(230deg,rgba(36, 94, 84, 1) 0%, rgba(28, 45, 42, 1) 1
 .nav-btn {
    cursor:pointer;
    position: absolute;
-   top: 12px;
-   right: 12px;
+   top: 10px;
+   right: 10px;
    z-index: 9999;
    color: var(--white);
    opacity: 1;
@@ -947,6 +1029,8 @@ background: linear-gradient(230deg,rgba(36, 94, 84, 1) 0%, rgba(28, 45, 42, 1) 1
    width: 48px;
    margin-left: 24px;
    margin-top: 24px;
+   z-index: 5;
+   position: relative;
 }
 
 /* =========================
@@ -1019,10 +1103,11 @@ background: linear-gradient(230deg,rgba(36, 94, 84, 1) 0%, rgba(28, 45, 42, 1) 1
 .site-footer {
    max-width: 1440px;
    margin: 200px auto 0 auto;
+   padding: 40px;
 }
 
 .footer-bg {
-   padding: 0 20px;
+   padding:20px 30px;
    display: grid;
    grid-template-columns: 1fr 1fr;
    column-gap: 130px;
@@ -1031,8 +1116,8 @@ background: linear-gradient(230deg,rgba(36, 94, 84, 1) 0%, rgba(28, 45, 42, 1) 1
 
 .site-footer h4 {
    font-size: 3.5rem;
-   margin-top: -28px;
-   padding-bottom: 20px;
+   margin-top: -48px;
+   padding-bottom: 30px;
    text-transform: uppercase;
    letter-spacing: -2px;
 }
@@ -1264,7 +1349,7 @@ social media icons sit in */
 
    .site-footer h4 {
       margin-left: -20px;
-      color: #222;
+      margin-top: -27px;
    }
 
    .site-footer h5 {
@@ -1348,17 +1433,17 @@ social media icons sit in */
    }
 
    .subpage-title h1 {
-      font-size: 3.5rem;
-      line-height: 3.5rem;
+      font-size: 3rem;
+      line-height: 3rem;
    }
 
    .overlay-content {
       top: 15%;
    }
 
-   .nav-link {
+/*   .nav-link {
       font-size: 1.8rem;
-   }
+   }*/
 
    .nav-subtitle {
       font-size: 0.8rem;
@@ -1388,12 +1473,30 @@ social media icons sit in */
    #contents-header {
       display: none;
    }
+
+   .xl-offset-header h2 {
+      font-size: 6rem;
+      margin-top: -60px;
+   }
 }
 
 @media (max-width: 600px) {
    .xl-offset-header h2 {
       font-size: 4.5rem;
-      margin-top: -56px;
+      margin-top: -53px;
+   }
+
+   .parallax {
+      max-height: 500px;
+   }
+
+   .parallax-text {
+      margin-top: 40px;
+   }
+
+   .defender {
+      max-height: 500px;
+      margin-top: -500px;
    }
 }
 
@@ -1412,15 +1515,12 @@ social media icons sit in */
    }
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .nav-link {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-} 
+@media (max-width: 450px) {
+   .xl-offset-header h2 {
+      font-size: 3.5rem;
+      margin-top: -48px;
+   }
+
 
 
 

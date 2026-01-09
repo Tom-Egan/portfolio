@@ -6,6 +6,7 @@ function toggleMenu() {
   const hamLine2 = document.getElementById("ham-line2");
   const hamLine3 = document.getElementById("ham-line3");
   const cornerCircle = document.getElementById("corner-circle-base");
+  const closeBtn = document.getElementById('corner-circle');
   const navBtn = document.getElementById("navBtn");
   const overlayContainer = document.getElementById("overlay-container");
 
@@ -15,19 +16,23 @@ function toggleMenu() {
     // close the mneu
     navBtn.style.position = 'absolute';
     overlay.style.position = 'absolute';
-    overlay.style.height = '200px';
-    overlay.style.width = '200px';
-    overlay.style.borderBottomLeftRadius = '50%';
-    overlay.style.top = '-120px';
-    overlay.style.right = '-100px';
+    overlay.style.height = '65px';
+    overlay.style.width = '80px';
+    overlay.style.borderBottomLeftRadius = '90%';
+    overlay.style.top = '0';
+    overlay.style.right = '0';
     overlay.style.background = 'var(--medium-green)';
     overlayContainer.style.maxWidth = '100%';
     cornerCircle.style.position = 'absolute';
-    cornerCircle.style.height = '200px';
-    cornerCircle.style.width = '200px';
-    cornerCircle.style.borderBottomLeftRadius = '50%';
-    cornerCircle.style.top = '-120px';
-    cornerCircle.style.right = '-100px';
+    cornerCircle.style.height = '65px';
+    cornerCircle.style.width = '80px';
+    cornerCircle.style.borderBottomLeftRadius = '90%';
+    cornerCircle.style.top = '0';
+    cornerCircle.style.right = '0';
+    closeBtn.style.width = '0';
+    closeBtn.style.height = '0';
+    closeBtn.style.top = '-65px';
+    closeBtn.style.right = '-80px';
     hamLine1.style.transform = 'rotate(0deg)';
     hamLine1.style.top = '0px';
     hamLine1.style.left = '4px'
@@ -69,6 +74,10 @@ function toggleMenu() {
     cornerCircle.style.borderBottomLeftRadius = '0';
     cornerCircle.style.top = '0';
     cornerCircle.style.right = '0';
+    closeBtn.style.width = '80px';
+    closeBtn.style.height = '65px';
+    closeBtn.style.top = '0';
+    closeBtn.style.right = '0';
     hamLine1.style.transform = 'rotate(45deg)';
     hamLine1.style.top = '10px';
     hamLine1.style.left = '7px';
