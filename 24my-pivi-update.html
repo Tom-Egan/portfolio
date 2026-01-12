@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Page title -->
-  <title>24MY Pivi Infotainment Update UX Case Study | Tom Egan</title>
+  <title>Range Rover Velar Infotainment UX Case Study (24MY Pivi)| Tom Egan</title>
 
   <!-- Primary SEO -->
-<meta name="description" content="UX case study for the 24MY L560 Range Rover Velar infotainment system, focusing on automotive HMI, interaction design, and system architecture.">
+<meta name="description" content="UX case study for the 24MY Pivi infotainment update—launched on L560 Range Rover Velar—focusing on automotive HMI, interaction design, and system architecture.">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.tom-egan.com/l560-range-rover-velar">
+  <link rel="canonical" href="https://www.tom-egan.com/24my-pivi-update">
 
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,8 +31,8 @@
 
   <!-- Optional: Open Graph / social sharing -->
   <meta property="og:title" content="24MY Pivi Infotainment Update UX Case Study | Tom Egan">
-  <meta property="og:description" content="UX case study detailing the redesign of the Range Rover Velar infotainment system for 24MY, focusing on automotive HMI and safety-critical interactions.">
-  <meta property="og:url" content="https://www.tom-egan.com/projects/l560-range-rover-velar">
+  <meta property="og:description" content="UX case study detailing the redesign of the Pivi infotainment system—launching on the Range Rover Velar for 24MY—focusing on automotive HMI and safety-critical interactions.">
+  <meta property="og:url" content="https://www.tom-egan.com/24my-pivi-update">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.tom-egan.com/og-image.jpg">
 
@@ -52,7 +52,7 @@
       },
       "dateCreated": "2020",
       "datePublished": "2025",
-      "description": "UX case study detailing the redesign of the Range Rover Velar infotainment system, focusing on safety-critical interactions, touchscreen controls, and automotive UX constraints.",
+      "description": "UX case study detailing the redesign of the Pivi infotainment system for 24MY, launching on the Range Rover Velar, focusing on safety-critical interactions, touchscreen controls, and automotive UX constraints.",
       "inLanguage": "en-US",
       "about": [
         "UX Design",
@@ -63,7 +63,11 @@
       "publisher": {
         "@type": "Person",
         "name": "Tom Egan"
-      }
+      },
+      "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tom-egan.com/24my-pivi-update"
+    }
     }
 </script>
 
@@ -99,8 +103,28 @@
   <!-- project details -->
   <section class="neg-mb-30">
     <!-- project details -->
-    <div data-include="../components/project_details_velar.html"></div>
+    <div data-include="../components/project_details_24my_pivi.html"></div>
   </section>
+
+  <div class="container padding-20 container-800 mt-40">
+
+    <h3 class="neg-mb-10">Executive Summary</h3>
+    <p>This project focused on redefining how global vehicle controls are accessed and used, integrating into  a highly constrained automotive infotainment system. Working across UX, research, and engineering, I helped explore and evaluate multiple interaction models, balancing usability, safety, and platform consistency. The outcome established scalable interaction patterns that shipped on the 24MY Range Rover Velar and rolled out to all JLR  vehicle programs.</p>
+
+    <p class="mb-60 italic"><strong>Expectations: </strong>This case study highlights UX and interaction design decisions under constraints, rather than final, highly polished visual design.</p>
+
+    <h3>Design Impact</h3>
+    <ul class="mt-20 neg-ml-24 mb-60">
+      <li><strong>Platform Scalability: </strong>Created a shared interaction model for global controls, used across all  vehicle programs and multiple vehicle configurations</li>
+      <li><strong>Risk Management: </strong>Helped align UX, engineering, and management on interaction tradeoffs early, reducing late-stage rework</li>
+      <li><strong>Pioneering:</strong> Established a design precedent, backed by research, within JLR for touchscreen-based climate and vehicle controls</li>
+    </ul>
+
+    <div class="white-bg radius-md padding-20 shadow">
+    <h3 class="neg-mb-10">Disclaimer</h3>
+    <p> This case study reflects publicly released features. Some design artifacts, concepts, and rationale have been generalized/abstracted and selectively shown to respect confidentiality.</p>
+  </div>
+  </div>
 
 <div id="problem" class="container container-1200">
   <!-- section 1 - intro -->
@@ -127,9 +151,9 @@
     <!-- text block --> 
     <div class="section-content">
         <h2>Problem</h2>
-        <p>For the 24MY (2024 Model Year) mid-cycle refresh, Jaguar Land Rover <strong class="color-dark-grey">removed a significant number of physical controls</strong> as part of a redesigned interior strategy. This resulted in several mission-critical vehicle functions needing to be safely and intuitively relocated into the touchscreen.</p>
+        <p>For the 24MY (2024 Model Year) mid-cycle refresh, Jaguar Land Rover removed a number of physical controls as part of a redesigned interior approach. This resulted in several mission-critical vehicle functions needing to be safely and intuitively relocated into the touchscreen.</p>
 
-        <p>As one of the UX designers, I worked with a small design team to <strong class="color-dark-grey">re-architect the existing Pivi infotainment system</strong>, adhering to strict legal, functional, and development constraints. Through multiple design iterations, interactive prototypes, and user tests, we delivered a production-ready solution that launched on the Range Rover Velar and later scaled across all JLR vehicles for 24MY and beyond.</p>
+        <p>As part of a small UX design team, I contributed to re-architecting the existing Pivi infotainment system, adhering to strict legal, functional, and development constraints. Through multiple design iterations, interactive prototypes, and user tests, we delivered a production-ready solution that launched on the Range Rover Velar and later scaled across all JLR vehicles for 24MY and beyond.</p>
     </div> <!-- section content -->
   </section> <!-- row -->
 </div>
@@ -153,9 +177,9 @@
     <div class="section-content">
         <h2>Objective</h2>
 
-        <p> The objective was to provide quick access to the high-frequency, safety-critical controls (previously operated by physical buttons) into the Pivi touchscreen. Affected features included:</p>
+        <p> The objective was to provide fast, low-distraction access to high-frequency, safety-critical vehicle controls within the Pivi touchscreen. Affected features included:</p>
 
-        <ul class="mt-20">
+        <ul class="mt-20 neg-ml-24">
             <li>Climate/HVAC</li>
             <li>Heated/cooled seats</li>
             <li>Volume</li>
@@ -188,14 +212,14 @@
     <div class="section-content">
         <h2>Constraints</h2>
 
-         <p>The primary design challenge was working within a tightly constrained solution space. Design modifications  were limited to system sidebars and overlays, driven by functional requirements, legal regulations, and existing software architecture. These constraints defined the boundaries of the work and eliminated some UX patterns that we could explore.</p>
+         <p>The primary design challenge was working within a tightly constrained solution space. Design exploration was focused within system sidebars and overlays, shaped by platform constraints, regulatory considerations, and the existing infotainment architecture. These constraints defined the boundaries of the work and shaped which interaction patterns were viable.</p>
 
-          <ul class="style-list">
-              <li><strong>Functional: </strong>Mission-critical systems such as climate and drive modes needed to be globally accessible in the system (i.e. can be accessed at anytime, regardless of which screen the user is on). In certain system states (e.g. while Apple CarPlay or Android Auto is active), the sidebars would be the only global entry point for these features.</li>
+          <ul class="neg-ml-40 style-list">
+              <li><strong>Functional: </strong>Mission-critical systems such as climate and drive modes needed to be globally accessible in the system (i.e. can be accessed at any time, regardless of which screen the user is on). In certain system states (e.g. while Apple CarPlay or Android Auto is active), the sidebars would be the only global entry point for these features.</li>
 
-              <li class="li-block"><strong>Legal: </strong>Functions such as Rear Defrost came with their own set of rules which needed to be considered and also dictated their implementation.</li>
+              <li class="li-block"><strong>Legal: </strong>Functions such as Rear Defrost came with their own set of rules which needed to be considered and influenced their implementation.</li>
 
-              <li class="li-block"><strong>Development: </strong>Integrating brand new, system level interactions into an existing software architecture meant that time and cost to develop factored into how much the system could/should be modified.</li>
+              <li class="li-block"><strong>Development: </strong>Integrating brand new, system level interactions into an existing software architecture meant that engineering feasibility and platform constraints influenced the final solution space.</li>
           </ul>
     </div> <!-- section content -->
   </section> <!-- row -->
@@ -231,19 +255,19 @@
         <h3 class="mt-60 neg-mb-10">The How</h3>
 
         <ol class="mt-40 neg-ml-16">
-            <li class="mb-10"><strong>Design: </strong>One to two concepts created in parallel (in Sketch/Figma)</li>
+            <li class="mb-10"><strong>Design: </strong>One to two concepts created in parallel</li>
 
-            <li class="mb-10"><strong>Develop: </strong>High-fidelity, interactive prototypes of the design direction(s) created (in Proto.io)</li>
+            <li class="mb-10"><strong>Develop: </strong>High-fidelity, interactive prototypes of the design direction(s) created</li>
         
             <li class="mb-10"><strong>User Test Plan: </strong> Coordinate with the UX Research team</li>
 
             <ul class="mt-10 mb-20">
                 <li>Determine interactions/user flows to examine</li>
                 <li>Define the user test tasks and user test plan</li>
-                <li>Conduct remote, A/B tests (if applicable) of the prototype(s)</li>
+                <li>Conduct remote, A/B tests of the prototype(s)</li>
             </ul>
 
-            <li class="mb-10"><strong>User Test Debrief: </strong>Review with our the UX Research team, sharing insights, recommendations, and next steps</li>
+            <li class="mb-10"><strong>User Test Debrief: </strong>Review findings with our the UX Research team, sharing insights, recommendations, and next steps</li>
 
             <li><strong>Iterate: </strong>Take the research recommendations and insights and return to Step 1 with a refined design direction</li>
         </ol>
@@ -251,7 +275,7 @@
   </section> <!-- row -->
 </div>
 
-<div id="constraints" class="container container-1200">
+<div id="role" class="container container-1200">
   <!-- section 1 - intro -->
   <section class="section-block padding-20">
     <!-- container for image block and number -->
@@ -272,7 +296,7 @@
     <div class="section-content">
         <h2>Role</h2>
 
-         <p>I was responsible for end-to-end concept development, which included: wireframing, interaction design, high-fidelity prototyping, and research collaboration. I helped develop each of interactive prototypes used in all user tests and worked directly with UX Research teams in both Portland and the UK to define user test plans and refine designs post-testing.</p>
+         <p>I was responsible for end-to-end concept development within our feature areas, which included: <strong>wireframing, interaction design, high-fidelity prototyping, and research collaboration</strong>. I helped develop each of the interactive prototypes used in all user tests and worked directly with UX Researchers in both Portland and the UK to frame hypotheses, define user test plans, and refine designs post-testing.</p>
 
          <p>With the JLR headquarters located in England, and our satellite office in Portland, Oregon, this was a global effort that involved regular collaboration with management and stakeholders in the UK.</p>
 
@@ -298,7 +322,7 @@
 
 
 <div class="container--rel full-width contrast-bg">
-    <div class="contrast-bg-color"></div>
+    <div class="contrast-bg-color2"></div>
     <section class="container--narrow resume xl-offset-header">
         
         <!-- accent elements -->
@@ -310,19 +334,25 @@
          <div class="shadow-mask"></div>
 
         <div class="container--rel full-width section-break">
-            <p> The following solutions demonstrate how specific information architecture and system-level interaction problems were solved within the tight spatial, legal, and technical constraints.</p>
+            <h4> The following solutions demonstrate how specific information architecture and system-level interaction problems were solved within the tight spatial, legal, and technical constraints.</h4>
 
-             <h3 class="neg-mb-10 bg-highlight radius-sm">6.1: Problem Space</h3>
+            <div class="neg-mb-10 radius-sm small-section-marker">
+              <h3>Problem Space</h3>
+              <span>6.1</span>
+            </div>
 
-             <p>The first major problem to address was sorting out what and where everything would go into the sidebar, which boiled down to: the number of elements that needed to be added, exceeded the available space. Once placement of Rear Defrost and Max Defrost (legal requirements) was accounted for, many back-and-forth dicussions with manangement and stakeholders of which features to prioritize unfolded.</p>
+             <p>The first major problem to address was sorting out what and where everything would go into the sidebar, which boiled down to: the number of elements that needed to be added, exceeded the available space. Once mandatory defrost controls were accounted for, prioritization decisions were made through cross-functional review, balancing user needs with system-level constraints.</p>
 
-             <img loading="lazy" src="../img/jlr/icp_delete_sidebar_callout.png" alt="Image of the vehicle's touchscreen, highlighting the area of the screen which will be referenced in this section">
+             <img class="mt-20" loading="lazy" src="../img/jlr/icp_delete_sidebar_callout.png" alt="Image of the vehicle's touchscreen, highlighting the area of the screen which will be referenced in this section">
                             
-              <img class="mb-40" loading="lazy" src="../img/jlr/icp_delete_sidebar.svg" alt="Wireframes showing the sidebar content differences from before and after the 24MY update">
+              <img class="mb-40 mt-20" loading="lazy" src="../img/jlr/icp_delete_sidebar.svg" alt="Wireframes showing the sidebar content differences from before and after the 24MY update">
 
-              <h3 class="neg-mb-10 bg-highlight radius-sm">6.2: Contextual Buttons</h3>
+              <div class="neg-mb-10 radius-sm small-section-marker">
+              <h3>Contextual Buttons</h3>
+              <span>6.2</span>
+            </div>
 
-              <ul class="mt-40">
+              <ul class="mt-40 style-list">
                    <li><strong>Problem: </strong>Available space in the sidebar was insufficient for all required controls.</li>
 
                     <li><strong>Solution: </strong>Introduced context-dependent buttons based on system state.</li>
@@ -332,23 +362,26 @@
 
               <p>To address space constraints, we introduced context-dependent buttons that adapted based on system state. One example was consolidating the previously separate Home and Apps buttons into a single contextual control.</p>
 
-                <ul>
-                    <li>If the user is on the home screen, display a shortcut button to open the App Drawer.</li>
+                <ul class="mt-20">
+                    <li>If the user is on the home screen, display a shortcut button to open the <strong>App Drawer</strong>.</li>
 
-                    <li>If the user is not on the home screen, display a shortcut button to return Home.</li>
+                    <li>If the user <strong>is not</strong> on the home screen, display a shortcut button to return <strong>Home</strong>.</li>
                 </ul>
 
-                <p>Note: The App Drawer could still be accessed via swiping from the left edge as a secondary method (Not quite as discoverable as the dedicated button, but still an available option for the user).</p>
+                <p class="caption">Note: The App Drawer could still be accessed via swiping from the left edge as a secondary method (Not quite as discoverable as the dedicated button, but still an available option for the user).</p>
 
                 <img loading="lazy" src="../img/jlr/icp_delete_homebtn.svg" alt="Wireframes showing the state change to the sidebar button when the user is on the home screen and when the user is not">
 
-                <p>This approach was extended to the Phone shortcut. With Phone  deprioritized, left without a permanent sidebar element, two edge cases still required attention: returning to active calls and returning to CarPlay or Android Auto. In these states, the Media button temporarily became a shortcut back to the active call or phone projection interface. Because call audio was already using the cabin speakers, Media access was unnecessary at that moment (i.e. show the user the right thing at the right time). This allowed four high-priority features to be served through two sidebar positions, freeing additional space without increasing interaction depth.</p>
+                <p>This approach was extended to the Phone shortcut. With Phone  deprioritized, left without a permanent sidebar element, two edge cases still required attention: returning to active calls and returning to CarPlay or Android Auto. In these states, the Media button temporarily became a shortcut back to the active call or phone projection interface. Because call audio would already be using the cabin speakers, Media access became unnecessary in that moment (i.e. show the user the right thing at the right time). This allowed four high-priority features to be served through two sidebar positions, freeing additional space without increasing interaction depth.</p>
 
                 <img class="mb-40" loading="lazy" src="../img/jlr/icp_delete_activecall.svg" alt="Wireframes showing the state change to the sidebar button when the user is on an active phone call">
 
-                <h3 class="neg-mb-10 bg-highlight radius-sm">6.3: Combo Defrost Button</h3>
+                <div class="neg-mb-10 radius-sm small-section-marker">
+              <h3>Combo Defrost Button</h3>
+              <span>6.3</span>
+            </div>
 
-                <ul class="mt-40">
+                <ul class="mt-40 style-list">
                     <li><strong>Problem: </strong>Available space in the sidebar was insufficient for all required controls, one-touch activation of Rear Defrost legally required.</li>
 
                     <li><strong>Solution: </strong>Combine two related functions into a single switch, toggling between multiple modes.</li>
@@ -356,17 +389,20 @@
                     <li><strong>Impact: </strong>Legal compliance maintained and enabled dual activation in a single press.</li>
                 </ul>
 
-                <p>Another example of where creative problem solving became necessary was with the case of Rear Defrost and Heated Windshield. Functionally, these two features are related, in the sense that they both are turning on some sort of heated element in the glass. Given that, and the limited space in the sidebar, these two features seemed like logical candidates to pair together into one button. However, the legal requirement that was given to us—at any point, Rear Defrost must be able to be turned on within one press on the screen—presented a different challenge.</p>
+                <p>Another example of where creative problem solving became necessary was with the case of Rear Defrost and Heated Windshield. Functionally, these two features are related, in the sense that they both are turning on some sort of heated element in the glass. Given that, and the limited space in the sidebar, these two features seemed like logical candidates to pair together into one button. However, a regulatory requirement that Rear Defrost remain accessible within a single interaction presented a different challenge.</p>
 
-                <p>Several concepts were explored and ultimately rejected due to legal constraints requiring one-touch activation of Rear Defrost. The chosen direction was a toggle switch that cycles through four different states, while still complying with  the Rear Defrost legal requirement. Our solution also created a beneficial byproduct: activating two controls on at once, in a single button press.</p>
+                <p>Several concepts were explored to balance space efficiency with usability. Early directions revealed tradeoffs between interaction simplicity and compliance requirements, helping narrow toward a solution that satisfied both. The chosen direction was a toggle switch that cycles through multiple functional states, while still complying with the Rear Defrost legal requirement. Our solution also created a beneficial byproduct: activating two controls on at once, in a single button press.</p>
 
                 <p>To reduce ambiguity, visual indicators were added to clearly distinguish front and rear control  states and to signal that this control behaved differently from standard sidebar navigation. The interaction also adapted based on vehicle trim level—defaulting to a simple Rear Defrost toggle when Heated Windshield was not equipped.</p>
 
                 <img class="mb-40" loading="lazy" src="../img/jlr/icp_delete_defrost.svg" alt="Wireframes showing all four states of the combo defrost button">
 
-                <h3 class="neg-mb-10 bg-highlight radius-sm">6.4: Overlays</h3>
+                <div class="neg-mb-10 radius-sm small-section-marker">
+              <h3>Overlays</h3>
+              <span>6.4</span>
+            </div>
 
-                <ul class="mt-40">
+                <ul class="mt-40 style-list">
                     <li><strong>Problem: </strong>Broader feature sets needed quick access and to be globally accessible from any screen.</li>
 
                     <li><strong>Solution: </strong>Use sidebar buttons as entry points to open an overlay, to allow for full-screen display.</li>
@@ -374,53 +410,240 @@
                     <li><strong>Impact: </strong>Additional Climate, Volume, and driving-related controls accessible from any screen, reduced visual clutter during active overlays.</li>
                 </ul>
 
-                <p>Using sidebar buttons as overlay entry points introduced the risk of mixed interaction models within the same visual grouping. This was mitigated by clearly delineating interaction zones and reinforcing behavior through distinct visual treatments and affordances.</p>
+                <p class="mb-40">Using sidebar buttons as overlay entry points introduced the risk of mixed interaction models within the same visual grouping. This was mitigated by clearly delineating interaction zones and reinforcing behavior through distinct visual treatments and affordances.</p>
 
                 <img loading="lazy" src="../img/jlr/icp_delete_overlay1.png" alt="Annotated screenshot highlighting the visual cues that were added to the Overlay buttons">
 
-                <p>Once an overlay is launched, the sidebars change to a more focused, empty state, removing unnecessary visual clutter. This was done to help communicate the context switch of having the overlay open, as well as provide the user a clearer visual path to their exit route (close button). One caveat to this stategy comes back to the previously mentioned legal requirements. Since one-touch activation of Rear Defrost and Max Defrost are required at all times, those two buttons needed to remain in place.</p>
+                <p>Once an overlay is launched, the sidebars change to a more focused, empty state, removing unnecessary visual clutter. This was done to help communicate the context switch of having the overlay open, as well as provide the user a clearer visual path to their exit route (close button). One caveat to this strategy comes back to the previously mentioned legal requirements. Since one-touch activation of Rear Defrost and Max Defrost are required at all times, those two buttons needed to remain in place.</p>
 
-                <img loading="lazy" src="../img/jlr/icp_delete_overlay2.png" alt="Annotated screenshot highlighting how the sidebar changes states when an overlay is opened.">
-                <span class="caption mb-40">[Screenshot from "Understanding the Pivi Pro Infotainment System | Land Rover Naperville | Naperville, IL" by Land Rover Naperville (2024), YouTube, 4:11]</span>
+                <img class="mt-20" loading="lazy" src="../img/jlr/icp_delete_overlay2.png" alt="Annotated screenshot highlighting how the sidebar changes states when an overlay is opened.">
 
-                <h3 class="neg-mb-10 bg-highlight radius-sm">6.5: The Quick Slider</h3>
+                <p class="caption mb-60 mt-0">[Screenshot from "Understanding the Pivi Pro Infotainment System | Land Rover Naperville | Naperville, IL" by Land Rover Naperville (2024), YouTube, 4:11]</p>
 
-                <ul class="mt-40">
+                <div class="neg-mb-10 radius-sm small-section-marker mt-80">
+                  <h3>Quick Slider</h3>
+                  <span>6.5</span>
+                </div>
+
+                <ul class="mt-40 style-list">
                     <li><strong>Problem: </strong>The new system lacked the ability for quick, large scale adjustments and quickly reach min/max values.</li>
 
                     <li><strong>Solution: </strong>Add a vertical drag interaction to select sidebar buttons.</li>
 
-                    <li><strong>Impact: </strong>Rapid, low-precision adjustments supported. Interaction model reused across climate, drive modes, and volume</li>
+                    <li><strong>Impact: </strong>Rapid, low-precision adjustments supported. Interaction model reused across Climate, Vehicle Controls, and Volume</li>
                 </ul>
 
                  <p>Introducing a secondary drag interaction to the overlay buttons enabled rapid adjustments, allowing for looser, less precise inputs from the user.  Visual feedback reinforced state changes without requiring explicit confirmation.</p>
 
                 <img loading="lazy" src="../img/jlr/icp_delete_slider1.svg" alt="Static wireframe version showing the state change of a blue background when the climate button is dragged down">
 
-                <span class="caption">
+                <p class="caption mt-0">
                 The sidebar background provides blue feedback for additional confirmation when the selected temperature is in the lower/colder ranges.
-                </span>
+                </p>
 
-                <img loading="lazy" src="../img/jlr/icp_delete_slider2.svg" alt="Static wireframe version showing the state change of a red background when the climate button is dragged up">
+                <img class="mt-40" loading="lazy" src="../img/jlr/icp_delete_slider2.svg" alt="Static wireframe version showing the state change of a red background when the climate button is dragged up">
 
-                <span class="caption">
+                <p class="caption mt-0">
                 The sidebar background provides red feedback for additional confirmation when the selected temperature is in the upper/warmer ranges.
-                </span>
+                </p>
 
-                <video muted controls autoplay loop src="../img/jlr/icp_delete_quickslider.mp4">Your browser does not support the video tag.</video>
+                <video loading="lazy" class="mt-40" muted controls autoplay loop src="../img/jlr/icp_delete_quickslider.mp4">Your browser does not support the video tag.</video>
 
-                <span class="caption video-caption">[Clip from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 6:54-7:05]</span>
+                <p class="caption mt-0">[Clip from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 6:54-7:05]</p>
 
-                <p>To promote discoverability, a visual affordance—the Rail—was added to suggest a constrained drag interaction. Color cues reinforced directionality for temperature adjustment, and the same interaction model was later extended to Drive Modes and Volume for consistency.</p>
+                <p class="mb-40">To promote discoverability, a visual affordance—the Rail—was added to suggest a constrained drag interaction. Color cues reinforced directionality for temperature adjustment, and the same interaction model was later extended to Drive Modes and Volume for consistency.</p>
 
                 <img class="mb-40" loading="lazy" src="../img/jlr/icp_delete_therail.png" alt="Close-up image showing the details of UI elements that make up the Overlay buttons">
+
+                 <div class="neg-mb-10 radius-sm small-section-marker">
+                  <h3>&ldquo;Preflight Checklist&rdquo;</h3>
+                  <span>6.6</span>
+                </div>
+
+                <ul class="mt-40 style-list">
+                    <li><strong>Problem: </strong>Quick, top-level access to common functions upon entering the vehicle was now lost.</li>
+
+                    <li><strong>Solution: </strong>Once the system boots, surface a dedicated space where the user can access features they might regularly turn on/off when first getting into the vehicle.</li>
+
+                    <li><strong>Impact: </strong>Reduced number of steps needed following vehicle entry and helped smooth the transition from physical to digital controls.</li>
+                </ul>
+
+                <p class="mb-40">While our designated sandbox to design in was limited to the system sidebars and overlays, we were able to make one outside modification to  interaction model: a new home tile. The Preflight Checklist introduced a new "launch pad" or "start here" type of interaction pattern, allowing drivers to easily locate key system settings before starting their journey. This reduced the number of interactions and time spent wayfinding during vehicle startup. The primary goal behind this was to help ease the transition from physical controls to touchscreen by surfacing those frequently used functions at the top level. </p>
+
+                <img loading="lazy" src="../img/jlr/preflightchecklist.svg" alt="Wireframe version of the home tile layout of quick controls">
+
+                <img class="mt-60" loading="lazy" src="../img/jlr/preflightchecklist.png" alt="Image of the vehicle's touchscreen, showing the home screen tile with quick controls">
+                <p class="caption mb-60 mt-0">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 6:41]</p>
+
+                <h4 class="neg-mb-20">Early Concepts</h4>
+                <p class="mb-40">A concept of a modal window appearing once the system booted up had been explored initially. However, while this approach ensures visibility to the user, the major tradeoff is that it introduced additional friction by requiring an explicit decision from the user at each vehicle start. That friction could diminish the long term user experience over the product's lifespan and day-to-day use, resulting in a preference for the less intrusive implementation of a home tile. This exploration demonstrated a case of: execution negating the design intent and creating a potential pain point.</p>
+
+                <img loading="lazy" src="../img/jlr/icp_concept10.png" alt="Image of an early design concept for the Pre-flight Checklist idea">
+              <p class="caption mb-40 mt-0">With the idea that the vehicle could use outside temperature as an input, the user's (likely) initial steps could be surfaced, with options for a hot summer day shown here.</p>
+
+              <img loading="lazy" src="../img/jlr/icp_concept11.png" alt="Image of an early design concept for the Pre-flight Checklist idea">
+              <p class="caption mb-40 mt-0">Conversely, relevant options for a cold winter day are highlighted here.</p>
+        </div>
+    </section> <!-- container--narrow -->
+</div> <!-- resume-bg -->
+
+<div id="results" class="container container-1200 neg-mb-80">
+  <!-- section 1 - intro -->
+  <section class="section-block-reverse padding-20">
+    <!-- container for image block and number -->
+    <div class="section-marker padding-0 radius-sm text-center">
+       
+       <!-- contains bg image, passed through with "data-bg" -->
+        <div data-bg="jlr-6" class="section-bg-wrapper radius-sm">
+          <!-- color of image tint + section number -->
+            <div class="section-bg-tint radius-sm">
+                <span>7</span>
+            </div>
+        </div> <!-- section-bg-wrapper -->
+    </div> <!-- section marker -->
+
+    <!-- text block --> 
+    <div class="section-content">
+        <h2>Results</h2>
+
+        <ul class="mt-40 neg-ml-24">
+          <li><strong>Production launch:</strong> Shipped as part of the 24MY mid-cycle refresh, debuting on the 2024 Range Rover Velar</li>
+          <li><strong>Scalability:</strong> Interaction patterns and design principles scaled across all JLR vehicle platforms</li>
+          <li><strong>Compliance:</strong> Met legal requirements for all safety-critical vehicle functions</li>
+          <li><strong>Validation:</strong> Designs validated through multiple rounds of usability testing in Portland (US) and the UK</li>
+          </ul>
+    </div> <!-- section content -->
+  </section> <!-- row -->
+</div>
+
+<div class="container--rel full-width contrast-bg">
+    <div class="contrast-bg-color2"></div>
+    <section class="container--narrow resume xl-offset-header">
+        
+        <!-- accent elements -->
+        <div class="corner-square top-right-square"></div>
+        <div class="corner-square btm-left-square"></div>
+
+        <div class="container--rel full-width section-break neg-mt-40">
+
+            <div class="neg-mb-10 radius-sm small-section-marker">
+              <h3>Climate</h3>
+              <span>7.1</span>
+            </div>
+
+             <p class="mb-40">The Climate Overlay was structured into three sections—temperature, seats, and fan speed—each optimized for its specific use case. While uniform control patterns were initially explored, testing showed that excessive visual repetition affected comprehension. Assigning distinct interaction styles to each section helped improved clarity.</p>
+
+             <img loading="lazy" src="../img/jlr/icp_delete_climate1.png" alt="Image of the Range Rover's touchscreen, displaying the Climate overlay">
+
+          <p class="caption mt-0">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 8:46]</p>
+
+          <p class="mt-40">For temperature, a variety of controls were provided to cover a range of use cases: small, medium, and large adjustments.</p>
+
+          <ul class="style-list">
+              <li><strong>Single Chevrons: </strong>adjusts the temperature up/down by one degree (0.5 degrees  Celsius).</li>
+
+              <li><strong>Double Chevrons: </strong>adjusts in larger chunks, changing the temperature up/down in four-degree increments (two degrees Celsius).</li>
+
+              <li><strong>Hi/Lo: </strong>dedicated shortcuts to jump to the highest and lowest temperatures round out the suite of controls</li>
+          </ul>
+
+          <p class="mb-40">Supplemental interactions were also included: press-and-hold any of the chevrons for continuous adjustment, and dragging up/down on the entire temperature area.</p>
+
+          <img loading="lazy" src="../img/jlr/icp_delete_temp.png" alt="Annotated screenshot calling out what each of the buttons on screen will do.">
+          
+          <p class="caption mt-0">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 8:46]</p>
+
+          <p>Moving over to Seats, this section is a small slice of a larger Seats app, providing quick access to the highest priority use case: seat heating/cooling. With a limited range of adjustments, we were able to display direct selection of high, medium, and low all at once, reducing the number of steps for the user. The visual centerpiece of the overlay, the seat graphic indicates which zone(s) heating/cooling is applied to. Finally, to increase user mobility around the system, a shortcut to the full Seats app (which includes additional features such as Massage) anchors the top edge of the screen. </p>
+
+          <p class="mb-40">The final section of the Climate Overlay contains the fan speed controls. Placement of this section in the overlay was very deliberate. Being the only "neutral" or shared control, it serves as a natural divider and visual break when both the driver and passenger Climate Overlays are open at the same time. Interactions for fan speed are fairly straightforward: direct selection via press or dragging. Similarly to Seats, a shortcut to the wider Climate app is provided above.</p>
+
+          <video loading="lazy" muted controls autoplay loop src="../img/jlr/icp_delete_climate.mp4">Your browser does not support the video tag.</video>
+          
+          <p class="caption mb-60 mt-0">[Clip from "Range Rover Walkthrough: Climate Controls pt 1" by SHARPECars (2025), YouTube, 1:06-1:19]</p>
+
+          <h4 class="neg-mb-20">Early Concepts</h4>
+          
+          <p>Early concepts shown below are exploratory and were used to evaluate interaction models and layout behavior rather than final visual design. A range of layout and control variations were explored to understand how visual density, grouping, and interaction patterns affected comprehension and usability. These explorations informed the final structure by clarifying which approaches improved clarity and which introduced unnecessary complexity.</p>
+
+          <p class="mb-40"> A few of the early challenges included finding a balance of: clear delineation of content buckets, managing independent passenger controls, visual overload, control blindness (i.e. similar elements blending together from duplication in close proximity), and visual hierarchy.</p>
+
+          <img loading="lazy" src="../img/jlr/icp_concept6.png" alt="Image of an early design concept for the Vehicle Controls overlay">
+            <p class="caption mb-40 mt-0">Early concept utilizing a more uniform and symmetrical grid, with section labels doubling as shortcuts to open the associated app. This layout structure limited options in terms of the interactions which could be used, given the smaller available space.</p>
+
+          <img loading="lazy" src="../img/jlr/icp_concept7.png" alt="Image of an early design concept for the Vehicle Controls overlay">
+            <p class="caption mb-40 mt-0">Exploration of alternative control schemes that enabled more precision and direct selections, experimenting with  asymmetrical visual hierarchy to separate content blocks. This approach presented design tradeoffs of increasing usability, at the cost of visual density.</p>
+
+          <img loading="lazy" src="../img/jlr/icp_concept9.png" alt="Image of an early design concept for the Vehicle Controls overlay">
+            <p class="caption mb-60 mt-0">Shared, bottom drawer concept with pagination, swiping to access controls for different feature areas such as Seats. Ultimately, this represented a divergent interaction model of a shared space between driver and passenger, creating conflicts with how the other overlays behave (e.g. duplicate entry points).</p>
+
+          <div class="neg-mb-10 radius-sm small-section-marker">
+              <h3>Vehicle Controls</h3>
+              <span>7.2</span>
+            </div>
+
+            <p>From an information architecture perspective, this was the largest and most complex feature area. Managing the selection of a large number of different drive modes was the first major challenge. Since the Pivi system already had a dedicated off-road app (4x4i), the approach was the surface the drive modes for everyday use in this top-level overlay, and defer the more situational, off-road modes to the 4x4i app. Doing so reduced some of complexity within the overlay and eliminated unnecessary visual clutter with lower frequency use cases.</p>
+
+            <p class="mb-40">Because the scope of features within this overlay was particularly broad and varied  vehicle-to-vehicle, similar controls/features were grouped into tiles, presented as a scrollable list. </p>
+
+            <img loading="lazy" src="../img/jlr/icp_delete_drivemodes.png" alt="Screenshot image of a YouTube video, showing the Vehicle Controls overlay on the vehicle's touchscreen.">
+            
+          <p class="caption mt-0">[Screenshot from "2025 Range Rover Controls Explained — Dashboard, Steering Wheel & Screen Guide" by MikesCarInfo (2025), YouTube, 7:36]</p>
+
+          <img class="mt-40" loading="lazy" src="../img/jlr/icp_delete_vehicle.svg" alt="Wireframes of multiple UI components, showing the different contents of the tiles inside the Drive Modes overlay">
+
+          <p class="caption mt-0">Layout of the Vehicle Controls overlay</p>
+
+          <img loading="lazy" src="../img/jlr/icp_delete_vehicle2.svg" alt="Production example of the above wireframes, shown in context, on the vehicle's touchscreen.">
+
+          <p class="caption mt-0">Full list of vehicle quick control tiles. Note: Some tiles may not be displayed if not equipped on the vehicle (e.g. Ride Height only available on vehicles with air suspension).</p>
+
+          <p class="mb-40">The inside column of the Vehicle Controls overlay can also be controlled via the Quick Slider—changing the drive mode or launching the 4x4i app without needing to open the overlay.</p>
+
+          <video loading="lazy" muted controls autoplay loop src="../img/jlr/icp_delete_vehicleslider.mp4">Your browser does not support the video tag.</video>
+
+          <p class="caption mb-60 mt-0">[Clip from "2024 Range Rover Sport Climate and Volume Quick Adjustment!" by Dan Stuart (2024), YouTube, 0:30-0:46]</p>
+
+          <h4 class="neg-mb-20">Early Concepts</h4>
+          
+          <p>Early design concepts for Vehicle Controls included a condensed, half-screen overlay, as well as alternative layouts and navigation methods. Some early explorations experimented with translating familiar physical controls into digital equivalents, with the hypothesis that a level of muscle memory would carryover to a touchscreen environment. Surfacing contextually relevant controls of the selected drive mode and helpful descriptions were additional aspects explored as well.</p>
+          <p class="mb-40">Layout-wise, there was a focus to keep the three different overlays structured similarly—e.g. mapping a full-height column next to the sidebar for the element that the Quick Slider would be controlling. A few examples of these early concepts are highlighted below.</p>
+
+           <img loading="lazy" src="../img/jlr/icp_concept1.png" alt="Image of an early design concept for the Vehicle Controls overlay">
+            <p class="caption mb-40 mt-0">Early concept using accordion menus to separate out the supplemental vehicle controls and to reduce visual density. This example also highlights the use of surfacing contextually relevant controls, such as the Wade Sensing feature to view water depth when Wade mode is selected.</p>
+
+          <img loading="lazy" src="../img/jlr/icp_concept4.png" alt="Image of an early design concept for the Vehicle Controls overlay">
+            <p class="caption mb-40 mt-0">Repackaging the above concept into a half-screen overlay and adding pagination, swiping to access the quick controls. This concept also explored the idea of providing an explicit signpost and entry point into Terrain Response (off-road modes), emphasizing the brand's capabilities. Early explorations favored limiting overlays to half-screen, as to not interfere with the passenger Climate overlay.</p>
+
+          <img loading="lazy" src="../img/jlr/icp_concept5.png" alt="Image of an early design concept for the Vehicle Controls overlay">
+            <p class="caption mt-0 mb-60">Half panel after swiping, displaying the accordion of quick controls on the second page.</p>
+
+
+          <div class="neg-mb-10 radius-sm small-section-marker">
+              <h3>Volume</h3>
+              <span>7.3</span>
+            </div>
+
+          <p class="mb-40">The most straightforward of the feature areas in terms of design, the Volume overlay reused the same control layout and interaction patterns from Temperature for system continuity.</p>
+          
+          <video loading="lazy" muted controls autoplay loop src="../img/jlr/icp_delete_volume.mp4">Your browser does not support the video tag.</video>
+          
+          <p class="caption mt-0 mb-40">[Clip from "How to adjust the volume in your Range Rover Velar" by Land Rover Grand Rapids (2025), YouTube, 0:02-0:14]</p>
+          
         </div>
     </section> <!-- container--narrow -->
 </div> <!-- resume-bg -->
 
 
 
-    <div class="pad-bot-60"></div>
+<div id="prototype" class="container--rel full-width mt-80 neg-mb-80">
+    <section class="container-800 pad-bot-60 padding-20">
+      <h2 class="mt-80">Prototype</h2>
+      <p class="mb-40">A sample demo of the interactive prototype which was used in testing, made in Proto.io.</p>
+
+      <video loading="lazy" muted controls autoplay loop src="../img/jlr/proto_demo.mp4">Your browser does not support the video tag.</video>
+
+    </section>
+</div>
 
 
   </main>
