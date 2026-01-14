@@ -14,6 +14,10 @@
       --light-grey: #D5D3CD;
       --dark-grey: #333333;
 
+      --eggplant: #3F2E42;
+      --mustard: #FFD655;
+      --steel-red: #CB4848;
+
       --max-width-100: 100%;
       --max-width-md: 1200px;
       --max-width-sm: 720px;
@@ -177,6 +181,10 @@ h5 {font-weight: normal;}
    margin: 20px auto;
 }
 
+.container h2 {
+   line-height: 4.5rem;
+}
+
 .container-1200 {
    max-width: 1200px;
 }
@@ -190,11 +198,26 @@ h5 {font-weight: normal;}
    margin: 0 auto;
 }
 
-.container-800 img, .container-800 video{
+.container-800 img, .container-800 video, .container-1200 img{
    width: 100%;
 }
 
 .full-width {width: var(--max-width-100);}
+
+
+.dark-section-break {
+   background: var(--medium-green);
+   color: var(--sand);
+   padding-top: 5px;
+   padding-bottom: 5px;
+   margin-top: 80px;
+}
+
+.dark-section-break .container-1200 {
+   margin-top: -50px;
+   margin-bottom: -50px;
+}
+
 .flex {display: flex;}
 .flex-col {flex-direction: column;}
 .section-break {margin-top: 60px;}
@@ -279,14 +302,17 @@ h5 {font-weight: normal;}
 .mb-40 {margin-bottom: 40px;}
 .mb-60 {margin-bottom: 60px;}
 .mb-80 {margin-bottom: 80px;}
+.mb-120 {margin-bottom: 120px;}
 .neg-mt-10 {margin-top: -10px;}
 .neg-mt-30 {margin-top: -30px;}
 .neg-mt-40 {margin-top: -40px;}
 .neg-mt-80 {margin-top: -80px;}
+.neg-mt-100 {margin-top: -100px;}
 .neg-mt-120 {margin-top: -120px;}
 .neg-mb-10 {margin-bottom: -10px;}
 .neg-mb-20 {margin-bottom: -20px;}
 .neg-mb-30 {margin-bottom: -30px;}
+.neg-mb-50 {margin-bottom: -50px;}
 .neg-mb-80 {margin-bottom: -80px;}
 .neg-ml-16 {margin-left: -16px;}
 .neg-ml-24 {margin-left: -24px;}
@@ -423,10 +449,12 @@ strong {
 
 .contents-list li a {
    transition: 0.2s ease-in-out;
+   color: var(--dark-grey);
 }
 
 .contents-list li a:hover {
-   letter-spacing: 1px;
+   letter-spacing: 0.5px;
+   color: var(--accent-red);
    transition: 0.1s ease-in-out;
 }
 
@@ -495,15 +523,29 @@ strong {
    margin: 0 auto;
    justify-content: center;
    align-items: flex-start;
-   background: url(../img/jlr/24my_interior3.jpg);
    background-position: center;
    background-size: cover;
    background-attachment: fixed;
    border-radius: var(--radius-lg);
 }
 
+.parallax[data-bg="jlr-para"] { background-image: url(../img/jlr/24my_interior3.jpg); }
+.parallax[data-bg="tt-para"] { background-image: url(../img/trackside_thunder/tt_mock_1.jpg); }
+
+.parallax-tint {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   top: 0;
+   background: var(--medium-green);
+   opacity: 0.7;
+   border-radius: var(--radius-lg);
+}
+
 .parallax-text {
    margin-top: -20px;
+   z-index: 2;
 }
 
 
@@ -521,6 +563,8 @@ strong {
    background-position: bottom right;
    background-size: cover;
 }
+
+
 
 .touchscreen {
    width: 100%;
@@ -670,6 +714,10 @@ strong {
    background: var(--sand-dark);
 }
 
+.contrast-bg3 {
+   height: 95.5%;
+}
+
 .dark-sand-bg {
    background: var(--sand-dark);
 }
@@ -704,7 +752,10 @@ strong {
 .section-break h4 {
    font-size: 1.5rem;
    line-height: 2rem;
+   margin-top: 40px;
 }
+
+
 
 
 .small-section-marker {
@@ -797,6 +848,17 @@ strong {
 
 .section-content h2 {padding-top: 24px; padding-bottom: 12px;}
 
+.section-content img {
+   width: 100%;
+}
+
+.callout h3 {
+   line-height: 3.2rem;
+   padding-left: 30px;
+   padding-right: 30px;
+   font-weight: 500;
+   text-wrap: pretty;
+}
 
 /* image in column 2 (right) */
 .section-marker {
@@ -924,9 +986,126 @@ strong {
    transition: 0.2s ease-in-out;
 }
 
+.two-col {
+   align-items: center;
+   gap: 40px;
+}
+
+.two-col h3 {
+   line-height: 2.8rem;
+}
+
+.two-col img {
+   width: 100%;
+}
+
+.color-box {
+  margin: 12px 0;
+  padding: 24px 30px 12px 30px;
+}
+
+.color-box h4 {
+  font-size: 1.5rem;
+  margin-bottom: -20px;
+  font-weight: 900;
+}
+
+.eggplant {
+  background: var(--eggplant);
+  color: var(--sand);
+}
+
+.mustard {
+  background: var(--mustard);
+  color: var(--eggplant);
+
+}
+
+.steel-red {
+  background: var(--steel-red);
+  color: var(--white);
+}
 
 
+.t-bolt-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 40px auto 0 auto;
+    overflow: hidden;
+    max-width: 500px;
+    touch-action: pan-y; /* Crucial for 2025 mobile UX */
+  user-select: none;   /* Prevents accidental text highlighting while swiping */
 
+}
+
+.slides-wrapper {
+  display: flex; /* Lines images up horizontally */
+  transition: transform 0.6s ease-in-out; /* The animation magic */
+  width: 100%;
+  max-width: 500px;
+  padding: 0;
+}
+
+.slide {
+  min-width: 100%; /* Each image takes full slider width */
+  max-width: 600px;
+  max-height: 700px;
+  flex-shrink: 0;
+}
+
+
+.slide-active {
+  display: block; /* Show the active image */
+}
+
+.dots-container {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0px auto 0 auto;
+  text-align: center;
+  z-index: 2;
+  padding-bottom: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.dot-active { background-color: #717171; }
+
+.t-bolt-wrapper button {
+  position: absolute;
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: var(--sand);
+  box-shadow: var(--shadow1);
+    top: 50%;
+    transform: translateY(-50%);
+    /* Add styling for background, color, padding, cursor etc. */
+}
+
+.t-bolt-wrapper img {
+  position: relative;
+}
+
+.t-bolt-wrapper #prev-slide {
+  left: 20px;
+}
+
+.t-bolt-wrapper #next-slide {
+  right: 20px;
+}
 
 /* =========================
    4. Header
@@ -1487,13 +1666,27 @@ social media icons sit in */
   .section-content h2 {
       color: var(--white);
       font-size: 3rem;
+      line-height: 3.2rem;
       padding-top: 0;
-      margin-top: -88px;
-      margin-bottom: 40px;
+      margin-top: -105px;
+      margin-bottom: -10px;
   }
 
-  .section-content h3, .small-section-marker h3{
+  
+
+  .section-content h3 {
+   margin-bottom: 0px;
+  }
+
+  .small-section-marker h3 {
+    font-size: 1.7rem;
+   line-height: 2rem;
+  }
+
+  .section-content h3{
    font-size: 1.7rem;
+   line-height: 2rem;
+   margin-bottom: -25px;
   }
 
   .section-bg-square  {
@@ -1516,6 +1709,12 @@ social media icons sit in */
    .flex {
       display: block;
    }
+
+   .two-col h3 {
+      margin-top: -20px;
+      margin-bottom: -25px;
+   }
+
 
    /* collapse grid to one row */
    .grid {
@@ -1574,6 +1773,7 @@ social media icons sit in */
       font-size: 6rem;
       margin-top: -60px;
    }
+
 }
 
 @media (max-width: 660px) {
@@ -1600,6 +1800,68 @@ social media icons sit in */
       max-height: 600px;
       margin-top: -600px;
    }
+
+   .callout h3 {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+
+   }
+
+   .padding-20 {
+      padding: 0;
+   }
+
+    .col-33-percent, .col-67-percent, .site-footer, .summary2 {
+      padding: 20px;
+    }
+
+   .col-33-percent img, .col-67-percent img {
+      margin-top: 20px;
+   }
+
+   .mobile-margin{
+      margin-top: 20px !important;
+   }
+
+   .dark-section-break {
+      padding-top: 0;
+   }
+
+   .mobile-wrap {
+   margin-top: -145px !important;
+  }
+
+  .container--narrow, .callout  {
+   padding: 20px;
+  }
+
+  .gameplan {
+   margin-top: -40px;
+   margin-bottom: -20px !important;
+  }
+
+  .mobile-neg-mt {
+   margin-top: -50px;
+  }
+
+  .site-footer {
+   margin-top: 130px;
+  }
+
+  .mobile-list {
+   margin-top: 40px;
+  }
+
+  .summary2 h3 {
+   line-height: 2.2rem;
+  }
+
+  .summary2 h2 {
+   line-height: 3.4rem;
+  }
+
+
+
 }
 
 
