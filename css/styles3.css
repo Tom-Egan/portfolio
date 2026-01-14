@@ -570,6 +570,20 @@ strong {
    width: 100%;
 }
 
+.img-grid {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.img-grid img {
+  max-width: 80%;
+}
+
+.img-grid video {
+   max-width: 50%;
+}
+
 
 
 
@@ -793,6 +807,10 @@ strong {
    padding: 20px 20px 0px 20px;
    line-height: 2.2rem;
    z-index: 2;
+}
+
+.section-break h4 {
+   text-wrap: pretty;
 }
 
 /* last line of the resume */
@@ -1713,6 +1731,10 @@ social media icons sit in */
    .two-col h3 {
       margin-top: -20px;
       margin-bottom: -25px;
+   }
+
+   .img-grid img, .img-grid video{
+      max-width: 100%;
    }
 
 
