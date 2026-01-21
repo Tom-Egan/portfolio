@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Character encoding -->
+	<meta charset="utf-8">
+
+	<!-- Responsive behavior -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/style4.css">
+
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+	
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div id="progress-container">
+	<div id="progress-bar"></div>
+</div>
+
+<!-- Link #1 for subnavigation -->
+<div id="start"></div>
+
+<!-- hero -->
+<section class="sticky-section text-left hero-wrapper flex-col" id="hero-bg">
+	<div id="heroAnimTarget" class="hero-content max-width-1400">
+		<h3 class="uppercase width-100 inter">Case Study</h3>
+		<div class="header-underline"></div>
+		<h1>24MY Pivi Update</h1>
+		<p class="width-100 text-left mt-24 serif hero-subtext">A deep-dive into an infotainment update for Jaguar Land Rover vehicles.</p>
+
+		<div class="flex gap-16 mt-24 width-100">
+			<div class="info-chip">
+				<p>UX Design</p>
+			</div>
+			<div class="info-chip">
+				<p>Automotive HMI</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="contents-header uppercase">
+	<h2>Contents</h2>
+</div>
+
+<!-- Subnavigation for sections -->
+<nav id="sectionSubnav" class="section-subnav" aria-label="Case study navigation: jump to a section">
+	<ul>
+		<li class="qn-box">
+			<a href="#summary">Summary</a>
+		</li>
+
+		<li class="qn-box">
+			<a href="#context">Context</a>
+		</li>
+
+		<li class="qn-box">
+			<a href="#solutions">Solutions</a>
+		</li>
+
+		<li class="qn-box">
+			<a href="#results">Results</a>
+		</li>
+	</ul>
+</nav>
+
+<!-- Link #2 for subnavigation -->
+<div id="summary"></div>
+
+<!-- Section 1: Summary -->
+<section class="rel-100vh rounded-section" id="overview-bg">
+
+	<!-- wrapper -->
+	<div class="max-width-1400">
+
+		<div id="heroAnimTrigger"></div>
+
+		<!-- header -->
+		<h2 class="center-section-title sticky-title">Summary</h2>
+
+		<!-- Sub header -->
+		<h3 class="mt-48 ml-50 subsection-header">Overview</h3>
+		<div class="header-underline dark-underline ml-50"></div>
+
+		<!-- TLDR Cards -->
+		<section id="cardWrapper" class="flex card-wrapper gap-12">
+
+			<div class="overflow-cover overflow-cover-left"></div>
+
+			<!-- card 1 -->
+			<div class="summary-card radius-sm card-shadow">
+				<h4>Company</h4>
+
+				<!-- logos -->
+				<div class="flex overview-logos mt-24 gap-12">
+					<img src="../img/logo-jag.png" alt="image of Jaguar logo">
+
+					<img id="lr-logo" src="../img/logo-lr.png" alt="image of Land Rover logo">
+				</div>
+			</div> <!-- card 1 -->
+
+			<!-- card 2 -->
+			<div class="summary-card radius-sm card-shadow">
+				<h4>Problem</h4>
+
+				<p class="mt-12">Physical vehicle controls removed, requiring safety-critical functions to move into the touchscreen UI</p>
+			</div> <!-- card 2 -->
+
+			<!-- card 3 -->
+			<div class="summary-card radius-sm card-shadow">
+				<h4>Constraints</h4>
+
+				<p class="mt-12">Legal one-touch-activataion requirements, limited sidebar space, modifying existing software architecture</p>
+			</div> <!-- card 3 -->
+
+			<!-- card 4 -->
+			<div class="summary-card radius-sm card-shadow">
+				<h4>Role</h4>
+
+				<p class="mt-12">UX Designer — UX concepting, interaction design, prototyping, usability testing</p>
+			</div> <!-- card 4 -->
+
+			<!-- card 5 -->
+			<div class="summary-card radius-sm card-shadow">
+				<h4>Team</h4>
+
+				<p class="mt-12">2 UX Designers + UX Research (US & UK)</p>
+			</div> <!-- card 5 -->
+
+			<!-- card 6 -->
+			<div class="summary-card radius-sm card-shadow">
+				<h4>Platform</h4>
+
+				<p class="mt-12">Pivi / Pivi Pro (embedded vehicle software)</p>
+			</div> <!-- card 6 -->
+
+			<!-- card 7 -->
+			<div class="summary-card radius-sm card-shadow">
+				<h4>Solutions</h4>
+
+				<p class="mt-12">Contextual sidebar buttons, overlays, multi-state controls, quick-adjust drag interactions, pre-trip homescreen tile</p>
+			</div> <!-- card 7 -->
+
+			<!-- card 8 -->
+			<div class="summary-card radius-sm card-shadow">
+				<h4>Outcome</h4>
+
+				<p class="mt-12">Shipped on 24MY Range Rover Velar; design and interaction patterns scaled across all Jaguar Land Rover vehicles</p>
+			</div> <!-- card 8 -->
+
+			<div class="overflow-cover overflow-cover-right"></div>
+		</section> <!-- card wrapper -->
+
+		<!-- list navigation: left arrow -->
+		<button id="leftArrow" class="arrow left-arrow">&#10094;</button>
+
+		<!-- list navigation: right arrow -->
+		<button id="rightArrow" class="arrow right-arrow">&#10095;</button>
+
+	</div> <!-- max-width-1400 -->
+
+	<!-- tldr background image -->
+	<div class="accent-bg-text-huge flex"></div>
+
+	<!-- bottom gradient to cover TLDR text -->
+	<div class="bg-text-cover-gradient"></div>
+
+	<!-- full width bg to cover TLDR -->
+	<div class="bg-text-cover">
+		<!-- Summary Section 2 -->
+		<section class="max-width-1400 flex flex-wrap padding-50 zindex-3 two-col align-center">
+			<div class="left-col" >
+				<!-- Sub header -->
+				<h3 id="anim-enter-right1" class="mt-48 subsection-header anim-enter-right">Executive Summary</h3>
+				<div id="anim-enter-right2" class="header-underline dark-underline anim-enter-right"></div>
+
+				<p id="anim-enter-right3" class="mt-32 anim-enter-right delay1">This project focused on redefining how global vehicle controls are accessed and used, integrating into a highly constrained automotive infotainment system. Working across UX, research, and engineering, I helped explore and evaluate multiple interaction models, balancing usability, safety, and platform consistency. The outcome established scalable interaction patterns that shipped on the 24MY Range Rover Velar and rolled out to all JLR vehicle programs.</p>
+
+				<div id="exe_sum_trigger"></div>
+
+				<p id="anim-enter-right4" class="mt-32 italic serif highlight-box anim-enter-right delay2"><strong>Setting expectations: </strong>This case study highlights UX and interaction design decisions under constraints, rather than final, highly polished visual design.</p>
+			</div>
+
+			<div id="anim-enter-left1" class="car-bg-img right-col scroll-animate">
+				<img src="../img/jlr/rr_cutout3.png">
+			</div>
+		</section>
+
+		<section class="max-width-1400 padding-50 zindex-3 impact-cards-wrapper">
+			<!-- Sub header -->
+			<h3 class="mt-72 subsection-header">Design Impact</h3>
+			<div class="header-underline dark-underline"></div>
+
+			<div class="flex gap-24 mt-32 impact-cards flex-wrap">
+				<div class="impact-card radius-sm card-shadow">
+					<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.14 42.82">
+
+					  <g id="Layer_1-2" data-name="Layer 1">
+					    <g>
+					      <path class="cls-1" d="M60.52,0H28.38c-.34,0-.62.28-.62.62v19.81h1.25V1.25h30.89v30.89h-19.63v1.25h20.25c.35,0,.62-.27.62-.62V.62c0-.34-.28-.62-.62-.62Z"/>
+					      <path class="cls-1" d="M38.38,40.82c-.28,0-.5.22-.5.5v.5h-.5c-.28,0-.5.22-.5.5s.22.5.5.5h1c.28,0,.5-.22.5-.5v-1c0-.28-.22-.5-.5-.5Z"/>
+					      <path class="cls-1" d="M34.38,41.82h-2c-.28,0-.5.22-.5.5s.22.5.5.5h2c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z"/>
+					      <path class="cls-1" d="M24.38,41.82h-2c-.28,0-.5.22-.5.5s.22.5.5.5h2c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z"/>
+					      <path class="cls-1" d="M29.38,41.82h-2c-.28,0-.5.22-.5.5s.22.5.5.5h2c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z"/>
+					      <path class="cls-1" d="M19.38,41.82h-.5v-.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1c0,.28.22.5.5.5h1c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z"/>
+					      <path class="cls-1" d="M18.88,26.32c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2Z"/>
+					      <path class="cls-1" d="M18.88,31.32c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2Z"/>
+					      <path class="cls-1" d="M18.38,35.82c-.28,0-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5Z"/>
+					      <path class="cls-1" d="M27.38,22.82h2c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-2c-.28,0-.5.22-.5.5s.22.5.5.5Z"/>
+					      <path class="cls-1" d="M34.38,22.82c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-2c-.28,0-.5.22-.5.5s.22.5.5.5h2Z"/>
+					      <path class="cls-1" d="M21.88,22.32c0,.28.22.5.5.5h2c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-2c-.28,0-.5.22-.5.5Z"/>
+					      <path class="cls-1" d="M38.38,25.82c-.28,0-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5Z"/>
+					      <path class="cls-1" d="M38.38,30.82c-.28,0-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5Z"/>
+					      <path class="cls-1" d="M38.38,35.82c-.28,0-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5Z"/>
+					      <path class="cls-1" d="M45.27,16.44v4.62c0,.82-1.26.81-1.25,0,0,0,0-3.04,0-3.04l-12.28,12.28c-.25-.35-.55-.65-.89-.89l12.28-12.28h-3.04c-.82.02-.81-1.25,0-1.25,0,0,4.6,0,4.6,0,.4,0,.58.22.58.56Z"/>
+					      <path class="cls-1" d="M11.49,16.44v4.62c0,.82,1.26.81,1.25,0,0,0,0-3.04,0-3.04l12.28,12.28c.25-.35.55-.65.89-.89l-12.28-12.28h3.04c.82.02.81-1.25,0-1.25,0,0-4.6,0-4.6,0-.4,0-.58.22-.58.56Z"/>
+					      <path class="cls-1" d="M1.18,5.57h21.65v14.72h1.18V4.98c0-.32-.26-.59-.59-.59H.59c-.32,0-.59.26-.59.59v22.83c0,.32.26.59.59.59h15.75v-1.18H1.18V5.57Z"/>
+					      <path class="cls-1" d="M28.38,29.84c-1.61,0-2.92,1.31-2.92,2.93s1.31,2.92,2.92,2.92,2.93-1.31,2.93-2.92-1.31-2.93-2.93-2.93ZM30.07,32.77c0,.94-.76,1.7-1.7,1.7s-1.7-.76-1.7-1.7.76-1.7,1.7-1.7,1.7.76,1.7,1.7Z"/>
+					    </g>
+					  </g>
+					</svg>
+					<h4>Platform Scalability</h4>
+					<p class="mt-12">Created a shared interaction model for global controls, used across all vehicle programs and multiple vehicle configurations.</p>
+				</div>
+
+				<div class="impact-card radius-sm card-shadow">
+					<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.61 26.71">
+					  <g id="Layer_1-2" data-name="Layer 1">
+					    <g>
+					      <path class="cls-1" d="M39.69,26.71c-.51,0-.99-.2-1.34-.56l-6.79-6.79c-.58-.58-.72-1.46-.35-2.19l.03-.06-1.51-1.51-.07.06c-1.63,1.42-3.71,2.2-5.85,2.2-4.92,0-8.93-4-8.93-8.93S18.89,0,23.81,0s8.93,4,8.93,8.93c0,2.14-.78,4.22-2.2,5.85l-.06.07,1.51,1.51.06-.03c.27-.13.56-.2.86-.2.5,0,.98.2,1.33.55l6.79,6.79c.36.36.56.84.56,1.34s-.2.98-.56,1.34-.84.56-1.34.56ZM23.81,1.05c-4.34,0-7.88,3.53-7.88,7.88s3.53,7.88,7.88,7.88,7.88-3.53,7.88-7.88-3.53-7.88-7.88-7.88Z"/>
+					      <path class="cls-1" d="M24.16,3.02c-.14-.26-.56-.26-.7,0l-4.91,8.9c-.07.12-.07.28,0,.4s.21.2.35.2h9.82c.14,0,.27-.08.34-.2.08-.12.08-.28.01-.4l-4.91-8.9ZM23.06,5.91h1.5l-.24,3.15h-1.02l-.24-3.15ZM24.35,10.9c-.14.15-.32.23-.54.23s-.4-.08-.54-.23c-.15-.15-.22-.33-.22-.54s.07-.41.22-.56c.14-.15.32-.22.54-.22s.4.07.54.22c.15.15.22.34.22.56s-.07.39-.22.54Z"/>
+					      <path class="cls-1" d="M2.83,11.75c-1.56,0-2.83-1.27-2.83-2.83s1.27-2.82,2.83-2.82c1.37,0,2.56,1.01,2.77,2.35v.08h7.83c0,.13,0,.26,0,.39,0,.23,0,.44.02.66h-7.88l-.02.07c-.33,1.23-1.45,2.1-2.72,2.1ZM2.83,7.13c-.99,0-1.8.8-1.8,1.79s.81,1.8,1.8,1.8c.68,0,1.29-.38,1.59-1,.13-.23.2-.5.2-.8,0-.17-.03-.35-.09-.52-.22-.75-.92-1.27-1.7-1.27Z"/>
+					      <path class="cls-1" d="M44.79,11.89c-1.32,0-2.49-.94-2.76-2.23l-.02-.08h-7.85c.01-.22.02-.44.02-.66,0-.13,0-.26,0-.39h7.84l.02-.08c.29-1.29,1.45-2.22,2.76-2.22,1.55,0,2.82,1.27,2.82,2.83s-1.27,2.83-2.82,2.83ZM44.79,7.26c-.74,0-1.4.44-1.67,1.13-.08.2-.13.43-.13.67s.04.46.13.66c.27.69.93,1.14,1.67,1.14.99,0,1.8-.81,1.8-1.8s-.81-1.8-1.8-1.8Z"/>
+					    </g>
+					  </g>
+					</svg>
+					<h4>Risk Management</h4>
+					<p class="mt-12">Helped align UX, engineering, and management on interaction tradeoffs early with extension explorations, reducing late-stage rework.</p>
+				</div>
+
+				<div class="impact-card radius-sm card-shadow">
+					<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.59 31.92">
+					  <g id="Layer_1-2" data-name="Layer 1">
+					    <g>
+					      <g>
+					        <path class="cls-1" d="M40.47,19.12l-2.59-2.6c-.46-.45-1.18.25-.71.71l1.72,1.72h-1.2c-1.77,0-3.39.35-4.8,1-3.56,1.63-5.8,5.13-5.8,9.6v2.37h1v-2.37c0-5.65,3.95-9.6,9.6-9.6h1.2l-1.72,1.72c-.46.45.25,1.17.71.7l2.6-2.6c.2-.2.22-.42-.01-.65Z"/>
+					        <path class="cls-1" d="M44.08,20.1v-.69c0-.18.01-.34.03-.47.02-.13.06-.24.11-.35.05-.1.12-.2.21-.3.09-.1.19-.21.32-.34l.96-.97c.21-.21.31-.48.31-.81s-.11-.59-.32-.79c-.21-.2-.48-.31-.8-.31-.35,0-.63.12-.86.36-.22.24-.35.52-.39.87l-1.59-.12c.05-.4.15-.75.31-1.06s.36-.57.62-.79c.25-.22.55-.38.88-.49.33-.11.7-.17,1.1-.17.37,0,.72.05,1.04.16.32.11.6.26.83.47.24.2.42.46.55.76s.2.65.2,1.04c0,.27-.04.51-.11.72-.07.21-.17.4-.3.57-.12.17-.27.34-.43.5-.16.16-.33.32-.52.5-.12.11-.22.2-.3.29s-.15.17-.21.26c-.05.09-.09.19-.12.3s-.04.25-.04.4v.47h-1.49ZM43.83,21.83c0-.27.1-.49.29-.69s.43-.29.7-.29.5.09.7.27c.2.18.3.41.3.67s-.1.49-.29.68c-.2.19-.43.29-.7.29-.13,0-.26-.02-.38-.07-.12-.05-.23-.12-.32-.2s-.16-.18-.22-.3c-.05-.12-.08-.24-.08-.37Z"/>
+					      </g>
+					      <g>
+					        <path class="cls-1" d="M7.12,19.12l2.59-2.6c.46-.45,1.18.25.71.71l-1.72,1.72h1.2c1.77,0,3.39.35,4.8,1,3.56,1.63,5.8,5.13,5.8,9.6v2.37h-1v-2.37c0-5.65-3.95-9.6-9.6-9.6h-1.2s1.72,1.72,1.72,1.72c.46.45-.25,1.17-.71.7l-2.6-2.6c-.2-.2-.22-.42.01-.65Z"/>
+					        <path class="cls-1" d="M2.02,20.1v-.69c0-.18.01-.34.03-.47.02-.13.06-.24.11-.35.05-.1.12-.2.21-.3.09-.1.19-.21.32-.34l.96-.97c.21-.21.31-.48.31-.81s-.11-.59-.32-.79c-.21-.2-.48-.31-.8-.31-.35,0-.63.12-.86.36-.22.24-.35.52-.39.87l-1.59-.12c.05-.4.15-.75.31-1.06s.36-.57.62-.79c.25-.22.55-.38.88-.49.33-.11.7-.17,1.1-.17.37,0,.72.05,1.04.16.32.11.6.26.83.47.24.2.42.46.55.76s.2.65.2,1.04c0,.27-.04.51-.11.72-.07.21-.17.4-.3.57-.12.17-.27.34-.43.5-.16.16-.33.32-.52.5-.12.11-.22.2-.3.29s-.15.17-.21.26c-.05.09-.09.19-.12.3s-.04.25-.04.4v.47h-1.49ZM1.77,21.83c0-.27.1-.49.29-.69s.43-.29.7-.29.5.09.7.27c.2.18.3.41.3.67s-.1.49-.29.68c-.2.19-.43.29-.7.29-.13,0-.26-.02-.38-.07-.12-.05-.23-.12-.32-.2s-.16-.18-.22-.3c-.05-.12-.08-.24-.08-.37Z"/>
+					      </g>
+					      <g>
+					        <path class="cls-1" d="M26.72,14.16l-2.6-2.6c-.2-.2-.42-.22-.65.01l-2.6,2.59c-.45.46.25,1.18.71.71l1.72-1.72v18.76h1v-12.77s0,0,0,0v-6l1.72,1.72c.45.46,1.17-.25.7-.71Z"/>
+					        <path class="cls-1" d="M23.05,6.44v-.69c0-.18.01-.34.03-.47.02-.13.06-.24.11-.35.05-.1.12-.2.21-.3.09-.1.19-.21.32-.34l.96-.97c.21-.21.31-.48.31-.81s-.11-.59-.32-.79c-.21-.2-.48-.31-.8-.31-.35,0-.63.12-.86.36-.22.24-.35.52-.39.87l-1.59-.12c.05-.4.15-.75.31-1.06s.36-.57.62-.79c.25-.22.55-.38.88-.49.33-.11.7-.17,1.1-.17.37,0,.72.05,1.04.16.32.11.6.26.83.47.24.2.42.46.55.76s.2.65.2,1.04c0,.27-.04.51-.11.72-.07.21-.17.4-.3.57-.12.17-.27.34-.43.5-.16.16-.33.32-.52.5-.12.11-.22.2-.3.29s-.15.17-.21.26c-.05.09-.09.19-.12.3s-.04.25-.04.4v.47h-1.49ZM22.8,8.17c0-.27.1-.49.29-.69s.43-.29.7-.29.5.09.7.27c.2.18.3.41.3.67s-.1.49-.29.68c-.2.19-.43.29-.7.29-.13,0-.26-.02-.38-.07-.12-.05-.23-.12-.32-.2s-.16-.18-.22-.3c-.05-.12-.08-.24-.08-.37Z"/>
+					      </g>
+					    </g>
+					  </g>
+					</svg>
+					<h4>Pioneering</h4>
+					<p class="mt-12">Established a design precedent within JLR  for touchscreen-based climate and vehicle controls, and internal ways of working (rapid, iterative design sprints).</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-120 padding-24 mb-120">
+			<div class="narrow flex flex-col zindex-3">
+				<div class="disclaimer-card radius-sm card-shadow">
+					<p>This case study reflects publicly released features. Some design artifacts, concepts, and rationale have been generalized/abstracted and selectively shown to respect confidentiality.</p>
+				</div>
+
+				<div class="disclaimer-title">
+					<img src="../img/disclaimer.svg">
+				</div>
+
+				
+			</div>
+		</section>
+	</div> <!-- bg text color -->
+	
+
+</section> <!-- summary -->
+
+
+<!-- Link #3 for subnavigation -->
+<div id="context"></div>
+
+<section class="rel-100vh context-bg flex parallax-bg">
+	<h2>Context</h2>
+</section>
+
+<div class="contents-header uppercase">
+	<h2>Section Two</h2>
+</div>
+
+<!-- Section 1: Summary -->
+<section class="rel-100vh rounded-section padding-btm-120" id="overview-bg">
+
+	<section class="max-width-1400 flex flex-wrap padding-50 zindex-3 two-col align-center section-two">
+			<div class="left-col" >
+				<!-- Sub header -->
+				<h3 id="anim-enter-right1" class="mt-48 subsection-header anim-enter-right">Problem Statement</h3>
+				<div id="anim-enter-right2" class="header-underline dark-underline anim-enter-right"></div>
+
+				<p id="anim-enter-right3" class="mt-32 anim-enter-right delay1">For the 24MY (2024 Model Year) mid-cycle refresh, Jaguar Land Rover removed a number of physical controls as part of a redesigned interior approach. This resulted in several mission-critical vehicle functions needing to be safely and intuitively relocated into the touchscreen.</p>
+
+				<p class="mt-32">As part of a small UX design team, I contributed to re-architecting the existing Pivi infotainment system, adhering to strict legal, functional, and development constraints. Through multiple design iterations, interactive prototypes, and user tests, we delivered a production-ready solution that launched on the Range Rover Velar and later scaled across all JLR vehicles for 24MY and beyond.</p>
+			</div>
+
+			<div id="anim-enter-left1" class="car-bg-img right-col scroll-animate">
+				<img src="../img/jlr/rr_cutout3.png">
+			</div>
+		</section>
+
+	<section class="max-width-1400 flex flex-wrap padding-50 zindex-3 two-col align-center section-two">
+			<div class="left-col" >
+				<!-- Sub header -->
+				<h3 id="anim-enter-right1" class="mt-48 subsection-header anim-enter-right">Objective</h3>
+				<div id="anim-enter-right2" class="header-underline dark-underline anim-enter-right"></div>
+
+				<p class="mt-32"> The objective was to provide fast, low-distraction access to high-frequency, safety-critical vehicle controls within the Pivi touchscreen. Affected features included:</p>
+
+		        <ul class="mt-48">
+		            <li>Climate/HVAC</li>
+		            <li>Heated/cooled seats</li>
+		            <li>Volume</li>
+		            <li>Drive modes</li>
+		            <li>Defrost</li>
+		            <li>Various vehicle settings (e.g. Auto Stop/Start)</li>
+		        </ul>
+			</div>
+
+			<div id="anim-enter-left1" class="car-bg-img right-col scroll-animate">
+				<img src="../img/jlr/rr_cutout3.png">
+			</div>
+	</section>
+
+	<section class="max-width-1400 flex flex-wrap padding-50 zindex-3 two-col align-center section-two">
+			<div class="left-col" >
+				<!-- Sub header -->
+				<h3 id="anim-enter-right1" class="mt-48 subsection-header anim-enter-right">Objective</h3>
+				<div id="anim-enter-right2" class="header-underline dark-underline anim-enter-right"></div>
+
+				<p class="mt-32"> The objective was to provide fast, low-distraction access to high-frequency, safety-critical vehicle controls within the Pivi touchscreen. Affected features included:</p>
+
+		        <ul class="mt-48">
+		            <li>Climate/HVAC</li>
+		            <li>Heated/cooled seats</li>
+		            <li>Volume</li>
+		            <li>Drive modes</li>
+		            <li>Defrost</li>
+		            <li>Various vehicle settings (e.g. Auto Stop/Start)</li>
+		        </ul>
+			</div>
+
+			<div id="anim-enter-left1" class="car-bg-img right-col scroll-animate">
+				<img src="../img/jlr/rr_cutout3.png">
+			</div>
+	</section>
+
+</section>
+
+
+<!-- Link #4 for subnavigation -->
+<div id="contact"></div>
+
+<!-- (sticky) Section 3 -->
+<!-- <section class="sticky-section flex-col" id="contact-bg">
+	<h1>03. CONTACT</h1>
+</section> -->
+
+
+
+
+	<!-- GSAP Core Animation Library -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script> -->
+
+	<!-- GSAP Scroll Trigger Plugin -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script> -->
+
+	<!-- animations -->
+	<script src="../js/app.js" defer></script>
+	<!-- <script src="../js/animation.js" defer></script> -->
+</body>
+</html>

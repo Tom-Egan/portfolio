@@ -1,0 +1,629 @@
+/* ================================================|
+***************************************************|
+                                                   |
+  Globals                                          |        
+                                                   |
+***************************************************|
+==================================================*/
+
+:root {
+  /* colors */
+  --white: #fff;
+
+  --off-white: #f9f9f9;
+  --off-white-20: rgba(255,255,255,0.2);
+
+  --dark-grey: #333;
+  --dark-grey-20: rgba(51, 51, 51, 0.2);
+  
+  /* corner radius */
+  --radius-12: 12px;
+  --radius-40: 40px;
+
+  /* sizing */
+  --max-width: 1360px;
+  --card-padding: 40px 40px 50px 40px;
+
+  /* spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 96px;
+
+  /* type */
+  --serif: "Glegoo"; /* weights = 400, 700 */
+  --sans-serif: "Outfit"; /* weights = 100-900 */
+
+  /* animation */
+  --transition:0.2s ease-in-out;
+
+  /* shadows */
+  --shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+  --inner-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);;
+}
+
+html { scroll-behavior: smooth; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: var(--sans-serif), sans-serif;
+  background: #111;
+  color: var(--dark-grey);
+}
+
+h2 {
+  font-size: 7rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.9rem;
+  text-transform: uppercase;
+}
+
+.label-h3 {
+  font-size: 1.4rem;
+  line-height: 2.2;
+  margin-bottom: -14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+}
+
+.header-underline {
+  width: 80px;
+  height: 4px;
+  background: var(--off-white);
+  margin-bottom: var(--space-md);
+  margin-top: 6px;
+  align-self: flex-start;
+}
+
+.dark-underline {
+  background: var(--dark-grey);
+
+}
+
+h4{
+  font-size: 1.6rem;
+  line-height: 2.2;
+}
+
+p {
+  max-width: 70ch;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-top: var(--space-md);
+}
+
+.accent-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.emphasis-block {
+  border-left: 4px solid red;
+  padding: 4px 0px 4px 12px;
+}
+
+strong {font-weight: 600;}
+
+img {display: block; width: 100%; height: auto;}
+
+.serif {font-family: var(--serif), serif;}
+.italic {font-style: italic;}
+.radius-sm {border-radius: var(--radius-12);}
+.card-shadow {box-shadow: var(--shadow);}
+.flex {display: flex;}
+.flex-col {flex-direction: column;}
+.gap-sm {gap: var(--space-sm);}
+.flex-wrap {flex-wrap: wrap;}
+.no-wrap {flex-wrap: no-wrap;}
+.sticky {position: sticky;}
+.no-style{list-style: none;}
+
+
+.radius-lg {
+  border-radius: var(--radius-40);
+}
+
+.top-radius-lg {
+  border-top-left-radius: var(--radius-40);
+  border-top-right-radius: var(--radius-40);
+}
+
+.btm-radius-lg {
+  border-bottom-left-radius: var(--radius-40);
+  border-bottom-right-radius: var(--radius-40);
+}
+
+.left-radius-lg {
+  border-top-left-radius: var(--radius-40);
+  border-bottom-left-radius: var(--radius-40);
+}
+
+.right-radius-lg {
+  border-top-right-radius: var(--radius-40);
+  border-bottom-right-radius: var(--radius-40);
+}
+
+.section-spacer {margin-top: 180px;;}
+
+.container {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+
+/* ================================================|
+***************************************************|
+                                                   |
+  Animation                                        |        
+                                                   |
+***************************************************|
+==================================================*/
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+[data-animate].in-view {
+  opacity: 1;
+  transform: none;
+}
+
+[data-delay="1"] { transition-delay: 0.1s; }
+[data-delay="2"] { transition-delay: 0.2s; }
+[data-delay="3"] { transition-delay: 0.3s; }
+
+
+/* ================================================|
+***************************************************|
+                                                   |
+  Case Study Hero                                  |        
+                                                   |
+***************************************************|
+==================================================*/
+
+/* full width bg container */
+.case-hero {
+  position: sticky;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background: var(--dark-grey);
+  color: var(--off-white);
+  display: flex;
+  align-items: center;
+}
+
+/* container for all the hero content */
+.case-hero-content {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: -80px auto 0 auto;
+}
+
+/* main project title */
+.case-hero-content h1 {
+  font-size: 11vw;
+  line-height: 1;
+}
+
+/* subject matter tags below description */
+.tag {
+  padding: 10px var(--space-sm);
+  background: #999;
+  border-top-left-radius: var(--space-sm);
+  border-bottom-right-radius: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+
+/* ================================================|
+***************************************************|
+                                                   |
+  Case Study Main Content                          |        
+                                                   |
+***************************************************|
+==================================================*/
+
+/* full width content container */
+.case-section {
+  position: relative;
+  width: 100%;
+  background: var(--off-white);
+  padding-bottom: var(--space-xl);
+}
+
+/* push the title container above the section */
+.section-peek {
+  margin-top: -40px;
+}
+
+/* title that sits on top of the section */
+.section-overhang {
+  position: absolute;
+  display: block;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--off-white);
+  margin-top: -46px;
+  z-index: 3;
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #222;
+}
+
+/* adjustment for the section below the list
+** of cards, which is position: absolute */
+.overview-clear {
+  position: relative;
+  gap: 100px;
+  display: flex;
+  align-items: stretch;
+  overflow-x: hidden;
+  padding-right: 0;
+  z-index: 2;
+}
+
+.overview-clear .col-left {
+  position: relative;
+  max-width: 50%;
+  padding-right: var(--space-lg);
+}
+
+.rr-img {
+  position: absolute;
+  max-width: 55%;
+  right: 0px;
+  margin-top: -470px;
+  overflow-x: none;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+
+
+/* ================================================|
+***************************************************|
+                                                   |
+  Cards                                            |        
+                                                   |
+***************************************************|
+==================================================*/
+
+/* full width bg behind the overview cards */
+/* parent <article> element */
+/*#overview {
+  position: absolute;
+  left: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100vw;
+  padding: 0;
+  margin: 50px 0 0 0;
+}*/
+
+.card-list-bg {
+  position: relative;
+  background: red;
+  padding: 32px 0 0 0;
+
+}
+
+/* container <div> for the cards */
+/* child of #overview <article */
+.card-list {
+  position: relative;
+  overflow-x: auto;
+  /*width: 100vw;*/
+  background: #ccc;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  box-shadow: var(--inner-shadow);
+  scroll-behavior: smooth;
+  /* hide scrollbar: IE and Edge */
+  -ms-overflow-style: none;
+  /* hide scrollbar: Firefox */
+  scrollbar-width: none;
+}
+
+/* hide scrollbar: Chrome */
+.card-list ::-webkit-scrollbar {
+  display: none;
+}
+
+/* set margins/gap between the cards */
+/* this is the parent <ul> of the <li> cards */
+.card-list .container .flex {
+  width: fit-content;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg) var(--space-md) var(--space-sm);
+}
+
+/* individual card styles */
+/* cards are <li> elements */
+.card {
+  display: block;
+  background: var(--white);
+  padding: var(--card-padding);
+  border-radius: var(--radius-12);
+  box-shadow: var(--shadow);
+  min-width: 360px;
+}
+
+/* add underline to the card's title */
+.card h4, .icon-card h4 {
+  border-bottom: 2px solid var(--dark-grey-20);
+  line-height: 2rem;
+  padding-bottom: var(--space-sm);
+}
+
+/* text adjustments for the card body text */
+.card p, .icon-card p {
+  margin-top: var(--space-sm);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* override margin of JLR logo */
+#card-jlr-logo {
+  position: relative;
+  display: block;
+  padding-bottom: var(--space-md);
+  top: var(--space-md);
+}
+
+/* container for the arrow controls to move the 
+** scrollable list of cards */
+.overview-card-controller {
+  position: relative;
+  width: 100%;
+  height: 42px;
+  top: 0px;
+  z-index: 2;
+  padding: 0 0 0 24px;
+  justify-content: flex-start;
+}
+
+/* button wrapper */
+.card-controller {
+  position: relative;
+  height: 100%;
+  width: 120px;
+  border: 2px solid var(--dark-grey-20);
+}
+
+/* the left/right buttons */
+.card-controller button {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--off-white);
+  background: var(--dark-grey);
+  font-size: 1.5rem;
+}
+
+.card-controller button:hover {
+  cursor: pointer;
+}
+
+.card-controller button:active {
+  background: #555;
+}
+
+.impact-cards {
+  position: relative;
+  gap: var(--space-md);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  background: #ccc;
+  flex: 1;
+  min-width: 300px;
+  padding: var(--card-padding);
+  border-radius: var(--radius-12);
+}
+
+.icon-card-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.icon-card-wrapper svg {
+  position: relative;
+  width: 100%;
+  max-height: 120px;
+}
+
+.impact-card-wrapper .container{
+  padding: 0;
+}
+
+
+/* ================================================|
+***************************************************|
+                                                   |
+  Section Subnavigation                            |        
+                                                   |
+***************************************************|
+==================================================*/
+
+.section-nav {
+  position: sticky;
+  top: -8px;
+  padding: var(--space-md);
+  z-index: 9999;
+}
+
+.section-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  background: var(--white);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--radius-12);
+  box-shadow: var(--shadow);
+  /*border: 2px solid var(--dark-grey);*/
+}
+
+.section-nav ul li {
+  padding: var(--space-sm) 0;
+}
+
+/* set pill-shaped radius on first link in navbar */
+.section-nav ul li:first-child,
+.section-nav ul li:first-child a{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* set pill-shaped radius on last link in navbar */
+.section-nav ul li:last-child,
+.section-nav ul li:last-child a{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* links */
+.section-nav ul li a {
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* link hover */
+.section-nav ul li a:hover {
+  background: #222;
+}
+
+/* highlight for the section the user is currently on */
+.active-section a{
+  background: var(--dark-grey-20);
+  border-bottom: 5px solid #222;
+}
+
+/* container holding the mobile subnav button */
+/* hidden by default, displayed in the media query */
+.mobile-subnav {
+  display: none;
+}
+
+/* button that opens the menu on mobile */
+.subnav-btn {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  padding:10px;
+}
+
+
+
+/* ================================================|
+***************************************************|
+                                                   |
+  Media Queries                                    |        
+                                                   |
+***************************************************|
+==================================================*/
+
+@media (max-width: 800px) {
+  /* collapse left column to single, full width */
+  .overview-clear .col-left{max-width: 100%;}
+
+  /* collapse range rover image to single col */
+  .rr-img {
+    position: relative;
+    margin-top: 0;
+    max-width: 100%;
+  }
+}
+
+/* 700px */
+@media (max-width: 700px) {
+
+  /* main project title */
+  .case-hero-content h1 {
+    font-size: 18vw;
+  }
+
+  /* reset parent containers to relative
+  ** and reset the scrollable properties */
+ /* #overview, .card-list {
+    position: relative;
+    overflow-x: clip;
+    padding: 0;
+  }*/
+
+  /* collapse cards into a single column layout */
+  /* readjust the padding and margins for mobile */
+  .card-list .container .flex {
+    flex-wrap: wrap;
+    row-gap: var(--space-md);
+    padding: var(--space-md) var(--space-xs);
+  }
+
+  /* converts the cards into a stackable set */
+  .card {
+    position: sticky;
+    top: 80px;
+    min-width: 100%;
+  }
+
+  /* show the mobile subnav button */
+  .mobile-subnav {
+    position: sticky;
+    top: -8px;
+    display: flex;
+    margin: 0 auto;
+    z-index: 9999;
+  }
+
+  /* original subnavigation container */
+  .section-nav {
+    display: none;
+  }
+
+  /* hide the left/right nav arrows when
+  ** the cards collapse to single column */
+  .overview-card-controller {
+    display: none;
+  }
+}
+
