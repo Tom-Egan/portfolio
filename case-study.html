@@ -1,19 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<!-- Character encoding -->
 	<meta charset="utf-8">
+
+	<!-- Responsive behavior -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title -->
+	<title>Range Rover Velar Infotainment UX Case Study (24MY Pivi Update)| Tom Egan</title>
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="../css/style5.css">
 
-	<!-- google fonts -->
+	<!-- Favicon -->
+	<link rel="icon" href="../favicon.ico" sizes="any">
+	<link rel="icon" href="../img/te_icon_color.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
+	<!-- Primary SEO -->
+	<meta name="description" content="UX case study for the 24MY Pivi infotainment update—launched on L560 Range Rover Velar—focusing on automotive HMI, interaction design, and system architecture.">
 
-	<title></title>
+	<!-- Canonical URL -->
+  	<link rel="canonical" href="https://www.tom-egan.com/24my-pivi-update">
+
+  	<!-- Open Graph / social sharing -->
+  	<meta property="og:title" content="24MY Pivi Infotainment Update UX Case Study | Tom Egan">
+  	<meta property="og:description" content="UX case study detailing the redesign of the Pivi infotainment system—launching on the Range Rover Velar for 24MY—focusing on automotive HMI and safety-critical interactions.">
+  	<meta property="og:url" content="https://www.tom-egan.com/24my-pivi-update">
+  	<meta property="og:type" content="website">
+  	<meta property="og:image" content="https://www.tom-egan.com/img/jlr/og-image.jpg">
+
+  	<!-- Optional: Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "CreativeWork",
+		"name": "24MY Pivi Infotainment Update UX Case Study",
+		"author": {
+		"@type": "Person",
+		"name": "Tom Egan",
+		"jobTitle": "UX Designer",
+		"url": "https://www.tom-egan.com"
+		},
+		"dateCreated": "2020",
+		"datePublished": "2025",
+		"description": "UX case study detailing the redesign of the Pivi infotainment system for 24MY, launching on the Range Rover Velar, focusing on safety-critical interactions, touchscreen controls, and automotive UX constraints.",
+		"inLanguage": "en-US",
+		"about": [
+			"UX Design",
+			"Automotive UX",
+			"Infotainment Systems",
+			"Human Machine Interface"
+		],
+			"publisher": {
+			"@type": "Person",
+			"name": "Tom Egan"
+		},
+			"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://www.tom-egan.com/24my-pivi-update"
+		}
+	}
+	</script>
+
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "WebSite",
+		  "name": "Tom Egan Portfolio",
+		  "url": "https://www.tom-egan.com"
+		}
+	</script>
+
 </head>
 
 <body>
@@ -41,17 +108,29 @@
 			<div class="flex gap-sm">
 				<span class="tag">UX Design</span>
 				<span class="tag">Automotive HMI</span>
-			</div>
+			</div> <!-- end of tags -->
 
-		</div> <!-- hero content -->
-	</header> <!-- hero -->
+		</div> <!-- end of hero content -->
+	</header> <!-- end of hero -->
 
-	<!-- Subnavigation -->
-	<section class="case-section section-peek top-radius-lg">
-
+	
+	<!-- top notch of section -->
+	<div id="summary" class=" section-peek top-radius-lg">
+		<!-- creates a row of three columns -->
+		<div class="flex">
+			<!-- variable width, containing corner radius -->
+			<div id="leftCorner" class="notch"></div>
+			<!-- fixed width, containing the notch -->
+			<div class="notch notch-bg"></div>
+			<!-- variable width, containing corner radius -->
+			<div id="rightCorner" class="notch"></div>
+		</div>
 		<!-- title that sits above section edge -->
 		<span class="section-overhang">Contents</span>
+	</div>
 
+	<!-- Subnavigation -->
+	<div id="subnav">
 		<!-- hidden on desktop -->
 		<!-- button to open the menu on mobile -->
 		<div class="container flex mobile-subnav">
@@ -61,19 +140,18 @@
 		</div>
 
 		<!-- case study subnavigation to jump to sections -->
-		<nav class="container section-nav">
-			<ul class="no-style flex">
-				<li class="active-section"><a href="#summary">Summary</a></li>
+		<nav class="section-nav">
+			<ul class="no-style flex subnav-links">
+				<li id="summaryLink"><a href="#summary">Summary</a></li>
 				<li><a href="#context">Context</a></li>
 				<li><a href="#solutions">Solutions</a></li>
 				<li><a href="#results">Results</a></li>
 			</ul>
 		</nav>
+	</div> <!-- End of Subnavigation -->
 
-	</section> <!-- subnavigation -->
-
-	<!-- summary -->
-	<section class="case-section summary full-bleed">
+	<!-- Section 1.1: Summary -->
+	<section id="summarySection" class="case-section summary full-bleed">
 
 		<!-- H2 Summary -->
 		<h2>Summary</h2>
@@ -81,84 +159,79 @@
 		<!-- (absolute, full width) -->
 		<!-- Subsection 1: Overview -->
 		<article class="full-bleed card-list-bg">
-
-			<!-- card wrapper -->
-			<!-- <div id="cardWrapper" class=""> -->
 				
-				<!-- cards -->
-				<ul class="no-style flex card-list">
+			<!-- cards -->
+			<ul id="cardWrapper" class="no-style flex card-list">
 
-					<!-- Card 1: Company -->
-					<li class="card">
-						<h4 class="serif">Company</h4>
-						<img id="card-jlr-logo" src="../img/jlr/logo-jlr.png" alt="image of Jaguar logo">
-					</li> <!-- card 1 -->
+				<!-- Card 1: Company -->
+				<li class="card">
+					<h3 class="serif">Company</h3>
+					<img id="card-jlr-logo" src="../img/jlr/logo-jlr.png" alt="image of Jaguar logo">
+				</li> <!-- card 1 -->
 
-					<!-- Card 2: Problem -->
-					<li class="card">
-						<h4 class="serif">Problem</h4>
-						<p>Physical vehicle controls removed, requiring safety-critical functions to move into the touchscreen UI</p>
-					</li> <!-- card 2 -->
+				<!-- Card 2: Problem -->
+				<li class="card">
+					<h3 class="serif">Problem</h3>
+					<p>Physical vehicle controls removed, requiring safety-critical functions to move into the touchscreen UI</p>
+				</li> <!-- card 2 -->
 
-					<!-- Card 3: Constraints -->
-					<li class="card">
-						<h4 class="serif">Constraints</h4>
-						<p>Legal one-touch-activation requirements, limited sidebar space, modifying existing software architecture</p>
-					</li> <!-- card 3 -->
+				<!-- Card 3: Constraints -->
+				<li class="card">
+					<h3 class="serif">Constraints</h3>
+					<p>Legal one-touch-activation requirements, limited sidebar space, modifying existing software architecture</p>
+				</li> <!-- card 3 -->
 
-					<!-- Card 4: Role -->
-					<li class="card">
-						<h4 class="serif">Role</h4>
-						<p>UX Designer — UX concepting, interaction design, prototyping, usability testing</p>
-					</li> <!-- card 4 -->
+				<!-- Card 4: Role -->
+				<li class="card">
+					<h3 class="serif">Role</h3>
+					<p>UX Designer — UX concepting, interaction design, prototyping, usability testing</p>
+				</li> <!-- card 4 -->
 
-					<!-- Card 5: Team -->
-					<li class="card">
-						<h4 class="serif">Team</h4>
-						<p>2 UX Designers + UX Research (US & UK)</p>
-					</li> <!-- card 5 -->
+				<!-- Card 5: Team -->
+				<li class="card">
+					<h3 class="serif">Team</h3>
+					<p>2 UX Designers + UX Research (US & UK)</p>
+				</li> <!-- card 5 -->
 
-					<!-- Card 6: Platform -->
-					<li class="card">
-						<h4 class="serif">Platform</h4>
-						<p>Pivi / Pivi Pro (embedded vehicle software)</p>
-					</li> <!-- card 6 -->
+				<!-- Card 6: Platform -->
+				<li class="card">
+					<h3 class="serif">Platform</h3>
+					<p>Pivi / Pivi Pro (embedded vehicle software)</p>
+				</li> <!-- card 6 -->
 
-					<!-- Card 7: Key Solutions-->
-					<li class="card">
-						<h4 class="serif">Key Solutions</h4>
-						<p>Contextual sidebar buttons, overlays, multi-state controls, quick-adjust drag interactions, pre-trip homescreen tile</p>
-					</li> <!-- card 7 -->
+				<!-- Card 7: Key Solutions-->
+				<li class="card">
+					<h3 class="serif">Key Solutions</h3>
+					<p>Contextual sidebar buttons, overlays, multi-state controls, quick-adjust drag interactions, pre-trip homescreen tile</p>
+				</li> <!-- card 7 -->
 
-					<!-- Card 8: Outcome-->
-					<li class="card">
-						<h4 class="serif">Outcome</h4>
-						<p>Shipped on 24MY Range Rover Velar; design and interaction patterns scaled across all Jaguar Land Rover vehicles</p>
-					</li> <!-- card 8 -->
+				<!-- Card 8: Outcome-->
+				<li class="card">
+					<h3 class="serif">Outcome</h3>
+					<p>Shipped on 24MY Range Rover Velar; design and interaction patterns scaled across all Jaguar Land Rover vehicles</p>
+				</li> <!-- card 8 -->
 
-				</ul> <!-- cards -->
-			</div> <!-- card list -->
-
-			<!-- container for the left/right
-			---- control arrows to scroll through
-			---- the list of cards above -->
-			<div class="container overview-card-controller flex">
-				<div class="card-controller radius-lg flex">
-					<!-- list navigation: left arrow -->
-					<button id="leftArrow" class="arrow left-arrow left-radius-lg">&#10094;</button>
-
-					<!-- list navigation: right arrow -->
-					<button id="rightArrow" class="arrow right-arrow right-radius-lg">&#10095;</button>
-				</div>
-			</div>
-
+			</ul> <!-- cards -->
 		</article> <!-- overview -->
-	</section>
 
-	<section class="case-section">
+		<!-- container for the left/right control arrows to scroll through the list of cards above -->
+		<div class="container overview-card-controller flex">
+			<div class="card-controller radius-lg flex">
+				<!-- list navigation: left arrow -->
+				<button id="leftArrow" class="arrow left-arrow left-radius-lg">&#10094;</button>
 
-		<!-- Subsection 2: Executive Summary -->
-		<article class="container overview-clear flex">
+				<!-- list navigation: right arrow -->
+				<button id="rightArrow" class="arrow right-arrow right-radius-lg">&#10095;</button>
+			</div>
+		</div> <!-- card controller -->
+	</section> <!-- End of 1.1: Summary -->
+
+	<!-- Section 1.2: Executive Summary -->
+	<section class="case-section exec-summary">
+
+		<!-- content -->
+		<article class="container flex">
+
 			<div class="col-left">
 				<!-- H3 -->
 				<h3>Executive Summary</h3>
@@ -171,18 +244,20 @@
 				<p class="emphasis-block serif italic"><strong>Setting expectations: </strong>This case study highlights UX and interaction design decisions under constraints, rather than final, highly polished visual design.</p>
 			</div>
 
-		</article> <!-- executive summary -->
+		</article> <!-- content -->
 
 		<!-- range rover image -->
 		<div class="rr-img">
 			<img src="../img/jlr/rr_cutout3.png" alt="Image of a Range Rover">
 		</div>
-	</section>
+	</section> <!-- End of 1.2: Executive Summary -->
 
-	<section class="case-section">
+	<!-- Section 1.3: Design Impact -->
+	<section class="case-section design-impact">
 
-		<!-- Subsection 3: Design Impact -->
+		<!-- content -->
 		<article class="container impact-card-wrapper">
+
 			<!-- H3 -->
 			<h3 class="section-spacer">Design Impact</h3>
 
@@ -198,32 +273,7 @@
 					<!-- icon -->
 					<div class="flex icon-card-wrapper">
 
-					<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.14 42.82">
-
-					  <g id="Layer_1-2" data-name="Layer 1">
-					    <g>
-					      <path class="cls-1" d="M60.52,0H28.38c-.34,0-.62.28-.62.62v19.81h1.25V1.25h30.89v30.89h-19.63v1.25h20.25c.35,0,.62-.27.62-.62V.62c0-.34-.28-.62-.62-.62Z"/>
-					      <path class="cls-1" d="M38.38,40.82c-.28,0-.5.22-.5.5v.5h-.5c-.28,0-.5.22-.5.5s.22.5.5.5h1c.28,0,.5-.22.5-.5v-1c0-.28-.22-.5-.5-.5Z"/>
-					      <path class="cls-1" d="M34.38,41.82h-2c-.28,0-.5.22-.5.5s.22.5.5.5h2c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z"/>
-					      <path class="cls-1" d="M24.38,41.82h-2c-.28,0-.5.22-.5.5s.22.5.5.5h2c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z"/>
-					      <path class="cls-1" d="M29.38,41.82h-2c-.28,0-.5.22-.5.5s.22.5.5.5h2c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z"/>
-					      <path class="cls-1" d="M19.38,41.82h-.5v-.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1c0,.28.22.5.5.5h1c.28,0,.5-.22.5-.5s-.22-.5-.5-.5Z"/>
-					      <path class="cls-1" d="M18.88,26.32c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2Z"/>
-					      <path class="cls-1" d="M18.88,31.32c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2Z"/>
-					      <path class="cls-1" d="M18.38,35.82c-.28,0-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5Z"/>
-					      <path class="cls-1" d="M27.38,22.82h2c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-2c-.28,0-.5.22-.5.5s.22.5.5.5Z"/>
-					      <path class="cls-1" d="M34.38,22.82c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-2c-.28,0-.5.22-.5.5s.22.5.5.5h2Z"/>
-					      <path class="cls-1" d="M21.88,22.32c0,.28.22.5.5.5h2c.28,0,.5-.22.5-.5s-.22-.5-.5-.5h-2c-.28,0-.5.22-.5.5Z"/>
-					      <path class="cls-1" d="M38.38,25.82c-.28,0-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5Z"/>
-					      <path class="cls-1" d="M38.38,30.82c-.28,0-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5Z"/>
-					      <path class="cls-1" d="M38.38,35.82c-.28,0-.5.22-.5.5v2c0,.28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5Z"/>
-					      <path class="cls-1" d="M45.27,16.44v4.62c0,.82-1.26.81-1.25,0,0,0,0-3.04,0-3.04l-12.28,12.28c-.25-.35-.55-.65-.89-.89l12.28-12.28h-3.04c-.82.02-.81-1.25,0-1.25,0,0,4.6,0,4.6,0,.4,0,.58.22.58.56Z"/>
-					      <path class="cls-1" d="M11.49,16.44v4.62c0,.82,1.26.81,1.25,0,0,0,0-3.04,0-3.04l12.28,12.28c.25-.35.55-.65.89-.89l-12.28-12.28h3.04c.82.02.81-1.25,0-1.25,0,0-4.6,0-4.6,0-.4,0-.58.22-.58.56Z"/>
-					      <path class="cls-1" d="M1.18,5.57h21.65v14.72h1.18V4.98c0-.32-.26-.59-.59-.59H.59c-.32,0-.59.26-.59.59v22.83c0,.32.26.59.59.59h15.75v-1.18H1.18V5.57Z"/>
-					      <path class="cls-1" d="M28.38,29.84c-1.61,0-2.92,1.31-2.92,2.93s1.31,2.92,2.92,2.92,2.93-1.31,2.93-2.92-1.31-2.93-2.93-2.93ZM30.07,32.77c0,.94-.76,1.7-1.7,1.7s-1.7-.76-1.7-1.7.76-1.7,1.7-1.7,1.7.76,1.7,1.7Z"/>
-					    </g>
-					  </g>
-					</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 61.14 42.82"><g data-name="Layer 1"><path d="M60.52 0H28.38c-.34 0-.62.28-.62.62v19.81h1.25V1.25H59.9v30.89H40.27v1.25h20.25c.35 0 .62-.27.62-.62V.62c0-.34-.28-.62-.62-.62M38.38 40.82c-.28 0-.5.22-.5.5v.5h-.5c-.28 0-.5.22-.5.5s.22.5.5.5h1c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5M34.38 41.82h-2c-.28 0-.5.22-.5.5s.22.5.5.5h2c.28 0 .5-.22.5-.5s-.22-.5-.5-.5M24.38 41.82h-2c-.28 0-.5.22-.5.5s.22.5.5.5h2c.28 0 .5-.22.5-.5s-.22-.5-.5-.5M29.38 41.82h-2c-.28 0-.5.22-.5.5s.22.5.5.5h2c.28 0 .5-.22.5-.5s-.22-.5-.5-.5M19.38 41.82h-.5v-.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1c0 .28.22.5.5.5h1c.28 0 .5-.22.5-.5s-.22-.5-.5-.5M18.88 26.32c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5zM18.88 31.32c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5zM18.38 35.82c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5" class="cls-1"/><path d="M27.38 22.82h2c.28 0 .5-.22.5-.5s-.22-.5-.5-.5h-2c-.28 0-.5.22-.5.5s.22.5.5.5M34.38 22.82c.28 0 .5-.22.5-.5s-.22-.5-.5-.5h-2c-.28 0-.5.22-.5.5s.22.5.5.5zM21.88 22.32c0 .28.22.5.5.5h2c.28 0 .5-.22.5-.5s-.22-.5-.5-.5h-2c-.28 0-.5.22-.5.5M38.38 25.82c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5M38.38 30.82c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5M38.38 35.82c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5" class="cls-1"/><path d="M45.27 16.44v4.62c0 .82-1.26.81-1.25 0v-3.04L31.74 30.3a3.8 3.8 0 0 0-.89-.89l12.28-12.28h-3.04c-.82.02-.81-1.25 0-1.25h4.6c.4 0 .58.22.58.56M11.49 16.44v4.62c0 .82 1.26.81 1.25 0v-3.04L25.02 30.3c.25-.35.55-.65.89-.89L13.63 17.13h3.04c.82.02.81-1.25 0-1.25h-4.6c-.4 0-.58.22-.58.56" class="cls-1"/><path d="M1.18 5.57h21.65v14.72h1.18V4.98c0-.32-.26-.59-.59-.59H.59c-.32 0-.59.26-.59.59v22.83c0 .32.26.59.59.59h15.75v-1.18H1.18zM28.38 29.84c-1.61 0-2.92 1.31-2.92 2.93s1.31 2.92 2.92 2.92 2.93-1.31 2.93-2.92-1.31-2.93-2.93-2.93m1.69 2.93c0 .94-.76 1.7-1.7 1.7s-1.7-.76-1.7-1.7.76-1.7 1.7-1.7 1.7.76 1.7 1.7" class="cls-1"/></g></svg>
 					</div>
 					<h4 class="serif">Platform Scalability</h4>
 
@@ -235,17 +285,7 @@
 
 					<!-- icon -->
 					<div class="flex icon-card-wrapper">
-
-					<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.61 26.71">
-					  <g id="Layer_1-2" data-name="Layer 1">
-					    <g>
-					      <path class="cls-1" d="M39.69,26.71c-.51,0-.99-.2-1.34-.56l-6.79-6.79c-.58-.58-.72-1.46-.35-2.19l.03-.06-1.51-1.51-.07.06c-1.63,1.42-3.71,2.2-5.85,2.2-4.92,0-8.93-4-8.93-8.93S18.89,0,23.81,0s8.93,4,8.93,8.93c0,2.14-.78,4.22-2.2,5.85l-.06.07,1.51,1.51.06-.03c.27-.13.56-.2.86-.2.5,0,.98.2,1.33.55l6.79,6.79c.36.36.56.84.56,1.34s-.2.98-.56,1.34-.84.56-1.34.56ZM23.81,1.05c-4.34,0-7.88,3.53-7.88,7.88s3.53,7.88,7.88,7.88,7.88-3.53,7.88-7.88-3.53-7.88-7.88-7.88Z"/>
-					      <path class="cls-1" d="M24.16,3.02c-.14-.26-.56-.26-.7,0l-4.91,8.9c-.07.12-.07.28,0,.4s.21.2.35.2h9.82c.14,0,.27-.08.34-.2.08-.12.08-.28.01-.4l-4.91-8.9ZM23.06,5.91h1.5l-.24,3.15h-1.02l-.24-3.15ZM24.35,10.9c-.14.15-.32.23-.54.23s-.4-.08-.54-.23c-.15-.15-.22-.33-.22-.54s.07-.41.22-.56c.14-.15.32-.22.54-.22s.4.07.54.22c.15.15.22.34.22.56s-.07.39-.22.54Z"/>
-					      <path class="cls-1" d="M2.83,11.75c-1.56,0-2.83-1.27-2.83-2.83s1.27-2.82,2.83-2.82c1.37,0,2.56,1.01,2.77,2.35v.08h7.83c0,.13,0,.26,0,.39,0,.23,0,.44.02.66h-7.88l-.02.07c-.33,1.23-1.45,2.1-2.72,2.1ZM2.83,7.13c-.99,0-1.8.8-1.8,1.79s.81,1.8,1.8,1.8c.68,0,1.29-.38,1.59-1,.13-.23.2-.5.2-.8,0-.17-.03-.35-.09-.52-.22-.75-.92-1.27-1.7-1.27Z"/>
-					      <path class="cls-1" d="M44.79,11.89c-1.32,0-2.49-.94-2.76-2.23l-.02-.08h-7.85c.01-.22.02-.44.02-.66,0-.13,0-.26,0-.39h7.84l.02-.08c.29-1.29,1.45-2.22,2.76-2.22,1.55,0,2.82,1.27,2.82,2.83s-1.27,2.83-2.82,2.83ZM44.79,7.26c-.74,0-1.4.44-1.67,1.13-.08.2-.13.43-.13.67s.04.46.13.66c.27.69.93,1.14,1.67,1.14.99,0,1.8-.81,1.8-1.8s-.81-1.8-1.8-1.8Z"/>
-					    </g>
-					  </g>
-					</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 47.61 26.71"><g data-name="Layer 1"><path d="M39.69 26.71c-.51 0-.99-.2-1.34-.56l-6.79-6.79c-.6-.59-.72-1.51-.31-2.26l-1.51-1.51a8.9 8.9 0 0 1-5.92 2.26c-4.92 0-8.93-4-8.93-8.93S18.89 0 23.81 0s8.93 4 8.93 8.93c0 2.17-.81 4.28-2.26 5.92l1.51 1.51c.72-.4 1.68-.28 2.26.31l6.79 6.79c.36.36.56.84.56 1.34s-.2.98-.56 1.34-.84.56-1.34.56ZM23.81 1.05c-4.34 0-7.88 3.53-7.88 7.88s3.53 7.88 7.88 7.88 7.88-3.53 7.88-7.88-3.53-7.88-7.88-7.88" class="cls-1"/><path d="M24.16 3.02c-.14-.26-.56-.26-.7 0l-4.91 8.9c-.16.26.05.61.35.6h9.82c.29 0 .5-.35.35-.6zm-1.1 2.89h1.5l-.24 3.15H23.3zm1.29 4.99a.7.7 0 0 1-.54.23c-.42 0-.77-.36-.76-.77 0-.43.32-.79.76-.78.44-.01.77.35.76.78 0 .21-.07.39-.22.54M2.83 11.75C1.27 11.75 0 10.48 0 8.92S1.27 6.1 2.83 6.1c1.4 0 2.61 1.06 2.78 2.43h7.82v.39c0 .23 0 .44.02.66H5.57a2.82 2.82 0 0 1-2.74 2.17m0-4.62c-.99 0-1.8.8-1.8 1.79s.81 1.8 1.8 1.8c.98.01 1.79-.82 1.79-1.8 0-.96-.81-1.8-1.79-1.79M44.79 11.89c-1.35 0-2.53-.98-2.78-2.31h-7.85c.01-.22.02-.44.02-.66v-.39h7.84c.26-1.32 1.44-2.3 2.78-2.3 1.55 0 2.82 1.27 2.82 2.83s-1.27 2.83-2.82 2.83Zm0-4.63c-.98-.01-1.81.81-1.8 1.8 0 .98.83 1.81 1.8 1.8.99 0 1.8-.81 1.8-1.8s-.81-1.8-1.8-1.8" class="cls-1"/></g></svg>
 					</div>
 					<h4 class="serif">Risk Management</h4>
 
@@ -257,24 +297,7 @@
 
 					<!-- icon -->
 					<div class="flex icon-card-wrapper">
-					<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.59 31.92">
-					  <g id="Layer_1-2" data-name="Layer 1">
-					    <g>
-					      <g>
-					        <path class="cls-1" d="M40.47,19.12l-2.59-2.6c-.46-.45-1.18.25-.71.71l1.72,1.72h-1.2c-1.77,0-3.39.35-4.8,1-3.56,1.63-5.8,5.13-5.8,9.6v2.37h1v-2.37c0-5.65,3.95-9.6,9.6-9.6h1.2l-1.72,1.72c-.46.45.25,1.17.71.7l2.6-2.6c.2-.2.22-.42-.01-.65Z"/>
-					        <path class="cls-1" d="M44.08,20.1v-.69c0-.18.01-.34.03-.47.02-.13.06-.24.11-.35.05-.1.12-.2.21-.3.09-.1.19-.21.32-.34l.96-.97c.21-.21.31-.48.31-.81s-.11-.59-.32-.79c-.21-.2-.48-.31-.8-.31-.35,0-.63.12-.86.36-.22.24-.35.52-.39.87l-1.59-.12c.05-.4.15-.75.31-1.06s.36-.57.62-.79c.25-.22.55-.38.88-.49.33-.11.7-.17,1.1-.17.37,0,.72.05,1.04.16.32.11.6.26.83.47.24.2.42.46.55.76s.2.65.2,1.04c0,.27-.04.51-.11.72-.07.21-.17.4-.3.57-.12.17-.27.34-.43.5-.16.16-.33.32-.52.5-.12.11-.22.2-.3.29s-.15.17-.21.26c-.05.09-.09.19-.12.3s-.04.25-.04.4v.47h-1.49ZM43.83,21.83c0-.27.1-.49.29-.69s.43-.29.7-.29.5.09.7.27c.2.18.3.41.3.67s-.1.49-.29.68c-.2.19-.43.29-.7.29-.13,0-.26-.02-.38-.07-.12-.05-.23-.12-.32-.2s-.16-.18-.22-.3c-.05-.12-.08-.24-.08-.37Z"/>
-					      </g>
-					      <g>
-					        <path class="cls-1" d="M7.12,19.12l2.59-2.6c.46-.45,1.18.25.71.71l-1.72,1.72h1.2c1.77,0,3.39.35,4.8,1,3.56,1.63,5.8,5.13,5.8,9.6v2.37h-1v-2.37c0-5.65-3.95-9.6-9.6-9.6h-1.2s1.72,1.72,1.72,1.72c.46.45-.25,1.17-.71.7l-2.6-2.6c-.2-.2-.22-.42.01-.65Z"/>
-					        <path class="cls-1" d="M2.02,20.1v-.69c0-.18.01-.34.03-.47.02-.13.06-.24.11-.35.05-.1.12-.2.21-.3.09-.1.19-.21.32-.34l.96-.97c.21-.21.31-.48.31-.81s-.11-.59-.32-.79c-.21-.2-.48-.31-.8-.31-.35,0-.63.12-.86.36-.22.24-.35.52-.39.87l-1.59-.12c.05-.4.15-.75.31-1.06s.36-.57.62-.79c.25-.22.55-.38.88-.49.33-.11.7-.17,1.1-.17.37,0,.72.05,1.04.16.32.11.6.26.83.47.24.2.42.46.55.76s.2.65.2,1.04c0,.27-.04.51-.11.72-.07.21-.17.4-.3.57-.12.17-.27.34-.43.5-.16.16-.33.32-.52.5-.12.11-.22.2-.3.29s-.15.17-.21.26c-.05.09-.09.19-.12.3s-.04.25-.04.4v.47h-1.49ZM1.77,21.83c0-.27.1-.49.29-.69s.43-.29.7-.29.5.09.7.27c.2.18.3.41.3.67s-.1.49-.29.68c-.2.19-.43.29-.7.29-.13,0-.26-.02-.38-.07-.12-.05-.23-.12-.32-.2s-.16-.18-.22-.3c-.05-.12-.08-.24-.08-.37Z"/>
-					      </g>
-					      <g>
-					        <path class="cls-1" d="M26.72,14.16l-2.6-2.6c-.2-.2-.42-.22-.65.01l-2.6,2.59c-.45.46.25,1.18.71.71l1.72-1.72v18.76h1v-12.77s0,0,0,0v-6l1.72,1.72c.45.46,1.17-.25.7-.71Z"/>
-					        <path class="cls-1" d="M23.05,6.44v-.69c0-.18.01-.34.03-.47.02-.13.06-.24.11-.35.05-.1.12-.2.21-.3.09-.1.19-.21.32-.34l.96-.97c.21-.21.31-.48.31-.81s-.11-.59-.32-.79c-.21-.2-.48-.31-.8-.31-.35,0-.63.12-.86.36-.22.24-.35.52-.39.87l-1.59-.12c.05-.4.15-.75.31-1.06s.36-.57.62-.79c.25-.22.55-.38.88-.49.33-.11.7-.17,1.1-.17.37,0,.72.05,1.04.16.32.11.6.26.83.47.24.2.42.46.55.76s.2.65.2,1.04c0,.27-.04.51-.11.72-.07.21-.17.4-.3.57-.12.17-.27.34-.43.5-.16.16-.33.32-.52.5-.12.11-.22.2-.3.29s-.15.17-.21.26c-.05.09-.09.19-.12.3s-.04.25-.04.4v.47h-1.49ZM22.8,8.17c0-.27.1-.49.29-.69s.43-.29.7-.29.5.09.7.27c.2.18.3.41.3.67s-.1.49-.29.68c-.2.19-.43.29-.7.29-.13,0-.26-.02-.38-.07-.12-.05-.23-.12-.32-.2s-.16-.18-.22-.3c-.05-.12-.08-.24-.08-.37Z"/>
-					      </g>
-					    </g>
-					  </g>
-					</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 47.59 31.92"><g data-name="Layer 1"><path d="m40.47 19.12-2.59-2.6c-.46-.45-1.18.25-.71.71l1.72 1.72h-1.2c-1.77 0-3.39.35-4.8 1-3.56 1.63-5.8 5.13-5.8 9.6v2.37h1v-2.37c0-5.65 3.95-9.6 9.6-9.6h1.2l-1.72 1.72c-.46.45.25 1.17.71.7l2.6-2.6c.2-.2.22-.42-.01-.65M7.12 19.12l2.59-2.6c.46-.45 1.18.25.71.71L8.7 18.95h1.2c1.77 0 3.39.35 4.8 1 3.56 1.63 5.8 5.13 5.8 9.6v2.37h-1v-2.37c0-5.65-3.95-9.6-9.6-9.6H8.7l1.72 1.72c.46.45-.25 1.17-.71.7l-2.6-2.6c-.2-.2-.22-.42.01-.65M2.02 20.1c0-.28-.02-.9.03-1.15.06-.44.34-.66.64-.99l.96-.97c.21-.21.31-.48.31-.81.01-.64-.49-1.11-1.12-1.1-.69-.02-1.19.56-1.25 1.22L0 16.18c.13-1.51 1.41-2.52 2.9-2.52 1.41 0 2.63.95 2.63 2.43 0 1.34-.92 1.85-1.66 2.58-.16.17-.27.32-.32.55-.02.11-.04.25-.04.4v.47H2.02Zm-.25 1.73c-.01-.53.47-.99 1-.97.51-.01 1.01.42 1 .95.01.53-.47.99-1 .97-.51 0-1-.42-1-.95M26.72 14.16l-2.6-2.6c-.2-.2-.42-.22-.65.01l-2.6 2.59c-.45.46.25 1.18.71.71l1.72-1.72v18.76h1V13.14l1.72 1.72c.45.46 1.17-.25.7-.71ZM23.05 6.44c0-.28-.02-.9.03-1.15.06-.44.34-.66.64-.99l.96-.97c.21-.21.31-.48.31-.81.01-.64-.49-1.11-1.12-1.1-.69-.02-1.19.56-1.25 1.22l-1.59-.12C21.16 1.01 22.44 0 23.93 0c1.41 0 2.63.95 2.63 2.43 0 1.34-.92 1.85-1.66 2.58-.16.17-.27.32-.32.55-.02.11-.04.25-.04.4v.47h-1.49Zm-.25 1.73c-.01-.53.47-.99 1-.97.51-.01 1.01.42 1 .95.01.53-.47.99-1 .97-.51 0-1-.42-1-.95M44.08 20.1c0-.28-.02-.9.03-1.15.06-.44.34-.66.64-.99l.96-.97c.21-.21.31-.48.31-.81.01-.64-.49-1.11-1.12-1.1-.69-.02-1.19.56-1.25 1.22l-1.59-.12c.13-1.51 1.41-2.52 2.9-2.52 1.41 0 2.63.95 2.63 2.43 0 1.34-.92 1.85-1.66 2.58-.16.17-.27.32-.32.55-.02.11-.04.25-.04.4v.47h-1.49Zm-.25 1.73c-.01-.53.47-.99 1-.97.51-.01 1.01.42 1 .95.01.53-.47.99-1 .97-.51 0-1-.42-1-.95" class="cls-1"/></g></svg>
 					</div>
 
 					<h4 class="serif">Pioneering</h4>
@@ -285,60 +308,40 @@
 			</ul> <!-- cards -->
 
 		</article> <!-- design impact -->
-		
-	</section> <!-- end of section 1: summary -->
+	</section> <!-- End of 1.3: Design Impact -->
 	
 </main>
 
 	<script src="../js/animate.js" defer></script>
+	<!-- controller for left/right arrows on horizontal card list -->
+	<script src="../js/card-list.js" defer></script>
+
 
 	<script>
-		//=========================================
-		// Navigation Arrows for Card List
-		//=========================================
+		window.onscroll = function() {scrollFunction()};
 
-		const leftArrow = document.getElementById('leftArrow');
-		const rightArrow = document.getElementById('rightArrow');
-		const scrollableList = document.getElementById('cardWrapper');
+		var subnav = document.getElementById("subnav");
+		var summary = document.getElementById("summarySection");
+		// get the initial distance from the top
+		var stuck = subnav.offsetTop + 12;
 
-		const scrollAmount = 376; // Amount to scroll in pixels per click
+		var summaryLink = document.getElementById("summaryLink");
+		var subnavLinks = document.querySelectorAll("subnav-links");
 
-		rightArrow.addEventListener('click', () => {
-		    // Scrolls the element to the right by the specified amount
-		    scrollableList.scrollLeft += scrollAmount;
-		});
+		function scrollFunction() {
+			if (window.pageYOffset >= stuck) {
+				subnav.classList.add("fixed");
+				summaryLink.classList.add("active-section")
+				// summary.style.paddingTop = "75px";
 
-		leftArrow.addEventListener('click', () => {
-		    // Scrolls the element to the left by the specified amount
-		    scrollableList.scrollLeft -= scrollAmount;
-		});
-
-		// Optional: Hide/Show arrows based on scroll position
-		scrollableList.addEventListener('scroll', () => {
-		    // Hide left arrow if at the beginning
-		    if (scrollableList.scrollLeft === 0) {
-		        leftArrow.style.opacity = '0.2';
-		    } else {
-		        leftArrow.style.opacity = '1';
-		    }
-
-		    // Hide right arrow if at the end
-		    if (scrollableList.scrollLeft + scrollableList.clientWidth >= scrollableList.scrollWidth) {
-		        rightArrow.style.opacity = '0.2';
-		    } else {
-		        rightArrow.style.opacity = '1';
-		    }
-		});
-
-		// Initial check to set arrow visibility on page load
-		// This is important if the list is not scrollable initially
-		document.addEventListener('DOMContentLoaded', (event) => {
-		    if (scrollableList.scrollLeft === 0) {
-		        leftArrow.style.opacity = '0.2';
-		    }
-		});
+			} else {
+				subnav.classList.remove("fixed");
+				summaryLink.classList.remove("active-section")
+				// summary.style.paddingTop = "0px";
+			}
+		}
+		
 	</script>
-
 </body>
 
 </html>
