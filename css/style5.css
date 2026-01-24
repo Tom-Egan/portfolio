@@ -23,6 +23,7 @@
   /* sizing */
   --max-width: 1360px;
   --card-padding: 40px 40px 50px 40px;
+  --padding: 24px;
 
   /* spacing */
   --space-xs: 8px;
@@ -39,8 +40,8 @@
   --transition:0.2s ease-in-out;
 
   /* shadows */
-  --shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
-  --inner-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);;
+  --shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  --inner-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
 }
 
 html { scroll-behavior: smooth; }
@@ -68,29 +69,6 @@ h3 {
   text-transform: uppercase;
 }
 
-.label-h3 {
-  font-size: 1.4rem;
-  line-height: 2.2;
-  margin-bottom: -14px;
-  text-transform: uppercase;
-  font-weight: bold;
-  display: block;
-}
-
-.header-underline {
-  width: 80px;
-  height: 4px;
-  background: var(--off-white);
-  margin-bottom: var(--space-md);
-  margin-top: 6px;
-  align-self: flex-start;
-}
-
-.dark-underline {
-  background: var(--dark-grey);
-
-}
-
 h4{
   font-size: 1.6rem;
   line-height: 2.2;
@@ -104,64 +82,104 @@ p {
   margin-top: var(--space-md);
 }
 
+strong {font-weight: 600;}
+
+img {display: block; width: 100%; height: auto;}
+
+/* heading that appears above project title */
+.case-label {
+  font-size: 1.4rem;
+  line-height: 2.2;
+  margin-bottom: -14px;
+  margin-top: -60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+}
+
+/* small underline below select headings */
+.header-underline {
+  width: 80px;
+  height: 4px;
+  margin-top: 6px;
+  align-self: flex-start;
+}
+
+/* set color for underline */
+.header-underline--dark {background: var(--dark-grey);}
+.header-underline--light {background: var(--off-white);}
+
+/* slightly larger text for emphasis */
 .accent-text {
   font-size: 1.4rem;
   line-height: 1.6;
 }
 
+/* add left border to the accent text */
 .emphasis-block {
   border-left: 4px solid red;
   padding: 4px 0px 4px 12px;
 }
 
-strong {font-weight: 600;}
-
-img {display: block; width: 100%; height: auto;}
-
+/* general utilities */
 .serif {font-family: var(--serif), serif;}
 .italic {font-style: italic;}
-.radius-sm {border-radius: var(--radius-12);}
-.card-shadow {box-shadow: var(--shadow);}
+.shadow--card {box-shadow: var(--shadow);}
+.shadow--inner {box-shadow: var(--inner-shadow);}
 .flex {display: flex;}
 .flex-col {flex-direction: column;}
-.gap-sm {gap: var(--space-sm);}
 .flex-wrap {flex-wrap: wrap;}
-.no-wrap {flex-wrap: no-wrap;}
+.no-wrap {flex-wrap: nowrap;}
 .sticky {position: sticky;}
-.no-style{list-style: none;}
+.list--no-style{list-style: none;}
+
+/* padding */
+.padding-none {padding: 0;}
+.padding-sm {padding: var(--space-sm);}
+.padding-lg {padding: var(--space-lg);}
+.padding-container {padding: var(--padding);}
+
+/* margins between cards */
+.gap-xs {gap: 12px;}
+.gap-sm {gap: var(--space-sm);}
+.gap-md {gap: var(--space-md);}
+
+/* margins between content */
+.spacer-md--top {margin-top: var(--space-md);}
+.spacer-lg--top {margin-top: var(--space-lg);}
+.spacer-xxl--top{margin-top: 180px;}
 
 
-.radius-lg {
-  border-radius: var(--radius-40);
-}
+/* 12px corner radius */
+.radius-sm {border-radius: var(--radius-12);}
 
-.top-radius-lg {
-  border-top-left-radius: var(--radius-40);
-  border-top-right-radius: var(--radius-40);
-}
+/* 40px corner radius */
+.radius-lg {border-radius: var(--radius-40);}
+.radius-lg--top {border-radius: var(--radius-40) var(--radius-40) 0 0;}
+.radius-lg--top-left {border-top-left-radius: var(--radius-40);}
+.radius-lg--top-right {border-top-right-radius: var(--radius-40);}
+.radius-lg--bottom {border-radius: 0 0 var(--radius-40) var(--radius-40);}
+.radius-lg--left {border-radius: var(--radius-40) 0 0 var(--radius-40);}
+.radius-lg--right {border-radius: 0 var(--radius-40) var(--radius-40) 0;}
 
-.btm-radius-lg {
-  border-bottom-left-radius: var(--radius-40);
-  border-bottom-right-radius: var(--radius-40);
-}
 
-.left-radius-lg {
-  border-top-left-radius: var(--radius-40);
-  border-bottom-left-radius: var(--radius-40);
-}
-
-.right-radius-lg {
-  border-top-right-radius: var(--radius-40);
-  border-bottom-right-radius: var(--radius-40);
-}
-
-.section-spacer {margin-top: 180px;;}
-
+/* base container element */
 .container {
   position: relative;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 24px;
+}
+
+/* base padding */
+.container-padding {
+  padding: var(--padding);
+}
+
+/* full width base container */
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow-x: clip;
 }
 
 
@@ -172,6 +190,15 @@ img {display: block; width: 100%; height: auto;}
                                                    |
 ***************************************************|
 ==================================================*/
+
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 [data-animate] {
   opacity: 0;
@@ -222,6 +249,13 @@ img {display: block; width: 100%; height: auto;}
 .case-hero-content h1 {
   font-size: 11vw;
   line-height: 1;
+  margin-top: var(--space-md);
+}
+
+/* parent wrapper for tags */
+.tag-group {
+  flex-wrap: wrap;
+  row-gap: 0px;
 }
 
 /* subject matter tags below description */
@@ -231,6 +265,10 @@ img {display: block; width: 100%; height: auto;}
   border-top-left-radius: var(--space-sm);
   border-bottom-right-radius: var(--space-sm);
   margin-top: var(--space-md);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: -18px;
 }
 
 
@@ -256,8 +294,6 @@ img {display: block; width: 100%; height: auto;}
   margin-top: -20px;
   margin-bottom: 24px;
   width: 100%;
-  /*background: green;*/
-
 }
 
 /* three columns that make up the notch
@@ -267,14 +303,6 @@ for the complex border radius */
   height: 63px;
   flex: 1;
   background: var(--off-white);
-}
-
-#leftCorner {
-  border-top-left-radius: var(--radius-40);
-}
-
-#rightCorner {
-  border-top-right-radius: var(--radius-40);
 }
 
 /* middle column that contains the notch */
@@ -298,18 +326,15 @@ for the complex border radius */
   z-index: 3;
 }
 
-.full-bleed {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-}
+/* realign the beginning content for the notch */
+.summary {margin-top: -24px;}
 
-.summary {
-  margin-top: -24px;
-}
+/* realign the beginning content for the notch */
+.summary h2 {padding-top: 100px;}
 
-.summary h2 {
-  padding-top: 100px;
-
+.flex-col--half h3,
+.flex-col--half p {
+  width: 48%;
 }
 
 .rr-img {
@@ -317,7 +342,7 @@ for the complex border radius */
   max-width: 55%;
   right: 0px;
   margin-top: -470px;
-  overflow-x: none;
+  overflow-x: hidden;
   z-index: 1;
   box-sizing: border-box;
 }
@@ -333,21 +358,21 @@ for the complex border radius */
 ==================================================*/
 
 
-.card-list-bg {
+.article--scroll-cards {
   position: relative;
-  background: #ccc;
+  background: #eeeeee;
   padding: 0;
   margin-top: var(--space-lg);
   margin-bottom: var(--space-lg);
 }
 
+
+
 /* container <div> for the cards */
 /* child of #overview <article */
-.card-list {
+.list--scroll-cards {
   position: relative;
   overflow-x: auto;
-  gap: var(--space-sm);
-  padding: var(--space-lg);
   scroll-behavior: smooth;
   /* hide scrollbar: IE and Edge */
   -ms-overflow-style: none;
@@ -356,16 +381,8 @@ for the complex border radius */
 }
 
 /* hide scrollbar: Chrome */
-.card-list ::-webkit-scrollbar {
+.list--scroll-cards ::-webkit-scrollbar {
   display: none;
-}
-
-/* set margins/gap between the cards */
-/* this is the parent <ul> of the <li> cards */
-.card-list .container .flex {
-  width: fit-content;
-  gap: var(--space-sm);
-  padding: var(--space-md) var(--space-lg) var(--space-md) var(--space-sm);
 }
 
 /* individual card styles */
@@ -375,12 +392,11 @@ for the complex border radius */
   background: var(--white);
   padding: var(--card-padding);
   border-radius: var(--radius-12);
-  box-shadow: var(--shadow);
   min-width: 360px;
 }
 
 /* add underline to the card's title */
-.card h3, .icon-card h4 {
+.card-heading {
   text-transform: initial;
   border-bottom: 2px solid var(--dark-grey-20);
   font-size: 1.6rem;
@@ -389,7 +405,7 @@ for the complex border radius */
 }
 
 /* text adjustments for the card body text */
-.card p, .icon-card p {
+.card-content {
   margin-top: var(--space-sm);
   font-size: 1.1rem;
   line-height: 1.6;
@@ -403,8 +419,8 @@ for the complex border radius */
   top: var(--space-md);
 }
 
-/* container for the arrow controls to move the 
-** scrollable list of cards */
+/* container for the arrow controls to
+move the scrollable list of cards */
 .overview-card-controller {
   position: relative;
   width: 100%;
@@ -413,7 +429,6 @@ for the complex border radius */
   z-index: 2;
   padding: 0 24px 0 0;
   justify-content: flex-end;
-
 }
 
 /* button wrapper */
@@ -422,7 +437,6 @@ for the complex border radius */
   height: 100%;
   width: 140px;
   background: #ccc;
-  box-shadow: var(--inner-shadow);
   border: 2px solid #ccc;
 }
 
@@ -446,35 +460,12 @@ for the complex border radius */
   background: #555;
 }
 
-/* <article> wrapper holding the <ul>  */
-.icon-card-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-top: var(--space-md);
-  margin-bottom: var(--space-lg);
-}
-
-.icon-card-wrapper svg {
-  position: relative;
-  width: 100%;
-  max-height: 120px;
-}
-
-/* <ul> container holding the design impact cards */
-.impact-cards {
-  position: relative;
-  gap: var(--space-md);
-  display: flex;
+.article--icon-card .list--scroll-cards {
   flex-wrap: wrap;
 }
 
-/* targets the <ul>, reset the outside padding of the
-cards so they sit flush with the heading */
-.impact-card-wrapper .container{padding: 0;}
-
 /* <li> element of the three design impact cards */
-.icon-card {
+.card--icon{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -484,6 +475,22 @@ cards so they sit flush with the heading */
   min-width: 300px;
   padding: var(--card-padding);
   border-radius: var(--radius-12);
+}
+
+/* nested <div> holding the icons  */
+.icon-card-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+/* the icons inside */
+.icon-card-img svg {
+  position: relative;
+  width: 100%;
+  max-height: 120px;
 }
 
 
@@ -496,34 +503,52 @@ cards so they sit flush with the heading */
 ***************************************************|
 ==================================================*/
 
-.section-nav {
+/* <nav> element */
+.nav--case-study {
   position: sticky !important;
   top: 8px;
   z-index: 9999;
-  /*background: #ccc;*/
 }
 
-#subnav {
+#subnav.subnav-desktop-nav {
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) !important;
   left: 50%;
   margin-top: -53px;
-  /*bottom: -92px;*/
-  /*margin-top: -45px;*/
-  /*padding-bottom: 20px;*/
+  padding-top: 24px;
+  transition: 0.2s ease-in-out;
+}
+
+/* top level subnav <div> */
+/* convert into a fullscreen overlay */
+#subnav.subnav-mobile-nav{
+ position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translate(-100%, 0%);
+  left: 0;
+  top: 0;
+  margin-top: 0px;
   padding-top: 24px;
   transition: 0.3s ease-in-out;
 }
 
+
 #subnav.fixed {
   position: fixed;
   width: 100%;
-   margin-top: 45px;
+  margin-top: 45px;
   z-index: 9999;
   top: 0px;
+  margin-top: 61px;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  transition: 0.3s ease-in-out;
 }
 
-.section-nav ul {
+#ul-subnav.desktop-nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -535,36 +560,47 @@ cards so they sit flush with the heading */
   margin-right: auto;
   border-radius: var(--radius-12);
   box-shadow: var(--shadow);
-  /*border: 2px solid var(--dark-grey);*/
 }
 
-.section-nav ul li {
+#ul-subnav.mobile-nav {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin-top: -24px;
+  padding: 0;
+  background: none;
+}
+
+
+.list--subnav li {
   padding: var(--space-sm) 0;
 }
 
 /* set pill-shaped radius on first link in navbar */
-.section-nav ul li:first-child,
-.section-nav ul li:first-child a{
+.list--subnav li:first-child,
+.list--subnav li:first-child a{
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
 /* set pill-shaped radius on last link in navbar */
-.section-nav ul li:last-child,
-.section-nav ul li:last-child a{
+.list--subnav li:last-child,
+.list--subnav li:last-child a{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 /* links */
-.section-nav ul li a {
+.list--subnav li a {
   padding: var(--space-sm) var(--space-md);
   text-decoration: none;
   font-weight: 500;
 }
 
 /* link hover */
-.section-nav ul li a:hover {
+.list--subnav li a:hover {
   background: #222;
 }
 
@@ -580,15 +616,6 @@ cards so they sit flush with the heading */
   display: none;
 }
 
-/* button that opens the menu on mobile */
-.subnav-btn {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 500px;
-  padding:10px;
-}
-
 
 
 /* ================================================|
@@ -600,15 +627,21 @@ cards so they sit flush with the heading */
 ==================================================*/
 
 @media (max-width: 800px) {
-  /* collapse left column to single, full width */
-  /*.overview-clear .col-left{max-width: 100%;}*/
-
   /* collapse range rover image to single col */
+  .flex-col--half h3,
+  .flex-col--half p,
   .rr-img {
     position: relative;
-    margin-top: 0;
     max-width: 100%;
+    width: 100%;
   }
+
+  .rr-img {
+    margin-top: 0;
+    overflow-x: hidden;
+  }
+
+  .article-spacer-lg{margin-top: var(--space-lg);}
 }
 
 /* 700px */
@@ -621,53 +654,116 @@ cards so they sit flush with the heading */
 
   /* collapse cards into a single column layout */
   /* readjust the padding and margins for mobile */
-  .card-list {
+  .list--scroll-cards {
     flex-wrap: wrap;
     overflow-x: clip;
     row-gap: var(--space-md);
     padding: var(--space-lg) var(--space-md);
   }
 
+  .article--icon-card .list--scroll-cards {
+    padding: 0;
+  }
+
   /* converts the cards into a stackable set */
-  .card, .design-impact h3, .icon-card{
+  .card, .icon-card{
     position: sticky;
     top: 80px;
     min-width: 100%;
   }
 
-  .design-impact .header-underline {
-    position: sticky;
-    top: 113px;
+  /* remove the notch */
+  .notch-bg {
+    flex: 1;
+    background: var(--off-white);
   }
 
-  /* move the executive summary container up
-  ** and reduce margin on mobile */
-  .exec-summary {
-    margin-top: -80px;
+  /* top level subnav <div> */
+  /* convert into a fullscreen overlay */
+  #subnav {
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    /*transform: translate(100%, 0%);*/
+    transform: translate(-100%, 0%);
+    left: 0;
+    margin-top: 0px;
+    padding-top: 24px;
   }
 
-  .design-impact {
-    margin-top: -180px;
+  /* reset, this class is not really needed on mobile */
+  #subnav.fixed {
+    margin-top: 0;
   }
 
   /* show the mobile subnav button */
+  /* <div> holding the "view section" button */
   .mobile-subnav {
     position: sticky;
-    top: 8px;
     display: flex;
-    margin: 0 auto;
-    z-index: 9999;
+    justify-content: center;
+    z-index: 9998;
+    margin-top:-78px;
+    margin-bottom: -52px;
+    top: -4px;
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .btn--subnav {
+    margin: 0 auto 0 auto;
+    padding: 10px;
+    width: 100%;
+    border-radius: var(--radius-12);
+    font-size: 1rem;
+    font-weight: 600;
   }
 
   /* original subnavigation container */
-  .section-nav {
-    display: none;
+  /* <nav> element */
+  .nav--case-study {
+    width: 100%;
+    background: none;
+  }
+
+  .list--subnav li {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 1px;
+    padding:0;
+  }
+
+  .list--subnav li a {
+    position: relative;
+    min-width: 100%;
+    background: blue;
+  }
+
+  .active-section a {
+    width: 100%;
   }
 
   /* hide the left/right nav arrows when
   ** the cards collapse to single column */
   .overview-card-controller {
     display: none;
+  }
+
+  .case-label, .accent-text {
+    font-size: 1.1rem;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+  }
+
+  .case-label {
+    margin-bottom: -10px;
+    margin-top: 0;
   }
 }
 

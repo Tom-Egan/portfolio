@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title -->
-	<title>Range Rover Velar Infotainment UX Case Study (24MY Pivi Update)| Tom Egan</title>
+	<title>24MY Pivi Update — UX Case Study | Tom Egan</title>
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="../css/style5.css">
@@ -93,10 +93,10 @@
 		<div class="case-hero-content">
 
 			<!-- project type -->
-			<span class="label-h3">Case Study</span>
+			<p class="case-label">Case Study</p>
 
 			<!-- decorative underline -->
-			<div aria-hidden="true" class="header-underline"></div>
+			<div aria-hidden="true" class="header-underline header-underline--light"></div>
 			
 			<!-- project title -->
 			<h1>24MY Pivi Update</h1>
@@ -105,43 +105,46 @@
 			<p class="serif accent-text">A deep-dive into an infotainment update for Jaguar Land Rover vehicles.</p>
 			
 			<!-- tags -->
-			<div class="flex gap-sm">
-				<span class="tag">UX Design</span>
-				<span class="tag">Automotive HMI</span>
+			<div class="flex tag-group gap-xs">
+				<p class="tag">UX Design</p>
+				<p class="tag">Automotive HMI</p>
+				<p class="tag">Interaction Design</p>
+				<p class="tag">Prototyping</p>
+				<p class="tag">Early Stage Concepting</p>
 			</div> <!-- end of tags -->
 
 		</div> <!-- end of hero content -->
 	</header> <!-- end of hero -->
-
 	
 	<!-- top notch of section -->
-	<div id="summary" class=" section-peek top-radius-lg">
+	<div aria-hidden="true" id="summary" class=" section-peek">
 		<!-- creates a row of three columns -->
 		<div class="flex">
 			<!-- variable width, containing corner radius -->
-			<div id="leftCorner" class="notch"></div>
+			<div class="notch radius-lg--top-left"></div>
 			<!-- fixed width, containing the notch -->
 			<div class="notch notch-bg"></div>
 			<!-- variable width, containing corner radius -->
-			<div id="rightCorner" class="notch"></div>
+			<div class="notch radius-lg--top-right"></div>
 		</div>
 		<!-- title that sits above section edge -->
 		<span class="section-overhang">Contents</span>
 	</div>
 
-	<!-- Subnavigation -->
-	<div id="subnav">
-		<!-- hidden on desktop -->
-		<!-- button to open the menu on mobile -->
-		<div class="container flex mobile-subnav">
-			<button class="subnav-btn">
-				View Sections
-			</button>
-		</div>
 
+	<!-- hidden on desktop -->
+	<!-- button to open the menu on mobile -->
+	<div class="container padding-container flex mobile-subnav">
+		<button id="mobileSubNavBtn" class="btn--subnav">
+			View Sections
+		</button>
+	</div>
+
+	<!-- Subnavigation -->
+	<div id="subnav" class="subnav-desktop-nav">
 		<!-- case study subnavigation to jump to sections -->
-		<nav class="section-nav">
-			<ul class="no-style flex subnav-links">
+		<nav class="nav--case-study">
+			<ul id="ul-subnav" class="flex list--no-style list--subnav desktop-nav">
 				<li id="summaryLink"><a href="#summary">Summary</a></li>
 				<li><a href="#context">Context</a></li>
 				<li><a href="#solutions">Solutions</a></li>
@@ -150,198 +153,167 @@
 		</nav>
 	</div> <!-- End of Subnavigation -->
 
-	<!-- Section 1.1: Summary -->
-	<section id="summarySection" class="case-section summary full-bleed">
+	<!-- Section 1: Summary -->
+	<section id="summarySection" class="case-section summary full-bleed radius-lg--bottom">
 
 		<!-- H2 Summary -->
 		<h2>Summary</h2>
 
-		<!-- (absolute, full width) -->
-		<!-- Subsection 1: Overview -->
-		<article class="full-bleed card-list-bg">
+		<!-- Section 1.1: Overview -->
+		<article class="full-bleed article--scroll-cards shadow--inner">
 				
 			<!-- cards -->
-			<ul id="cardWrapper" class="no-style flex card-list">
+			<ul id="cardWrapper" class="flex list--no-style list--scroll-cards gap-sm padding-lg">
 
 				<!-- Card 1: Company -->
-				<li class="card">
-					<h3 class="serif">Company</h3>
+				<!-- stacked-card class used in js file -->
+				<li class="card shadow--card">
+					<h3 class="serif card-heading">Company</h3>
 					<img id="card-jlr-logo" src="../img/jlr/logo-jlr.png" alt="image of Jaguar logo">
 				</li> <!-- card 1 -->
 
 				<!-- Card 2: Problem -->
-				<li class="card">
-					<h3 class="serif">Problem</h3>
-					<p>Physical vehicle controls removed, requiring safety-critical functions to move into the touchscreen UI</p>
+				<li class="card shadow--card">
+					<h3 class="serif card-heading">Problem</h3>
+					<p class="card-content">Physical vehicle controls removed, requiring safety-critical functions to move into the touchscreen UI</p>
 				</li> <!-- card 2 -->
 
 				<!-- Card 3: Constraints -->
-				<li class="card">
-					<h3 class="serif">Constraints</h3>
-					<p>Legal one-touch-activation requirements, limited sidebar space, modifying existing software architecture</p>
+				<li class="card shadow--card">
+					<h3 class="serif card-heading">Constraints</h3>
+					<p class="card-content">Legal one-touch-activation requirements, limited sidebar space, modifying existing software architecture</p>
 				</li> <!-- card 3 -->
 
 				<!-- Card 4: Role -->
-				<li class="card">
-					<h3 class="serif">Role</h3>
-					<p>UX Designer — UX concepting, interaction design, prototyping, usability testing</p>
+				<li class="card shadow--card">
+					<h3 class="serif card-heading">Role</h3>
+					<p class="card-content">UX Designer — UX concepting, interaction design, prototyping, usability testing</p>
 				</li> <!-- card 4 -->
 
 				<!-- Card 5: Team -->
-				<li class="card">
-					<h3 class="serif">Team</h3>
-					<p>2 UX Designers + UX Research (US & UK)</p>
+				<li class="card shadow--card">
+					<h3 class="serif card-heading">Team</h3>
+					<p class="card-content">2 UX Designers + UX Research (US & UK)</p>
 				</li> <!-- card 5 -->
 
 				<!-- Card 6: Platform -->
-				<li class="card">
-					<h3 class="serif">Platform</h3>
-					<p>Pivi / Pivi Pro (embedded vehicle software)</p>
+				<li class="card shadow--card">
+					<h3 class="serif card-heading">Platform</h3>
+					<p class="card-content">Pivi / Pivi Pro (embedded vehicle software)</p>
 				</li> <!-- card 6 -->
 
 				<!-- Card 7: Key Solutions-->
-				<li class="card">
-					<h3 class="serif">Key Solutions</h3>
-					<p>Contextual sidebar buttons, overlays, multi-state controls, quick-adjust drag interactions, pre-trip homescreen tile</p>
+				<li class="card shadow--card">
+					<h3 class="serif card-heading">Key Solutions</h3>
+					<p class="card-content">Contextual sidebar buttons, overlays, multi-state controls, quick-adjust drag interactions, pre-trip homescreen tile</p>
 				</li> <!-- card 7 -->
 
 				<!-- Card 8: Outcome-->
-				<li class="card">
-					<h3 class="serif">Outcome</h3>
-					<p>Shipped on 24MY Range Rover Velar; design and interaction patterns scaled across all Jaguar Land Rover vehicles</p>
+				<li class="card shadow--card">
+					<h3 class="serif card-heading">Outcome</h3>
+					<p class="card-content">Shipped on 24MY Range Rover Velar; design and interaction patterns scaled across all Jaguar Land Rover vehicles</p>
 				</li> <!-- card 8 -->
 
 			</ul> <!-- cards -->
-		</article> <!-- overview -->
+		</article> <!-- End Section 1.1: Overview -->
 
 		<!-- container for the left/right control arrows to scroll through the list of cards above -->
-		<div class="container overview-card-controller flex">
-			<div class="card-controller radius-lg flex">
+		<div class="container padding-container overview-card-controller flex">
+			<div class="card-controller radius-lg flex shadow--inner">
 				<!-- list navigation: left arrow -->
-				<button id="leftArrow" class="arrow left-arrow left-radius-lg">&#10094;</button>
+				<button aria-label="Scroll cards left" id="leftArrow" class="arrow left-arrow radius-lg--left">&#10094;</button>
 
 				<!-- list navigation: right arrow -->
-				<button id="rightArrow" class="arrow right-arrow right-radius-lg">&#10095;</button>
+				<button aria-label="Scroll cards right" id="rightArrow" class="arrow right-arrow radius-lg--right">&#10095;</button>
 			</div>
 		</div> <!-- card controller -->
-	</section> <!-- End of 1.1: Summary -->
-
-	<!-- Section 1.2: Executive Summary -->
-	<section class="case-section exec-summary">
-
-		<!-- content -->
-		<article class="container flex">
-
-			<div class="col-left">
-				<!-- H3 -->
-				<h3>Executive Summary</h3>
-
-				<!-- decorative underline -->
-				<div aria-hidden="true" class="header-underline dark-underline"></div>
-
-				<p>This project focused on redefining how global vehicle controls are accessed and used, integrating into a highly constrained automotive infotainment system. Working across UX, research, and engineering, I helped explore and evaluate multiple interaction models, balancing usability, safety, and platform consistency. The outcome established scalable interaction patterns that shipped on the 24MY Range Rover Velar and rolled out to all JLR vehicle programs.</p>
-
-				<p class="emphasis-block serif italic"><strong>Setting expectations: </strong>This case study highlights UX and interaction design decisions under constraints, rather than final, highly polished visual design.</p>
-			</div>
-
-		</article> <!-- content -->
-
-		<!-- range rover image -->
-		<div class="rr-img">
-			<img src="../img/jlr/rr_cutout3.png" alt="Image of a Range Rover">
-		</div>
-	</section> <!-- End of 1.2: Executive Summary -->
-
-	<!-- Section 1.3: Design Impact -->
-	<section class="case-section design-impact">
-
-		<!-- content -->
-		<article class="container impact-card-wrapper">
+	
+		<!-- Section 1.2: Executive Summary -->
+		<article class="container padding-container flex flex-col flex-col--half">
 
 			<!-- H3 -->
-			<h3 class="section-spacer">Design Impact</h3>
+			<h3 class="spacer-md--top">Executive Summary</h3>
 
 			<!-- decorative underline -->
-			<div aria-hidden="true" class="header-underline dark-underline"></div>
+			<div aria-hidden="true" class="header-underline header-underline--dark"></div>
+
+			<p>This project focused on redefining how global vehicle controls are accessed and used, integrating into a highly constrained automotive infotainment system. Working across UX, research, and engineering, I helped explore and evaluate multiple interaction models, balancing usability, safety, and platform consistency. The outcome established scalable interaction patterns that shipped on the 24MY Range Rover Velar and rolled out to all JLR vehicle programs.</p>
+
+			<p class="emphasis-block serif italic"><strong>Setting expectations: </strong>This case study highlights UX and interaction design decisions under constraints, rather than final, highly polished visual design.</p>
+		</article> <!-- End Section 1.2: Executive Summary -->
+
+		<!-- Range Rover image -->
+		<figure class="rr-img">
+			<img src="../img/jlr/rr_cutout3.png" alt="Image of a Range Rover">
+		</figure>
+
+		<!-- Section 1.3: Design Impact -->
+		<article class="container padding-container article--icon-card">
+
+			<!-- H3 -->
+			<h3 class="spacer-xxl--top">Design Impact</h3>
+
+			<!-- decorative underline -->
+			<div aria-hidden="true" class="header-underline header-underline--dark"></div>
 
 			<!-- cards -->
-			<ul class="container no-style flex impact-cards">
+			<ul class="flex list--no-style list--scroll-cards gap-md spacer-md--top">
 
 				<!-- Card 1: Platform Scalability -->
-				<li class="icon-card">
+				<!-- stacked card class used in js file -->
+				<li class="card card--icon">
 
 					<!-- icon -->
-					<div class="flex icon-card-wrapper">
+					<div class="flex icon-card-img">
 
 						<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 61.14 42.82"><g data-name="Layer 1"><path d="M60.52 0H28.38c-.34 0-.62.28-.62.62v19.81h1.25V1.25H59.9v30.89H40.27v1.25h20.25c.35 0 .62-.27.62-.62V.62c0-.34-.28-.62-.62-.62M38.38 40.82c-.28 0-.5.22-.5.5v.5h-.5c-.28 0-.5.22-.5.5s.22.5.5.5h1c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5M34.38 41.82h-2c-.28 0-.5.22-.5.5s.22.5.5.5h2c.28 0 .5-.22.5-.5s-.22-.5-.5-.5M24.38 41.82h-2c-.28 0-.5.22-.5.5s.22.5.5.5h2c.28 0 .5-.22.5-.5s-.22-.5-.5-.5M29.38 41.82h-2c-.28 0-.5.22-.5.5s.22.5.5.5h2c.28 0 .5-.22.5-.5s-.22-.5-.5-.5M19.38 41.82h-.5v-.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1c0 .28.22.5.5.5h1c.28 0 .5-.22.5-.5s-.22-.5-.5-.5M18.88 26.32c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5zM18.88 31.32c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5zM18.38 35.82c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5" class="cls-1"/><path d="M27.38 22.82h2c.28 0 .5-.22.5-.5s-.22-.5-.5-.5h-2c-.28 0-.5.22-.5.5s.22.5.5.5M34.38 22.82c.28 0 .5-.22.5-.5s-.22-.5-.5-.5h-2c-.28 0-.5.22-.5.5s.22.5.5.5zM21.88 22.32c0 .28.22.5.5.5h2c.28 0 .5-.22.5-.5s-.22-.5-.5-.5h-2c-.28 0-.5.22-.5.5M38.38 25.82c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5M38.38 30.82c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5M38.38 35.82c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5" class="cls-1"/><path d="M45.27 16.44v4.62c0 .82-1.26.81-1.25 0v-3.04L31.74 30.3a3.8 3.8 0 0 0-.89-.89l12.28-12.28h-3.04c-.82.02-.81-1.25 0-1.25h4.6c.4 0 .58.22.58.56M11.49 16.44v4.62c0 .82 1.26.81 1.25 0v-3.04L25.02 30.3c.25-.35.55-.65.89-.89L13.63 17.13h3.04c.82.02.81-1.25 0-1.25h-4.6c-.4 0-.58.22-.58.56" class="cls-1"/><path d="M1.18 5.57h21.65v14.72h1.18V4.98c0-.32-.26-.59-.59-.59H.59c-.32 0-.59.26-.59.59v22.83c0 .32.26.59.59.59h15.75v-1.18H1.18zM28.38 29.84c-1.61 0-2.92 1.31-2.92 2.93s1.31 2.92 2.92 2.92 2.93-1.31 2.93-2.92-1.31-2.93-2.93-2.93m1.69 2.93c0 .94-.76 1.7-1.7 1.7s-1.7-.76-1.7-1.7.76-1.7 1.7-1.7 1.7.76 1.7 1.7" class="cls-1"/></g></svg>
 					</div>
-					<h4 class="serif">Platform Scalability</h4>
+					<h4 class="serif card-heading">Platform Scalability</h4>
 
-					<p>Created a shared interaction model for global controls, used across all vehicle programs and multiple vehicle configurations.</p>
+					<p class="card-content">Created a shared interaction model for global controls, used across all vehicle programs and multiple vehicle configurations.</p>
 				</li> <!-- card 1 -->
 				
 				<!-- Card 2: Risk Management -->
-				<li class="icon-card">
+				<li class="card card--icon">
 
 					<!-- icon -->
-					<div class="flex icon-card-wrapper">
+					<div class="flex icon-card-img">
 						<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 47.61 26.71"><g data-name="Layer 1"><path d="M39.69 26.71c-.51 0-.99-.2-1.34-.56l-6.79-6.79c-.6-.59-.72-1.51-.31-2.26l-1.51-1.51a8.9 8.9 0 0 1-5.92 2.26c-4.92 0-8.93-4-8.93-8.93S18.89 0 23.81 0s8.93 4 8.93 8.93c0 2.17-.81 4.28-2.26 5.92l1.51 1.51c.72-.4 1.68-.28 2.26.31l6.79 6.79c.36.36.56.84.56 1.34s-.2.98-.56 1.34-.84.56-1.34.56ZM23.81 1.05c-4.34 0-7.88 3.53-7.88 7.88s3.53 7.88 7.88 7.88 7.88-3.53 7.88-7.88-3.53-7.88-7.88-7.88" class="cls-1"/><path d="M24.16 3.02c-.14-.26-.56-.26-.7 0l-4.91 8.9c-.16.26.05.61.35.6h9.82c.29 0 .5-.35.35-.6zm-1.1 2.89h1.5l-.24 3.15H23.3zm1.29 4.99a.7.7 0 0 1-.54.23c-.42 0-.77-.36-.76-.77 0-.43.32-.79.76-.78.44-.01.77.35.76.78 0 .21-.07.39-.22.54M2.83 11.75C1.27 11.75 0 10.48 0 8.92S1.27 6.1 2.83 6.1c1.4 0 2.61 1.06 2.78 2.43h7.82v.39c0 .23 0 .44.02.66H5.57a2.82 2.82 0 0 1-2.74 2.17m0-4.62c-.99 0-1.8.8-1.8 1.79s.81 1.8 1.8 1.8c.98.01 1.79-.82 1.79-1.8 0-.96-.81-1.8-1.79-1.79M44.79 11.89c-1.35 0-2.53-.98-2.78-2.31h-7.85c.01-.22.02-.44.02-.66v-.39h7.84c.26-1.32 1.44-2.3 2.78-2.3 1.55 0 2.82 1.27 2.82 2.83s-1.27 2.83-2.82 2.83Zm0-4.63c-.98-.01-1.81.81-1.8 1.8 0 .98.83 1.81 1.8 1.8.99 0 1.8-.81 1.8-1.8s-.81-1.8-1.8-1.8" class="cls-1"/></g></svg>
 					</div>
-					<h4 class="serif">Risk Management</h4>
+					<h4 class="serif card-heading">Risk Management</h4>
 
-					<p>Helped align UX, engineering, and management on interaction tradeoffs early with extension explorations, reducing late-stage rework.</p>
+					<p class="card-content">Helped align UX, engineering, and management on interaction tradeoffs early with extension explorations, reducing late-stage rework.</p>
 				</li> <!-- card 2 -->
 
 				<!-- Card 3: Pioneering -->
-				<li class="icon-card">
+				<li class="card card--icon">
 
 					<!-- icon -->
-					<div class="flex icon-card-wrapper">
+					<div class="flex icon-card-img">
 						<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 47.59 31.92"><g data-name="Layer 1"><path d="m40.47 19.12-2.59-2.6c-.46-.45-1.18.25-.71.71l1.72 1.72h-1.2c-1.77 0-3.39.35-4.8 1-3.56 1.63-5.8 5.13-5.8 9.6v2.37h1v-2.37c0-5.65 3.95-9.6 9.6-9.6h1.2l-1.72 1.72c-.46.45.25 1.17.71.7l2.6-2.6c.2-.2.22-.42-.01-.65M7.12 19.12l2.59-2.6c.46-.45 1.18.25.71.71L8.7 18.95h1.2c1.77 0 3.39.35 4.8 1 3.56 1.63 5.8 5.13 5.8 9.6v2.37h-1v-2.37c0-5.65-3.95-9.6-9.6-9.6H8.7l1.72 1.72c.46.45-.25 1.17-.71.7l-2.6-2.6c-.2-.2-.22-.42.01-.65M2.02 20.1c0-.28-.02-.9.03-1.15.06-.44.34-.66.64-.99l.96-.97c.21-.21.31-.48.31-.81.01-.64-.49-1.11-1.12-1.1-.69-.02-1.19.56-1.25 1.22L0 16.18c.13-1.51 1.41-2.52 2.9-2.52 1.41 0 2.63.95 2.63 2.43 0 1.34-.92 1.85-1.66 2.58-.16.17-.27.32-.32.55-.02.11-.04.25-.04.4v.47H2.02Zm-.25 1.73c-.01-.53.47-.99 1-.97.51-.01 1.01.42 1 .95.01.53-.47.99-1 .97-.51 0-1-.42-1-.95M26.72 14.16l-2.6-2.6c-.2-.2-.42-.22-.65.01l-2.6 2.59c-.45.46.25 1.18.71.71l1.72-1.72v18.76h1V13.14l1.72 1.72c.45.46 1.17-.25.7-.71ZM23.05 6.44c0-.28-.02-.9.03-1.15.06-.44.34-.66.64-.99l.96-.97c.21-.21.31-.48.31-.81.01-.64-.49-1.11-1.12-1.1-.69-.02-1.19.56-1.25 1.22l-1.59-.12C21.16 1.01 22.44 0 23.93 0c1.41 0 2.63.95 2.63 2.43 0 1.34-.92 1.85-1.66 2.58-.16.17-.27.32-.32.55-.02.11-.04.25-.04.4v.47h-1.49Zm-.25 1.73c-.01-.53.47-.99 1-.97.51-.01 1.01.42 1 .95.01.53-.47.99-1 .97-.51 0-1-.42-1-.95M44.08 20.1c0-.28-.02-.9.03-1.15.06-.44.34-.66.64-.99l.96-.97c.21-.21.31-.48.31-.81.01-.64-.49-1.11-1.12-1.1-.69-.02-1.19.56-1.25 1.22l-1.59-.12c.13-1.51 1.41-2.52 2.9-2.52 1.41 0 2.63.95 2.63 2.43 0 1.34-.92 1.85-1.66 2.58-.16.17-.27.32-.32.55-.02.11-.04.25-.04.4v.47h-1.49Zm-.25 1.73c-.01-.53.47-.99 1-.97.51-.01 1.01.42 1 .95.01.53-.47.99-1 .97-.51 0-1-.42-1-.95" class="cls-1"/></g></svg>
 					</div>
 
-					<h4 class="serif">Pioneering</h4>
+					<h4 class="serif card-heading">Pioneering</h4>
 
-					<p>Established a design precedent within JLR for touchscreen-based climate and vehicle controls, and internal ways of working (rapid, iterative design sprints).</p>
+					<p class="card-content">Established a design precedent within JLR for touchscreen-based climate and vehicle controls, and internal ways of working (rapid, iterative design sprints).</p>
 				</li> <!-- card 3 -->
 
 			</ul> <!-- cards -->
-
-		</article> <!-- design impact -->
-	</section> <!-- End of 1.3: Design Impact -->
+		</article> <!-- End Section 1.3: Design Impact -->
+	</section> <!-- End Section 1: Summary -->
 	
 </main>
 
-	<script src="../js/animate.js" defer></script>
-	<!-- controller for left/right arrows on horizontal card list -->
-	<script src="../js/card-list.js" defer></script>
+	<!-- microinteraction logic for the cards stacking on mobile -->
+	<script src="../js/stacked-cards.js"></script>
 
+	<!-- controller for left/right arrows on horizontal card list on desktop -->
+	<script src="../js/scroll-cards.js" defer></script>
 
-	<script>
-		window.onscroll = function() {scrollFunction()};
+	<!-- notch subnavigation, converts to fixed container on scroll -->
+	<!-- includes mobile subnavigation button logic -->
+	<script src="../js/case-study-subnav.js" defer></script>
 
-		var subnav = document.getElementById("subnav");
-		var summary = document.getElementById("summarySection");
-		// get the initial distance from the top
-		var stuck = subnav.offsetTop + 12;
-
-		var summaryLink = document.getElementById("summaryLink");
-		var subnavLinks = document.querySelectorAll("subnav-links");
-
-		function scrollFunction() {
-			if (window.pageYOffset >= stuck) {
-				subnav.classList.add("fixed");
-				summaryLink.classList.add("active-section")
-				// summary.style.paddingTop = "75px";
-
-			} else {
-				subnav.classList.remove("fixed");
-				summaryLink.classList.remove("active-section")
-				// summary.style.paddingTop = "0px";
-			}
-		}
-		
-	</script>
 </body>
 
 </html>
