@@ -327,10 +327,10 @@ for the complex border radius */
 }
 
 /* realign the beginning content for the notch */
-.summary {margin-top: -24px;}
+.summary-section  {margin-top: -24px;}
 
 /* realign the beginning content for the notch */
-.summary h2 {padding-top: 100px;}
+.summary-section  h2 {padding-top: 100px;}
 
 .flex-col--half h3,
 .flex-col--half p {
@@ -516,7 +516,7 @@ move the scrollable list of cards */
   left: 50%;
   margin-top: -53px;
   padding-top: 24px;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 /* top level subnav <div> */
@@ -526,13 +526,46 @@ move the scrollable list of cards */
   height: 100vh;
   width: 100vw;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.5);
-  transform: translate(-100%, 0%);
+  background: rgba(0, 0, 0, 0.9);
+  transform: translate(0%, -100%);
   left: 0;
   top: 0;
   margin-top: 0px;
   padding-top: 24px;
-  transition: 0.3s ease-in-out;
+  transition: 0.45s ease-in-out;
+}
+
+/* hide the subnav close elements when the 
+.subnav-desktop-nav classes gets added in js */
+#subnav.subnav-desktop-nav .overlay-anchor-bottom,
+#subnav.subnav-desktop-nav .btn-close--subnav {
+  display: none;
+}
+
+/* attributes that the subnav close button wrapper
+is applied when the .subnav-mobile-nav class is 
+added in js */
+#subnav.subnav-mobile-nav .overlay-anchor-bottom {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  background: red;
+  width: 100%;
+  padding: var(--space-sm);
+  bottom: 0;
+}
+
+#subnav.subnav-mobile-nav .btn-close--subnav {
+  display: block;
+  padding: 12px;
+  position: relative;
+  z-index: 9999;
+  min-width: 50%;
+}
+
+/* hide the subnav close button by default */
+.btn-close--subnav {
+  display: none;
 }
 
 
@@ -542,7 +575,6 @@ move the scrollable list of cards */
   margin-top: 45px;
   z-index: 9999;
   top: 0px;
-  margin-top: 61px;
   left: 50%;
   transform: translate(-50%, -50%) !important;
   transition: 0.3s ease-in-out;
@@ -572,7 +604,6 @@ move the scrollable list of cards */
   padding: 0;
   background: none;
 }
-
 
 .list--subnav li {
   padding: var(--space-sm) 0;
@@ -617,7 +648,6 @@ move the scrollable list of cards */
 }
 
 
-
 /* ================================================|
 ***************************************************|
                                                    |
@@ -648,7 +678,7 @@ move the scrollable list of cards */
 @media (max-width: 700px) {
 
   /* main project title */
-  .case-hero-content h1, .summary h2{
+  .case-hero-content h1, .summary-section  h2{
     font-size: 18vw;
   }
 
@@ -678,28 +708,6 @@ move the scrollable list of cards */
     background: var(--off-white);
   }
 
-  /* top level subnav <div> */
-  /* convert into a fullscreen overlay */
-  #subnav {
-    width: 100%;
-    z-index: 9999;
-    position: fixed;
-    top: 0;
-    background: rgba(0, 0, 0, 0.5);
-    height: 100vh;
-    width: 100vw;
-    /*transform: translate(100%, 0%);*/
-    transform: translate(-100%, 0%);
-    left: 0;
-    margin-top: 0px;
-    padding-top: 24px;
-  }
-
-  /* reset, this class is not really needed on mobile */
-  #subnav.fixed {
-    margin-top: 0;
-  }
-
   /* show the mobile subnav button */
   /* <div> holding the "view section" button */
   .mobile-subnav {
@@ -725,27 +733,41 @@ move the scrollable list of cards */
 
   /* original subnavigation container */
   /* <nav> element */
-  .nav--case-study {
+/*  .nav--case-study {
     width: 100%;
     background: none;
-  }
+  }*/
 
-  .list--subnav li {
+/*  .list--subnav li {
     display: flex;
     margin-top: 0;
     margin-bottom: 1px;
     padding:0;
-  }
+  }*/
 
-  .list--subnav li a {
+  /* set pill-shaped radius on first link in navbar */
+/*  .list--subnav li:first-child,
+  .list--subnav li:first-child a{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }*/
+
+  /* set pill-shaped radius on last link in navbar */
+/*  .list--subnav li:last-child,
+  .list--subnav li:last-child a{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }*/
+
+/*  .list--subnav li a {
     position: relative;
     min-width: 100%;
     background: blue;
-  }
+  }*/
 
-  .active-section a {
+/*  .active-section a {
     width: 100%;
-  }
+  }*/
 
   /* hide the left/right nav arrows when
   ** the cards collapse to single column */
