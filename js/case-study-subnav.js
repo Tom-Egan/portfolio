@@ -5,6 +5,8 @@ const ulSubnav = document.getElementById("ul-subnav");
 const subnavOpenBtn = document.getElementById("mobileSubNavBtn");
 const subnavCloseBtn = document.getElementById("closeMobileSubNavBtn");
 const summaryLink = document.getElementById("summaryLink");
+const home = document.getElementById("homebtn");
+const backToTopMobile = document.getElementById("toTopMobile");
 
 let stuckOffset = 0;
 
@@ -35,7 +37,8 @@ function setDesktopMode() {
   ulSubnav.classList.remove("mobile-nav");
   ulSubnav.classList.add("desktop-nav");
 
-  stuckOffset = subnav.offsetTop + 12;
+  // nav has margin-top: -41, factor that in 
+stuckOffset = subnav.getBoundingClientRect().top + window.scrollY - 12;
 
   window.addEventListener("scroll", onDesktopScroll);
   onDesktopScroll();
@@ -46,24 +49,27 @@ function setDesktopMode() {
 ================================ */
 
 function openMobileSubnav() {
-  subnav.style.transform = "translate(0%, 0%)";
+  subnav.classList.add("is-open");
+  document.body.classList.add("nav-locked");
 }
 
 function closeMobileSubnav() {
-  subnav.style.transform = "translate(0%, -100%)";
+  subnav.classList.remove("is-open");
+  document.body.classList.remove("nav-locked");
 }
+
 
 /* ================================
    DESKTOP SCROLL
 ================================ */
 
+stuckOffset = subnav.offsetTop;
+
 function onDesktopScroll() {
-  if (window.pageYOffset >= stuckOffset) {
+  if (window.scrollY >= stuckOffset) {
     subnav.classList.add("fixed");
-    summaryLink.classList.add("active-section");
   } else {
     subnav.classList.remove("fixed");
-    summaryLink.classList.remove("active-section");
   }
 }
 

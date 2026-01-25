@@ -80,10 +80,9 @@
 		  "url": "https://www.tom-egan.com"
 		}
 	</script>
-
 </head>
 
-<body>
+<body id="top">
 
 <main>
 	<!-- hero -->
@@ -135,31 +134,67 @@
 	<!-- hidden on desktop -->
 	<!-- button to open the menu on mobile -->
 	<div class="container padding-container flex mobile-subnav">
-		<button id="mobileSubNavBtn" class="btn--subnav">
-			View Sections
+		<button id="mobileSubNavBtn" class="btn--subnav radius-sm">Menu
 		</button>
 	</div>
 
-	<!-- Subnavigation -->
-	<div id="subnav" class="subnav-desktop-nav">
-		<!-- case study subnavigation to jump to sections -->
-		<nav class="nav--case-study">
-			<ul id="ul-subnav" class="flex list--no-style list--subnav desktop-nav">
-				<li id="summaryLink"><a href="#summary">Summary</a></li>
-				<li><a href="#context">Context</a></li>
-				<li><a href="#solutions">Solutions</a></li>
-				<li><a href="#results">Results</a></li>
-			</ul>
-		</nav>
-
-		<div class="container padding-container flex overlay-anchor-bottom">
-			<button id="closeMobileSubNavBtn" class="btn-close--subnav">Close
-			</button>
-		</div>
-	</div> <!-- End of Subnavigation -->
-
 	<!-- Section 1: Summary -->
 	<section class="case-section summary-section full-bleed radius-lg--bottom">
+
+		<!-- subnavigation -->
+		<div id="subnav" class="subnav-desktop-nav">
+
+			<!-- overlay panel -->
+			<div class="subnav-panel">
+
+				<!-- HEADER (close button) -->
+				<div class="subnav-header container padding-container flex overlay-anchor overlay-anchor--top">
+
+					<!-- mobile close button -->
+					<button id="closeMobileSubNavBtn" class="btn-close--subnav radius-sm">Close
+					</button>
+
+					<button id="toTopMobile" class="btn-top--subnav radius-sm">Back to Top
+					</button>
+
+				</div> <!-- header -->
+
+				<!-- MAIN NAV -->
+				<nav class="nav--case-study">
+					<ul id="ul-subnav" class="flex list--no-style list--subnav desktop-nav radius-sm">
+
+						<li id="mobileCaseStudyTitle">
+							<p class="case-label">Case Study</p>
+							<div aria-hidden="true" class="header-underline header-underline--light"></div>
+							<p class="subnav-project-title">24MY Pivi Update</p>
+						</li>
+
+						<li id="summaryLink"><a href="#summary" class="link-underline--bottom">Summary</a></li>
+
+						<li><a href="#context" class="link-underline--bottom">Context</a></li>
+
+						<li><a href="#solutions" class="link-underline--bottom">Solutions</a></li>
+
+						<li><a href="#results">Results</a></li>
+
+					</ul>
+				</nav> <!-- main nav -->
+
+				<!-- FOOTER -->
+				<div class="subnav-footer container padding-container flex overlay-anchor overlay-anchor--bottom">
+
+					<ul class="flex">
+						<li><a id="homebtn" href="#"><img src="../img/te_icon_color.svg">Home</a></li>
+						<li><a href="#"><img src="../img/te_icon_color.svg">About</a></li>
+						<li><a href="#"><img src="../img/te_icon_color.svg">Contact</a></li>
+					</ul>
+
+				</div> <!-- footer -->
+
+			</div> <!-- overlay -->
+
+		</div><!-- End of Subnavigation -->
+
 
 		<!-- H2 Summary -->
 		<h2>Summary</h2>
@@ -172,49 +207,49 @@
 
 				<!-- Card 1: Company -->
 				<!-- stacked-card class used in js file -->
-				<li class="card shadow--card">
+				<li class="card shadow--card radius-sm">
 					<h3 class="serif card-heading">Company</h3>
 					<img id="card-jlr-logo" src="../img/jlr/logo-jlr.png" alt="image of Jaguar logo">
 				</li> <!-- card 1 -->
 
 				<!-- Card 2: Problem -->
-				<li class="card shadow--card">
+				<li class="card shadow--card radius-sm">
 					<h3 class="serif card-heading">Problem</h3>
 					<p class="card-content">Physical vehicle controls removed, requiring safety-critical functions to move into the touchscreen UI</p>
 				</li> <!-- card 2 -->
 
 				<!-- Card 3: Constraints -->
-				<li class="card shadow--card">
+				<li class="card shadow--card radius-sm">
 					<h3 class="serif card-heading">Constraints</h3>
 					<p class="card-content">Legal one-touch-activation requirements, limited sidebar space, modifying existing software architecture</p>
 				</li> <!-- card 3 -->
 
 				<!-- Card 4: Role -->
-				<li class="card shadow--card">
+				<li class="card shadow--card radius-sm">
 					<h3 class="serif card-heading">Role</h3>
 					<p class="card-content">UX Designer — UX concepting, interaction design, prototyping, usability testing</p>
 				</li> <!-- card 4 -->
 
 				<!-- Card 5: Team -->
-				<li class="card shadow--card">
+				<li class="card shadow--card radius-sm">
 					<h3 class="serif card-heading">Team</h3>
 					<p class="card-content">2 UX Designers + UX Research (US & UK)</p>
 				</li> <!-- card 5 -->
 
 				<!-- Card 6: Platform -->
-				<li class="card shadow--card">
+				<li class="card shadow--card radius-sm">
 					<h3 class="serif card-heading">Platform</h3>
 					<p class="card-content">Pivi / Pivi Pro (embedded vehicle software)</p>
 				</li> <!-- card 6 -->
 
 				<!-- Card 7: Key Solutions-->
-				<li class="card shadow--card">
+				<li class="card shadow--card radius-sm">
 					<h3 class="serif card-heading">Key Solutions</h3>
 					<p class="card-content">Contextual sidebar buttons, overlays, multi-state controls, quick-adjust drag interactions, pre-trip homescreen tile</p>
 				</li> <!-- card 7 -->
 
 				<!-- Card 8: Outcome-->
-				<li class="card shadow--card">
+				<li class="card shadow--card radius-sm">
 					<h3 class="serif card-heading">Outcome</h3>
 					<p class="card-content">Shipped on 24MY Range Rover Velar; design and interaction patterns scaled across all Jaguar Land Rover vehicles</p>
 				</li> <!-- card 8 -->
@@ -266,7 +301,7 @@
 
 				<!-- Card 1: Platform Scalability -->
 				<!-- stacked card class used in js file -->
-				<li class="card card--icon">
+				<li class="card card--icon radius-sm">
 
 					<!-- icon -->
 					<div class="flex icon-card-img">
@@ -279,7 +314,7 @@
 				</li> <!-- card 1 -->
 				
 				<!-- Card 2: Risk Management -->
-				<li class="card card--icon">
+				<li class="card card--icon radius-sm">
 
 					<!-- icon -->
 					<div class="flex icon-card-img">
@@ -291,7 +326,7 @@
 				</li> <!-- card 2 -->
 
 				<!-- Card 3: Pioneering -->
-				<li class="card card--icon">
+				<li class="card card--icon radius-sm">
 
 					<!-- icon -->
 					<div class="flex icon-card-img">

@@ -86,6 +86,10 @@ strong {font-weight: 600;}
 
 img {display: block; width: 100%; height: auto;}
 
+button:hover {
+  cursor: pointer;
+}
+
 /* heading that appears above project title */
 .case-label {
   font-size: 1.4rem;
@@ -391,7 +395,6 @@ for the complex border radius */
   display: block;
   background: var(--white);
   padding: var(--card-padding);
-  border-radius: var(--radius-12);
   min-width: 360px;
 }
 
@@ -452,7 +455,7 @@ move the scrollable list of cards */
 }
 /* the left/right arrow buttons */
 .card-controller button:hover {
-  cursor: pointer;
+
 }
 
 /* the left/right arrow buttons */
@@ -474,7 +477,6 @@ move the scrollable list of cards */
   flex: 1;
   min-width: 300px;
   padding: var(--card-padding);
-  border-radius: var(--radius-12);
 }
 
 /* nested <div> holding the icons  */
@@ -503,150 +505,330 @@ move the scrollable list of cards */
 ***************************************************|
 ==================================================*/
 
-/* <nav> element */
-.nav--case-study {
-  position: sticky !important;
-  top: 8px;
+#subnav {
   z-index: 9999;
 }
 
+/* DESKTOP ONLY: subnav participates in layout */
 #subnav.subnav-desktop-nav {
-  position: absolute;
-  transform: translate(-50%, -50%) !important;
-  left: 50%;
-  margin-top: -53px;
-  padding-top: 24px;
-  transition: 0.3s ease-in-out;
-}
-
-/* top level subnav <div> */
-/* convert into a fullscreen overlay */
-#subnav.subnav-mobile-nav{
- position: fixed;
-  height: 100vh;
-  width: 100vw;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.9);
-  transform: translate(0%, -100%);
-  left: 0;
-  top: 0;
-  margin-top: 0px;
-  padding-top: 24px;
-  transition: 0.45s ease-in-out;
-}
-
-/* hide the subnav close elements when the 
-.subnav-desktop-nav classes gets added in js */
-#subnav.subnav-desktop-nav .overlay-anchor-bottom,
-#subnav.subnav-desktop-nav .btn-close--subnav {
-  display: none;
-}
-
-/* attributes that the subnav close button wrapper
-is applied when the .subnav-mobile-nav class is 
-added in js */
-#subnav.subnav-mobile-nav .overlay-anchor-bottom {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  background: red;
-  width: 100%;
-  padding: var(--space-sm);
-  bottom: 0;
-}
-
-#subnav.subnav-mobile-nav .btn-close--subnav {
-  display: block;
-  padding: 12px;
   position: relative;
-  z-index: 9999;
-  min-width: 50%;
+  inset: auto;
+  /*margin-top: -78px;*/
+  display: flex;
+  justify-content: center;
 }
 
-/* hide the subnav close button by default */
-.btn-close--subnav {
+
+/* ============= DESKTOP SUBNAV ============= */
+
+/* hide the subnav mobile elements when the 
+.subnav-desktop-nav classes gets added in js */
+.mobile-subnav, 
+.btn-close--subnav,
+#subnav.subnav-desktop-nav .overlay-anchor,
+#subnav.subnav-desktop-nav .btn-close--subnav,
+#subnav.subnav-desktop-nav #mobileCaseStudyTitle  {
   display: none;
 }
 
+/* ===============================
+   DESKTOP: disable overlay shell
+================================ */
 
+/* Restore layout participation */
+#subnav.subnav-desktop-nav {
+  position: relative;
+}
+
+/* parent container for subnavigation */
+/* .fixed class added in javascript */
 #subnav.fixed {
   position: fixed;
+  top: 12px;
+  left: 0;
   width: 100%;
-  margin-top: 45px;
-  z-index: 9999;
-  top: 0px;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  transition: 0.3s ease-in-out;
+  margin-top: 58px;
 }
 
+/* THIS IS THE FIX */
+#subnav.subnav-desktop-nav .subnav-panel {
+  position: static;       /* re-enters document flow */
+  inset: auto;
+  background: transparent !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* <ul> item of navigation links for desktop */
 #ul-subnav.desktop-nav {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: -10px;
+  margin-top: -88px;
   margin-bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 50%);
   background: var(--white);
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  border-radius: var(--radius-12);
   box-shadow: var(--shadow);
 }
 
-#ul-subnav.mobile-nav {
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  margin-top: -24px;
-  padding: 0;
-  background: none;
-}
-
-.list--subnav li {
+/* desktop: parent <li> for subnav links */
+.desktop-nav.list--subnav li {
   padding: var(--space-sm) 0;
 }
 
+/* desktop: first <li> for subnav links */
 /* set pill-shaped radius on first link in navbar */
-.list--subnav li:first-child,
-.list--subnav li:first-child a{
+.desktop-nav.list--subnav li:first-child,
+.desktop-nav.list--subnav li:first-child a{
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
+/* desktop: last <li> for subnav links */
 /* set pill-shaped radius on last link in navbar */
-.list--subnav li:last-child,
-.list--subnav li:last-child a{
+.desktop-nav.list--subnav li:last-child,
+.desktop-nav.list--subnav li:last-child a{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-/* links */
-.list--subnav li a {
+/* desktop: subnav links inside the <li> */
+.desktop-nav.list--subnav li a {
   padding: var(--space-sm) var(--space-md);
   text-decoration: none;
   font-weight: 500;
 }
 
-/* link hover */
-.list--subnav li a:hover {
+/* desktop: [hover] for subnav links inside the <li> */
+.desktop-nav.list--subnav li a:hover {
   background: #222;
 }
 
-/* highlight for the section the user is currently on */
-.active-section a{
+/* desktop: [active] for subnav links inside the <li> */
+.desktop-nav.active-section a{
   background: var(--dark-grey-20);
   border-bottom: 5px solid #222;
 }
 
-/* container holding the mobile subnav button */
-/* hidden by default, displayed in the media query */
-.mobile-subnav {
-  display: none;
+
+/* ========= MOBILE SUBNAV OVERLAY ========= */
+
+/* prevent scrolling content underneath when
+the overlay is open. This is controlled in js */
+body.nav-locked {
+  overflow: hidden;
+  height: 100vh;
 }
 
+/* overlay wrapper */
+#subnav.subnav-mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* open overlay */
+#subnav.subnav-mobile-nav.is-open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+#subnav.subnav-mobile-nav .subnav-panel {
+  background: transparent;
+}
+
+#subnav.subnav-mobile-nav.is-open .subnav-panel {
+  background: rgba(0,0,0,0.9);
+}
+
+/* sliding panel */
+.subnav-panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0,0,0,0.9);
+  transform: translateY(-100svh);
+  transition: none;
+}
+
+/* Animate ONLY when user opens menu */
+#subnav.subnav-mobile-nav.is-open .subnav-panel {
+  transition: transform 0.45s ease;
+  transform: translateY(0);
+}
+
+/* attributes that the subnav header and footer
+wrappers is applied when the .subnav-mobile-nav
+class is  added in js */
+.overlay-anchor{
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-sm);
+  position: absolute;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  padding: var(--space-sm);
+}
+
+/* anchor header to the top */
+.overlay-anchor--top {top: 0;}
+
+/* anchor close button to the bottom */
+.overlay-anchor--bottom {bottom: 0;}
+
+/* mobile overlay footer <ul> holding the links */
+#subnav.subnav-mobile-nav .overlay-anchor--bottom ul {
+  position: relative;
+  justify-content: center;
+  align-content: stretch;
+  width: 100%;
+  background: #666;
+}
+
+/* mobile overlay header <li> holding the links */
+#subnav.subnav-mobile-nav .overlay-anchor--bottom ul li {
+  display: inline-block;
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  background: #222;
+}
+
+/* mobile overlay header links */
+#subnav.subnav-mobile-nav .overlay-anchor--bottom ul li a {
+  text-align: center;
+  display: block;
+  position: relative;
+  background: #555;
+  text-decoration: none;
+  padding: var(--space-sm);
+  cursor: pointer;
+}
+
+#subnav.subnav-mobile-nav .overlay-anchor--bottom ul li a:hover {
+  background: #ccc;
+}
+
+/* mobile subnav overlay header elements */
+.overlay-anchor--top button,
+.overlay-anchor--top a {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* mobile subnav overlay close button */
+.overlay-anchor--top button {
+  display: block;
+  padding: 10px;
+}
+
+.overlay-anchor--bottom li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--off-white);
+}
+
+.overlay-anchor--bottom a img {
+  max-width: 32px;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 6px;
+}
+
+.subnav-project-title {
+  font-size: 13vw;
+  line-height: 1;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: 16px;
+}
+
+/* Menu label for mobile nav */
+/* show when the mobile class is loaded in js */
+#subnav.subnav-mobile-nav #mobileCaseStudyTitle {
+  display: inline-block;
+  color: var(--off-white);
+  padding-left: var(--space-md);
+  margin-top: 0px;
+}
+
+/* <ul> item of navigation links for mobile */
+#ul-subnav.mobile-nav {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  height: auto;
+  margin-top: -24px;
+  padding: 0;
+  background: none;
+}
+
+/* original subnavigation container */
+/* <nav> element */
+.mobile-nav.nav--case-study {
+  width: 100%;
+  background: none;
+}
+
+.mobile-nav.list--subnav li {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 1px;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+}
+
+/* set pill-shaped radius on first link in navbar */
+.mobile-nav.list--subnav li:first-child,
+.mobile-nav.list--subnav li:first-child a{
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/* set pill-shaped radius on last link in navbar */
+.mobile-nav.list--subnav li:last-child,
+.mobile-nav.list--subnav li:last-child a{
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.mobile-nav.list--subnav li a {
+  position: relative;
+  min-width: 100%;
+  padding: var(--space-sm);
+  color: var(--off-white);
+  text-decoration: none;
+  font-size: 6vw;
+  transition: var(--transition);
+}
+
+.mobile-nav.list--subnav li a:hover {
+  background: red;
+}
+
+.mobile-nav li .link-underline--bottom {
+  border-bottom: 2px solid var(--off-white-20);
+}
+
+.mobile-nav.active-section a {
+  width: 100%;
+}
 
 /* ================================================|
 ***************************************************|
@@ -678,9 +860,7 @@ added in js */
 @media (max-width: 700px) {
 
   /* main project title */
-  .case-hero-content h1, .summary-section  h2{
-    font-size: 18vw;
-  }
+  .case-hero-content h1, .summary-section  h2{font-size: 18vw;}
 
   /* collapse cards into a single column layout */
   /* readjust the padding and margins for mobile */
@@ -691,14 +871,12 @@ added in js */
     padding: var(--space-lg) var(--space-md);
   }
 
-  .article--icon-card .list--scroll-cards {
-    padding: 0;
-  }
+  .article--icon-card .list--scroll-cards {padding: 0;}
 
   /* converts the cards into a stackable set */
   .card, .icon-card{
     position: sticky;
-    top: 80px;
+    top: 70px;
     min-width: 100%;
   }
 
@@ -709,7 +887,7 @@ added in js */
   }
 
   /* show the mobile subnav button */
-  /* <div> holding the "view section" button */
+  /* <div> holding the menu button */
   .mobile-subnav {
     position: sticky;
     display: flex;
@@ -722,70 +900,23 @@ added in js */
     padding: var(--space-sm) var(--space-md);
   }
 
+  /* mobile subnav "menu" button on mobile */
   .btn--subnav {
     margin: 0 auto 0 auto;
     padding: 10px;
     width: 100%;
-    border-radius: var(--radius-12);
     font-size: 1rem;
     font-weight: 600;
   }
 
-  /* original subnavigation container */
-  /* <nav> element */
-/*  .nav--case-study {
-    width: 100%;
-    background: none;
-  }*/
-
-/*  .list--subnav li {
-    display: flex;
-    margin-top: 0;
-    margin-bottom: 1px;
-    padding:0;
-  }*/
-
-  /* set pill-shaped radius on first link in navbar */
-/*  .list--subnav li:first-child,
-  .list--subnav li:first-child a{
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }*/
-
-  /* set pill-shaped radius on last link in navbar */
-/*  .list--subnav li:last-child,
-  .list--subnav li:last-child a{
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }*/
-
-/*  .list--subnav li a {
-    position: relative;
-    min-width: 100%;
-    background: blue;
-  }*/
-
-/*  .active-section a {
-    width: 100%;
-  }*/
-
   /* hide the left/right nav arrows when
   ** the cards collapse to single column */
-  .overview-card-controller {
-    display: none;
-  }
-
-  .case-label, .accent-text {
-    font-size: 1.1rem;
-  }
-
-  .tag {
-    font-size: 0.8rem;
-  }
+  .overview-card-controller {display: none;}
+  .case-label, .accent-text {font-size: 1.1rem;}
+  .tag {font-size: 0.8rem;}
 
   .case-label {
     margin-bottom: -10px;
     margin-top: 0;
   }
 }
-
