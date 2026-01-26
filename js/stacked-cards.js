@@ -35,6 +35,11 @@ function enableStackedCards() {
 
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  cards.forEach(card => {
+  card.style.willChange = "transform, opacity, filter";
+});
+
 }
 
 /* ---------- Disable ---------- */
@@ -48,11 +53,24 @@ function disableStackedCards() {
     card.style.transform = "";
     card.style.opacity = "";
     card.style.filter = "";
+    card.style.willChange = "";
   });
+
+
+  // Ensure last card is always fully reset
+  const lastCard = cards[cards.length - 1];
+  if (lastCard) {
+    lastCard.style.transform = "";
+    lastCard.style.opacity = "";
+    lastCard.style.filter = "";
+  }
+
 }
 
 /* ---------- Core scroll logic ---------- */
 function onScroll() {
+  if (!isEnabled) return;
+
   cards.forEach((card, index) => {
     const nextCard = cards[index + 1];
     if (!nextCard) return;
@@ -76,14 +94,24 @@ function onScroll() {
 
     /* visual mapping */
     const scale = 1 - progress * MAX_SCALE_REDUCTION;
-    const opacity = 1 - progress * MAX_OPACITY_REDUCTION;
-    const blur = progress * MAX_BLUR;
+    const opacity = 1 - Math.pow(progress, 1.8) * MAX_OPACITY_REDUCTION;
+    const blur = Math.pow(progress, 1.4) * MAX_BLUR;
+
 
     card.style.transform = `scale(${scale})`;
     card.style.opacity = opacity;
     card.style.filter = `blur(${blur}px)`;
   });
+
+  // Ensure last card is always fully reset
+  const lastCard = cards[cards.length - 1];
+  if (lastCard) {
+    lastCard.style.transform = "";
+    lastCard.style.opacity = "";
+    lastCard.style.filter = "";
+  }
 }
+
 
 /* ---------- Media query wiring ---------- */
 function handleBreakpoint(e) {

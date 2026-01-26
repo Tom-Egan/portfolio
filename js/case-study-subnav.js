@@ -1,76 +1,113 @@
 const navMobileQuery = window.matchMedia("(max-width: 700px)");
 
 const subnav = document.getElementById("subnav");
-const ulSubnav = document.getElementById("ul-subnav");
 const subnavOpenBtn = document.getElementById("mobileSubNavBtn");
 const subnavCloseBtn = document.getElementById("closeMobileSubNavBtn");
-const summaryLink = document.getElementById("summaryLink");
-const home = document.getElementById("homebtn");
-const backToTopMobile = document.getElementById("toTopMobile");
+const subnavTopBtn = document.getElementById("toTopMobile");
 
 let stuckOffset = 0;
+
+/* ================================
+   STATE SETTERS
+================================ */
+
+function setMode(mode) {
+  subnav.dataset.mode = mode;
+  subnav.dataset.pinned = "false";
+}
+
+
+function openNav() {
+  enableTransitions();
+  subnav.dataset.state = "open";
+  document.body.classList.add("nav-locked");
+}
+
+function closeNav() {
+  enableTransitions();
+  subnav.dataset.state = "closed";
+  document.body.classList.remove("nav-locked");
+}
+
+
+function disableTransitions() {
+  subnav.dataset.transition = "off";
+}
+
+function enableTransitions() {
+  subnav.dataset.transition = "on";
+}
+
+
+/* ================================
+   SCROLL (DESKTOP ONLY)
+================================ */
+
+function onScroll() {
+  subnav.dataset.pinned =
+    window.pageYOffset >= stuckOffset ? "true" : "false";
+}
+
+function enableDesktopScroll() {
+  subnav.dataset.pinned = "false";
+
+  // Wait for layout to settle (critical)
+  requestAnimationFrame(() => {
+    stuckOffset = subnav.getBoundingClientRect().top + window.scrollY;
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+  });
+}
+
+
+function disableDesktopScroll() {
+  window.removeEventListener("scroll", onScroll);
+  subnav.dataset.pinned = "false";
+}
+
+
+/* ================================
+   MOBILE NAV
+================================ */
+
+function enableMobileNav() {
+  subnavOpenBtn.addEventListener("click", openNav);
+  subnavCloseBtn.addEventListener("click", closeNav);
+}
+
+function disableMobileNav() {
+  subnavOpenBtn.removeEventListener("click", openNav);
+  subnavCloseBtn.removeEventListener("click", closeNav);
+}
 
 /* ================================
    MODE SWITCHING
 ================================ */
 
 function setMobileMode() {
-  window.removeEventListener("scroll", onDesktopScroll);
+  disableDesktopScroll();
+  disableTransitions();
 
-  subnav.classList.remove("fixed");
-  subnav.classList.add("subnav-mobile-nav");
-  subnav.classList.remove("subnav-desktop-nav");
+  // FORCE closed position BEFORE mobile styles apply
+  subnav.dataset.state = "closed";
 
-  ulSubnav.classList.add("mobile-nav");
-  ulSubnav.classList.remove("desktop-nav");
+  // Switch mode in the NEXT frame
+  requestAnimationFrame(() => {
+    setMode("mobile");
+    enableMobileNav();
 
-  subnavOpenBtn.addEventListener("click", openMobileSubnav);
-  subnavCloseBtn.addEventListener("click", closeMobileSubnav);
+    // Re-enable transitions one frame later
+    requestAnimationFrame(() => {
+      enableTransitions();
+    });
+  });
 }
+
 
 function setDesktopMode() {
-  closeMobileSubnav();
-
-  subnav.classList.remove("subnav-mobile-nav");
-  subnav.classList.add("subnav-desktop-nav");
-
-  ulSubnav.classList.remove("mobile-nav");
-  ulSubnav.classList.add("desktop-nav");
-
-  // nav has margin-top: -41, factor that in 
-stuckOffset = subnav.getBoundingClientRect().top + window.scrollY - 12;
-
-  window.addEventListener("scroll", onDesktopScroll);
-  onDesktopScroll();
-}
-
-/* ================================
-   MOBILE ACTIONS
-================================ */
-
-function openMobileSubnav() {
-  subnav.classList.add("is-open");
-  document.body.classList.add("nav-locked");
-}
-
-function closeMobileSubnav() {
-  subnav.classList.remove("is-open");
-  document.body.classList.remove("nav-locked");
-}
-
-
-/* ================================
-   DESKTOP SCROLL
-================================ */
-
-stuckOffset = subnav.offsetTop;
-
-function onDesktopScroll() {
-  if (window.scrollY >= stuckOffset) {
-    subnav.classList.add("fixed");
-  } else {
-    subnav.classList.remove("fixed");
-  }
+  disableMobileNav();
+  setMode("desktop");
+  enableDesktopScroll();
 }
 
 /* ================================
@@ -78,11 +115,15 @@ function onDesktopScroll() {
 ================================ */
 
 function handleBreakpoint(e) {
-  if (e.matches) {
-    setMobileMode();
-  } else {
-    setDesktopMode();
-  }
+
+  disableTransitions();
+
+  e.matches ? setMobileMode() : setDesktopMode();
+
+   // Re-enable transitions *after* layout settles
+  requestAnimationFrame(() => {
+    enableTransitions();
+  });
 }
 
 navMobileQuery.addEventListener("change", handleBreakpoint);
@@ -91,8 +132,41 @@ navMobileQuery.addEventListener("change", handleBreakpoint);
    INIT
 ================================ */
 
-if (navMobileQuery.matches) {
-  setMobileMode();
-} else {
-  setDesktopMode();
-}
+disableTransitions();
+
+navMobileQuery.matches ? setMobileMode() : setDesktopMode();
+
+subnavTopBtn.addEventListener("click", () => {
+  if (subnav.dataset.mode !== "mobile") return;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  closeNav();
+});
+
+const subnavPanel = subnav.querySelector(".subnav-panel");
+
+subnavPanel.addEventListener("click", (e) => {
+  if (e.target === subnavPanel) return;
+
+  if (subnav.dataset.mode !== "mobile") return;
+
+  const target = e.target.closest("a, button");
+  if (!target) return;
+
+  // Prevent double-handling for back-to-top
+  if (target.id === "toTopMobile") return;
+
+  closeNav();
+});
+
+
+requestAnimationFrame(() => {
+  subnav.dataset.ready = "true";
+});
+
+subnav.dataset.state = "closed";
+

@@ -133,7 +133,7 @@
 
 	<!-- hidden on desktop -->
 	<!-- button to open the menu on mobile -->
-	<div class="container padding-container flex mobile-subnav">
+	<div class="container padding-container flex mobile-subnav-btn">
 		<button id="mobileSubNavBtn" class="btn--subnav radius-sm">Menu
 		</button>
 	</div>
@@ -142,13 +142,22 @@
 	<section class="case-section summary-section full-bleed radius-lg--bottom">
 
 		<!-- subnavigation -->
-		<div id="subnav" class="subnav-desktop-nav">
+
+		<!-- data logic
+
+		mode = desktop | mobile
+		state = closed | open 
+		pinned = true  | false 
+
+		-->
+		<div id="subnav" data-mode="desktop" data-state="closed" data-pinned="false">
 
 			<!-- overlay panel -->
 			<div class="subnav-panel">
 
 				<!-- HEADER (close button) -->
-				<div class="subnav-header container padding-container flex overlay-anchor overlay-anchor--top">
+				<!-- <div class="subnav-header container padding-container flex overlay-group overlay-group--top"> -->
+				<div class="subnav-header container padding-container flex overlay-group">
 
 					<!-- mobile close button -->
 					<button id="closeMobileSubNavBtn" class="btn-close--subnav radius-sm">Close
@@ -161,7 +170,7 @@
 
 				<!-- MAIN NAV -->
 				<nav class="nav--case-study">
-					<ul id="ul-subnav" class="flex list--no-style list--subnav desktop-nav radius-sm">
+					<ul id="ul-subnav" class="flex list--no-style list--subnav  radius-sm">
 
 						<li id="mobileCaseStudyTitle">
 							<p class="case-label">Case Study</p>
@@ -181,7 +190,8 @@
 				</nav> <!-- main nav -->
 
 				<!-- FOOTER -->
-				<div class="subnav-footer container padding-container flex overlay-anchor overlay-anchor--bottom">
+				<!-- <div class="subnav-footer container padding-container flex overlay-group overlay-group--bottom"> -->
+				<div class="subnav-footer container flex overlay-group">
 
 					<ul class="flex">
 						<li><a id="homebtn" href="#"><img src="../img/te_icon_color.svg">Home</a></li>
